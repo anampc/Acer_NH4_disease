@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582830389815.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7C721E",
+    "lastKnownWriteTime" : 1582830380,
+    "last_content_update" : 1582830389815,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "B893A530",
+        "caption" : "FlowRates",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=FlowRates&cache_key=B893A530",
+        "displayedObservations" : "3310",
+        "environment" : "",
+        "object" : "FlowRates",
+        "preview" : "0",
+        "totalObservations" : "3310",
+        "variables" : "7"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

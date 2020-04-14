@@ -1,0 +1,731 @@
+#--------------------------------------------------------------------------
+#
+#     2. Unconstrained (Simple) ordination
+#     Part I : Principal Component Analysis (PCA)
+#
+#     Lab on PCA using R: Solved AP
+#     2015
+#     Sakina-Dorothée Ayata (sakina@obs-vlfr.fr)
+#     AME2 Course, Villefranche/Miami
+#
+#--------------------------------------------------------------------------
+
+# These labs are inspired from the lectures of P. Legendre and from the
+# book "Numerical Ecology with R" by Borcard et al. (2012)
+# (http://www.springer.com/978-1-4419-7975-9).
+
+#-------------------------------------------------------------------------
+#      Objectives of the Lab
+#-------------------------------------------------------------------------
+
+# Main objectives :
+# - Implement your own PCA function in R using linear algebra
+# - Use the PCA implemented in the vegan package on ecological data
+# - Use the PCA implemented in the FactoMineR package on ecological data
+# - Interpret the results of a PCA
+#
+# Secondary objectives :
+# - Manipulate ecological data with R, draw plot using ggplot2
+# - Transform ecological variables
+
+#-------------------------------------------------------------------------
+#      1) Ecological Data Sets
+#-------------------------------------------------------------------------
+
+# For the labs on constrained and unconstrained ordinations,
+# we will use the following data sets from ecological studies.
+
+# 1.a) Fish Data from the Doubs french river (Doubs data set)
+#------------------------------------------------------------------------
+
+# This data set consists of three matrices containing biological
+# and environmental variables collected at 29 sites along the Doubs
+# River, which runs near the France-Switzerland border (Verneaux, 1973;
+# Verneaux et al., 2003). The first matrix contains coded abundances of
+# 27 fish species, the second matrix contains 11 environmental variables
+# related to the hydrology, geomorphology and chemistry of the river, and
+# the third matrix contains the geographical coordinates (Cartesian
+# coordinates: Longitude X and Latitude Y ) of the sites.
+
+fish    <- read.csv("data/fish.csv")
+species <- read.csv("data/species.csv")
+env     <- read.csv("data/env.csv")
+xy      <- read.csv("data/xy.csv")
+
+# 1.b) Having a first look at the data set on environmental parameters
+#------------------------------------------------------------------------
+# Let's focus on the environmental data set.
+
+# What does the function head()? Take a look at it with the R-command:
+?head()
+head(env)
+
+# What produces the function summary()? Take a look at its description in R
+?summary()
+summary(env)
+
+# What do the rows and the columns represent? Sites (Objects) and variables (descriptors)
+# How many sites have been sampled? 29
+# How many and which environmental parameters have been measured?
+  # Distance from source, Altutide, Slope, Flow, pH, ,
+  # Phospates, Nitrates, Ammonium, Oxygen
+
+# What are their dimensions?
+
+# What is/are the types of the data (quantitative, semi-quantitative,
+# qualitative)?
+
+plot(env)
+# Are some variables highy correlated?
+
+# We will come back to the other data set later. For know, let's focus on
+# applying PCA.
+
+
+#------------------------------------------------------------------------
+#         2) Principal Component Analysis (PCA)
+#------------------------------------------------------------------------
+
+# 2.a) To refresh your memory from the lecture on PCA, describe briefly
+# what the PCA is/do and on which kind of data it applies
+#------------------------------------------------------------------------
+
+
+# Could you apply it to the env dataset? Yes
+# What would the PCA calculate? Correlation
+
+# Can we directly perform a PCA on the doubs data set or is it necessary to
+# transform the data first? Transform
+
+# 2.b) Performing a PCA using linear algebra
+#------------------------------------------------------------------------
+
+# During the lecture on PCA, we have seen the linear algebra necessary to
+# perform a Principal Component Analysis (PCA).
+
+# Later, we will use R packages to directly perform the PCA using predefined
+# functions. But for now, we will implement it ourself in R to perform a PCA
+# on the very small table we used during the lecture:
+Y <- matrix(c(2,3,5,7,9,1,4,0,6,2),5,2)
+Y
+
+# Remember the various step to perform a PCA:
+# To perform a PCA on a covariance matrix, you will first have to standardize
+# the data. Then:
+# - Compute the covariance matrix S of the original or centred data matrix
+# - Compute the eigenvectors and eigenvalues of S
+# - Extract the matrix U of the eigenvectors and compute the matrix F of the
+# principal components for the scaling 1 biplot.
+# - Computation of matrices U2 and G for the scaling 2 biplot
+# - Plot the results.
+# So let's do that
+
+# We will center the matrix Y by columns, applying the function 'scale'
+?scale
+# What does this function do?
+
+Y.bar <- scale(Y,center=TRUE,scale=FALSE)
+# Check the matrix Y.bar, and note its dimensions
+Y.bar
+
+# Considering that this artificial data set is homogeneous, we will perform a
+# PCA on a covariance matrix S.
+
+# Let's calculate the covariance matrix and have a look at it
+?cov
+S <- cov(Y.bar)
+S
+
+# Note that you can also do :
+S <- cov(Y)
+# Why is it equivalent ?
+
+# What represent the diagonal and the sum along the diagonal of matrix S?
+
+# Should we use a covariance matrix S or a correlation matrix R to do the PCA
+# on these dataset and why?
+
+# Let's calculate the eigenvectors and eigenvalues of this matrix using the
+# function eigen()
+S.eig <- eigen(S)
+
+# What has been computed by the fuction eigen() ?
+?eigen()
+S.eig
+
+# Check the eigenvectors and eigenvalues
+S.eig$values
+S.eig$vectors
+# Hopefully, we find the same thing as in the lecture!
+
+# We will now plot the eigenvalues using ggplot
+
+# If ggplot2 has not been installed yet, uncomment the following line:
+# install.packages("ggplot2")
+library(ggplot2)
+
+eig <- data.frame(S.eig$values)
+eig$nb <- c(1:length(S.eig$values))
+ggplot(eig) + geom_bar(aes(x=nb,y=S.eig$values),stat="identity") +
+  xlab("Eigenvalues") +  ylab("Eigenvalues")
+
+
+eig$prop <- eig$S.eig.values/sum(eig$S.eig.values)
+ggplot(eig) + geom_bar(aes(x=nb,y=prop),stat="identity") +
+  geom_line(aes(x=nb,y=mean(prop))) +
+  xlab("Eigenvalues") +  ylab("Eigenvalues")
+
+# Which are the significant eignevalues?
+
+# Transfer the eigenvectors in the matrix U (using a scaling of type 1)
+U <- S.eig$vectors
+
+# Calculate the matrix F (representation of the objects in the PCA plane using
+# a scaling of type 1)
+F <- Y.bar %*% U
+# Check the value of the matrix F
+F
+
+# Calculate the matrix U2 in order to represent the variables in the PCA plane
+# using a scaling of type 2
+U2 <- U %*% diag(S.eig$values^(0.5))
+
+# Calculate the matrix G for the representation of the objects using a scaling
+# of type 2
+G <- F %*% diag(S.eig$values^(-0.5))
+
+# We will now use ggplot to draw the PCA results with biplots
+
+
+# Plot the objects in the PCA plane with points using a scaling of type 1 using
+# the two first components (using the two first columns of the matrix F)
+b <- ggplot() + geom_point(aes(x=F[,1],y=F[,2])) + xlim(-5.3,5.3) + ylim(-3,3) +
+  xlab("PCA 1") +  ylab("PCA 2")+ coord_fixed()
+b
+
+# Note that the ratio between the x and y coordinates are fixed to 1 using the
+# command coord_fixed(), in order to produce a plot that would correctly
+# represent the distance between the objects.
+
+# Let's add to the plot the arrows representing columns of the matrix U
+# (descriptors) using the geom_segment option of ggplot
+
+b + geom_segment(aes(x = 0, y = 0, xend = U[,1], yend = U[,2]))
+
+# Note that the vectors are small, so we could multiply their coordinates by a
+# factor 3 for instance to make them more visible on the plot. It will not
+# change the interpretation since in biplot of type 1
+
+b + geom_segment(aes(x = 0, y = 0, xend = U[,1]*3, yend = U[,2]*3))
+
+
+# Now it is you turn to do it, this time using the environmental dataset from
+# the Doubs river
+
+# Read the environmental variables and convert it into a matrix
+env.Y <- as.matrix(env)
+
+# Center the matrix Y by columns, applying the functions 'scale' and 'plyr'
+env.Y.cent <- scale(env.Y ,center=TRUE,scale=FALSE)
+# Center and normalize the matrix Y
+env.Y.norm <- scale(env.Y ,center=TRUE,scale=TRUE)
+
+# Calculate the covariance matrix and have a look at it
+S <- cov(env.Y.cent)
+S
+
+# Calculate the correlation matrix and have a look at it
+R <- cor(env.Y.norm)
+R
+# What represent the diagonal and the sum along te diagonal ?
+?diag
+?sum
+diag(R)
+sum(diag(R))
+diag(S)
+sum(diag(S))
+
+# Should we use a covariance matrix S or a correlation matrix R to do the PCA of
+# these data and why?
+
+# Calculate the eigenvectors and eigenvalues of this matrix using the function
+# eigen() and have a look at the eigenvectors and eigenvalues
+
+# Transfer the eigenvectors in the matrix env.U (using a scaling of type 1)
+
+# Which are the significant eigenvalues using the Kaiser-Guttman criterion?
+
+# Calculate the matrix env.F (representation of the objects in the PCA plane
+# using a scaling of type 1 and have a look at its values
+
+# Calculate the matrix env.U2 in order to represent the variables in the PCA
+# plane using a scaling of type 2
+
+# Calculate the matrix env.G for the representation of the objects using a
+# scaling of type 2
+
+# Plot the descriptors in the PCA plane with arrows and using a scaling of type
+# 1 (matrix env.U)
+
+# Plot the objects in the PCA plane with points using a scaling of type 1 using
+# the two first components (using the two first columns of the matrix env.F)
+
+# Add to the plot the arrows representing columns of the matrix env.U
+# (descriptors) using the geom_segment()
+
+# Now it is time to look at the results of your PCA!
+
+# What are the main environmentale variables responsible for the variability
+# between sites? Which are the most correlated parameters? Which are the sites
+# with similar environmental conditions? You may need to have look at the
+# various matrices to answer.
+
+# Try to plot the PCA1 and PC2 versus the distance from source
+
+
+
+# 2.c) PCA using the vegan library
+#------------------------------------------------------------------------
+
+# First, you will have to load the "vegan" library in R:
+# install.packages("vegan")
+library(vegan)
+
+# Take the time to read the documentation of this library:
+?vegan
+
+# In this package, the PCA is computed using the function rda()
+?rda()
+# As you see, this function can be used for PCA or for RDA (see later the
+# dedicated lecture and lab). In fact, the rda() function performs a PCA when it
+# receives a single data set as input.
+
+# Two types of scaling are available:
+# Scaling = 1: conserves the euclidian distrances between the objects
+# Scaling = 2: conserves the correlation between the descriptors
+# The argument "scale=FALSE" means that the data have to be centred by columns,
+# but not normalized
+
+# Performing the PCA
+#####################
+
+# We will now perform an PCA using the rda() function of the vegan package
+
+summary(env)                     # Again, have a look on the statistcs of env
+env.pca <- rda(env, scale=TRUE)  # 'scale=TRUE' calls for a standardization
+
+summary(env.pca)                 # By default scaling=2
+# This means that by default, the correlation among the descriptors is conserved
+
+# Comment this result. What did you abtained as a result of the PCA?
+
+# For a scale that conserves the euclidian distance among objects you have:
+summary(env.pca,scaling=1)       # Using scaling=1
+
+# Yes, it is quicker than doing all the linear algebra by your selg, but now I
+# hope that you understand what this predefined function does to perform a PCA !
+
+# Examining the results of the PCA
+#####################################
+?cca.object       # will give you the help for both rda() and cca() outputs
+
+
+# For directly accessing to some results of the PCA, you can use the '$' sign
+# and then press tabulation on your keyboard.
+# For instance, you can acces to the following results :
+env.pca$CA$eig
+env.pca$CA$u
+env.pca$CA$v
+
+# What did you get ?
+
+# You could for instance use :
+
+eigenval <- env.pca$CA$eig   # Here you will get the eigenvalues
+sitecoord <- env.pca$CA$u[,1:2]   # The site coordinates along PC1 and PC2
+
+# Checking if the PC axes are meaningful
+########################################
+
+# How can you verify if the PC1, PC2, PC3, etc are meaningful ?
+# (Cite two methods)
+
+eig <- data.frame(eigenval)
+eig$nb <- c(1:length(eigenval))
+eig$prop <- eig$eigenval/sum(eig$eigenval)
+eig
+# What is now in the dataframe "eig" ?
+
+# PLOTTING...
+
+# Plot on the same figure the eigenvalues and the percentage of variance for
+# each axis
+par(mfrow=c(2,1))
+barplot(ev, main="Eigenvalues",las=2)
+abline(h=mean(ev),col="red")    # average eigenvalue
+# Note that the average eigenvalue is a possible criteria to asses the number of
+# interpretable axes)
+legend("topright","Average eigenvalue",lwd=1,col=2,bty="n")
+barplot(100*ev/sum(ev),main="% of variance",las=2)
+?barplot
+
+
+# PCA biplots with scaling 1 and 2
+
+# First possibility:
+#--------------------------------------------------
+par(mfrow=c(1,2))
+# With scaling 1:
+plot(env.pca, scaling=1)
+# With scaling 2 by default
+plot(env.pca, scaling=2)
+par(mfrow=c(1,1))
+
+# You can also use the function biplot() of vegan (for results of rda())
+biplot(env.pca,scaling=1,main="PCA - Scaling 1")
+biplot(env.pca,main="PCA - Scaling 2")       # by default: scaling type 2
+
+# Second possibility: biplots using ggplot
+#--------------------------------------------------
+
+# If ggplot2 has not been installed yet, uncomment the following line:
+# install.packages("ggplot2")
+
+# If it has been installed, you can load it directly :
+library(ggplot2)
+
+# Now let's plot the eigenvalues with ggplot using geom_bar (histograms)
+ggplot(eig) + geom_bar(aes(x=nb,y=eigenval),stat="identity") +
+  xlab("Eigenvalues") +  ylab("Eigenvalues")
+
+
+# ggplot(env.pca) + geom_point(aes(x=sitecoord[,1],y=sitecoord[,1])) +
+#   xlab("PCA 1") +  ylab("PCA 2")
+
+# We could also plot the proportion of variance explained by each eignevalue
+# and add a line representing the mean proportion :
+ggplot(eig) + geom_bar(aes(x=nb,y=prop),stat="identity") +
+  geom_line(aes(x=nb,y=mean(prop))) +
+  xlab("Eigenvalues") +  ylab("Eigenvalues")
+
+# Which are the significant eigenvalues according to the Kaiser-Guttman criteria?
+# So how many of the PC axes have to be looked at ?
+
+
+# Third possibility: two separate plots
+#---------------------------------------
+
+# We could also plot the PCA results from vegan using the autoplot library
+# developed by Jean-Olivier Irisson from Villefranche (UPMC).
+
+# For this, firt install the devtools package, then lad the resuired library
+install.packages("devtools")
+library(devtools)
+install_github("autoplot", "jiho")
+library(autoplot)
+
+# There you go !
+autoplot(env.pca)
+
+# Note that it produces two plots, but you have to click on the Enter key in
+# the console. The percentage of variance represented by each axis P1 and PC2
+# is indicated automatically.
+
+# Playing with autoplot
+#-----------------------
+# Here is one interest of using autoplot: it is easy to represent the objects
+# with dots whose size is proportional to cos2
+autoplot(env.pca, type="obs", mapping=aes(alpha=.cos2))
+autoplot(env.pca, type="obs", mapping=aes(alpha=.cos2, size=.contrib))
+
+# and also, you can do things like that :
+head(env)
+autoplot(env.pca, type="obs", data=env, mapping=aes(colour=pH))
+autoplot(env.pca, type="obs", data=env, mapping=aes(colour=dfs))
+# This type of plot may underline that one descriptor is well or badly
+# represetend in the PCA space
+# You can aslo see it here:
+autoplot(env.pca, type="var")
+
+# And, since the env and fish data sets share the same structure (same rows),
+# you can add additional information on the sites, for instance, the abundance
+# of the Titi fish:
+head(fish)
+autoplot(env.pca, type="obs", data=fish, mapping=aes(size=Titi))
+
+
+# Now interpret your PCA results since the plots may be nicer now.
+# What can you conclude regarding the environmental conditions in these various
+# sites?
+
+# Note : it may also be useful to apply a clustering on the the PCA results...
+# See the futures lectures regarding clustering.
+
+
+## Exercice : perform a PCA with vegan on the spider environmental data sets
+#############################################################################
+spiders.env <- read.csv("data/spiders.env.csv")
+head(spiders.env)
+summary(spiders.env)
+
+# What represent these data? What are the descriptors' type ? Water content (volume, Reflectance, spp counts)
+# Are they suitable for PCA? May be no.  Why? There are a lot of ceros from spp counts
+# Should they be "scaled"  (standardized) before performing a PCA? Why? Yeap, the units are differents
+
+# Perform a PCA on it and draw the biplot with the scaling of your choice
+
+# 1. Extract the data we are going to use for the PCA
+only.spiders<-data.frame(spiders.env[,1:2])
+# 2. Run the PCA with environmental data
+envSpiders.pca <- rda(only.spiders, scale=TRUE)  # 'scale=TRUE' calls for a standardization
+
+summary(envSpiders.pca)                 # By default scaling=2
+summary(envSpiders.pca,scaling=1)       # Using scaling=1
+
+envSpiders.pca$CA$eig
+envSpiders.pca$CA$u
+envSpiders.pca$CA$v
+
+# Plot
+
+# With scaling 1:
+biplot(envSpiders.pca,scaling=1,main="PCA - Scaling 1")
+# With scaling 2 by default
+biplot(envSpiders.pca,main="PCA - Scaling 2")       # by default: scaling type 2
+
+# Or using autoplot
+autoplot(envSpiders.pca)
+
+# And, since the I also have spp data, I will try to add additional information on
+# the sites, (abundance of Spp):
+
+autoplot(envSpiders.pca, type="obs", data=spiders.env$Calamagrostis, mapping=aes(size=Titi))
+
+# How do you interpret the results?
+
+
+# 2.d) PCA using FactoMineR
+#------------------------------------------------------------------------
+
+# First, you will have to load the "FactoMineR" library in R:
+# install.packages("FactoMineR")
+library(FactoMineR)
+
+# With FactoMineR, the PCA is performed by the PCA() function
+# Take the time to read the documentation of this function to see how to use it:
+?PCA
+
+env.PCA <- PCA(env)
+# What does it produce ?
+# What do the results of this function look like ?
+env.PCA
+
+# You could then look at the eigenvalues, coordinates of sites and descriptors, ...
+env.PCA$eig
+env.PCA$ind$coord
+env.PCA$var$coord
+
+# Are the results different from what you got with vegan?
+
+# Note that you can also use autoplot to plot PCA results from FactoMineR
+# (press 'Enter' to have the following plots)
+autoplot(env.PCA)
+
+# How do you interpret the results ?
+
+# An interest of this function, is that it is easy to plot additional points or
+# descriptors on the PCA graphs, a posteriori (this means that the additionnal
+# points or variables are not used for the analysis, but appear on the graph).
+
+# For instance :
+# Perform the PCA on the first 8 physical descriptors only, but locate the last
+# ones (those not used) inthe PCA space
+env.PCA_red <- PCA(env, quanti.sup =9:11)
+
+# Note that the supplementary/additional descriptors are now in blue in the plot
+
+# An other one is that it can handle missing data (see PCA help/documentation)
+
+## Exercice : perform a PCA with FactoMineR on the decathlon data sets
+#######################################################################
+decathlon <- read.csv("data/decathlon.csv")
+head(decathlon)
+summary(decathlon)
+# What represent these data? Are they all of the same type?
+# Perform a PCA on the qualitative data only, but with the last descriptor as
+# an additional qualitative data
+
+# How do you interpret the results?
+
+# See the end of ?PCA for cues...
+
+## Exercice : perform a PCA with FactoMineR on the spider environment data sets
+###############################################################################
+head(spiders.env)
+summary(spiders.env)
+# What represent these data?
+# Should they be scaled before the PCA?
+# Perform a PCA on it and draw the biplot with the scaling of your choice
+# How do you interpret the results?
+
+## Exercice : compare the PCA results obtained with vegan and with FactoMineR
+# and the different data sets you have
+
+
+# NB : other functions exist to perfomr PCA in R, such as prcomp():
+?prcomp
+env.prcomp <- prcomp(env, scale=TRUE)
+autoplot(env.prcomp)
+
+
+#------------------------------------------------------------------------
+# BONUS if you have time
+#------------------------------------------------------------------------
+
+# 2.e) PCA on transformed data
+#------------------------------------------------------------------------
+
+
+# We will now work with the fish abundace data set.
+# So let's have a look at this data set first
+
+# Fish abundances :
+#------------------------------------------------------------------------
+head(fish)
+summary(fish)
+
+# If you have time and feel curious about this data set, here are some things
+# you could look at. But don't forget that the main purpose of this Lab is to
+# practice PCA (and not play with R)
+# So you could jump directly after the next dashed line and come back here later
+
+# What do they represent ?
+# What range do they have ?
+# Loking at a barplot of abundances classes, are the zero-abundances frequent ?
+# Map some fish species using bubble plot
+# Compute the number of occurence of each species and plot the corresponding
+# barplot
+# You can for instance use plyr and gplot
+install.packages("reshape")
+library(reshape)
+fish.m <- melt(fish, variable="species")
+head(fish.m)
+ggplot() + geom_histogram(aes(x=species, weight=value), data=fish.m)
+# Compute and map the species richness
+# Compute other biodiversity indices and map them
+# Data tranformation :
+# Transform abundances to presence-absence data
+# Scale the data using the chord and the Hellinger transformation
+
+#------------------------------------------------------------------------
+
+
+# Is is possible to perform a PCA directly on species abundances ? Why ?
+# What should be done first ?
+
+# We will now transform the fish species abundaces data set before performing a
+# PCA that will conserves the euclidian distance between the objects
+
+# Here are some examples of possible transformations on species abundances data set
+# using the decostand() function of the vegan package
+library(vegan)
+? decostand
+
+fish.transf.1 = decostand(fish,"total")    # relative abundance profiles
+fish.transf.2 = decostand(fish,"norm")     # chord-transformation
+fish.transf.3 = decostand(fish,"chi.sq")   # chi-square transformation
+fish.transf.4 = decostand(fish,"hel")      # Hellinger transformation
+# "The Hellinger distance is also a measure recommended for clustering or
+# ordination of species abundance data (Rao 1995)".
+fish.transf.5 = decostand(dfish,"pa")       # convert to presence/absence (0/1)
+
+# For more on the transformation of abundance data for ordination, see the article
+# by Pierre Legendre and Eugene D. Gallagher, published in 2001 in Oecologia:
+# "Ecologically meaningful transformations for ordination of species data"
+# (the pdf of this article is on the server)
+
+# Perform a PCA (with the function of your choice) on the Hellinger-transformed
+# species fish data
+# How do you interpret your results ?
+
+
+# Here are also some examples of transformations for environmental data
+env.transf.1 = decostand(env,"range") # scale the variables within the interval
+# [0, 1]
+env.transf.1 = decostand(env,"stand") # standardization (centered-normalized)
+# of the variables
+
+# What kind of transformations would be useful to describe/explore the doubs
+# data sets ? Apply them, perform PCA on transformed data, compare your results.
+
+
+
+# Hints: you may for instance apply the PCA on the species data after a
+# Hellinger transformation and plot the biplots
+
+
+#------------------------------------------------------------------------
+# ADDITIONAL BONUS for very curious people
+#------------------------------------------------------------------------
+
+# Let's go bak to the doubs river data set and take some time to look into it...
+
+# Sampling sites:
+#------------------------------------------------------------------------
+# Plot the map of the sampling sites with ggplot2
+library(ggplot2)
+ggplot() + geom_point(mapping=aes(x=x, y=y), data=xy)
+ggplot() + geom_point(mapping=aes(x=x, y=y), data=xy) + coord_fixed(ratio=1)
+# Explain how ggplot plots the sampling site: what data are used? What does
+# "coord_fixed(ratio=1)" means?
+
+# Environmental variables
+#------------------------------------------------------------------------
+head(env)
+
+# Examine the variation of some env. variables along the stream using line plot
+# For instance, to plot the altitude (alt) as a function of the distance from
+# source (dfs):
+ggplot(env, aes(x=dfs, y=alt)) + geom_line()
+# Plot similar graphs for the other environmental data.
+# Which variables display a downstream-upstream gradient?
+
+# Now, plot buble maps of some environmental variables
+# But first, bind the environmental data and the coordinates, since the lines
+# correspond between the two data sets
+env.xy <- cbind(env, xy)
+# NB: when the station names are shared by the thwo data sets, the joint()
+# function should be prefered
+ggplot(env.xy, aes(x=x, y=y)) + geom_point(aes(size=dfs)) + coord_fixed(ratio=1)
+# Plot similar graphs for the other environmental data.
+
+# Some of the variables seem be correlated. Which one ?
+
+# Check it using scatter plots (of all pairs of env. variables for instance)
+# this can be automatically done using
+pairs(env)
+# or, better, the corresponding ggplot version
+plotmatrix(env)
+install.packages("GGally")
+library(GGally)
+ggpairs(env)
+
+# Simple transformation of env. variables :
+# If the slope normaly distributed (barplot of frequences) ?
+ggplot() + geom_histogram(aes(x=slo), data=env)
+ggplot() + geom_histogram(aes(x=slo), data=env, binwidth=0.5)
+ggplot() + geom_density(aes(x=slo), data=env)
+shapiro.test(env$slo)
+
+# Log-transform the slope
+# Check visually the normality of this new variable by barplotting its frequences
+ggplot() + geom_histogram(aes(x=log(slo)), data=env)
+# Note that it could also be done like this:
+ggplot() + geom_histogram(aes(x=slo), data=env) + scale_x_continuous(trans="log")
+# What it the difference between the two representations ?
+ggplot() + geom_density(aes(x=log(slo)), data=env)
+shapiro.test(log(env$slo))
+
+# Will you need to standardize all environmental variables before performing a
+# PCA on it? Why?
+

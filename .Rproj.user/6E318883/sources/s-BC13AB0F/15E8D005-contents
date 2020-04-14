@@ -1,0 +1,102 @@
+library(ggplot2)
+library(lubridate)
+library(zoo)
+
+
+FlowRates<-read.csv("Flow_Data_03-03-20.csv")
+summary(FlowRates)
+
+
+
+flowPlot2 <- ggplot(FlowRates, aes(Duration_hours, Flow, 
+                                   colour=factor(Set_to_.mL.min.))) + theme_bw() +
+  scale_x_continuous(breaks=seq(0,125,24),
+                     name = "Hours since flow rate was set")+
+  scale_y_continuous(breaks=seq(0, 400, 50),
+                     name = "Flow (mL)")+
+  theme(legend.position = c(0.8, 0.7),
+        legend.title = element_blank()) + 
+        geom_line(alpha=0.8)
+flowPlot2
+
+
+flowPlot1 <- ggplot(FlowRates, aes(Duration_hours, Flow_decline, 
+                                   colour=factor(Set_to_.mL.min.))) + theme_bw() +
+  scale_x_continuous(breaks=seq(0,125,24),
+                     name = "Hours since flow rate was set")+
+  scale_y_continuous(breaks=seq(-250 ,10, 30),
+                     name = "Flow decline (mL)")+
+  theme(legend.position = c(0.8, 0.7),
+        legend.title = element_blank()) +
+  geom_line(alpha=0.8)
+flowPlot1
+
+
+flowPlot3 <- ggplot(FlowRates, aes(Duration_hours, Flow_decline, 
+                                   colour=factor(Set_to_.mL.min.))) + theme_bw() +
+  scale_x_continuous(breaks=seq(0,125,24),
+                     name = "Hours since flow rate was set")+
+  scale_y_continuous(breaks=seq(-250 ,10, 30),
+                     name = "Flow decline (mL)")+
+  theme(legend.position = c(0.8, 0.7),
+        legend.title = element_blank()) +
+  geom_smooth(method = "loess")
+flowPlot3
+
+
+
+Concentration <- ggplot(FlowRates, aes(Duration_hours, Concentration.Increment, 
+                                  colour=factor(Set_to_.mL.min.))) + theme_bw() + geom_line(alpha=0.8)+
+  scale_x_continuous(breaks=seq(0,125,24),
+                     name = "Hours since flow rate was set")+
+  scale_y_continuous(breaks=seq(-10 ,28,2),
+                     name = "NH4 Concentration (uM)")
+  #geom_line()+
+Concentration
+
+lm1<-lm(Flow_decline~Duration_hours, data=FlowRates)
+lm1
+
+
+flowPlot+facet_grid(Set_to_.mL.min.~.)
+
+
+
+FlowRates$Time<-as.POSIXct(FlowRates$Time,format="%m/%d/%y %H:%M %p")
+FlowRates$Set_to_.mL.min.<-as.factor(FlowRates$Set_to_.mL.min.)
+
+
+library(dplyr)
+
+FlowRates<-FlowRates %>%
+  group_by(Set_to_.mL.min.) %>%
+  mutate(Duration = Time - lag(Time, default = first(Time)))
+FlowRates$Time1< 
+
+
+
+flowPlot <- ggplot(FlowRates, aes(Time0, Flow, 
+                                  colour=factor(Set_to_.mL.min.))) +
+  geom_line()
+flowPlot
+
+
+FlowRates$Time1<-hms (FlowRates$Time0)
+FlowRates$Time2<-hour(FlowRates$Time1)*60 + minute(FlowRates$Time1) 
+
+flowPlot <- ggplot(FlowRates, aes(Time1, Flow, 
+                                  colour=factor(Set_to_.mL.min.))) +
+  geom_line()
+flowPlot
+
+flowPlot <- ggplot(FlowRates, aes(Time2, Flow, 
+                                  colour=factor(Set_to_.mL.min.))) +
+  geom_line()
+flowPlot+ facet_wrap(~Set_to_.mL.min.)
+
+
+
+
+
+
+
