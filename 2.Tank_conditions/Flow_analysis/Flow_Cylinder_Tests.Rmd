@@ -1,0 +1,199 @@
+---
+title: "Flow analysis"
+author: "Ana Palacio-Castro"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    df_print: paged
+    theme: united
+    fig_width: 8 
+    fig_height: 8
+bibliography: packages.bib
+nocite: '@*'
+---
+
+# Set-up
+
+```{r Knitr_setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+```{r, include=FALSE}
+library(ggplot2)
+library(gridExtra)
+#library(lubridate)
+#library(zoo)
+
+
+theme_set (theme_classic() +
+             theme(panel.grid.major = element_blank(),
+                    panel.grid.minor = element_blank(), 
+                    axis.line = element_line(colour = "black"),
+                    legend.position="none",
+                    axis.text.x = element_text(angle = 90, vjust = 0.5),
+                    plot.title = element_text(size=12, face="bold"),
+                    #panel.border = element_rect(colour = "black", fill=NA, size=1)
+                    panel.border = element_blank()
+                              ))
+```
+
+# Data 
+```{r}
+FlowRates2<-read.csv("Flow_Data_2020-07-15.csv")
+summary(FlowRates2)
+
+```
+
+# Labreview flow 
+
+```{r}
+flowPlot_Computer <- ggplot(FlowRates2, aes(Hours, Average..Flow.Rate.Labview, 
+                                   colour=factor(Trial), shape=factor(Trial))) + theme_bw() +
+  scale_x_continuous(breaks=seq(0,24,3),
+                     name = "Hours since flow rate was set")+
+  scale_y_continuous(breaks=seq(0, 400, 50),
+                     name = "Flow Labview (mL/min)")+
+  theme(legend.position = "none",
+        legend.title = element_blank()) + 
+  geom_line(alpha=0.5)+
+  geom_point(alpha=0.5)+
+  facet_wrap(~Tank)
+flowPlot_Computer
+
+```
+
+# Cylinder flow 
+
+```{r}
+flowPlot_Real <- ggplot(FlowRates2, aes(Hours, Flow.rate..actual, 
+                                            colour=factor(Trial), shape=factor(Trial))) + theme_bw() +
+  scale_x_continuous(breaks=seq(0,24,3),
+                     name = "Hours since flow rate was set")+
+  scale_y_continuous(breaks=seq(0, 400, 50),
+                     name = "Flow Cylinder (mL/min)")+
+  theme(legend.position = "none",
+        legend.title = element_blank()) + 
+  geom_line(alpha=0.5)+
+  geom_point(alpha=0.5)+
+  facet_wrap(~Tank)
+flowPlot_Real
+
+```
+
+# Error 
+
+## Deference (real - recorded)
+
+
+```{r}
+flowPlot_Difference <- ggplot(FlowRates2, aes(Hours, -Actual.vs.mean.Labview..mL.min., 
+                                        colour=factor(Trial), shape=factor(Trial))) +
+  theme_bw() +
+  scale_x_continuous(breaks=seq(0,24,3),
+                     name = "Hours since flow rate was set")+
+  scale_y_continuous(breaks=seq(-250, 30, 30),
+                     name = "Difference in recorded flow (mL/min)")+
+  theme(legend.position = "none",
+        legend.title = element_blank()) + 
+  geom_line(alpha=0.5)+
+  geom_point(alpha=0.5)+
+  facet_wrap(~Tank)
+flowPlot_Difference
+
+```
+
+## % error 
+
+```{r}
+flowPlot_Per_Difference <- ggplot(FlowRates2, aes(Hours, X..error.Labreview, 
+                                              colour=factor(Trial), shape=factor(Trial))) + theme_bw() +
+  scale_x_continuous(breaks=seq(0,24,2),
+                     name = "Hours since flow rate was set")+
+  scale_y_continuous(limits = c(-150, 0),
+                     breaks=seq(-100, 0, 15),
+                     name = "% error Labview")+
+  theme(legend.position = "none",
+        legend.title = element_blank()) + 
+  geom_line(alpha=0.5)+
+  geom_point(alpha=0.5)+
+  facet_wrap(~Tank)
+flowPlot_Per_Difference
+
+
+```
+
+
+# Flow decline 
+
+## Labview 
+
+```{r}
+LabviewDecline <- ggplot(FlowRates2, aes(Hours, Average..mL.min.Decline.Labview, colour=factor(Trial))) +
+  theme_bw() +
+  scale_x_continuous(breaks=seq(0,24,3),
+                     name = "Hours since flow rate was set")+
+  scale_y_continuous(breaks=seq(-250 ,10, 20),
+                     name = "Flow rate decline (mL/min)")+
+  theme(legend.position = "bottom",
+        legend.title = element_blank()) +
+  geom_line(alpha=0.5)
+LabviewDecline + facet_wrap(~Tank)+
+  theme(legend.position = "bottom",
+        legend.direction = "horizontal" )
+
+```
+
+## Cylinder
+
+```{r}
+CylinderDecline <- ggplot(FlowRates2, aes(Hours, Actual.decline..mL.min., 
+                                         colour=factor(Trial), shape=factor(Trial))) +
+  theme_bw() +
+  scale_x_continuous(breaks=seq(0,24,3),
+                     name = "Hours since flow rate was set")+
+  scale_y_continuous(breaks=seq(-250 ,10, 20),
+                     name = "Flow rate decline (mL/min)")+
+  theme(legend.position = "none",
+        legend.title = element_blank()) + 
+  geom_hline(yintercept=-30, linetype="dashed", color="black")+
+  geom_hline(yintercept=-60, linetype="dashed", color="orange")+
+  geom_hline(yintercept=-90, linetype="dashed", color="red")+
+  geom_line(alpha=0.5)
+CylinderDecline + facet_wrap(~Tank)+ theme(legend.position = "bottom")
+  
+
+```
+
+# Estimated Nutrient concentration
+
+```{r}
+#subset(FlowRates2, Trial=="5"
+Nutrinets <- ggplot(data=FlowRates2,
+                                aes(Hours, Concentration_Change, 
+                                    colour=factor(Trial), shape=factor(Trial))) +
+  theme_bw() + geom_point()+
+  scale_x_continuous(breaks=seq(0,24,3),
+                     name = "Hours since flow rate was set")+
+  scale_y_continuous(breaks=seq(5 , 20, 1),
+                     name = "N concentration modeled (uM)")+
+  theme(legend.position = "none",
+        legend.title = element_blank()) + 
+  geom_hline(yintercept=10, linetype="dashed", color="black")+
+  geom_hline(yintercept=12, linetype="dashed", color="orange")+
+  geom_hline(yintercept=14, linetype="dashed", color="red")+
+  geom_line(alpha=0.5)
+Nutrinets + facet_wrap(~Tank) + theme(legend.position = "bottom")
+```
+
+# Packges used
+
+```{r}
+# Creates bibliography 
+# knitr::write_bib(c(.packages()), "packages.bib")
+```
+

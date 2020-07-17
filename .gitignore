@@ -9,6 +9,7 @@
 **/.Rproj
 **/.RData
 **/.Ruserdata
+.Rproj.user
 
 # produced vignettes
 vignettes/*.html
@@ -25,9 +26,10 @@ vignettes/*.pdf
 **/.directory
 **/.dropbox
 **/*.DS_Store*
-.Rproj.user
+**/Old
 **/*.docx
 **/*.svg
 **/*.eds
 **/*.xls
 **/*.xlsx
+**/*.pdf
