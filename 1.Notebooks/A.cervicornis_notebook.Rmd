@@ -4,7 +4,7 @@ author: "A. Palacio-Castro, D. Kroesche, S. Rosales"
 date: "`r Sys.Date()`"
 output:
   pdf_document:
-    toc: yes
+  toc: yes
   html_document:
     df_print: paged
     theme: united
@@ -15,7 +15,8 @@ output:
 
 ## Primary Flow Rate Sensor Tests (DK)
 
-*Set flow rate in tank 5 to a specific value. Gradual changes monitored over several days via Labview. 
+* Set flow rate in tank 5 to a specific value.
+* Gradual changes monitored over several days via Labview. 
 
 ------
 
@@ -23,32 +24,41 @@ output:
 
 ## Secondary Flow Rate Tests (DK)
 
-*calibrate tanks in the morning:
-	*set tanks to a flow rate of 150 +/- 10 mL/min
-	*measure volume of water collected within 15 seconds in a graduated cylinder
-	*adjust rate scale factor accordingly to correct disparity
-*Note: Labview flow rate oscillates between two values for all tanks. Calibrations done using the higher value.
+* calibrate tanks in the morning:
+    - set tanks to a flow rate of 150 +/- 10 mL/min
+    - measure volume of water collected within 15 seconds in a graduated cylinder
+	  - adjust rate scale factor accordingly to correct disparity
+* Note: Labview flow rate oscillates between two values for all tanks. Calibrations done using the higher value.
 
-*set all tanks to 150 +/- 10 mL/min after calibration
-*measured actual flow rate in each tank once per hour
-*record kept in: [Flow Rate Cylinder Tests]
-(https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+* set all tanks to 150 +/- 10 mL/min after calibration
+* measured actual flow rate in each tank once per hour
+* record kept in: [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
 
-#Labview Excel Printout Key:
+## Labview Excel Printout Key:
 
-Tank #:
-Excel Column Recording Flow Rate
+
+| Tank #: | Excel Column Recording Flow Rate | Tank #: | Excel Column Recording Flow Rate |
+|---------|----------------------------------|---------|----------------------------------|
+| 1       | E                                | 9       | AK                               |
+| 2       | I                                | 10      | AO                               |
+| 3       | M                                | 11      | AS                               |
+| 4       | Q                                | 12      | AW                               |
+| 5       | U                                | 13      | BA                               |
+| 6       | Y                                | 14      | BE                               |
+| 7       | AC                               | 15      | BI                               |
+| 8       | AG                               | 16      | BM                               |
+
 
 ------
 
 # July 6, 2020
 
-## Make NH4Cl stock # 1 (AP & DK)
+## Make NH4Cl stock 1 (AP & DK)
 
-* Make 2 batches of  NH4Cl stock # 1 (200 mM), each one of 1L. Each batch has:
+* Make 2 batches of  NH4Cl stock 1 (200 mM), each one of 1L. Each batch has:
 	*  1L of millipore water
 	*  ~10.6982 g of NH4Cl
-	*  Calculations are in: [Nutrient calculations] (https://docs.google.com/spreadsheets/d/1YvdtbUH2qMIzq6EW2xj6OTkVD5FPB1q9HCX_sdudOvY/edit#gid=1881522557)
+	*  Calculations are in: [Nutrient calculations](https://docs.google.com/spreadsheets/d/1YvdtbUH2qMIzq6EW2xj6OTkVD5FPB1q9HCX_sdudOvY/edit#gid=1881522557)
 
 * First batch was divided in 50mL falcon tubes 
 * Second was kept in a 1L glass bottle.  
@@ -58,7 +68,18 @@ Excel Column Recording Flow Rate
 ## Initial test of nutrient pumps (AP & DK)
 
 *  Measured volume delivered by the feeders using 100mL graduated cylinders. 
- 
+
+
+| Trial | pump #1 | pump #2 | pump #3 | pump #4 | pump#5 (counterclockwise) |
+|-------|---------|---------|---------|---------|---------------------------|
+| 1     | 15.0    | 10.0    | 11.25   | 13.0    | 6.0                       |
+| 2     | 15.0    | 10.0    | 10.5    | 13.0    | 6.0                       |
+| 3     | 15.0    | 10.0    | 11.0    | 12.0    | 6.0                       |
+| 4     |         | 10.0    | 11.0    |         | 5.0                       |
+| 5     |         |         | 11.0    |         | 7.0                       |
+| 6     |         |         | 11.0    |         |                           |
+| 7     |         |         | 11.0    |         |                           |
+| 8     |         |         | 11.5    |         |                           |
 
 ------
 
@@ -75,6 +96,15 @@ Excel Column Recording Flow Rate
 * Contacted Nate for potential solutions
 * results after 10 (?) rounds (20 mins): 
 
+
+| Pump # | Total Volume | Volume/10 |
+|--------|--------------|-----------|
+| 1      | 151          | 15.1      |
+| 2      | 95           | 9.5       |
+| 3      | 125          | 12.5      |
+| 4      | 119          | 11.9      |
+
+
 ------
 
 # July 9, 2020
@@ -90,6 +120,12 @@ Excel Column Recording Flow Rate
 * pumps initiated at 15:05, stopped working after 15:59 (27 doses)
 
 
+| Pump # | Total Volume | Volume/27 |
+|--------|--------------|-----------|
+| 1      | 395          | 14.6      |
+| 2      | 262          | 9.70      |
+| 3      | 337          | 12.5      |
+| 4      | 329          | 12.2      |
 
 ------
 
@@ -97,11 +133,11 @@ Excel Column Recording Flow Rate
 
 ## Feeders Tested (DK)
 
-*pumps stop working randomly and change the settings on its own
+* pumps stop working randomly and change the settings on its own
 
 ## Calibrated and Tested Neptune Dos Pumps (DK/AP)
 
-*These have shown to be reliable and easily programmable. A viable option.
+* These have shown to be reliable and easily programmable. A viable option.
 
 ------
 
@@ -115,23 +151,19 @@ Excel Column Recording Flow Rate
 
 * Results:
 
-Pump #
-Volume (mL):
-16-1
-18.0
-16-2
-18.0
-17-1
-18.0
-17-2
-19.0
+| Pump # | Volume (mL): |
+|--------|--------------|
+| 16-1   | 18.0         |
+| 16-2   | 18.0         |
+| 17-1   | 18.0         |
+| 17-2   | 19.0         |
 
 ## Feeder Pumps Tested (DK/AP)
 
 * Ian fixed bugs in the code
 * Need to determine the pumping duration needed to dose 10 mL
 * Controller ports starting from the bottom: #1, #2, #3, #4, #5
-* Record kept in: [Flow Rate Cylinder Tests] https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing 
+* Record kept in: [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing)
 
 ------
 
@@ -141,7 +173,7 @@ Volume (mL):
 
 * We will need more tags. (so far we have: A001 - A200)
 * Labeled 200 microcentrifuge tubes for tissue samples
-* all other supplies are listed in: [Nutrients_diseases experiment]https://docs.google.com/spreadsheets/d/1FDztXA1ID9vdiWwcwcTswNrOvZOzLIbVc-qbNeAnUmA/edit?usp=sharing 
+* all other supplies are listed in: [Nutrients_diseases experiment](https://docs.google.com/spreadsheets/d/1FDztXA1ID9vdiWwcwcTswNrOvZOzLIbVc-qbNeAnUmA/edit?usp=sharing)
 
 ## Set up feeders on tanks 1-4 (DK)
 
@@ -156,37 +188,639 @@ Volume (mL):
 ------
 
 # July 16, 2020
+ 
+## Secondary Flow Rate Tests (DK)
 
-
-
-------
-
-
-
-
+* Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing)
 
 ------
 
-# July XX, 2020
+# July 17, 2020
+ 
+## Secondary Flow Rate Tests (DK)
 
-## Coral collection 
+* Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing)
 
-* Hour of collection:
-* Driving time: 
-* Transportation method: 
-* Tanks used
+------
 
-|Genotype| Nursery| # Frags | Tags 
+# July 20, 2020
+
+## Made NH4Cl Stock 2 (2.25 mM) (DK)
+
+* Added 11.25 mL of Stock 1 (200 mM) solution for every 1.0 L of RO Water
+* Stock 2 batches #1-4 made using stock 1 batches #1-3 
+* Calculations are in: [Nutrient calculations](https://docs.google.com/spreadsheets/d/1YvdtbUH2qMIzq6EW2xj6OTkVD5FPB1q9HCX_sdudOvY/edit#gid=1881522557)
+
+## Start nutrient trials (DK/AP)
+
+* Added 7.5 mL of stock 1 (200mM, Tube # 4) to tanks 1-4.
+* No nutrients added to tank 6
+
+* Set pumps to 15 min intervals 
+    - Pump 1: 14 seconds duration
+    - Pump 2: 21 seconds
+    - Pump 3: 16 seconds
+    - Pump 4: 16 seconds
+
+## Water Samples
+
+* Sample #X-1:  <1 min, ~ at 2:00 PM, 2 samples per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+    - NO3: frozen
+
+* Sample #X-2:  ~ at 3:00 PM, 1 sample per tank (tanks 1-4)
+   -   NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+* Sample #X-3:  ~ at 4:00 PM, 1 samples per tank (tanks 1-4)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+* Sample #X-4:  ~ at 5:00 PM, 1 sample per tank (tanks 1-4)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+* Sample #X-5:  ~ at 6:00 PM, 2 samples per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+    - NO3: frozen
+
+## Tried IPAM with Danielle’s computer
+
+* Camera driver issues
+
+## Things we need to check:
+
+* IPAM issues
+* Volume of tanks + reserve water below (semi-closed system) (Was ok)
+* Where can we set up IPAM and BW stations in the lab? (limited counter space)
+* Ask Ian if outlet in back right side of lab (that feeders are plugged into) is on a timer (It is not) 
+* Need bubble wrap or newspaper for transporting corals (got it, AP)
+
+------
+
+# July 21, 2020
+
+## Took a cylinder measurement in the morning before calibration  (DK)
+
+
+| Tank # | Time | Labview Flow Rate | Actual Flow Rate |
+|--------|------|-------------------|------------------|
+| 1      | 9:13 | 0/23.3333         | 96               |
+| 2      | 9:14 | 0/0               | 112              |
+| 3      | 9:15 | 44.5715/66.8573   | 124              |
+| 4      | 9:16 | 0                 | 108              |
+
+* Calibrated tanks 1-4 at 9:34 am
+* Calibrated tanks 6-8 at 9:42
+* Calibration log record kept in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1d2_0wEzvD5eoe0TQJQA_VIc-d5FIFlLXJvQtSlPjOss/edit?usp=sharing)
+
+## Water Samples (DK)
+
+* Sample #X-6:  ~ at 10:00 AM, 2 samples per tank (tanks 1-4, 6)
+   - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+   - NO3: frozen
+
+* Sample #X-7:  ~ at 1:00 PM, 1 sample per tank (tanks 1-4), 2 samples (tank 6)
+   - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+    - NO3: frozen
+
+* Sample #X-8:  ~ at 6:00 PM, 1 sample per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+## Cleared coral skeletons off of old tags 201-300
+
+* Some tags are missing. List of found & missing tags listed in [Found Tags](https://docs.google.com/spreadsheets/d/1PDjjh4exPg2ah9bKvK1MkoB--UZF_aPxIz-tee699Tk/edit?usp=sharing)
+
+## Made NH4Cl Stock 2 (2.25 mM) (DK)
+
+* Added 11.25 mL of Stock 1 (200 mM) solution for every 1.0 L of RO Water
+* Stock 2 batch #5 made using stock 1 batches #3
+* Added this to batches #1-4 to maintain sufficient volume for the feeders 
+
+------
+
+# July 22, 2020
+
+## Cylinder measurement in the morning before calibration (DK)
+
+
+| Tank # | Time | Labview Flow Rate | Actual Flow Rate |
+|--------|------|-------------------|------------------|
+| 1      | 8:52 | 24.6667/49.3333   | 108              |
+| 2      | 8:53 | 0/0               | 88               |
+| 3      | 8:54 | 0/0               | 92               |
+| 4      | 8:55 | 0/0               | 88               |
+
+## Calibrated tanks (DK)
+
+* Calibration log is kept in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing)
+
+## Set flow rate for tanks #1-4, 6 to ~ 150 mL/min
+
+* Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing)
+
+## Water samples (DK)
+
+* Sample #X-9:  ~ at 9:15 AM, 1 sample per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+* Sample #X-10:  ~ at 1:00 PM, 2 samples per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+    - NO3: frozen
+
+* Sample #X-11:  ~ at 6:00 PM, 1 sample per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+## Weighed Coral Tags
+
+* Data recorded in [BW](https://docs.google.com/spreadsheets/d/1WvMUv8Np_tW6QucTO2KIcT7ZuLN3V6XWbt138fwzQbg/edit?usp=sharing)
+
+## Made NH4Cl Stock 2 (2.25 mM) (DK)
+
+* Added 11.25 mL of Stock 1 (200 mM) solution for every 1.0 L of RO Water
+* Stock 2 batch #6-9
+    - Batch #6 made using stock 1 batch #3-4
+    - Batch #7 made using stock 1 batch #4
+    - Batch #8 made using stock 1 batch #4-5
+    - Batch #9 made using stock 1 batch #5
+    - Added 1.6 L batches #6-9 to feeder jars 1-4 respectively 
+
+------
+
+# July 23, 2020
+
+## Cylinder measurement in the morning before calibration (DK)
+
+| Tank # | Time | Labview Flow Rate | Actual Flow Rate |
+|--------|------|-------------------|------------------|
+| 1      | 8:30 | 0/0               | 88               |
+| 2      | 8:32 | 0/0               | 84               |
+| 3      | 8:33 | 70.2859/93.7145   | 124              |
+| 4      | 8:34 | 0/0               | 80               |
+
+## Calibrated tanks (DK)
+
+* Calibration log is kept in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing)
+
+## Set flow rate for tanks #1-4, 6 to ~ 150 mL/min
+
+* Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing)
+
+## Nutrient trials (DK)
+
+* Sample #X-12:  ~ at 9:15 AM, 1 sample per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+* Sample #X-13:  ~ at 1:00 PM, 2 samples per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+    - NO3: frozen
+
+* Sample #X-14:  ~ at 6:00 PM, 1 sample per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+## Weighed Coral Tags
+* Data recorded in [BW](https://docs.google.com/spreadsheets/d/1WvMUv8Np_tW6QucTO2KIcT7ZuLN3V6XWbt138fwzQbg/edit?usp=sharing)
+ 
+------
+
+# July 24, 2020
+
+## Cylinder measurement in the morning before calibration  (DK)
+
+
+| Tank # | Time | Labview Flow Rate | Actual Flow Rate |
+|--------|------|-------------------|------------------|
+| 1      | 8:50 | 0/0               | 84               |
+| 2      | 8:51 | 0/0               | 108              |
+| 3      | 8:53 | 0/0               | 84               |
+| 4      | 8:55 | 0/0               | 72               |
+
+## Calibrated tanks (DK)
+
+* Calibration log is kept in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing)
+
+## Set flow rate for tanks #1-4, 6 to ~ 150 mL/min
+
+* Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing)
+
+## Nutrient trials (DK)
+
+* Sample #X-15:  ~ at 9:15 AM, 1 sample per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+* Sample #X-16:  ~ at 1:00 PM, 2 samples per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+    - NO3: frozen
+
+* Sample #X-17:  ~ at 6:00 PM, 1 sample per tank (tanks 1-4, 6)
+    - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+## Weighed Coral Tags
+
+* Data recorded in [BW](https://docs.google.com/spreadsheets/d/1WvMUv8Np_tW6QucTO2KIcT7ZuLN3V6XWbt138fwzQbg/edit?usp=sharing)
+
+## Made NH4Cl Stock 2 (2.25 mM) (DK)
+
+* Added 11.25 mL of Stock 1 (200 mM) solution for every 1.0 L of RO Water
+* Stock 2 batch #10-14
+    - Batch #10 made using stock 1 batch #5-6
+    - Batch #11 made using stock 1 batch #6
+    - Batch #12 made using stock 1 batch #6-7
+    - Batch #13 made using stock 1 batch #7
+    - Batch #14 made using stock 1 batch #7-8
+    - Added 1.6 L batches #10-13 to feeder jars 1-4 respectively
+    - Batch #14 stored in the fridge 
+
+## Made 1% SDS  (DK)
+
+* 8 batches
+* 50.0 mL each 
+* 400 mL total
+
+------
+
+# July 26, 2020
+
+## Covered sump with black trash bags to block out light (AP)
+
+## Stopped feeders and turned up water flow @ 14:00 to restore tank to ambient nutrients  (DK)
+
+------
+
+# July 27, 2020
+
+## Finished buoyant weights for new tags (DK)
+
+* Data recorded in [BW](https://docs.google.com/spreadsheets/d/1WvMUv8Np_tW6QucTO2KIcT7ZuLN3V6XWbt138fwzQbg/edit?usp=sharin)
+
+## Coral collection from UM nursery 
+
+* Fragments received @ 16:00 (DK, AP)
+
+* 4 genotypes: Cooper-9, Acerv2, Kelsey-1, and Elkhorn 
+
+* Corals were fragmented, measured, dry weighed, and glued to tags 
+
+
+|Genotype| Nursery| # Frags | Tags | HoldingTank | 
+|--------- |----|----|------------|-------|
+| Acerv2   | UM | 24 | A039-A062  | Tank8 |
+| Cooper9  | UM | 23 | A016-A38   | Tank6 |
+| Elkhorn  | UM | 30 | A063-A092  | Tank7 |
+| Kelsey-1 | UM | 26 | A001-A015, A93-A103 | Tank5 |
+
+* Small pieces from genotype Cooper-9 glued to tag #391
+* Acerv2 Extras : tag #s 459, 355, 364, 401, 473
+* Elkhorn Extras: tag #s 373, 436, 456 
+* Unknown genotype: tag #448 
+* Fragments #008 and #009 were left out of the water for a while (but seem to be ok by morning)
+* Data recorded in [Nutrients_diseases experiment](https://docs.google.com/spreadsheets/d/1FDztXA1ID9vdiWwcwcTswNrOvZOzLIbVc-qbNeAnUmA/edit?usp=sharing)
+
+------
+
+# July 28, 2020
+
+## Tissue Samples Taken from fragment #s A001-A103
+
+* preserved in 400 µL 1% SDS + 1 and ½ hour incubation at 65C
+
+## Fragment #102 is dead, found outside the tank
+
+------
+
+# July 30, 2020
+
+## Fragments #71 and 91 have tissue loss. 
+* They were moved to a quarantine tank to recover.
+* They did not recover… died
+
+## Fed (DK, AP) 
+
+* Genotypes Cooper9, Elkhorn and Kelsey-1 
+* Corals moved to plastic bins and fed ~ 1h 
+
+## Coral collection from CRF nursery
+
+* 3 genotypes: K2 
+    - K2 (008: Super branching genotype, extra apical tips)
+    - U41 (051: single branches, except one frag fused)
+    - U44 (066: few fragments with branches ~3)
+*  Fragments received @ 15:30 (DK, SR, AP)
+* Driving time: ~1:20 
+* Transportation method: Fragments kept in original bags and placed in additional plastic bins. Transported inside the car.
+* Corals were already fragmented. 
+* At the lab, we measured, dry weighed, and glued them to tags. Tag A102 was reused (genet U41)
+
+
+|Genotype| Nursery| # Frags | Tags | Tank| 
+|------- |--------|---------|------|----|
+| U41 | CRF | 24 | A102, A104-A126| Tank9|
+| U44 | CRF | 24 | A127- A150| Tank10|
+| K2  | CRF | 24 | A-151-A174| Tank11|
+
+------
+
+# July 31, 2020
+
+* Tissue loss in fragment A137 (genet U44) and A006 (genet Kelsey-1). Moved to quarantine tank
+  
+## Fed  (DK) 
+
+* Genotypes Acerv2, U41, U44, K2
+* Corals moved to plastic bins and fed ~ 1h
+
+## Cleaned tanks (DK)
+
+* Tank #s 1-11
+* Removed corals from tanks, scrubbed inside surfaces, let debris settle and siphon it out from the bottom. Do not drain the tank. 
+
+## Adjusted tank lights (DK)
+
+* Fixed lights schedules
+*Turned on tank lights for tanks #9-12
+
+## Genotype U41 are not looking great
+
+* Potential tissue loss soon
+
+------ 
+
+# August 1, 2020
+
+## Tissue loss AM (DK)
+
+* Moved fragments with tissue loss to quarantine tank
+* Pictures taken of all fragments with tissue loss. Photos stored in [2020-08-01_Photos_TissueLoss](https://drive.google.com/drive/folders/1rVrad8nCiEy279o_hQ6vQIZBlJ9rq2ds?usp=sharing)
+ 
+
+| Tag # | Tank  | Genotype | Tag # | Tank  | Genotype |
+|-------|-------|----------|-------|-------|----------|
+| 405   | 9     | U41      | A140  | 10    | U44      |
+| A102  | 9     | U41      | A127  | 10    | U44      |
+| A104  | 9     | U41      | A144  | 10    | U44      |
+| A106  | 9     | U41      | 472   | 10    | U44      |
+| A112  | 9     | U41      | A141  | 10    | U44      |
+| A105  | 9     | U41      | A150  | 10    | U44      |
+| A120  | 9     | U41      | A149  | 10    | U44      |
+| A067  | 7     | Elkhorn  | A143  | 10    | U44      |
+|       |       |          | A145  | 10    | U44      |
+|       |       |          | A131  | 10    | U44      |
+
+  
+## Fed  (DK) 
+
+* All tanks/genotypes fed
+* Tanks drained ¼ of the way, pumps turned off and fed for ~ 1h
+
+## Tissue loss PM (AP)
+
+* Moved more corals to quarantine tank ~8-9 PM
+* Tags: A146, A148, A147, A130, A142 
+
+## Spawning (AP)
+
+* UM genotype Elkhorn spawned.
+
+------
+
+# August 2, 2020
+
+## Tissue loss PM (AP)
+
+* Fragments with tissue loss were removed from tanks: A104, A135, A153, A111, A011
+* All corals were fed in plastic bins for ~30 and then moved to the tanks.
+
+------
+
+# August 3, 2020
+
+## Coral collection from FWC
+
+* Hour of collection: 3:15
+* Driving time: 2 hrs 30 mins
+* Transportation method: transported in separate plastic bins for each genotype all contained in a large cooler with seawater. Cooler kept in the cab of the truck. 
+* Tanks used: tank 1 = Fm19, tank 2 = FM14, tank 3 = FM9, tank 4 = FM6
+
+
+|Genotype| Nursery| # Frags | Tags | Tank|
 |------------------ |----|----|----|
-| A | # | # | ----|
-| B | # | # | ----|
-| C | # | # | ----|
-| D | # | # | ----|
-| E | # | # | ----|
-| F | # | # | ----|
-| G | # | # |----|
+| FM19 | FWC | 24 | A175-A198|Tank1|
+| FM14 | FWC | 24  | 263-296|Tank2|
+| FM9 | FWC | 24 | A199, A200, 201-229|Tank3|
+| FM6 | FWC | 25 | 230-262|Tank4|
 
 
+## All fragments treated with Coral Revive
 
+* Fragments placed in small plastic bins and treated with one capful of Coral Revive for 15 mins per bin
+* Coral Revive water added to the tank when replacing corals to their tank 
 
 ------
+
+# August 4, 2020
+
+## moved dead fragments data to a separate tab in [Nutrients_diseases experiment](https://docs.google.com/spreadsheets/d/1FDztXA1ID9vdiWwcwcTswNrOvZOzLIbVc-qbNeAnUmA/edit?usp=sharing)
+
+* “Fragments_available” tab now only contains living fragments
+
+## FWC (AP/DK/SR)
+
+* Corals from FWC were fragmented, measured, dry weighed, and glued to tags
+
+## Fed (DK)
+
+* Genotypes Kelsey-1, U41, and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* Genotypes not listed here are being fed by autofeeder  
+
+------
+
+# August 5, 2020
+
+## Tissue Samples Taken from fragment #s A104-229 (DK)
+
+* preserved in 400 µL 1% SDS + 1 and ½ hour incubation at 65C
+
+## Tissue loss observed on tag #s A108, A126 (DK)
+
+* Fragments placed in quarantine tank 
+
+## Fed (DK)
+
+* Genotypes Kelsey-1, U41, and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* Genotypes not listed here are being fed by autofeeder  
+
+------
+
+# August 6, 2020
+
+## Fragments #s A108 and A126 are dead (DK)
+
+* Removed from quarantine tank and from “Fragments available” spreadsheet 
+* Added fragments to “Dead fragments” spreadsheet 
+* spreadsheets kept in [Nutrients_diseases experiment](https://docs.google.com/spreadsheets/d/1FDztXA1ID9vdiWwcwcTswNrOvZOzLIbVc-qbNeAnUmA/edit?usp=sharing)
+
+## Tissue loss observed on tag # A117 (elkhorn) (DK)
+
+* fragment placed in quarantine tank 
+
+## Cleaned tanks 7-12 (DK)
+
+* Removed corals from tank, wiped down tank with sponge, and siphoned out debris 
+
+## Fed (DK)
+
+* Genotypes Kelsey-1, U41, and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* genotypes not listed here are being fed by autofeeder  
+
+## Tissue Samples Taken from fragment #s 230-268 (DK)
+
+* preserved in 400 µL 1% SDS + 1 and ½ hour incubation at 65C
+
+------
+
+# August 7, 2020
+
+## Coral collection from CRF (Genotype replacement ACER066=U44) (AP)
+
+* Hour of collection: 3PM
+* Driving time: 2h 
+* Transportation method: transported in a plastic bin contained in a larger cooler with seawater. Cooler kept in the cab of the car. 
+* Tank used: old U44
+
+## Tissue Samples Taken from fragment #s 269-296 (DK)
+
+* preserved in 400 µL 1% SDS + 1 and ½ hour incubation at 65C
+
+## Cleaned tanks 1-6 (DK)
+
+* Removed corals from tank, wiped down tank with sponge, and siphoned out debris 
+
+## Fed (DK)
+
+* Genotypes Kelsey-1, U41, and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* genotypes not listed here are being fed by autofeeder  
+
+## Tag #117A is dead
+
+* removed from quarantine tank 
+
+------
+
+# August 8, 2020
+
+## Fragging and tagging CRF fragment U44 (AP, SR)
+
+* Corals from new U44 corals were fragmented, measured, dry weighed, and glued to tags.
+* No tissue loss from yesterday’s collection.
+
+------
+
+# August 9, 2020
+
+## Fed (DK)
+
+* Genotypes Kelsey-1, U41, U44 and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* genotypes not listed here are being fed by autofeeder  
+
+## Cleaned tanks 9-12 (DK)
+
+* Removed corals from tank, wiped down tank with sponge, and siphoned out debris
+
+## tissue loss observed on large Elkhorn genotype fragment (DK)
+
+* bone cutters used to cut off areas with tissue loss
+* fragment treated with Revive 
+* fragment placed in quarantine tank 
+
+------
+
+# August 10, 2020
+
+## Cleaned tanks 1-4 (DK)
+
+* Removed corals from tank, wiped down tank with sponge, and siphoned out debris
+
+## tissue loss observed on three extra Elkhorn genotype fragments (DK)
+
+* cut off tissue loss area with bone cutters 
+*  fragment placed in quarantine tank 
+
+## Fed (DK)
+
+* Genotypes Kelsey-1, U41, U44 and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* genotypes not listed here are being fed by autofeeder 
+
+## Added LabVIEW data to (DK) [LabVIEW Records](https://docs.google.com/spreadsheets/d/1fdBhvFhAMHes9MH9DoXZQZRB6x2R0RSrZWdcJNixlO0/edit)
+
+------
+
+# August 11, 2020
+
+## Tissue samples taken from new genotype U44 fragments (DK)
+
+* tag #s listed in the “Fragments Available” tab of [Nutrients_diseases experiment](https://docs.google.com/spreadsheets/d/1FDztXA1ID9vdiWwcwcTswNrOvZOzLIbVc-qbNeAnUmA/edit?usp=sharing)
+* preserved in 400 µL 1% SDS + 1 and ½ hour incubation at 65C
+
+## Fed (DK)
+
+* Genotypes Kelsey-1, U41, U44 and K2 
+* Corals moved to plastic bins and fed ~ 1h
+
+## Cleaned tanks 5-8 (DK)
+
+* Removed corals from tank, wiped down tank with sponge, and siphoned out debris
+
+## tissue loss observed on the same three extra Elkhorn genotype fragments (DK)
+
+* cut off tissue loss area with bone cutters 
+* corals treated with revive
+
+------
+
+# August 12, 2020
+
+## IPAM (DK, AP)
+
+* Fragments dark adapted for at least 30 min in cooler
+* Gain had to be kind of high … 
+* Pictures (missed 1st genotype)
+
+## BW (DK, AP)
+* Temperature bw 27 and 29C
+* Partial water changes. Next time do a full one because of mucus release and change in water density. 
+* Fragment 228 (FM9) broken tip.
+* Tags A187 and A188 are switched. Initial picture/weight shows A188 bigger and heavier than A187, but now is the opposite. Probably misplaced during the gluing process. Check with pictures 
+
+------
+
+# August 13, 2020
+
+## Fed (DK)
+
+* Genotypes Kelsey-1, U41, U44 and K2 
+* Corals moved to plastic bins and fed ~ 1h
+
+## Tissue Loss observed in extra elkhorn fragment
+
+* cut off tissue loss area with bone cutters 
+* coral treated with revive
+* remaining pieces attached to a tile with other extra elkhorn fragments 
+
+## Extra fragments attached to tiles and moved to upper touch tank
+
+* fragments attached with epoxy
+* photos of extra fragments are in [2020-08-13_Photos_Extra_Fragments](https://drive.google.com/drive/folders/1-AEGwphbwhWrOBageO6HtjE3mBIglWXX)
+
+## cut new fragment for genotype Kelsey-1
+
+* attached with coral glue
+* tag # A108
+
+------
+
+# August 14, 2020
+
+##
