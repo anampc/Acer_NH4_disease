@@ -27,6 +27,7 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
   library(tidyverse)
 
 # Graphs
+<<<<<<< HEAD
 theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
                               panel.grid.minor = element_blank(), 
                               axis.line = element_line(colour = "black"),
@@ -36,6 +37,7 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
                               #panel.border = element_rect(colour = "black", fill=NA, size=1)
                               panel.border = element_blank()
                               ))
+
     
 # Data    
   # Fragment list
@@ -44,6 +46,7 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
   # Collection information
   #Location<-read.csv("Metadata/Genotype_Origin.csv", header = T)
 ```
+
 
 # Meta data
 
@@ -105,20 +108,20 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
     #Extras <- BW_Tall[which (BW_Tall$Nutrients=="Extra"), ]
     #BW_Tall <- droplevels(BW_Tall[!rownames(BW_Tall) %in%
     #                                   rownames(Extras), ])
- 
-  # 3. Merge with treatments
+
+# 3. Merge with treatments
     BW_Tall<-plyr::join(BW_Tall, Treatment, by = "Tag", 
                 type = "left", match = "all")
 
     BW_Tall<-plyr::join(BW_Tall, Tags, by = "Tag", 
                 type = "left", match = "all")
     
-
     BW_Tall$Nutrients<-factor(BW_Tall$Nutrients, 
                              levels= c("Ambient", "NH4"), ordered=TRUE)
     BW_Tall$Disease<-factor(BW_Tall$Disease, 
                              levels= c("Placebo", "Pathogen"), ordered=TRUE)
- # 4. Replicates
+
+# 4. Replicates
     BW_Tall$Tank<-factor(BW_Tall$Tank, ordered=FALSE)
     BW_Tall$Genotype<-factor(BW_Tall$Genotype, ordered=FALSE)
 
@@ -250,7 +253,8 @@ SizeBiasCheck
 AW_Genet<- ggplot(BW.data, aes (Genotype, dAW_r, colour=factor(Genotype))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
-  geom_jitter(alpha=0.5) + ggthe_bw + theme(legend.position = "none")+
+  theme(legend.position = "none")+
+  geom_jitter(alpha=0.5) + 
   scale_y_continuous(limits = c(0, 10),
                          breaks = seq(0, 10,2),  
                          expand = c(0, 0),
