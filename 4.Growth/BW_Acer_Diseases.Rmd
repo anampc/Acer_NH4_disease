@@ -1,5 +1,5 @@
 ---
-title: "Acer_BW_Disease"
+title: "Acer BW under nutrients and disease"
 author: "Ana M. Palacio"
 date: "`r Sys.Date()`"
 output:
@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
   library(tidyverse)
 
 # Graphs
-<<<<<<< HEAD
+
 theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
                               panel.grid.minor = element_blank(), 
                               axis.line = element_line(colour = "black"),
@@ -41,10 +41,10 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
     
 # Data    
   # Fragment list
-  #CurrentFragments<-read.csv("Metadata/Fragment_Replicate.csv", header = T)
+  #CurrentFragments<-read.csv("8.Metadata/Frag_assignments.csv", header = T)
 
   # Collection information
-  #Location<-read.csv("Metadata/Genotype_Origin.csv", header = T)
+  #Location<-read.csv("8.Metadata/Genotypes.csv", header = T)
 ```
 
 
@@ -76,7 +76,6 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
   
    #Tags$Estimated_Density<-(-Tags$SW_den/((Tags$T_BW/Tags$T_AW)-1))
    
-  library(dplyr)
   Tags %>%
       group_by(T_Type) %>%
       summarise_at(vars(T_AW, T_BW), funs(mean(., na.rm=TRUE)))
@@ -166,7 +165,7 @@ summary(BW.data)
 ```{r}
 SizeBiasCheck<- ggplot(BW.data, aes (BW, dBW_r, colour=factor(Genotype))) +
   #geom_smooth(method = "lm")+
-  geom_jitter(alpha=0.5) + ggthe_bw +
+  geom_jitter(alpha=0.5) + 
   scale_y_continuous(limits = c(0, 5),
                          breaks = seq(0, 6,2),  
                          expand = c(0, 0),
@@ -181,7 +180,7 @@ SizeBiasCheck
 BW_Genet<- ggplot(BW.data, aes (Genotype, dBW_r, colour=factor(Genotype))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
-  geom_jitter(alpha=0.5) + ggthe_bw +
+  geom_jitter(alpha=0.5) +
   scale_y_continuous(limits = c(0, 5),
                          breaks = seq(0, 5,1),  
                          expand = c(0, 0),
@@ -191,6 +190,21 @@ BW_Genet
 BW_Genet+ facet_wrap(~Nutrients)
 BW_Genet+ facet_wrap(~Disease)
 #BW_Genet+ facet_wrap(Nutrients~Disease)
+```
+
+### Pre-treatment bias
+
+```{r}
+BW_Bias<- ggplot(BW.data, aes (Genotype, dBW_r, colour=factor(Nutrients))) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.y=mean, geom="line") + 
+  geom_jitter(alpha=0.5) +
+  scale_y_continuous(limits = c(0, 5),
+                         breaks = seq(0, 5,1),  
+                         expand = c(0, 0),
+                         name=("dBW [mg / g*day]"))
+BW_Bias + facet_grid(~Disease)
+
 ```
 
 
@@ -237,7 +251,7 @@ summary(BW.data)
 SizeBiasCheck<- ggplot(BW.data, aes (Est_Coral_AW, dAW_r, colour=factor(Genotype))) +
   #stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   #stat_summary(fun.y=mean, geom="line") + 
-  geom_jitter(alpha=0.5) + ggthe_bw +
+  geom_jitter(alpha=0.5) + 
   scale_y_continuous(limits = c(0, 10),
                          breaks = seq(0, 10,2),  
                          expand = c(0, 0),
@@ -263,8 +277,24 @@ AW_Genet<- ggplot(BW.data, aes (Genotype, dAW_r, colour=factor(Genotype))) +
 AW_Genet
 AW_Genet+ facet_wrap(~Nutrients)
 AW_Genet+ facet_wrap(~Disease)
-AW_Genet+ facet_wrap(Nutrients~Disease)
+#AW_Genet+ facet_wrap(Nutrients~Disease)
 ```
+
+### Pre-treatment bias
+
+```{r}
+AW_Bias<- ggplot(BW.data, aes (Genotype, dAW_r, colour=factor(Nutrients))) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.y=mean, geom="line") + 
+  geom_jitter(alpha=0.5) +
+  scale_y_continuous(limits = c(0, 5),
+                         breaks = seq(0, 5,1),  
+                         expand = c(0, 0),
+                         name=("dBW [mg / g*day]"))
+AW_Bias + facet_grid(~Disease)
+
+```
+
 
 
 # Packages used

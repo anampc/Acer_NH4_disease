@@ -1,12 +1,12 @@
-Expected suceptibility,RiskTransmission,Year,Margaret_ID,Baseline,Genotype,CollectionDate,Nursery,Nursery_genet
-Resistant,0,2016,C9,Margaret paper,1,2020-08-03,FWC,FM9
-Resistant,0.22,2016,C6,Good survivorship in outplants/Margaret,2,2020-07-30,CRF,K2
-Resistant,0.3,2017,C26,Margaret paper,3,2020-07-27,UM,Acerv2
-Resistant,0.3,2017,C24,Margaret paper,4,2020-07-27,UM,Cooper-9
-Intermediate,0.39,2016,C3,Poor survivorship in outplants,5,2020-08-07,CRF,U44
-Intermediate,0.45,2016,C1,Margaret paper,6,2020-07-30,CRF,U41
-Susceptible,0.5,2016,C13,Margaret paper,7,2020-08-03,FWC,FM19
-Susceptible,0.65,2016,C8,Margaret paper,8,2020-08-03,FWC,FM6
-Susceptible,0.65,2016,C16,Margaret paper,9,2020-08-03,FWC,FM14
-Susceptible,0.9,2017,C17,Margaret paper,10,2020-07-27,UM,Kelsey-1
-Susceptible,1,2017,C21,Margaret paper,11,2020-07-27,UM,Elkhorn
+Expected suceptibility,RiskTransmission,Year,Margaret_ID,Baseline,CollectionDate,Nursery,Genotype
+Resistant,0,2016,C9,Margaret paper,2020-08-03,FWC,FM9
+Resistant,0.22,2016,C6,Good survivorship in outplants/Margaret,2020-07-30,CRF,K2
+Resistant,0.3,2017,C26,Margaret paper,2020-07-27,UM,Acerv2
+Resistant,0.3,2017,C24,Margaret paper,2020-07-27,UM,Cooper-9
+Intermediate,0.39,2016,C3,Poor survivorship in outplants,2020-08-07,CRF,U44
+Intermediate,0.45,2016,C1,Margaret paper,2020-07-30,CRF,U41
+Susceptible,0.5,2016,C13,Margaret paper,2020-08-03,FWC,FM19
+Susceptible,0.65,2016,C8,Margaret paper,2020-08-03,FWC,FM6
+Susceptible,0.65,2016,C16,Margaret paper,2020-08-03,FWC,FM14
+Susceptible,0.9,2017,C17,Margaret paper,2020-07-27,UM,Kelsey-1
+Susceptible,1,2017,C21,Margaret paper,2020-07-27,UM,Elkhorn
