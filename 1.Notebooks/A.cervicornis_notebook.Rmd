@@ -3,8 +3,8 @@ title: '*A.cer* trade-offs in nutrients and disease exposure'
 author: "A. Palacio-Castro, D. Kroesche, S. Rosales"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-  toc: yes
+  #pdf_document:
+  #toc: yes
   html_document:
     df_print: paged
     theme: united
@@ -257,7 +257,7 @@ output:
 
 # July 21, 2020
 
-## Took a cylinder measurement in the morning before calibration  (DK)
+## Cylinder measurement in the morning before calibration (DK)
 
 
 | Tank # | Time | Labview Flow Rate | Actual Flow Rate |
@@ -363,7 +363,7 @@ output:
 
 * Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing)
 
-## Nutrient trials (DK)
+## Water Samples (DK)
 
 * Sample #X-12:  ~ at 9:15 AM, 1 sample per tank (tanks 1-4, 6)
     - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
@@ -400,7 +400,7 @@ output:
 
 * Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing)
 
-## Nutrient trials (DK)
+## Water Samples (DK)
 
 * Sample #X-15:  ~ at 9:15 AM, 1 sample per tank (tanks 1-4, 6)
     - NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
@@ -620,7 +620,7 @@ output:
 
 * “Fragments_available” tab now only contains living fragments
 
-## FWC (AP/DK/SR)
+## Coral collection from FWC (AP/DK/SR)
 
 * Corals from FWC were fragmented, measured, dry weighed, and glued to tags
 

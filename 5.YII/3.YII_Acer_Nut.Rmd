@@ -35,7 +35,7 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
                               plot.title = element_text(size=12, face="bold"),
                               #panel.border = element_rect(colour = "black", fill=NA, size=1)
                               panel.border = element_blank()
-                              ))
+                              )) +
 ```
 
 # Data and data clean-up 
@@ -88,7 +88,12 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
 YII_Genet<- ggplot(YII.Tall, aes (Genotype, YII, colour=factor(Genotype))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
-  geom_jitter(alpha=0.5)
+  geom_jitter(alpha=0.5)+
+  scale_y_continuous(limits = c(0, .73),
+                         breaks = seq(0, 0.7,0.2),  
+                         expand = c(0, 0),
+                         name=("YII (Fv/Fm)"))
+  
 YII_Genet
 
 YII_Genet+ facet_wrap(~Nutrients)

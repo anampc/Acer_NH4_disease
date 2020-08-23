@@ -69,7 +69,7 @@ A084,Elkhorn,NH4,Pathogen,1
 A082,Elkhorn,Ambient,Pathogen,6
 A078,Elkhorn,NH4,Pathogen,2
 A073,Elkhorn,Ambient,Pathogen,7
-A074,Elkhorn,NH4,Pathogen,3
+A145,Elkhorn,NH4,Pathogen,3
 A080,Elkhorn,Ambient,Pathogen,8
 A089,Elkhorn,NH4,Pathogen,4
 263,FM14,Ambient,Placebo,8
@@ -215,7 +215,7 @@ A097,Kelsey-1,NH4,Pathogen,2
 A005,Kelsey-1,Ambient,Pathogen,7
 A094,Kelsey-1,NH4,Pathogen,3
 A093,Kelsey-1,Ambient,Pathogen,8
-,Kelsey-1,NH4,Pathogen,4
+A153,Kelsey-1,NH4,Pathogen,4
 A115,U41,Ambient,Pathogen,5
 A118,U41,NH4,Pathogen,4
 A112,U41,Ambient,Pathogen,6
@@ -253,3 +253,5 @@ A132,U44,Ambient,Pathogen,6
 A130,U44,NH4,Pathogen,3
 A121,U44,Ambient,Pathogen,5
 A129,U44,NH4,Pathogen,4
+A136,Kelsey,Extra,Extra,Holding
+A142,Elkhorn,Extra,Extra,Holding
