@@ -130,7 +130,7 @@ YII_Tank+ facet_wrap(Time~Disease)
 ## Treatments
 
 ```{r}
-YII_Tank<- ggplot(YII.Tall, aes (Tank, YII)) +
+YII_Disease<- ggplot(YII.Tall, aes (Disease, YII)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
   scale_y_continuous(limits = c(0.4, .73),
@@ -140,7 +140,7 @@ YII_Tank<- ggplot(YII.Tall, aes (Tank, YII)) +
   geom_jitter(aes(colour=Genotype), alpha=0.3)+
   facet_wrap(~Time) +
   theme(legend.position = "bottom")
-YII_Tank
+YII_Disease
 
 YII_Tank+ facet_wrap(Time~Nutrients)
 YII_Tank+ facet_wrap(Time~Disease)
