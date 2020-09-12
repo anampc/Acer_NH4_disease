@@ -40,7 +40,7 @@ A196,FM19,NH4,Placebo,Experiment
 282,FM14,NH4,Placebo,Experiment
 296,FM14,NH4,Pathogen,Experiment
 A010,Kelsey-1,NH4,Placebo,Experiment
-A026,Cooper-9,NH4,Placebo,Experiment
+A026,Cooper-9,TL,TL,Extra?
 A029,Cooper-9,NH4,Pathogen,Experiment
 A038,Cooper-9,NH4,Pathogen,Experiment
 A041,Acerv2,NH4,Pathogen,Experiment
@@ -257,6 +257,6 @@ A136,Kelsey-1,Extra,Extra,Extra?
 A142,Elkhorn,Extra,Extra,Extra?
 A145,Elkhorn,Ambient,Pathogen,Experiment
 306,Kelsey-1,Extra,Extra,Extra?
-410,K2,Experiment,Ambient,Placebo
-NEW,FM19,Ambient,Pathogen,Experiment
-NEW,Acerv2,Ambient,Pathogen,
+410,K2,Ambient,Placebo,Experiment
+358,FM19,Ambient,Pathogen,Experiment
+469,Acerv2,Ambient,Pathogen,Experiment
