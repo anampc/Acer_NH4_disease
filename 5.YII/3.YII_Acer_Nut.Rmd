@@ -80,6 +80,20 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
     YII.Tall$Genotype<-factor(YII.Tall$Genotype, ordered=FALSE)
   
   summary(YII.Tall)
+
+# Subset data  
+YII.CRF<-YII.Tall[which(YII.Tall$Genotype=='K2'|
+                      YII.Tall$Genotype=='U41'|
+                      YII.Tall$Genotype=='U44'), ]
+
+YII.UM<-YII.Tall[which(YII.Tall$Genotype=='Acerv2'|
+                      YII.Tall$Genotype=='Cooper-9'|
+                      YII.Tall$Genotype=='Elkhorn'|
+                      YII.Tall$Genotype=='Kelsey-1'), ]
+
+YII.FWC<-YII.Tall[which(YII.Tall$Genotype=='FM14'|
+                      YII.Tall$Genotype=='FM6'|
+                      YII.Tall$Genotype=='FM9'), ]
 ```
 
 # Data exploration
@@ -92,7 +106,7 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
 YII_Genet<- ggplot(YII.Tall, aes (Genotype, YII, colour=factor(Time))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
-  geom_jitter(alpha=0.5)+
+  geom_jitter(alpha=0.5)+ theme(legend.position = "bottom")+
   scale_y_continuous(limits = c(0, .73),
                          breaks = seq(0, 0.7,0.2),  
                          expand = c(0.01, 0.01),
@@ -103,7 +117,6 @@ YII_Genet
 YII_Genet+ facet_wrap(~Nutrients)
 YII_Genet+ facet_wrap(~Disease)
 YII_Genet+ facet_wrap(Nutrients~Disease)
-
 
 ```
 
@@ -124,7 +137,6 @@ YII_Tank
 
 YII_Tank+ facet_wrap(Time~Nutrients)
 YII_Tank+ facet_wrap(Time~Disease)
-
 ```
 
 ## Treatments
@@ -148,13 +160,11 @@ YII_Tank+ facet_wrap(Time~Disease)
 ```
 
 
-
 ```{r Graphs YII, echo =FALSE}
-    
 
 YII_Genotype<- ggplot(YII.Tall, aes (Date, YII, colour=factor(Nutrients))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun.y=mean, geom="line") +
+  stat_summary(fun.y=mean, geom="line")
 YII_Genotype +  facet_grid (~Disease)
 YII_Genotype +  facet_wrap(~Genotype)
 
