@@ -119,15 +119,17 @@ YII_Genet+ facet_wrap(~Disease)
 YII_Genet+ facet_wrap(Nutrients~Disease)
 
 
-YII_Genet<- ggplot(YII.Tall, aes (Date, YII, colour=factor(Genotype))) +
+YII_Genet<- ggplot(YII.Tall, aes (Time, YII, colour=factor(Nutrients), shape=Nutrients)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
-  geom_jitter(alpha=0.5)+ theme(legend.position = "bottom")+
-  scale_y_continuous(limits = c(0, .73),
+  stat_summary(fun.y=mean, geom="point") +
+  #geom_jitter(alpha=0.2)+
+  theme(legend.position = "bottom")+
+  scale_y_continuous(limits = c(0.3, .73),
                          breaks = seq(0, 0.7,0.2),  
                          expand = c(0.01, 0.01),
                          name=("YII (Fv/Fm)"))
-YII_Genet
+YII_Genet+ facet_wrap(~Genotype)
 ```
 
 ## Tank
@@ -145,8 +147,8 @@ YII_Tank<- ggplot(YII.Tall, aes (Tank, YII)) +
   theme(legend.position = "bottom")
 YII_Tank
 
-YII_Tank+ facet_wrap(Time~Nutrients)
-YII_Tank+ facet_wrap(Time~Disease)
+# YII_Tank+ facet_wrap(Time~Nutrients)
+# YII_Tank+ facet_wrap(Time~Disease)
 ```
 
 ## Fragment

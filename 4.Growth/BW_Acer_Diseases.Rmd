@@ -346,19 +346,18 @@ AW_Tank
 ### Treatments
 
 ```{r}
-AW_Disease<- ggplot(BW.data, aes (Disease, dAW_r)) +
+AW_Disease<- ggplot(BW.data, aes (Date, dAW_r, colour=Nutrients)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
   scale_y_continuous(limits = c(-3, 10),
                          breaks = seq(-3, 10,2),  
                          expand = c(0, 0),
                          name=("Growth rate (mg/g day)"))+
-  geom_jitter(aes(colour=Genotype), alpha=0.3)+
-  facet_wrap(~Date) +
+  geom_jitter(alpha=0.3)+
   theme(legend.position = "bottom")
 AW_Disease
 
-AW_Disease + facet_wrap(Date~Nutrients)
+AW_Disease + facet_wrap(~Genotype)
 AW_Disease + facet_wrap(Date~Disease)
 
 ```
