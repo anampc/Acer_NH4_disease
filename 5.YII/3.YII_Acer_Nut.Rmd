@@ -106,7 +106,7 @@ YII.FWC<-YII.Tall[which(YII.Tall$Genotype=='FM14'|
 YII_Genet<- ggplot(YII.Tall, aes (Genotype, YII, colour=factor(Time))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
-  geom_jitter(alpha=0.5)+ theme(legend.position = "bottom")+
+  geom_jitter(alpha=0.5, shape=21)+ theme(legend.position = "bottom")+
   scale_y_continuous(limits = c(0, .73),
                          breaks = seq(0, 0.7,0.2),  
                          expand = c(0.01, 0.01),
@@ -147,6 +147,20 @@ YII_Tank<- ggplot(YII.Tall, aes (Tank, YII)) +
   theme(legend.position = "bottom")
 YII_Tank
 
+YII_Tank2<- ggplot(YII.Tall, aes (Time, YII, colour=(Tank))) + 
+      
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.y=mean, geom="line") + 
+     scale_y_continuous(limits = c(0.4, .73),
+                         breaks = seq(0, 0.7,0.2),  
+                         expand = c(0, 0),
+                         name=("YII (Fv/Fm)"))+
+    
+    theme(legend.position="bottom",
+        legend.title = element_blank(), 
+        strip.background =element_rect(fill=NA)) 
+YII_Tank2+facet_wrap(~Nutrients)
+
 # YII_Tank+ facet_wrap(Time~Nutrients)
 # YII_Tank+ facet_wrap(Time~Disease)
 ```
@@ -156,7 +170,7 @@ YII_Tank
 
 ```{r}
 YII_Frag<- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
-                                    colour=factor(Genotype))) + 
+                                    colour=factor(Tank))) + 
       geom_line()+
       
      scale_y_continuous(limits = c(0.4, .73),
@@ -168,6 +182,8 @@ YII_Frag<- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
         legend.title = element_blank(), 
         strip.background =element_rect(fill=NA)) 
 YII_Frag+facet_wrap(~Genotype)
+
+
 ```
 
 
@@ -175,20 +191,37 @@ YII_Frag+facet_wrap(~Genotype)
 ## Treatments
 
 ```{r}
-YII_Disease<- ggplot(YII.Tall, aes (Disease, YII)) +
+
+YII_Frag<- ggplot(YII.Tall, aes (Time, YII, group=(Genotype),
+                                    colour=factor(Genotype))) + 
+      
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
-  scale_y_continuous(limits = c(0.4, .73),
+     scale_y_continuous(limits = c(0.4, .73),
                          breaks = seq(0, 0.7,0.2),  
                          expand = c(0, 0),
                          name=("YII (Fv/Fm)"))+
-  geom_jitter(aes(colour=Genotype), alpha=0.3)+
-  facet_wrap(~Time) +
-  theme(legend.position = "bottom")
-YII_Disease
+    
+    theme(legend.position="bottom",
+        legend.title = element_blank(), 
+        strip.background =element_rect(fill=NA)) 
+YII_Frag+facet_wrap(~Tank)
 
-YII_Tank+ facet_wrap(Time~Nutrients)
-YII_Tank+ facet_wrap(Time~Disease)
+YII_Disease<- ggplot(YII.Tall, aes (Time, YII, group=(Genotype),
+                                    colour=factor(Genotype))) + 
+      
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.y=mean, geom="line") + 
+     scale_y_continuous(limits = c(0.4, .73),
+                         breaks = seq(0, 0.7,0.2),  
+                         expand = c(0, 0),
+                         name=("YII (Fv/Fm)"))+
+    
+    theme(legend.position="bottom",
+        legend.title = element_blank(), 
+        strip.background =element_rect(fill=NA)) 
+YII_Disease+facet_wrap(~Disease)
+
 
 ```
 
