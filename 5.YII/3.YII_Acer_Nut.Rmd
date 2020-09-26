@@ -156,7 +156,7 @@ YII_Tank
 
 ```{r}
 YII_Frag<- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
-                                    colour=factor(Genotype))) + 
+                                    colour=factor(Tank))) + 
       geom_line()+
       
      scale_y_continuous(limits = c(0.4, .73),
@@ -168,6 +168,22 @@ YII_Frag<- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
         legend.title = element_blank(), 
         strip.background =element_rect(fill=NA)) 
 YII_Frag+facet_wrap(~Genotype)
+
+
+YII_Frag1 <- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
+                                    colour=factor(Genotype))) + 
+      geom_line()+
+      
+     scale_y_continuous(limits = c(0.4, .73),
+                         breaks = seq(0, 0.7,0.2),  
+                         expand = c(0, 0),
+                         name=("YII (Fv/Fm)"))+
+    
+    theme(legend.position="bottom",
+        legend.title = element_blank(), 
+        strip.background =element_rect(fill=NA)) 
+YII_Frag1+facet_wrap(~Tank)
+
 ```
 
 
