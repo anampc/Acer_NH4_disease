@@ -87,7 +87,7 @@ A106,U44,NH4,Placebo,Experiment
 A119,U41,NH4,Pathogen,Experiment
 A125,U41,NH4,Pathogen,Experiment
 A130,U44,NH4,Pathogen,Experiment
-A151,K2,NH4,Placebo,Experiment
+A151,K2,NH4,Placebo,Dead
 A162,K2,NH4,Placebo,Experiment
 A167,K2,NH4,Pathogen,Experiment
 A175,FM19,NH4,Pathogen,Experiment
@@ -203,7 +203,7 @@ A047,Acerv2,Ambient,Placebo,Experiment
 A053,Acerv2,Ambient,Pathogen,Experiment
 A055,Acerv2,Ambient,Placebo,Experiment
 A069,Elkhorn,Ambient,Placebo,Experiment
-A073,Elkhorn,Ambient,Pathogen,Experiment
+A073,Elkhorn,Ambient,Pathogen,Dead
 A088,Elkhorn,Ambient,Placebo,Experiment
 A103,Kelsey-1,Ambient,Placebo,Experiment
 A104,U44,Ambient,Pathogen,Experiment
@@ -255,8 +255,10 @@ A092,Elkhorn,NH4,Pathogen,Experiment
 A153,Kelsey-1,NH4,Pathogen,Experiment
 A136,Kelsey-1,Extra,Extra,Extra?
 A142,Elkhorn,Extra,Extra,Extra?
-A145,Elkhorn,Ambient,Pathogen,Experiment
+A145,Elkhorn,Ambient,Pathogen,Dead
 306,Kelsey-1,Extra,Extra,Extra?
 410,K2,Ambient,Placebo,Experiment
 358,FM19,Ambient,Pathogen,Experiment
 469,Acerv2,Ambient,Pathogen,Experiment
+334,FM9,Ambient,Pathogen,Experiment
+471,Elkhorn,Ambient,Pathogen,Experiment

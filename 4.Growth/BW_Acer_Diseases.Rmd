@@ -153,6 +153,9 @@ BW.data<-BW.data %>%
 BW.data$dBW_r<-BW.data$dBW_r*1000
 
 summary(BW.data)
+
+BW.data<-BW.data[which(BW.data$Available!="Dead"),]
+BW.data<-BW.data[which(BW.data$Available!="Extra?"),]
 ```
 
 
@@ -203,7 +206,6 @@ BW_Bias<- ggplot(BW.data, aes (Genotype, dBW_r, colour=factor(Nutrients))) +
 BW_Bias + facet_grid(Date~Disease)
 
 ```
-
 
 # AW
 
@@ -268,7 +270,6 @@ SizeBiasCheck<- ggplot(BW.data, aes (Est_Coral_AW, dAW_r, colour=factor(Genotype
 SizeBiasCheck
 ```
 
-
 ### Genotype
 
 ```{r}
@@ -299,7 +300,8 @@ AW_Genet2<- ggplot(BW.data, aes (Date, dAW_r, colour=Genotype)) +
   theme(legend.position = "bottom")
  
 AW_Genet2
-AW_Genet2 + facet_grid(Nutrients~Disease)
+AW_Genet2 + facet_wrap(~Tank)
+AW_Genet2 + facet_wrap(~Nutrients)
 
 ```
 
@@ -319,7 +321,7 @@ BW_Frag<- ggplot(BW.data, aes (Date, dAW_r, group=(Tag),
     theme(legend.position="bottom",
         legend.title = element_blank(), 
         strip.background =element_rect(fill=NA)) 
-BW_Frag+facet_wrap(~Genotype)
+BW_Frag+facet_wrap(Nutrients~Genotype)
 ```
 
 
@@ -341,12 +343,7 @@ AW_Tank
 #AW_Tank+ facet_wrap(Date~Nutrients)
 #AW_Tank+ facet_wrap(Date~Disease)
 
-```
-
-### Treatments
-
-```{r}
-AW_Disease<- ggplot(BW.data, aes (Date, dAW_r, colour=Nutrients)) +
+AW_Disease<- ggplot(BW.data, aes (Date, dAW_r, colour=Genotype)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
   scale_y_continuous(limits = c(-3, 10),
@@ -357,10 +354,49 @@ AW_Disease<- ggplot(BW.data, aes (Date, dAW_r, colour=Nutrients)) +
   theme(legend.position = "bottom")
 AW_Disease
 
-AW_Disease + facet_wrap(~Genotype)
+```
+
+### Treatments
+
+```{r}
+AW_Disease<- ggplot(BW.data, aes (Date, dAW_r, colour=Tank)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.y=mean, geom="line") + 
+  scale_y_continuous(limits = c(-3, 10),
+                         breaks = seq(-3, 10,2),  
+                         expand = c(0, 0),
+                         name=("Growth rate (mg/g day)"))+
+  geom_jitter(alpha=0.3, shape=21)+
+  theme(legend.position = "bottom")
+AW_Disease
+
+AW_Disease + facet_wrap(~Nutrients)
 AW_Disease + facet_wrap(Date~Disease)
 
 ```
+
+
+### Fragments
+
+```{r}
+AW_Disease<- ggplot(BW.data, aes (Date, dAW_r, group=Tag, 
+                                  colour=Nutrients)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.y=mean, geom="line") + 
+  scale_y_continuous(limits = c(-3, 10),
+                         breaks = seq(-3, 10,2),  
+                         expand = c(0, 0),
+                         name=("Growth rate (mg/g day)"))+
+  geom_jitter(alpha=0.3)+
+  theme(legend.position = "bottom")
+AW_Disease
+
+AW_Disease + facet_wrap(~Tank)
+AW_Disease + facet_wrap(Nutrients~Disease)
+
+```
+
+
 
 
 ### Pre-treatment bias
