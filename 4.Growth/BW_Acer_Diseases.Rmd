@@ -292,16 +292,17 @@ AW_Genet2<- ggplot(BW.data, aes (Date, dAW_r, colour=Genotype)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
   theme(legend.position = "none")+
-  geom_jitter(shape=21, alpha=0.3)+
+  #geom_jitter(shape=21, alpha=0.3)+
   scale_y_continuous(limits = c(0, 10),
                          breaks = seq(0, 10,2),  
                          expand = c(0, 0),
-                         name=("AW mg / g*day"))+
+                         name=("Growth (mg / g d)"))+
   theme(legend.position = "bottom")
  
 AW_Genet2
-AW_Genet2 + facet_wrap(~Tank)
 AW_Genet2 + facet_wrap(~Nutrients)
+AW_Genet2 + facet_wrap(~Tank)
+
 
 ```
 

@@ -103,10 +103,11 @@ YII.FWC<-YII.Tall[which(YII.Tall$Genotype=='FM14'|
 ```{r}
 # Genotype
 
-YII_Genet<- ggplot(YII.Tall, aes (Genotype, YII, colour=factor(Time))) +
+YII_Genet<- ggplot(YII.Tall, aes (Time, YII, colour=Genotype)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
-  geom_jitter(alpha=0.5, shape=21)+ theme(legend.position = "bottom")+
+  #geom_jitter(alpha=0.5, shape=21)+
+  theme(legend.position = "bottom")+
   scale_y_continuous(limits = c(0, .73),
                          breaks = seq(0, 0.7,0.2),  
                          expand = c(0.01, 0.01),
