@@ -143,7 +143,7 @@ YII_Tank<- ggplot(YII.Tall, aes (Tank, YII)) +
                          breaks = seq(0, 0.7,0.2),  
                          expand = c(0, 0),
                          name=("YII (Fv/Fm)"))+
-  geom_jitter(aes(colour=Genotype), alpha=0.3)+
+  geom_jitter(aes(colour=Genotype), alpha=0.2, shape=21)+
   facet_wrap(~Time) +
   theme(legend.position = "bottom")
 YII_Tank
@@ -167,7 +167,6 @@ YII_Tank2+facet_wrap(~Nutrients)
 ```
 
 ## Fragment
-
 
 ```{r}
 YII_Frag<- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
@@ -201,12 +200,9 @@ YII_Frag1+facet_wrap(~Tank)
 
 ```
 
-
-
 ## Treatments
 
 ```{r}
-
 YII_Frag<- ggplot(YII.Tall, aes (Time, YII, group=(Genotype),
                                     colour=factor(Genotype))) + 
       
@@ -237,12 +233,10 @@ YII_Disease<- ggplot(YII.Tall, aes (Time, YII, group=(Genotype),
         strip.background =element_rect(fill=NA)) 
 YII_Disease+facet_wrap(~Disease)
 
-
 ```
 
 
 ```{r Graphs YII, echo =FALSE}
-
 YII_Genotype<- ggplot(YII.Tall, aes (Date, YII, colour=factor(Nutrients))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line")
