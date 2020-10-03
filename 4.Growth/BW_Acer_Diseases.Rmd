@@ -303,7 +303,6 @@ AW_Genet2
 AW_Genet2 + facet_wrap(~Nutrients)
 AW_Genet2 + facet_wrap(~Tank)
 
-
 ```
 
 
@@ -324,7 +323,6 @@ BW_Frag<- ggplot(BW.data, aes (Date, dAW_r, group=(Tag),
         strip.background =element_rect(fill=NA)) 
 BW_Frag+facet_wrap(Nutrients~Genotype)
 ```
-
 
 ### Tank
 
@@ -354,7 +352,6 @@ AW_Disease<- ggplot(BW.data, aes (Date, dAW_r, colour=Genotype)) +
   geom_jitter(alpha=0.3)+
   theme(legend.position = "bottom")
 AW_Disease
-
 ```
 
 ### Treatments
