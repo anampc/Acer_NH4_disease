@@ -71,19 +71,17 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
 ```{r}
 
 # Tall format
-  Temp.Tall <- gather(Temperature, Tank, Temperature, Tank.1:Tank.12, factor_key=TRUE)
+  Temp.Tall <- gather(Temperature, Tank, Temperature, 
+                      Tank.1:Tank.12, factor_key=TRUE)
   Treatment.Tall <- gather(data=Treatment, Content,
-                           key= Tank, Tank.1:Tank.12, factor_key=TRUE)
+                      key= Tank, Tank.1:Tank.12, factor_key=TRUE)
 
 
 # Merge with content
   
-  Temperature.tall<-merge(Temp.Tall, Treatment.Tall, 
-                          by = c("Time","Tank"))
-  
   Temperature.tall<-plyr::join(Temp.Tall, Treatment.Tall, 
                     by = c("Time","Tank"),
-                    type = "left")
+                    type = "full")
 
 # Data types
     Temperature.tall$Tank<-factor(Temperature.tall$Tank)
@@ -109,7 +107,48 @@ TankTemperature<- ggplot(Temperature.tall, aes (Time, Temperature, colour=factor
 TankTemperature+facet_wrap(~Tank)
 
 TankTemperature+facet_wrap(~Content)
+TankTemperature+facet_wrap(~Period)
+
 ```
+
+## Experiment
+
+```{r}
+
+Experiment<-Temperature.tall[which(Temperature.tall$Period=="Experiment"),]
+Experiment<-Experiment[which(Experiment$Tank!="Tank.12"),]
+Experiment<-Experiment[which(Experiment$Tank!="Tank.11"),]
+Experiment<-Experiment[which(Experiment$Tank!="Tank.10"),]
+Experiment<-Experiment[which(Experiment$Tank!="Tank.9"),]  
+
+library(lubridate)
+
+Experiment$Day<-as.Date(ymd_hms(Experiment$Time))
+Experiment$Day<-weekdays(Experiment$Day)
+Experiment$Data<-ifelse (Experiment$Day=="Friday",
+                         15, NA)
+
+```
+
+
+```{r}
+ExperimentTemperature<- ggplot(Experiment) +
+  #geom_vline(xintercept=1500)+
+  
+  geom_jitter(aes(Time, Temperature, colour=factor(Tank)),
+              alpha=0.5, size=0.01)+
+  geom_point(aes(Time, Data), alpha=1, size=0.05)+
+  scale_y_continuous(limits = c(15, 35),
+                         breaks = seq(15, 35, 2),  
+                         expand = c(0, 0),
+                         name=("Temperature (C)"))
+
+ExperimentTemperature+facet_wrap(~Tank)
+ExperimentTemperature+facet_wrap(~Content)
+
+
+```
+
 
 # Packages used
 

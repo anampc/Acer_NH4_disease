@@ -93,6 +93,7 @@ YII.UM<-YII.Tall[which(YII.Tall$Genotype=='Acerv2'|
 
 YII.FWC<-YII.Tall[which(YII.Tall$Genotype=='FM14'|
                       YII.Tall$Genotype=='FM6'|
+                      YII.Tall$Genotype=='FM19'|
                       YII.Tall$Genotype=='FM9'), ]
 ```
 
@@ -170,11 +171,11 @@ YII_Tank2+facet_wrap(~Nutrients)
 
 
 ```{r}
-YII_Frag<- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
+YII_Frag<- ggplot(YII.FWC, aes (Date, YII, group=(Fragment),
                                     colour=factor(Tank))) + 
       geom_line()+
       
-     scale_y_continuous(limits = c(0.4, .73),
+     scale_y_continuous(limits = c(0.0, .73),
                          breaks = seq(0, 0.7,0.2),  
                          expand = c(0, 0),
                          name=("YII (Fv/Fm)"))+
@@ -182,7 +183,7 @@ YII_Frag<- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
     theme(legend.position="bottom",
         legend.title = element_blank(), 
         strip.background =element_rect(fill=NA)) 
-YII_Frag+facet_wrap(~Genotype)
+YII_Frag+facet_wrap(Nutrients~Genotype)
 
 
 YII_Frag1 <- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
@@ -207,22 +208,24 @@ YII_Frag1+facet_wrap(~Tank)
 
 ```{r}
 
-YII_Frag<- ggplot(YII.Tall, aes (Time, YII, group=(Genotype),
+YII_Nutrient<- ggplot(YII.UM, aes (Date, YII,
+                                    group=(Genotype),
                                     colour=factor(Genotype))) + 
       
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.5 )+
   stat_summary(fun.y=mean, geom="line") + 
-     scale_y_continuous(limits = c(0.4, .73),
+     scale_y_continuous(limits = c(0.0, .73),
                          breaks = seq(0, 0.7,0.2),  
                          expand = c(0, 0),
                          name=("YII (Fv/Fm)"))+
+  geom_vline(xintercept = as.Date("2020-09-14"), linetype=3)+
     
     theme(legend.position="bottom",
         legend.title = element_blank(), 
         strip.background =element_rect(fill=NA)) 
-YII_Frag+facet_wrap(~Tank)
+YII_Nutrient+facet_wrap(~Nutrients)
 
-YII_Disease<- ggplot(YII.Tall, aes (Time, YII, group=(Genotype),
+YII_Disease<- ggplot(YII.FWC, aes (Time, YII, group=(Genotype),
                                     colour=factor(Genotype))) + 
       
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
