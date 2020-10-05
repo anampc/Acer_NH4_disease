@@ -1,0 +1,233 @@
+---
+title: "Acer Temps nutrients and disease"
+author: "Ana Palacio"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+      toc: true
+      df_print: paged
+      theme: united
+bibliography: packages.bib
+nocite: '@*'
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE) 
+                      #fig.width=4, fig.height=3 )
+```
+
+# General project set-up 
+
+```{r libraries, results="hide"}
+
+# Libraries
+  library(reshape2)
+  library(tidyverse)
+  library(tidyr)
+
+# Graphs
+
+theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
+                              panel.grid.minor = element_blank(), 
+                              axis.line = element_line(colour = "black"),
+                              legend.position="bottom",
+                              axis.text.x = element_text(angle = 90, vjust = 0.5),
+                              plot.title = element_text(size=12, face="bold"),
+                              #panel.border = element_rect(colour = "black", fill=NA, size=1)
+                              panel.border = element_blank()
+                              ))
+```
+
+
+# Data
+
+* Treatments, Genotypes, Tags
+
+```{r}
+
+# Treatment Info
+  Treatment<-read.csv("Data/Treatments.csv")
+  #duplicated(Treatment$Time)
+  D_Treatment<-Treatment[duplicated(Treatment$Time), ]
+  #Treatment<-Treatment[!duplicated(Treatment$Time), ]
+  summary(Treatment)
+
+# Temperature
+  Temperature<-read.csv("Data/Temperature_wide.csv")
+  D_Temperature<-Temperature[duplicated(Temperature$Time), ]
+  #Temperature<-Temperature[!duplicated(Temperature$Time), ]
+  summary(Temperature)
+  
+  # Temperature
+  Nutrients<-read.csv("Data/Nutrient samples_round2.csv")
+  summary(Nutrients)
+  
+  # Tags %>%
+  #     group_by(T_Type) %>%
+  #     summarise_at(vars(T_AW, T_BW), funs(mean(., na.rm=TRUE)))
+
+```
+
+# Formating 
+
+## Temperature
+
+```{r}
+
+# Tall format
+  Temp.Tall <- gather(Temperature, Tank, Temperature, 
+                      Tank.1:Tank.12, factor_key=TRUE)
+  Treatment.Tall <- gather(data=Treatment, Content,
+                      key= Tank, Tank.1:Tank.12, factor_key=TRUE)
+
+
+# Merge with content
+  
+  Temperature.tall<-plyr::join(Temp.Tall, Treatment.Tall, 
+                    by = c("Time","Tank"),
+                    type = "full")
+
+# Data types
+    Temperature.tall$Tank<-factor(Temperature.tall$Tank)
+    Temperature.tall$Content<-factor(Temperature.tall$Content)
+    Temperature.tall$Time<-strptime(Temperature.tall$Time, "%m/%d/%Y %H:%M:%S")
+    Temperature.tall$Time <- as.POSIXct(Temperature.tall$Time)
+
+    summary(Temperature.tall)
+
+```
+
+## Nutrients
+
+```{r}
+Nutrients$Date<-as.Date(Nutrients$Date, "%m-%d-%Y")
+Nutrients$Time<-paste(Nutrients$Date, Nutrients$Hour, sep = " ")
+
+Nutrients$Time<-strptime(Nutrients$Time, "%Y-%m-%d %H:%M:%S")
+Nutrients$Time <- as.POSIXct(Nutrients$Time)
+Nutrients$Precipitation <- as.numeric(Nutrients$Precipitation)
+
+summary(Nutrients)
+```
+
+
+# Profiles 
+
+## Temperature
+
+```{r}
+TankTemperature<- ggplot(Temperature.tall, aes (Time, Temperature, colour=factor(Tank))) +
+  #geom_vline(xintercept=1500)+
+  geom_jitter(alpha=0.5, size=0.01)+
+  scale_y_continuous(limits = c(15, 35),
+                         breaks = seq(15, 35, 2),  
+                         expand = c(0, 0),
+                         name=("Temperature (C)"))
+TankTemperature+facet_wrap(~Tank)
+
+TankTemperature+facet_wrap(~Content)
+TankTemperature+facet_wrap(~Period)
+
+```
+
+### Experiment
+
+```{r}
+
+Experiment<-Temperature.tall[which(Temperature.tall$Period=="Experiment"),]
+Experiment<-Experiment[which(Experiment$Tank!="Tank.12"),]
+Experiment<-Experiment[which(Experiment$Tank!="Tank.11"),]
+Experiment<-Experiment[which(Experiment$Tank!="Tank.10"),]
+Experiment<-Experiment[which(Experiment$Tank!="Tank.9"),]  
+
+library(lubridate)
+
+Experiment$Day<-as.Date(ymd_hms(Experiment$Time))
+Experiment$Day<-weekdays(Experiment$Day)
+Experiment$Data<-ifelse (Experiment$Day=="Friday",
+                         15, NA)
+
+```
+
+
+```{r}
+ExperimentTemperature<- ggplot(Experiment) +
+  #geom_vline(xintercept=1500)+
+  
+  geom_jitter(aes(Time, Temperature, colour=factor(Tank)),
+              alpha=0.5, size=0.01)+
+  geom_point(aes(Time, Data), alpha=1, size=0.05)+
+  scale_y_continuous(limits = c(15, 35),
+                         breaks = seq(15, 35, 2),  
+                         expand = c(0, 0),
+                         name=("Temperature (C)"))
+
+ExperimentTemperature+facet_wrap(~Tank)
+ExperimentTemperature+facet_wrap(~Content)
+
+
+```
+
+
+## Nutrients
+
+```{r}
+
+TankNutrients<- ggplot(Nutrients, aes (Time, NH4, colour=factor(Tank))) +
+  #geom_vline(xintercept=1500)+
+  geom_line(linetype=2)+
+  geom_point(alpha=1, size=2)+
+  scale_y_continuous(limits = c(0, 35),
+                         breaks = seq(0, 35, 2),  
+                         expand = c(0, 0),
+                         name=("NH4 (uM)"))+
+  scale_x_datetime(date_minor_breaks = "1 day", 
+               name=("Date"))
+
+TankNutrients+facet_grid(Treatment~.)
+
+TankTemperature+facet_wrap(~Content)
+TankTemperature+facet_wrap(~Period)
+
+```
+
+
+
+```{r}
+
+TankNutrients<- ggplot(Nutrients, aes (x=Time)) +
+  #geom_vline(xintercept=1500)+
+  geom_line(aes(y=NH4, group=(Tank), colour=factor(Treatment)), linetype=2)+
+  geom_point(aes(y=NH4, colour=factor(Treatment)), alpha=1, size=2)+
+  geom_point(aes(y=Precipitation.cm.), size=3)+
+  geom_hline(yintercept = 10, linetype=3)+
+  geom_hline(yintercept = 20, linetype=3)+
+  geom_hline(yintercept = 30, linetype=3)+
+  
+  scale_y_continuous(limits = c(0, 35),
+                         breaks = seq(0, 35, 2),  
+                         expand = c(0.01, 0),
+                         name=("NH4 (uM)"))+
+  scale_x_datetime(breaks = "1 day", 
+                   #limits = c(Sys.Date() - 20, NA),
+                    #limits = as.Date(c("2020-09-14","2020-10-03")),
+                    name=("Date"))
+
+TankNutrients
+
+facet_grid(Treatment~.)
+
+TankTemperature+facet_wrap(~Content)
+TankTemperature+facet_wrap(~Period)
+
+```
+
+
+# Packages used
+
+```{r}
+# Creates bibliography 
+#knitr::write_bib(c(.packages()), "packages.bib")
+```
