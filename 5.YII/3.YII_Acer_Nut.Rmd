@@ -104,7 +104,7 @@ YII.FWC<-YII.Tall[which(YII.Tall$Genotype=='FM14'|
 ```{r}
 # Genotype
 
-YII_Genet<- ggplot(YII.Tall, aes (Time, YII, colour=Genotype)) +
+YII_Genet<- ggplot(YII.Tall, aes (Date, YII, colour=Genotype)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
   #geom_jitter(alpha=0.5, shape=21)+
@@ -170,11 +170,11 @@ YII_Tank2+facet_wrap(~Nutrients)
 ## Fragment
 
 ```{r}
-YII_Frag<- ggplot(YII.FWC, aes (Date, YII, group=(Fragment),
+YII_Frag<- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
                                     colour=factor(Tank))) + 
       geom_line()+
       
-     scale_y_continuous(limits = c(0.0, .73),
+     scale_y_continuous(limits = c(0.3, .73),
                          breaks = seq(0, 0.7,0.2),  
                          expand = c(0, 0),
                          name=("YII (Fv/Fm)"))+
@@ -197,7 +197,7 @@ YII_Frag1 <- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
     theme(legend.position="bottom",
         legend.title = element_blank(), 
         strip.background =element_rect(fill=NA)) 
-YII_Frag1+facet_wrap(~Tank)
+YII_Frag1+facet_wrap(Nutrients~A_Tank)
 
 ```
 
@@ -205,7 +205,7 @@ YII_Frag1+facet_wrap(~Tank)
 
 ```{r}
 
-YII_Nutrient<- ggplot(YII.UM, aes (Date, YII,
+YII_Nutrient<- ggplot(YII.Tall, aes (Date, YII,
                                     group=(Genotype),
                                     colour=factor(Genotype))) + 
       
@@ -222,7 +222,7 @@ YII_Nutrient<- ggplot(YII.UM, aes (Date, YII,
         strip.background =element_rect(fill=NA)) 
 YII_Nutrient+facet_wrap(~Nutrients)
 
-YII_Disease<- ggplot(YII.FWC, aes (Time, YII, group=(Genotype),
+YII_Disease<- ggplot(YII.Tall, aes (Time, YII, group=(Genotype),
                                     colour=factor(Genotype))) + 
       
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
