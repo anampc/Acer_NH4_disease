@@ -88,7 +88,7 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
 
 # 1. BW data
   BW_Tall<-read.csv("Data/BW_ Long_data.csv")
-  
+  #BW_Tall<-read.csv("Data/BW_ Long_data2.csv")  
   #BW_Tall$Estimated.W.density[BW_Tall$Estimated.W.density == "#VALUE!" ] <-NA
   #BW_Tall$Estimated.W.density<-as.numeric(as.character(BW_Tall$Estimated.W.density))
   
@@ -289,7 +289,17 @@ AW_Genet
 AW_Genet+ facet_wrap(~Nutrients)
 AW_Genet+ facet_wrap(~Disease)
 
-AW_Genet2<- ggplot(BW.UM, aes (Date, dAW_r, colour=Genotype)) +
+AW_Genet2<- ggplot(BW.data, aes (Date, dAW_r, colour=Genotype)) +
+  geom_vline(xintercept = as.Date("2020-08-12"), linetype=3)+
+  geom_vline(xintercept = as.Date("2020-08-21"), linetype=3)+
+  geom_vline(xintercept = as.Date("2020-09-04"), linetype=3)+
+  geom_vline(xintercept = as.Date("2020-09-11"), linetype=3)+
+  geom_vline(xintercept = as.Date("2020-09-14"), linetype=4)+
+  geom_vline(xintercept = as.Date("2020-09-18"), linetype=3)+
+  geom_vline(xintercept = as.Date("2020-09-25"), linetype=3)+
+  geom_vline(xintercept = as.Date("2020-10-02"), linetype=3)+
+  geom_vline(xintercept = as.Date("2020-10-09"), linetype=3)+
+  
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
   geom_vline(xintercept = as.Date("2020-09-14"), linetype=3)+
@@ -299,6 +309,11 @@ AW_Genet2<- ggplot(BW.UM, aes (Date, dAW_r, colour=Genotype)) +
                          breaks = seq(0, 10,2),  
                          expand = c(0, 0),
                          name=("Growth (mg / g d)"))+
+  scale_x_date(limits = c(as.Date("2020-08-20"), as.Date("2020-10-05")),
+                         breaks = "7 day",
+                         expand = c(0, 0),
+                         name=("Growth (mg / g d)"))+
+  
   theme(legend.position = "bottom")
  
 AW_Genet2

@@ -197,7 +197,7 @@ ExperimentTemperature+facet_wrap(~Content)
 
 TankNutrients<- ggplot(Nutrients, aes (Time, NH4, colour=factor(Tank))) +
   #geom_vline(xintercept=1500)+
-  geom_line(linetype=2)+
+  #geom_line(linetype=2)+
   geom_point(alpha=1, size=2)+
   scale_y_continuous(limits = c(0, 35),
                          breaks = seq(0, 35, 2),  
@@ -207,9 +207,6 @@ TankNutrients<- ggplot(Nutrients, aes (Time, NH4, colour=factor(Tank))) +
                name=("Date"))
 
 TankNutrients+facet_grid(Treatment~.)
-
-TankTemperature+facet_wrap(~Content)
-TankTemperature+facet_wrap(~Period)
 
 ```
 
@@ -235,11 +232,6 @@ TankNutrients<- ggplot(Nutrients, aes (x=Time)) +
 
 TankNutrients
 
-facet_grid(Treatment~.)
-
-TankTemperature+facet_wrap(~Content)
-TankTemperature+facet_wrap(~Period)
-
 ```
 
 
@@ -256,9 +248,6 @@ TankTemperature+facet_wrap(~Period)
                name=("Date"))
 
 TankNutrients+facet_grid(Treatment~.)
-
-TankTemperature+facet_wrap(~Content)
-TankTemperature+facet_wrap(~Period)
 
 ```
 
@@ -278,7 +267,6 @@ Salinity_plot<- ggplot(Salinity, aes (x=Time, y=Salinity)) +
                     name=("Date"))
 
 Salinity_plot
-
 
 
 Salinity_summary<- ggplot(Summary.Salinity, aes (x=Date)) +
@@ -323,6 +311,7 @@ All_summary<- ggplot() +
   
   # Data collection
   geom_vline(xintercept = as.Date("2020-08-12"), linetype=3)+
+  geom_vline(xintercept = as.Date("2020-08-21"), linetype=3)+
   geom_vline(xintercept = as.Date("2020-09-04"), linetype=3)+
   geom_vline(xintercept = as.Date("2020-09-11"), linetype=3)+
   geom_vline(xintercept = as.Date("2020-09-14"), linetype=4)+
