@@ -26,6 +26,7 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
   library(reshape2)
   library(tidyverse)
   library(tidyr)
+  library(lubridate)
 
 # Graphs
 
@@ -141,7 +142,7 @@ summary(Summary.Salinity)
 ```{r}
 TankTemperature<- ggplot(Temperature.tall, aes (Time, Temperature, colour=factor(Tank))) +
   #geom_vline(xintercept=1500)+
-  geom_jitter(alpha=0.5, size=0.01)+
+  geom_point(alpha=0.5, size=0.01)+
   scale_y_continuous(limits = c(15, 35),
                          breaks = seq(15, 35, 2),  
                          expand = c(0, 0),
