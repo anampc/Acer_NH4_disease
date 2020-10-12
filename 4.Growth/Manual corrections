@@ -1,0 +1,11 @@
+Notes 
+
+* A103 from 2020-09-04. Probably missing digits. Changed from 3.0 to estimated 3.8187. AP
+* A069 from 2020-09-04. Cell history says Replaced: "4.13780" with "3.82660". 4.13780 makes more sense so changed back to the initial value.
+* A120 from 2020-09-04. Seems typo, changed from 4.76 to average bw pre-and post data = 4.2484
+* 289 from 2020-09-04. Changed from 11.862 to 11.0862
+* A048 from 2020-09-04. Probably missing a digit. Manually changed from 3.948 to 3.4948 
+* 270 from 2020-09-11. Impossible value. Changed from 3.17 to 8.17
+* 284 from 2020-09-25. Impossible value. Changed from 6.6020 to 7.6020
+* A186 from 2020-10-02. Manually changed from 4.0168 to 4.0289. Does not seem like a typo 
+* A006 from 2020-09-21. Unlikely value Manually changed from 4.9898 to average bw other 2 timepoints = 4.2216

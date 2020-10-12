@@ -164,8 +164,6 @@ Experiment<-Experiment[which(Experiment$Tank!="Tank.11"),]
 Experiment<-Experiment[which(Experiment$Tank!="Tank.10"),]
 Experiment<-Experiment[which(Experiment$Tank!="Tank.9"),]  
 
-library(lubridate)
-
 Experiment$Day<-as.Date(ymd_hms(Experiment$Time))
 Experiment$Day<-weekdays(Experiment$Day)
 Experiment$Data<-ifelse (Experiment$Day=="Friday",

@@ -68,9 +68,10 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
   #duplicated(Tags$Tag)
   summary(Tags)
   
-  Tags$SW_den<-(999.842594+0.06793952*(Tags$Temperature)-0.00909529*(Tags$Temp)^2+0.0001001685*
-    (Tags$Temperature)^3-0.000001120083*(Tags$Temperature)^4+0.000000006536332*(Tags$Temp)^5+(0.824493-0.0040899*
-    (Tags$Temperature)+0.000076438*(Tags$Temperature)^2-0.00000082467*(Tags$Temperature)^3+0.0000000053875*
+  Tags$T_SW_den<-(999.842594+0.06793952*(Tags$Temperature)-0.00909529*(Tags$Temperature)^2+0.0001001685*
+    (Tags$Temperature)^3-0.000001120083*(Tags$Temperature)^4+0.000000006536332*(Tags$Temperature)^5+
+      (0.824493-0.0040899* (Tags$Temperature)+0.000076438*(Tags$Temperature)^2-0.00000082467*
+    (Tags$Temperature)^3+0.0000000053875*
     (Tags$Temperature)^4)*(Tags$Salinity)+(-0.00572466+0.00010227*(Tags$Temperature)-0.0000016546*
     (Tags$Temperature)^2)* (Tags$Salinity)^1.5+0.00048314*(Tags$Salinity)^2)*0.001
   
@@ -156,6 +157,7 @@ summary(BW.data)
 
 BW.data<-BW.data[which(BW.data$Available!="Dead"),]
 BW.data<-BW.data[which(BW.data$Available!="Extra?"),]
+write.csv(BW.data, "BW.data.csv", row.names = FALSE)
 ```
 
 
@@ -176,34 +178,63 @@ SizeBiasCheck
 
 ```{r}
  
-BW_Genet<- ggplot(BW.data, aes (Genotype, dBW_r, colour=factor(Date))) +
+BW_Genet<- ggplot(BW.data, aes (Date, BW, colour=factor(Genotype))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
   geom_jitter(alpha=0.5) +
-  scale_y_continuous(limits = c(0, 5),
-                         breaks = seq(0, 5,1),  
+  scale_y_continuous(limits = c(2, 15),
+                         breaks = seq(0, 15,1),  
+                         expand = c(0, 0),
+                         name=("dBW [mg / g*day]"))+
+  theme(legend.position = "bottom")
+
+BW_Genet
+BW_Genet+facet_grid(~Nutrients)
+BW_Genet+facet_grid(Disease~Nutrients)
+
+dBW_Genet<- ggplot(BW.data, aes (Date, dBW, colour=factor(Genotype))) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.y=mean, geom="line") + 
+  geom_jitter(alpha=1) +
+  scale_y_continuous(limits = c(-1.4, 1.5),
+                         breaks = seq(-1.4, 1.5, 0.4),  
                          expand = c(0, 0),
                          name=("dBW [mg / g*day]"))+
   theme(legend.position = "bottom")
   
-BW_Genet
-BW_Genet+ facet_wrap(~Nutrients)
-BW_Genet+ facet_wrap(~Disease)
-#BW_Genet+ facet_wrap(Nutrients~Disease)
+dBW_Genet
+dBW_Genet+ facet_wrap(~Nutrients)
+dBW_Genet + facet_wrap(Nutrients~Disease)
+
+
+dBWr_Genet<- ggplot(BW.data, aes (Date, dBW_r, colour=factor(Genotype))) +
+  geom_jitter(alpha=0.3) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.y=mean, geom="line") + 
+    scale_y_continuous(limits = c(-2, 6),
+                         breaks = seq(-2, 10, 1),  
+                         expand = c(0, 0),
+                         name=("dBW [mg / g*day]"))+
+  theme(legend.position = "bottom")
+  
+dBWr_Genet
+dBWr_Genet+ facet_wrap(~Nutrients)
+dBWr_Genet + facet_wrap(Nutrients~Disease)
 ```
 
 ### Pre-treatment bias
 
 ```{r}
 BW_Bias<- ggplot(BW.data, aes (Genotype, dBW_r, colour=factor(Nutrients))) +
+  geom_jitter(alpha=0.3) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
-  geom_jitter(alpha=0.5) +
+  
   scale_y_continuous(limits = c(0, 5),
                          breaks = seq(0, 5,1),  
                          expand = c(0, 0),
                          name=("dBW [mg / g*day]"))
-BW_Bias + facet_grid(Date~Disease)
+BW_Bias
 
 ```
 
@@ -221,8 +252,8 @@ BW_Bias + facet_grid(Date~Disease)
   BW.data$SW_den<-(999.842594+0.06793952*(BW.data$Temp)-0.00909529*(BW.data$Temp)^2+0.0001001685*
     (BW.data$Temp)^3-0.000001120083*(BW.data$Temp)^4+0.000000006536332*(BW.data$Temp)^5+(0.824493-0.0040899*
     (BW.data$Temp)+0.000076438*(BW.data$Temp)^2-0.00000082467*(BW.data$Temp)^3+0.0000000053875*(BW.data$Temp)^4)*
-    (BW.data$Salinity)+(-0.00572466+0.00010227*(BW.data$Temp)-0.0000016546*(BW.data$Temp)^2)*
-    (BW.data$Salinity)^1.5+0.00048314*(BW.data$Salinity)^2)*0.001
+    (BW.data$Sal)+(-0.00572466+0.00010227*(BW.data$Temp)-0.0000016546*(BW.data$Temp)^2)*
+    (BW.data$Sal)^1.5+0.00048314*(BW.data$Sal)^2)*0.001
     
 # 3. Coral air weight
   BW.data$Est_Coral_AW<-(BW.data$Coral_BW)*(1/(1-(BW.data$SW_den)/2.4))
@@ -254,7 +285,6 @@ BW.FWC<-BW.data[which(BW.data$Genotype=='FM14'|
                       BW.data$Genotype=='FM6'|
                       BW.data$Genotype=='FM19'|
                       BW.data$Genotype=='FM9'), ]
-
 ```
 
 ## AW Exploration 
@@ -268,7 +298,14 @@ SizeBiasCheck<- ggplot(BW.data, aes (Est_Coral_AW, dAW_r, colour=factor(Genotype
                          breaks = seq(0, 10,2),  
                          expand = c(0, 0),
                          name=("dAW [mg / g*day]"))
-SizeBiasCheck
+ggExtra::ggMarginal(
+  p = SizeBiasCheck,
+  type = 'density',
+  margins = 'both',
+  size = 5,
+  colour = 'black',
+  fill = 'gray'
+)
 ```
 
 ### Genotype
@@ -309,7 +346,7 @@ AW_Genet2<- ggplot(BW.data, aes (Date, dAW_r, colour=Genotype)) +
                          breaks = seq(0, 10,2),  
                          expand = c(0, 0),
                          name=("Growth (mg / g d)"))+
-  scale_x_date(limits = c(as.Date("2020-08-20"), as.Date("2020-10-05")),
+  scale_x_date(limits = c(as.Date("2020-08-20"), as.Date("2020-10-10")),
                          breaks = "7 day",
                          expand = c(0, 0),
                          name=("Growth (mg / g d)"))+
@@ -374,7 +411,47 @@ AW_Disease
 ### Treatments
 
 ```{r}
-AW_Disease<- ggplot(BW.data, aes (Date, dAW_r, colour=Tank)) +
+
+BW<- ggplot(BW.data, aes (Date, Coral_BW, colour=Genotype)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.y=mean, geom="line") + 
+  scale_y_continuous(limits = c(-3, 10),
+                         breaks = seq(-3, 10,2),  
+                         expand = c(0, 0),
+                         name=("Estimated BW (g)"))+
+  geom_jitter(alpha=0.3, shape=21)+
+  theme(legend.position = "bottom")
+BW
+BW+facet_grid(~Nutrients)
+
+
+AW<- ggplot(BW.data, aes (Date, Est_Coral_AW, colour=Genotype)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.y=mean, geom="line") + 
+  scale_y_continuous(limits = c(-3, 10),
+                         breaks = seq(-3, 10,2),  
+                         expand = c(0, 0),
+                         name=("Estimated AW (g)"))+
+  geom_jitter(alpha=0.3, shape=21)+
+  theme(legend.position = "bottom")
+AW
+AW + facet_grid(Disease~Nutrients)
+
+D_BW<- ggplot(BW.data, aes (Date, dBW_r, colour=Genotype)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.y=mean, geom="line") + 
+  scale_y_continuous(limits = c(-3, 7),
+                         breaks = seq(-3, 10,2),  
+                         expand = c(0, 0),
+                         name=("Growth rate (mg/g day)"))+
+  geom_jitter(alpha=0.3, shape=21)+
+  theme(legend.position = "bottom")
+D_BW
+D_BW + facet_wrap(~Nutrients)
+D_BW + facet_wrap(~Disease)
+
+
+D_AW<- ggplot(BW.data, aes (Date, dAW_r, colour=Genotype)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
   scale_y_continuous(limits = c(-3, 10),
@@ -383,10 +460,9 @@ AW_Disease<- ggplot(BW.data, aes (Date, dAW_r, colour=Tank)) +
                          name=("Growth rate (mg/g day)"))+
   geom_jitter(alpha=0.3, shape=21)+
   theme(legend.position = "bottom")
-AW_Disease
-
-AW_Disease + facet_wrap(~Nutrients)
-AW_Disease + facet_wrap(Date~Disease)
+D_AW
+D_AW + facet_wrap(~Nutrients)
+D_AW + facet_wrap(~Disease)
 
 ```
 
