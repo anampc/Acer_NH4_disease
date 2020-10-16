@@ -61,6 +61,8 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
     YII.Tall$Time<-as.numeric(YII.Tall$Time)
     YII.Tall$Date<-as.Date(YII.Tall$Date, "%Y-%m-%d")
     YII.Tall$Days<-(as.numeric(YII.Tall$Date)-18486)
+    YII.Tall$Date[which(YII.Tall$Date=="2020-09-04")]<-"2020-09-02"
+    YII.Tall$Date<-as.Date(YII.Tall$Date, "%Y-%m-%d")
   
   # Remove-unused data    
     Extras <- YII.Tall[which (YII.Tall$Nutrients=="Extra"), ]
@@ -208,7 +210,7 @@ YII_Frag1+facet_wrap(Nutrients~A_Tank)
 YII_Nutrient<- ggplot(YII.Tall, aes (Date, YII,
                                     group=(Genotype),
                                     colour=factor(Genotype))) + 
-  geom_point(alpha=0.1)+    
+  #geom_point(alpha=0.1)+    
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.5 )+
   stat_summary(fun.y=mean, geom="line") + 
      scale_y_continuous(limits = c(0.0, .73),
