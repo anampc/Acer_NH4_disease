@@ -9,3 +9,6 @@ Notes
 * 284 from 2020-09-25. Impossible value. Changed from 6.6020 to 7.6020
 * A186 from 2020-10-02. Manually changed from 4.0168 to 4.0289. Does not seem like a typo 
 * A006 from 2020-09-21. Unlikely value Manually changed from 4.9898 to average bw other 2 timepoints = 4.2216
+
+* A197 from 2020-10-09. Unlikely value Manually changed from 4.9023 to 3.9023
+* A122 from 2020-10-09. Unlikely value Manually changed from 5.7367 to 5.13673
