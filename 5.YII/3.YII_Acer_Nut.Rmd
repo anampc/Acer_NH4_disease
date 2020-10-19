@@ -123,7 +123,7 @@ YII_Genet+ facet_wrap(~Disease)
 YII_Genet+ facet_wrap(Nutrients~Disease)
 
 
-YII_Genet<- ggplot(YII.Tall, aes (Time, YII, colour=factor(Nutrients), shape=Nutrients)) +
+YII_Genet<- ggplot(YII.Tall, aes (Date, YII, colour=factor(Nutrients), shape=Nutrients)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
   stat_summary(fun.y=mean, geom="point") +
