@@ -151,7 +151,7 @@ YII_Tank<- ggplot(YII.Tall, aes (Tank, YII)) +
   theme(legend.position = "bottom")
 YII_Tank
 
-YII_Tank2<- ggplot(YII.Tall, aes (Time, YII, colour=(Genotype))) + 
+YII_Tank2<- ggplot(YII.Tall, aes (Time, YII, colour=(Tank))) + 
       
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
@@ -163,7 +163,7 @@ YII_Tank2<- ggplot(YII.Tall, aes (Time, YII, colour=(Genotype))) +
     theme(legend.position="bottom",
         legend.title = element_blank(), 
         strip.background =element_rect(fill=NA)) 
-YII_Tank2+facet_wrap(~A_Tank)
+YII_Tank2+facet_wrap(~Nutrients)
 
 # YII_Tank+ facet_wrap(Time~Nutrients)
 # YII_Tank+ facet_wrap(Time~Disease)
