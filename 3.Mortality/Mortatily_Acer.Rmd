@@ -31,7 +31,7 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
    
 # Default ggplot settings
 
-    Fill.colour<-scale_colour_manual(values = c("black", "gray70", "gray35"))
+    Fill.colour<-scale_colour_manual(values = c("black", "gray35"))
 
     ggthe_bw<-theme(plot.background=element_blank(),
           panel.grid.major.y = element_blank(),
@@ -48,11 +48,18 @@ Try survival package
 
 ```{r}
 # Data
-    Survival.data<-read.csv("Data/Acer_Mortality.csv", header = TRUE)
+    Survival.data<-read.csv("Data/Acer_Mortality2.csv", header = TRUE)
     summary(Survival.data)
+     Survival.data$Date<-as.Date(Survival.data$Date)
+    Survival.data$Day<-as.numeric(Survival.data$Date)-18518
+    Survival.data$Fu.time_texp<-Survival.data$Day
+    Survival.data$Treatment<-paste(Survival.data$Nutrients, Survival.data$Disease, sep = "-" )
+    
     summary(Survival.data$Genotype)
-    Survival.data$Genotype<-factor(Survival.data$Genotype, 
-                                   levels=c("G_48", "G_62","G_31", "G_08","G_07", "G_50"))
+    #Survival.data$Genotype<-factor 
+     #   (Survival.data$Genotype, 
+     #   levels=c("G_48", "G_62","G_31", "G_08","G_07", "G_50"))
+    Survival.data$Genotype<-as.factor(Survival.data$Genotype)
     summary(Survival.data$Genotype)
 ```
 
@@ -67,22 +74,23 @@ Try survival package
     summary(fit0)
   # Plot the survival model
     Genotype_only<-ggsurvplot(fit0, data = Survival.data, pval = TRUE,
-               risk.table=T, tables.height=0.4, conf.int = T, n.risk   = TRUE )
+               risk.table=T, tables.height=0.4, conf.int = F, n.risk   = TRUE )
     Genotype_only
 
 # Only treatment model
     # Kaplan-Meier estimator. The "log-log" confidence interval is preferred.
-    fit1 <- survfit(surv_object ~ Treatment, data = Survival.data)
+    fit1 <- survfit(surv_object ~ Treatment,
+                    data = Survival.data)
     summary(fit1)
-    #coxfit <- coxph(surv_object ~ Treatment, data = Survival.data, ties = 'exact')
-    #summary(coxfit)
+    coxfit <- coxph(surv_object ~ Treatment, data = Survival.data, ties = 'exact')
+    summary(coxfit)
 
     # Plot the survival model
-    Treatment_Only<-ggsurvplot(fit1, data = Survival.data, pval = TRUE, 
-           conf.int = T, risk.table=T, palette=Fill.colour,
-           break.time.by=15, xlim=c(0,115), risk.table.y.text = FALSE,
+    Nutrients_Only<-ggsurvplot(fit1, data = Survival.data, pval = TRUE, 
+           conf.int = T, risk.table=T, #palette=Fill.colour,
+           break.time.by=15, xlim=c(0,60), risk.table.y.text = FALSE,
            risk.table.title="Number of fragments at risk")
-    Treatment_Only
+    Nutrients_Only
     #ggsave("Outputs/Fig_2_Surv_Treatment.svg", 
      #      Treatment_Only$plot, width=4, height=3.5,dpi = 300)
     #ggsave("Outputs/Fig_2_Surv_Treatment.pdf", print(Treatment_Only),
