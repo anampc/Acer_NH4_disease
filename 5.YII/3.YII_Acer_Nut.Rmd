@@ -97,6 +97,9 @@ YII.FWC<-YII.Tall[which(YII.Tall$Genotype=='FM14'|
                       YII.Tall$Genotype=='FM6'|
                       YII.Tall$Genotype=='FM19'|
                       YII.Tall$Genotype=='FM9'), ]
+
+
+LastTreatment<-YII.Tall[which(YII.Tall$Time=='12'|YII.Tall$Time=='13'), ]
 ```
 
 # Data exploration
@@ -302,7 +305,6 @@ YII_Nut<- ggplot(YII.nutrients, aes (Date, YII, colour=factor(Nutrients))) +
   stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
   stat_summary(fun.y=mean, geom="line") +   theme_gdocs()
 YII_Nut + ylim(0.2, 0.7)
-
 
 YII_Date_Nut<- ggplot(YII.nutrients, aes (Nutrients, YII, colour=factor(Nutrients))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+

@@ -88,52 +88,6 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
 
 ```
 
-## Nutrients
-
-```{r}
-# Nutrients
-
-Nutrients<-read.csv("Data/Nutrient samples_round2.csv")
-  summary(Nutrients)
-  
-  Nutrients$Date<-as.Date(Nutrients$Date, "%m-%d-%Y")
-  Nutrients$Time<-paste(Nutrients$Date, Nutrients$Hour, sep = " ")
-
-  Nutrients$Time<-strptime(Nutrients$Time, "%Y-%m-%d %H:%M:%S")
-  Nutrients$Time <- as.POSIXct(Nutrients$Time)
-  Nutrients$Precipitation <- as.numeric(Nutrients$Precipitation)
-  Nutrients$Date <- as.Date(Nutrients$Time)
-  
-summary(Nutrients)
-
-```
-
-## Salinity
-
-```{r}
-# Precipitation
-  Precipitation<-read.csv("Data/Precipitation.csv")
-  Precipitation$Date<-as.Date(Precipitation$Date, "%Y-%m-%d")
-
-# Salinity
-  Salinity<-read.csv("Data/System.csv")
-  Salinity$Time<-strptime(Salinity$Time, "%m/%d/%Y %H:%M:%S")
-  Salinity$Time <- as.POSIXct(Salinity$Time)
-  Salinity$Date <- as.Date(Salinity$Time)
-  summary(Salinity)
-  
-  
-Summary.Salinity<- Salinity %>%
-  group_by(Date)%>%
-  dplyr::summarise(mean=mean(Salinity), 
-            min=min(Salinity),
-            max=max(Salinity))
-
-Summary.Salinity<-left_join(Summary.Salinity, Precipitation, by=("Date"))
-Summary.Salinity$Precipitation<-as.numeric(Summary.Salinity$Precipitation)
-
-summary(Summary.Salinity)
-```
 
 # Profiles 
 
@@ -189,158 +143,21 @@ ExperimentTemperature+facet_wrap(~Content)
 
 ```
 
-
-## Nutrients
-
 ```{r}
-
-TankNutrients<- ggplot(Nutrients, aes (Time, NH4, colour=factor(Tank))) +
+meanTemp<-ggplot(Experiment) +
   #geom_vline(xintercept=1500)+
-  #geom_line(linetype=2)+
-  geom_point(alpha=1, size=2)+
-  scale_y_continuous(limits = c(0, 35),
-                         breaks = seq(0, 35, 2),  
-                         expand = c(0, 0),
-                         name=("NH4 (uM)"))+
-  scale_x_datetime(date_minor_breaks = "1 day", 
-               name=("Date"))
-
-TankNutrients+facet_grid(Treatment~.)
-
-```
-
-```{r}
-
-TankNutrients<- ggplot(Nutrients, aes (x=Time)) +
-  #geom_vline(xintercept=1500)+
-  geom_line(aes(y=NH4, group=(Tank), colour=factor(Treatment)), linetype=2)+
-  geom_point(aes(y=NH4, colour=factor(Treatment)), alpha=1, size=2)+
-  geom_point(aes(y=Precipitation.cm.), size=3)+
-  geom_hline(yintercept = 10, linetype=3)+
-  geom_hline(yintercept = 20, linetype=3)+
-  geom_hline(yintercept = 30, linetype=3)+
   
-  scale_y_continuous(limits = c(0, 35),
-                         breaks = seq(0, 35, 2),  
-                         expand = c(0.01, 0),
-                         name=("NH4 (uM)"))+
-  scale_x_datetime(breaks = "1 day", 
-                   #limits = c(Sys.Date() - 20, NA),
-                    #limits = as.Date(c("2020-09-14","2020-10-03")),
-                    name=("Date"))
-
-TankNutrients
-
-```
-
-
-```{r}
- TankNutrients<- ggplot(Nutrients, aes (Time, NH4, colour=factor(Tank))) +
-  #geom_vline(xintercept=1500)+
-  geom_line(linetype=2)+
-  geom_point(alpha=1, size=2)+
-  scale_y_continuous(limits = c(0, 35),
-                         breaks = seq(0, 35, 2),  
-                         expand = c(0, 0),
-                         name=("NH4 (uM)"))+
-  scale_x_datetime(date_minor_breaks = "1 day", 
-               name=("Date"))
-
-TankNutrients+facet_grid(Treatment~.)
-
-```
-
-## Salinity
-
-```{r}
-Salinity_plot<- ggplot(Salinity, aes (x=Time, y=Salinity)) +
-  #geom_vline(xintercept=1500)+
-  geom_line()+
-    scale_y_continuous(limits = c(15, 36),
+  geom_jitter(aes(Time, Temperature, colour=factor(Tank)),
+              alpha=0.5, size=0.01)+
+  geom_point(aes(Time, Data), alpha=1, size=0.05)+
+  scale_y_continuous(limits = c(15, 35),
                          breaks = seq(15, 35, 2),  
-                         expand = c(0.01, 0),
-                         name=("Salinity (?)"))+
-  scale_x_datetime(breaks = "1 week", 
-                   #limits = c(Sys.Date() - 20, NA),
-                    #limits = as.Date(c("2020-09-14","2020-10-03")),
-                    name=("Date"))
+                         expand = c(0, 0),
+                         name=("Temperature (C)"))
 
-Salinity_plot
-
-
-Salinity_summary<- ggplot(Summary.Salinity, aes (x=Date)) +
-  #geom_vline(xintercept=1500)+
-  geom_line(aes(y=min), colour="blue")+
-  geom_line(aes(y=max), colour="red")+
-  geom_line(aes(y=mean), colour="black")+
-  geom_line(aes(y=Precipitation*10), colour="black")+
-  geom_hline(yintercept = 30, linetype=3)+
-  geom_hline(yintercept = 33, linetype=3)+
-  
-  # Data collection
-  geom_vline(xintercept = as.Date("2020-08-12"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-09-04"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-09-11"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-09-14"), linetype=4)+
-  geom_vline(xintercept = as.Date("2020-09-18"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-09-25"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-10-02"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-10-09"), linetype=3)+
-  
-  geom_hline(yintercept = 33, linetype=3)+
-  
-  scale_y_continuous(limits = c(0, 36),
-                         breaks = seq(0, 35, 2),  
-                         expand = c(0.01, 0),
-                         name=("Salinity (?)"))+
-  scale_x_date(breaks = "3 day", 
-                   #limits = c(Sys.Date() - 20, NA),
-                    #limits = as.Date(c("2020-09-14","2020-10-03")),
-                    name=("Date"))
-
-Salinity_summary
-
+ExperimentTemperature+facet_wrap(~Tank)
 ```
 
-```{r}
-All_summary<- ggplot() +
-  
-  geom_hline(yintercept = 30, linetype=3)+
-  geom_hline(yintercept = 33, linetype=3)+
-  
-  # Data collection
-  geom_vline(xintercept = as.Date("2020-08-12"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-08-21"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-09-04"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-09-11"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-09-14"), linetype=4)+
-  geom_vline(xintercept = as.Date("2020-09-18"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-09-25"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-10-02"), linetype=3)+
-  geom_vline(xintercept = as.Date("2020-10-09"), linetype=3)+
-  
-  geom_line(data=Summary.Salinity, aes(x=Date, y=min), colour="blue")+
-  geom_line(data=Summary.Salinity, aes(x=Date, y=max), colour="red")+
-  geom_line(data=Summary.Salinity, aes( x=Date, y=mean), colour="black")+
-  
-  geom_line(data=Summary.Salinity, aes(x=Date, y=Precipitation+20), colour="black")+
-  geom_point(data=Summary.Salinity, aes(x=Date, y=Precipitation+20), colour="black", alpha=1, size=1)+
-  
-  geom_line(data=Nutrients, aes (x=as.Date(Time), y=NH4, group=factor(Tank), colour=Treatment), linetype=2) +
-  geom_point(data=Nutrients, aes (x=as.Date(Time), y=NH4, group=factor(Tank), colour=Treatment), alpha=1, size=2) +
-  
-  
-  scale_y_continuous(limits = c(0, 36),
-                         breaks = seq(0, 35, 2),  
-                         expand = c(0.01, 0),
-                         name=("Salinity / NH4 (uM) / Precipitation +20in"))+
-  scale_x_date(breaks = "3 day", 
-                   #limits = c(Sys.Date() - 20, NA),
-                    #limits = as.Date(c("2020-09-14","2020-10-03")),
-                    name=("Date"))
-All_summary
-
-```
 
 
 # Packages used
