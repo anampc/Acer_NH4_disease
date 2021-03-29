@@ -1,0 +1,9430 @@
+﻿---
+title: '*A.cer* trade-offs in nutrients and disease exposure'
+author: "A. Palacio-Castro, D. Kroesche, S. Rosales"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    df_print: paged
+    theme: united
+    toc: yes
+---
+
+
+# February 7th - March 13th, 2020
+
+
+## Primary Flow Rate Sensor Tests (DK)
+
+
+* Set flow rate in tank 5 to a specific value. Gradual changes monitored over several days via Labview. 
+
+
+------
+
+
+# June 30th - July 2nd, 2020
+
+
+## Secondary Flow Rate Tests (DK)
+
+
+* set all tanks to 150 +/- 10 mL/min after calibration
+* measured actual flow rate in each tank once per hour
+* record kept in: [Flow Rate Cylinder Tests]
+(https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+#Labview Excel Printout Key:
+
+
+Tank #:
+	Excel Column Recording Flow Rate
+	1
+	E
+	2
+	I
+	3
+	M
+	4
+	Q
+	5
+	U
+	6
+	Y
+	7
+	AC
+	8
+	AG
+	9
+	AK
+	10
+	AO
+	11
+	AS
+	12
+	AW
+	13
+	BA
+	14
+	BE
+	15
+	BI
+	16
+	BM
+	
+
+------
+
+
+# July 6, 2020
+
+
+## Make NH4Cl stock 1 (AP & DK)
+
+
+* Make 2 batches of  NH4Cl stock 1 (200 mM), each one of 1L. Each batch has:
+        *  1L of millipore water
+        *  ~10.6982 g of NH4Cl
+        *  Calculations are in: [Nutrient calculations](https://docs.google.com/spreadsheets/d/1YvdtbUH2qMIzq6EW2xj6OTkVD5FPB1q9HCX_sdudOvY/edit#gid=1881522557)
+
+
+* First batch was divided in 50mL falcon tubes 
+* Second was kept in a 1L glass bottle.  
+* All stocks were covered with aluminum foil and placed in the ERL fridge.
+
+
+
+
+## Initial test of nutrient pumps (AP & DK)
+
+
+*  Measured volume delivered by the feeders using 100mL graduated cylinders. 
+
+
+Trial
+	pump #1
+	pump #2
+	pump #3
+	pump #4
+	pump#5
+(counterclockwise)
+	1
+	15.0
+	10.0
+	11.25
+	13.0
+	6.0
+	2
+	15.0
+	10.0
+	10.5
+	13.0
+	6.0
+	3
+	15.0
+	10.0
+	11.0
+	12.0
+	6.0
+	4
+	
+
+	10.0
+	11.0
+	
+
+	5.0
+	5
+	
+
+	
+
+	11.0
+	
+
+	7.0
+	6
+	
+
+	
+
+	11.0
+	
+
+	
+
+	7
+	
+
+	
+
+	11.0
+	
+
+	
+
+	8
+	
+
+	
+
+	11.5
+	
+
+	
+
+	
+
+
+
+------
+
+
+# July 7, 2020
+
+
+## Cleaned ERL flowmeters (DK)
+
+
+* Took paddlewheel flowmeters apart and ran warm freshwater through components, and then reassembled them. (Model #: FV-300-7V, range: 200-2000 mL/min)
+
+
+## Tested nutrient delivery pumps #1- 4 (DK)
+
+
+* Issues with the ‘interval’ changing on its own/not adhering to what we set it to
+* Pump settings: pumps = 4, duration = 20 sec, Interval = 2 mins
+* Contacted Nate for potential solutions
+* results after 10 (?) rounds (20 mins): 
+
+
+Pump #
+	Total Volume
+	Volume/10
+	1
+	151
+	15.1
+	2
+	95
+	9.5
+	3
+	125
+	12.5
+	4
+	119
+	11.9
+	
+
+
+
+------
+# July 9, 2020
+
+
+## Secondary Flow Rate Tests (DK)
+
+
+* purpose: to determine if cleaning salt/debris from flowmeters improves results
+* flowmeters on tanks 1-4 have been cleaned
+* testing tanks 1-4 and 15-16
+
+
+## Tested nutrient delivery pumps #1- 4 (DK)
+
+
+* pumps initiated at 15:05, stopped working after 15:59 (27 doses)
+
+
+
+
+Pump #
+	Total Volume
+	Volume/27
+	1
+	395
+	14.6
+	2
+	262
+	9.70
+	3
+	337
+	12.5
+	4
+	329
+	12.2
+	
+
+------
+
+
+# July 10, 2020
+
+
+## Feeders Tested (DK)
+
+
+* pumps stop working randomly and change the settings on its own
+
+
+## Calibrated and Tested Neptune Dos Pumps (DK/AP)
+
+
+* These have shown to be reliable and easily programmable. A viable option.
+
+
+------
+
+
+# July 14, 2020
+
+
+## Secondary Flow Rate Tests (After Flowmeter Cleaning) (DK)
+
+
+## Neptune Dos Pumps Tested (DK/AP)
+
+
+* Expected volume = 18.6 mL
+
+
+* Results:
+
+
+Pump #
+	Volume (mL):
+	16-1
+	18.0
+	16-2
+	18.0
+	17-1
+	18.0
+	17-2
+	19.0
+	
+
+## Feeder Pumps Tested (DK/AP)
+
+
+* Ian fixed bugs in the code
+* Need to determine the pumping duration needed to dose 10 mL
+* Controller ports starting from the bottom: #1, #2, #3, #4, #5
+* Record kept in: [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+------
+
+
+# July 15, 2020
+
+
+## Gathered items needed for picking up corals from FWC (DK)
+
+
+* We will need more tags. (so far we have: A001 - A200)
+* Labeled 200 microcentrifuge tubes for tissue samples
+* all other supplies are listed in: [Nutrients_diseases experiment](https://docs.google.com/spreadsheets/d/1FDztXA1ID9vdiWwcwcTswNrOvZOzLIbVc-qbNeAnUmA/edit?usp=sharing) 
+
+
+## Set up feeders on tanks 1-4 (DK)
+
+
+* 5ft of tubing x 4 needed for feeder “in” tubes
+* two feeders to a bottle of nutrients   
+
+
+## Field Temperatures
+
+
+* CRF~85F=29.5C
+* FWC ~86F=30C
+
+
+------
+# July 16, 2020
+ 
+## Secondary Flow Rate Tests (DK)
+
+
+* Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+------
+
+
+# July 17, 2020
+ 
+## Secondary Flow Rate Tests (DK)
+
+
+* Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+------
+
+
+# July 20, 2020
+
+
+## Made NH4Cl Stock 2 (2.25 mM) (DK)
+
+
+* Added 11.25 mL of Stock 1 (200 mM) solution for every 1.0 L of RO Water
+* Stock 2 batches #1-4 made using stock 1 batches #1-3 
+* Calculations are in: [Nutrient calculations](https://docs.google.com/spreadsheets/d/1YvdtbUH2qMIzq6EW2xj6OTkVD5FPB1q9HCX_sdudOvY/edit#gid=1881522557)
+
+
+## Start nutrient trials (DK/AP)
+
+
+* Added 7.5 mL of stock 1 (200mM, Tube # 4) to tanks 1-4.
+* No nutrients added to tank 6
+* Sample #X-1:  <1 min, ~ at 2:00 PM, 2 samples per tank (tanks 1-4, 6)
+- NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+- NO3: frozen
+* Set pumps to 15 min intervals 
+- Pump 1: 14 seconds duration
+- Pump 2: 21 seconds
+- Pump 3: 16 seconds
+- Pump 4: 16 seconds
+* Sample #X-2:  ~ at 3:00 PM, 1 sample per tank (tanks 1-4)
+- NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+* Sample #X-3:  ~ at 4:00 PM, 1 samples per tank (tanks 1-4)
+- NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+* Sample #X-4:  ~ at 5:00 PM, 1 sample per tank (tanks 1-4)
+- NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+* Sample #X-5:  ~ at 6:00 PM, 2 samples per tank (tanks 1-4, 6)
+- NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+- NO3: frozen
+
+
+## Tried IPAM with Danielle’s computer
+
+
+* Camera driver issues
+
+
+## Things we need to check:
+
+
+* IPAM issues
+* Volume of tanks + reserve water below (semi-closed system) (Was ok)
+* Where can we set up IPAM and BW stations in the lab? (limited counter space)
+* Ask Ian if outlet in back right side of lab (that feeders are plugged into) is on a timer (It is not) 
+* Need bubble wrap or newspaper for transporting corals (got it, AP)
+
+
+------
+
+
+# July 21, 2020
+
+
+## Took a cylinder measurement in the morning before calibration  (DK)
+
+
+Tank #
+	Time
+	Labview Flow Rate
+	Actual Flow Rate
+	1
+	9:13
+	0/23.3333
+	96
+	2
+	9:14
+	0/0
+	112
+	3
+	9:15
+	44.5715/66.8573
+	124
+	4
+	9:16
+	0
+	108
+	
+
+* Calibrated tanks 1-4 at 9:34 am
+* Calibrated tanks 6-8 at 9:42
+* Calibration log record kept in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1d2_0wEzvD5eoe0TQJQA_VIc-d5FIFlLXJvQtSlPjOss/edit?usp=sharing) 
+
+
+## Nutrient trials (DK)
+
+
+* Sample #X-6:  ~ at 10:00 AM, 2 samples per tank (tanks 1-4, 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+   * NO3: frozen
+
+
+* Sample #X-7:  ~ at 1:00 PM, 1 sample per tank (tanks 1-4), 2 samples (tank 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+   * NO3: frozen
+
+
+* Sample #X-8:  ~ at 6:00 PM, 1 sample per tank (tanks 1-4, 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+
+## Cleared coral skeletons off of old tags 201-300
+
+
+* Some tags are missing. List of found & missing tags listed in [Found Tags](https://docs.google.com/spreadsheets/d/1PDjjh4exPg2ah9bKvK1MkoB--UZF_aPxIz-tee699Tk/edit?usp=sharing) 
+
+
+## Made NH4Cl Stock 2 (2.25 mM) (DK)
+
+
+* Added 11.25 mL of Stock 1 (200 mM) solution for every 1.0 L of RO Water
+* Stock 2 batch #5 made using stock 1 batches #3
+   * Added this to batches #1-4 to maintain sufficient volume for the feeders 
+------
+
+
+# July 22, 2020
+
+
+## Took a cylinder measurement in the morning before calibration  (DK)
+
+
+Tank #
+	Time
+	Labview Flow Rate
+	Actual Flow Rate
+	1
+	8:52
+	24.6667/49.3333
+	108
+	2
+	8:53
+	0/0
+	88
+	3
+	8:54
+	0/0
+	92
+	4
+	8:55
+	0/0
+	88
+	
+
+## Calibrated tanks (DK)
+
+
+* Calibration log is kept in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+# Set flow rate for tanks #1-4, 6 to ~ 150 mL/min
+
+
+* Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+## Nutrient trials (DK)
+
+
+* Sample #X-9:  ~ at 9:15 AM, 1 sample per tank (tanks 1-4, 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+
+* Sample #X-10:  ~ at 1:00 PM, 2 samples per tank (tanks 1-4, 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+   * NO3: frozen
+
+
+* Sample #X-11:  ~ at 6:00 PM, 1 sample per tank (tanks 1-4, 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+
+## Weighed Coral Tags
+
+
+* Data recorded in [BW](https://docs.google.com/spreadsheets/d/1WvMUv8Np_tW6QucTO2KIcT7ZuLN3V6XWbt138fwzQbg/edit?usp=sharing) 
+
+
+## Made NH4Cl Stock 2 (2.25 mM) (DK)
+
+
+* Added 11.25 mL of Stock 1 (200 mM) solution for every 1.0 L of RO Water
+* Stock 2 batch #6-9
+   * Batch #6 made using stock 1 batch #3-4
+   * Batch #7 made using stock 1 batch #4
+   * Batch #8 made using stock 1 batch #4-5
+   * Batch #9 made using stock 1 batch #5
+   * Added 1.6 L batches #6-9 to feeder jars 1-4 respectively 
+
+
+------
+
+
+# July 23, 2020
+
+
+## Took a cylinder measurement in the morning before calibration  (DK)
+
+
+Tank #
+	Time
+	Labview Flow Rate
+	Actual Flow Rate
+	1
+	8:30
+	0/0
+	88
+	2
+	8:32
+	0/0
+	84
+	3
+	8:33
+	70.2859/93.7145
+	124
+	4
+	8:34
+	0/0
+	80
+	
+
+## Calibrated tanks (DK)
+
+
+* Calibration log is kept in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+# Set flow rate for tanks #1-4, 6 to ~ 150 mL/min
+
+
+* Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+## Nutrient trials (DK)
+
+
+* Sample #X-12:  ~ at 9:15 AM, 1 sample per tank (tanks 1-4, 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+
+* Sample #X-13:  ~ at 1:00 PM, 2 samples per tank (tanks 1-4, 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+   * NO3: frozen
+
+
+* Sample #X-14:  ~ at 6:00 PM, 1 sample per tank (tanks 1-4, 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+
+## Weighed Coral Tags
+
+
+* Data recorded in [BW](https://docs.google.com/spreadsheets/d/1WvMUv8Np_tW6QucTO2KIcT7ZuLN3V6XWbt138fwzQbg/edit?usp=sharing)
+ 
+------
+
+
+# July 24, 2020
+
+
+## Took a cylinder measurement in the morning before calibration (DK)
+
+
+Tank #
+	Time
+	Labview Flow Rate
+	Actual Flow Rate
+	1
+	8:50
+	0/0
+	84
+	2
+	8:51
+	0/0
+	108
+	3
+	8:53
+	0/0
+	84
+	4
+	8:55
+	0/0
+	72
+	
+
+## Calibrated tanks (DK)
+
+
+* Calibration log is kept in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+# Set flow rate for tanks #1-4, 6 to ~ 150 mL/min
+
+
+* Data recorded in [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+## Nutrient trials (DK)
+
+
+* Sample #X-15:  ~ at 9:15 AM, 1 sample per tank (tanks 1-4, 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+
+* Sample #X-16:  ~ at 1:00 PM, 2 samples per tank (tanks 1-4, 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+   * NO3: frozen
+
+
+* Sample #X-17:  ~ at 6:00 PM, 1 sample per tank (tanks 1-4, 6)
+   * NH4: added 100uL of Chloroform, wrapped in aluminum foil and moved to fridge
+
+
+## Weighed Coral Tags
+
+
+* Data recorded in [BW](https://docs.google.com/spreadsheets/d/1WvMUv8Np_tW6QucTO2KIcT7ZuLN3V6XWbt138fwzQbg/edit?usp=sharing)
+
+
+## Made NH4Cl Stock 2 (2.25 mM) (DK)
+
+
+* Added 11.25 mL of Stock 1 (200 mM) solution for every 1.0 L of RO Water
+* Stock 2 batch #10-14
+   * Batch #10 made using stock 1 batch #5-6
+   * Batch #11 made using stock 1 batch #6
+   * Batch #12 made using stock 1 batch #6-7
+   * Batch #13 made using stock 1 batch #7
+   * Batch #14 made using stock 1 batch #7-8
+   * Added 1.6 L batches #10-13 to feeder jars 1-4 respectively
+   * Batch #14 stored in the fridge 
+
+
+## Made 1% SDS  (DK)
+
+
+* 8 batches
+* 50.0 mL each 
+* 400 mL total
+
+
+------
+
+
+# July 26, 2020
+
+
+## Covered sump with black trash bags to block out light (AP)
+
+
+## Stopped feeders and turned up water flow @ 14:00 to restore tank to ambient nutrients  (DK)
+
+
+------
+
+
+# July 27, 2020
+
+
+## Finished buoyant weights for new tags (DK)
+
+
+* Data recorded in [BW](https://docs.google.com/spreadsheets/d/1WvMUv8Np_tW6QucTO2KIcT7ZuLN3V6XWbt138fwzQbg/edit?usp=sharing)
+
+
+## Coral collection from UM nursery 
+
+
+* Fragments received @ 16:00 (DK, AP)
+
+
+* 4 genotypes: Cooper-9, Acerv2, Kelsey-1, and Elkhorn 
+
+
+* Corals were fragmented, measured, dry weighed, and glued to tags 
+
+
+|Genotype| Nursery| # Frags | Tags | HoldingTank | 
+|------------------ |----|----|----|----|
+| Acerv2 | UM | 24 | A039-A062 | Tank8 |
+| Cooper9 | UM | 23 | A016-A38 | Tank6 |
+| Elkhorn | UM | 30 | A063-A092 | Tank7 |
+| Kelsey-1 | UM | 26 | A001-A015, A93-A103 | Tank5 |
+
+
+* Small pieces from genotype Cooper-9 glued to tag #391
+* Acerv2 Extras : tag #s 459, 355, 364, 401, 473
+* Elkhorn Extras: tag #s 373, 436, 456 
+* Unknown genotype: tag #448 
+* Fragments #008 and #009 were left out of the water for a while (but seem to be ok by morning)
+* Data recorded in [Nutrients_diseases experiment](https://docs.google.com/spreadsheets/d/1FDztXA1ID9vdiWwcwcTswNrOvZOzLIbVc-qbNeAnUmA/edit?usp=sharing) 
+
+
+------
+
+
+# July 28, 2020
+
+
+## Tissue Samples Taken from fragment #s A001-A103
+
+
+* preserved in 400 µL 1% SDS + 1 and ½ hour incubation at 65C
+
+
+## Fragment #102 is dead, found outside the tank
+
+
+------
+
+
+# July 30, 2020
+
+
+## Tissue loss
+
+
+* Fragments #71 and 91 were moved to a quarantine tank to recover.
+* They did not recover… died
+
+
+## Fed (DK, AP) 
+
+
+* Genotypes Cooper9, Elkhorn and Kelsey-1 
+* Corals moved to plastic bins and fed ~ 1h 
+
+
+## Coral collection from CRF nursery
+
+
+* 3 genotypes: K2 
+- K2 (008: Super branching genotype, extra apical tips)
+- U41 (051: single branches, except one frag fused)
+- U44 (066: few fragments with branches ~3)
+*  Fragments received @ 15:30 (DK, SR, AP)
+* Driving time: ~1:20 
+* Transportation method: Fragments kept in original bags and placed in additional plastic bins. Transported inside the car.
+* Corals were already fragmented. 
+* At the lab, we measured, dry weighed, and glued them to tags. Tag A102 was reused (genet U41)
+
+
+
+
+|Genotype| Nursery| # Frags | Tags | Tank| 
+|------------------ |----|----|----|----|
+| U41 | CRF | 24 | A102, A104-A126| Tank9|
+| U44 | CRF | 24 | A127- A150| Tank10|
+| K2 | CRF | 24 | A-151-A174| Tank11|
+
+
+------
+
+
+# July 31, 2020
+
+
+* Tissue loss in fragment A137 (genet U44) and A006 (genet Kelsey-1). Moved to quarantine tank
+  
+## Fed  (DK) 
+
+
+* Genotypes Acerv2, U41, U44, K2
+* Corals moved to plastic bins and fed ~ 1h
+
+
+## Cleaned tanks (DK)
+
+
+* Tank #s 1-11
+* Removed corals from tanks, scrubbed inside surfaces, let debris settle and siphon it out from the bottom. Do not drain the tank. 
+
+
+## Adjusted tank lights (DK)
+
+
+* Fixed lights schedules
+* Turned on tank lights for tanks #9-12
+
+
+## Genotype U41 are not looking great
+
+
+* Potential tissue loss soon
+
+
+
+
+------ 
+
+
+# August 1, 2020
+
+
+## Tissue loss AM (DK)
+
+
+* Moved fragments with tissue loss to quarantine tank
+* Pictures taken of all fragments with tissue loss. Photos stored in [2020-08-01_Photos_TissueLoss](https://drive.google.com/drive/folders/1rVrad8nCiEy279o_hQ6vQIZBlJ9rq2ds?usp=sharing) 
+ 
+Tag #
+	Tank 
+	Genotype
+	405
+	9
+	U41
+	A102
+	9
+	U41
+	A104
+	9
+	U41
+	A106
+	9
+	U41
+	A112
+	9
+	U41
+	A105
+	9
+	U41
+	A120
+	9
+	U41
+	A140
+	10
+	U44
+	A127
+	10
+	U44
+	A144
+	10
+	U44
+	472
+	10
+	U44
+	A141
+	10
+	U44
+	A150
+	10
+	U44
+	A149
+	10
+	U44
+	A143
+	10
+	U44
+	A145
+	10
+	U44
+	A131
+	10
+	U44
+	A067
+	7
+	Elkhorn
+	
+
+  
+## Fed  (DK) 
+
+
+* All tanks/genotypes fed
+* Tanks drained ¼ of the way, pumps turned off and fed for ~ 1h
+
+
+## Tissue loss PM (AP)
+
+
+* Moved more corals to quarantine tank ~8-9 PM
+A146, A148, A147, A130, A142 
+
+
+## Spawning (AP)
+
+
+* UM genotype Elkhorn spawned.
+
+
+------
+
+
+# August 2, 2020
+
+
+## Tissue loss PM (AP)
+
+
+ * Fragments with tissue loss were removed from tanks: A104, A135, A153, A111, A011
+
+
+* All corals were fed in plastic bins for ~30 and then moved to the tanks.
+
+
+------
+
+
+# August 3, 2020
+
+
+## Coral collection from FWC
+
+
+* Hour of collection: 3:15
+* Driving time: 2 hrs 30 mins
+* Transportation method: transported in separate plastic bins for each genotype all contained in a large cooler with seawater. Cooler kept in the cab of the truck. 
+* Tanks used: tank 1 = Fm19, tank 2 = FM14, tank 3 = FM9, tank 4 = FM6
+
+
+|Genotype| Nursery| # Frags | Tags | Tank|
+|------------------ |----|----|----|
+| FM19 | FWC | 24 | A175-A198|Tank1|
+| FM14 | FWC | 24  | 263-296|Tank2|
+| FM9 | FWC | 24 | A199, A200, 201-229|Tank3|
+| FM6 | FWC | 25 | 230-262|Tank4|
+
+
+
+
+## All fragments treated with Coral Revive
+
+
+* Fragments placed in small plastic bins and treated with one capful of Coral Revive for 15 mins per bin
+* Coral Revive water added to the tank when replacing corals to their tank 
+
+
+------
+
+
+# August 4, 2020
+
+
+## moved dead fragments data to a separate tab in [Nutrients_diseases experiment]
+
+
+* “Fragments_available” tab now only contains living fragments
+
+
+## FWC (AP/DK/SR)
+
+
+* Corals from FWC were fragmented, measured, dry weighed, and glued to tags
+
+
+## Fed (DK)
+
+
+* Genotypes Kelsey-1, U41, and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* genotypes not listed here are being fed by autofeeder  
+
+
+------
+
+
+# August 5, 2020
+
+
+## Tissue Samples Taken from fragment #s A104-229 (DK)
+
+
+* preserved in 400 µL 1% SDS + 1 and ½ hour incubation at 65C
+
+
+## Tissue loss observed on tag #s A108, A126 (DK)
+
+
+* fragments placed in quarantine tank 
+
+
+## Fed (DK)
+
+
+* Genotypes Kelsey-1, U41, and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* genotypes not listed here are being fed by autofeeder  
+
+
+------
+
+
+# August 6, 2020
+
+
+## Fragments #s A108 and A126 are dead (DK)
+
+
+* Removed from quarantine tank and from “Fragments available” spreadsheet 
+* Added fragments to “Dead fragments” spreadsheet 
+* spreadsheets kept in [Nutrients_diseases experiment](https://docs.google.com/spreadsheets/d/1FDztXA1ID9vdiWwcwcTswNrOvZOzLIbVc-qbNeAnUmA/edit?usp=sharing) 
+
+
+## Tissue loss observed on tag # A117 (elkhorn) (DK)
+
+
+* fragment placed in quarantine tank 
+
+
+## Cleaned tanks 7-12 (DK)
+
+
+* Removed corals from tank, wiped down tank with sponge, and siphoned out debris 
+
+
+## Fed (DK)
+
+
+* Genotypes Kelsey-1, U41, and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* genotypes not listed here are being fed by autofeeder  
+
+
+## Tissue Samples Taken from fragment #s 230-268 (DK)
+
+
+* preserved in 400 µL 1% SDS + 1 and ½ hour incubation at 65C
+
+
+------
+
+
+# August 7, 2020
+
+
+## Coral collection from CRF (Genotype replacement ACER066=U44) (AP)
+
+
+* Hour of collection: 3PM
+* Driving time: 2h 
+* Transportation method: transported in a plastic bin contained in a larger cooler with seawater. Cooler kept in the cab of the car. 
+* Tank used: old k2 (Tank 11)
+
+
+## Tissue Samples Taken from fragment #s 269-296 (DK)
+
+
+* preserved in 400 µL 1% SDS + 1 and ½ hour incubation at 65C
+
+
+## Cleaned tanks 1-6 (DK)
+
+
+* Removed corals from tank, wiped down tank with sponge, and siphoned out debris 
+
+
+## Fed (DK)
+
+
+* Genotypes Kelsey-1, U41, and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* genotypes not listed here are being fed by autofeeder  
+
+
+# Tag #117A is dead
+
+
+* removed from quarantine tank 
+
+
+------
+
+
+# August 8, 2020
+
+
+## Fragging and tagging CRF fragment U44 (AP, SR)
+
+
+* Corals from new U44 corals were fragmented, measured, dry weighed, and glued to tags.
+* No tissue loss from yesterday’s collection.
+
+
+------
+
+
+# August 9, 2020
+
+
+## Fed (DK)
+
+
+* Genotypes Kelsey-1, U41, U44 and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* genotypes not listed here are being fed by autofeeder  
+
+
+## Cleaned tanks 9-12 (DK)
+
+
+* Removed corals from tank, wiped down tank with sponge, and siphoned out debris
+
+
+## tissue loss observed on large Elkhorn genotype fragment (DK)
+
+
+* bone cutters used to cut off areas with tissue loss
+* fragment treated with Revive 
+* fragment placed in quarantine tank 
+
+
+------
+
+
+# August 10, 2020
+
+
+## Cleaned tanks 1-4 (DK)
+
+
+* Removed corals from tank, wiped down tank with sponge, and siphoned out debris
+
+
+## tissue loss observed on three extra Elkhorn genotype fragments (DK)
+
+
+* cut off tissue loss area with bone cutters 
+*  fragment placed in quarantine tank 
+
+
+## Fed (DK)
+
+
+* Genotypes Kelsey-1, U41, U44 and K2 
+* Corals moved to plastic bins and fed ~ 1h
+* genotypes not listed here are being fed by autofeeder 
+
+
+## Added LabVIEW data to [LabVIEW Records](https://docs.google.com/spreadsheets/d/1fdBhvFhAMHes9MH9DoXZQZRB6x2R0RSrZWdcJNixlO0/edit) 
+
+
+------
+
+
+# August 11, 2020
+
+
+## Tissue samples taken from new genotype U44 fragments (DK)
+
+
+* tag #s listed in the “Fragments Available” tab of [Nutrients_diseases experiment](https://docs.google.com/spreadsheets/d/1FDztXA1ID9vdiWwcwcTswNrOvZOzLIbVc-qbNeAnUmA/edit?usp=sharing) 
+* preserved in 400 µL 1% SDS + 1 and ½ hour incubation at 65C
+
+
+## Fed (DK)
+
+
+* Genotypes Kelsey-1, U41, U44 and K2 
+* Corals moved to plastic bins and fed ~ 1h
+
+
+## Cleaned tanks 5-8 (DK)
+
+
+* Removed corals from tank, wiped down tank with sponge, and siphoned out debris
+
+
+## tissue loss observed on the same three extra Elkhorn genotype fragments (DK)
+
+
+* cut off tissue loss area with bone cutters 
+* corals treated with revive
+
+
+------
+
+
+# August 12, 2020
+
+
+## IPAM (DK, AP)
+
+
+* Fragments dark adapted for at least 30 min in cooler
+* Gain had to be kind of high … 
+* Pictures (missed 1st genotype)
+
+
+## BW (DK, AP)
+
+
+* Temperature bw 27 and 29C
+* Partial water changes. Next time do a full one because of mucus release and change in water density. 
+* Fragment 228 (FM9) broken tip.
+* Tags A187 and A188 are switched. Initial picture/weight shows A188 bigger and heavier than A187, but now is the opposite. Probably misplaced during the gluing process. Check with pictures 
+
+
+------
+
+
+# August 13, 2020
+
+
+## Fed (DK)
+
+
+* Genotypes Kelsey-1, U41, U44 and K2 
+* Corals moved to plastic bins and fed ~ 1h
+
+
+## Tissue Loss observed in extra elkhorn fragment
+
+
+* cut off tissue loss area with bone cutters 
+* coral treated with revive
+* remaining pieces attached to a tile with other extra elkhorn fragments 
+
+
+## Extra fragments attached to tiles and moved to upper touch tank
+
+
+* fragments attached with epoxy
+* photos of extra fragments are in [2020-08-13_Photos_Extra_Fragments](https://drive.google.com/drive/folders/1-AEGwphbwhWrOBageO6HtjE3mBIglWXX) 
+
+
+Genotype
+	Tags/Zipties
+	Elkhorn
+	Blue zipties 456,436
+	Kelsey-1
+	Yellow zipties 
+	Acerv2
+	Pink zipties
+	Cooper-9
+	Tag # 391
+	K2
+	Tag # 410
+	FM19
+	Orange zipties 
+	FM14
+	Green zipties
+	FM9
+	Blue and green zipties
+	FM6
+	Pink and yellow zipties
+	U44
+	Tag # 146
+	
+
+## cut new fragment for genotype Kelsey-1
+
+
+* attached with coral glue
+* tag # A108
+
+
+------
+
+
+# August 14, 2020
+
+
+## Made 6 batches of NH4Cl Stock 2 (2.25 mM) (DK)
+
+
+* 3 batches with a volume of 3.6 L, 3 batches with a volume of 1.6 L
+* Added 11.25 mL of Stock 1 (200 mM) solution for every 1.0 L of RO Water
+
+
+## Tissue loss observed on 3 extra, and 1 experimental elkhorn genotype fragments 
+* Experimental fragment tag # A074
+* coral treated with revive
+
+
+## Moved corals to temporary tanks (DK, SR)
+
+
+* Genotypes are no longer separated
+* Tanks 9-12 are temporary tanks for the corals that will ultimately go in tanks 1-4 respectively
+* Spreadsheet of tank assignments can be found in [Nutrients_diseases experiment](https://docs.google.com/spreadsheets/d/1FDztXA1ID9vdiWwcwcTswNrOvZOzLIbVc-qbNeAnUmA/edit?usp=sharing)
+
+
+
+
+## Tested spectrophotometer with dilutions (DK, AP)
+
+
+* Dilutions[a] from stock 2 expected values: 1~0 µM, ~5 µM, ~2.5 µM
+
+
+Target
+	Expected
+	
+
+	Measured
+	
+
+	
+
+	
+
+	% Error
+	Stock_[10uM]
+	0.010
+	mM
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	9.900
+	uM
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	0.139
+	mg/L
+	0.14
+	mg/L
+	9.95
+	uM
+	0.51%
+	Stock_[5uM]
+	0.005
+	mM
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	4.950
+	uM
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	0.070
+	mg/L
+	0.07
+	mg/L
+	4.98
+	uM
+	0.51%
+	Stock_[2.5uM]
+	0.002
+	mM
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	2.475
+	uM
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	0.035
+	mg/L
+	0.03
+	mg/L
+	2.13
+	uM
+	-13.85%
+	
+
+------
+
+
+# August 17, 2020
+
+
+## Large amounts of tissue loss on extra fragments over the weekend (DK)
+* Genotypes affected: Elkhorn, Kelsey-1, FM9, FM6
+* cut off tissue loss area with bone cutters 
+* coral treated with revive
+* A074 is dead
+
+
+## Deep cleaned tanks 1-8 (DK)
+
+
+* removed corals and egg crate
+* scrubbed down tanks with sponge
+* cleaned all algae from egg crate 
+* drained tanks entirely, top and bottom both
+* refilled tanks with fresh seawater
+
+
+## Fed (DK)
+
+
+* All tanks/genotypes
+* Corals moved to plastic bins and fed ~ 1h
+
+
+## Spectrophotometer measurements taken of tanks 1-12
+
+
+* Water sampled at 9 am today before tank cleaning
+
+
+* Results: These are not ok since the blank was wrong (not reagents added)
+
+
+Tank1
+	0.03
+	mg/L
+	1.761597181
+	uM
+	Tank2
+	0.03
+	mg/L
+	1.761597181
+	uM
+	Tank3
+	0.03
+	mg/L
+	1.761597181
+	uM
+	Tank4
+	0.03
+	mg/L
+	1.761597181
+	uM
+	Tank5
+	0.03
+	mg/L
+	1.761597181
+	uM
+	Tank6
+	0.03
+	mg/L
+	1.761597181
+	uM
+	Tank7
+	0.03
+	mg/L
+	1.761597181
+	uM
+	Tank8
+	0.03
+	mg/L
+	1.761597181
+	uM
+	Tank9
+	0.03
+	mg/L
+	1.761597181
+	uM
+	Tank10
+	0.03
+	mg/L
+	1.761597181
+	uM
+	Tank11
+	0.03
+	mg/L
+	1.761597181
+	uM
+	Tank12
+	0.12
+	mg/L
+	7.046388726
+	uM
+	
+
+------
+
+
+
+
+# August 18, 2020 
+
+
+ ## A108 is dead (genotype Kelsey-1) (DK)
+
+
+* Removed fragment from tank 12
+
+
+## Tissue loss on extra fragments (DK)
+* Genotypes affected: Elkhorn, FM19, FM9, FM6, FM14
+* cut off tissue loss area with bone cutters 
+* coral treated with revive
+
+
+## Fed (DK)
+
+
+* All tanks/genotypes
+* Corals moved to plastic bins and fed ~ 1h
+
+
+## Ran dilutions through spectrophotometer (DK/AP)
+
+
+* First sample at 2:20 pm
+* Trouble at 4:17 pm, delayed 45 mins
+* Last sample 5:46 pm
+* After samples from the 19th I think the problem was the blank, not the time since samples did not decay on the 19th. 
+
+
+------
+
+
+# August 19, 2020
+
+
+## Calibrated Tanks 1-4 at 9:20 am (DK)
+
+
+* set all tanks to 150 +/- 10 mL/min after calibration
+* measured actual flow rate in each tank once per hour
+* record kept in: [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+
+
+## Start nutrient trials (DK)
+
+
+* Added 7.5 mL of stock 1 (200mM, Tube # 4) to tanks 1-4 at 9:45 pm
+* Sample taken after 5 mins
+* feeders started at 9:49 am
+* first dose at 10:04 am
+* target concentration not reached, see the Hatch Test spreadsheet in [Nutrient calculations](https://docs.google.com/spreadsheets/d/1YvdtbUH2qMIzq6EW2xj6OTkVD5FPB1q9HCX_sdudOvY/edit?usp=sharing) 
+
+
+Tank1
+	0.06
+	mg/L
+	3.52
+	uM
+	10:04 AM
+	Tank2
+	0.03
+	mg/L
+	1.76
+	uM
+	10:04 AM
+	Tank3
+	0.05
+	mg/L
+	2.94
+	uM
+	10:04 AM
+	Tank4
+	0.04
+	mg/L
+	2.35
+	uM
+	10:04 AM
+	Tank1
+	0.04
+	mg/L
+	2.35
+	uM
+	11:07 AM
+	Tank2
+	0.04
+	mg/L
+	2.35
+	uM
+	11:07 AM
+	Tank3
+	0.05
+	mg/L
+	2.94
+	uM
+	11:07 AM
+	Tank4
+	0.02
+	mg/L
+	1.17
+	uM
+	11:07 AM
+	Tank1
+	0.09
+	mg/L
+	5.28
+	uM
+	12:08 AM
+	Tank2
+	0.01
+	mg/L
+	0.59
+	uM
+	12:08 AM
+	Tank3
+	0.01
+	mg/L
+	0.59
+	uM
+	12:08 AM
+	Tank4
+	under
+	mg/L
+	#VALUE!
+	uM
+	12:08 AM
+	Tank1
+	0.06
+	mg/L
+	3.52
+	uM
+	1:19 PM
+	Tank2
+	0.03
+	mg/L
+	1.76
+	uM
+	1:19 PM
+	Tank3
+	0.05
+	mg/L
+	2.94
+	uM
+	1:19 PM
+	Tank4
+	0.04
+	mg/L
+	2.35
+	uM
+	1:19 PM
+	Tank1
+	0.11
+	mg/L
+	6.46
+	uM
+	2:?
+	Tank2
+	0.03
+	mg/L
+	1.76
+	uM
+	
+
+	Tank3
+	0.01
+	mg/L
+	0.59
+	uM
+	
+
+	Tank4
+	-0.01
+	mg/L
+	-0.59
+	uM
+	
+
+	
+
+
+
+## Ran dilutions through spectrophotometer (DK/AP)
+
+
+* see the Hatch Test spreadsheet in [Nutrient calculations](https://docs.google.com/spreadsheets/d/1YvdtbUH2qMIzq6EW2xj6OTkVD5FPB1q9HCX_sdudOvY/edit?usp=sharing) 
+
+
+Sample
+	value
+	mg/L
+	value
+	uM
+	Difference
+	
+
+	% Error
+	Batch
+	[1/40]_A_R1
+	0.29
+	mg/L
+	17.03
+	uM
+	2.35
+	uM
+	16
+	2
+	[1/40]_A_R2
+	0.29
+	mg/L
+	17.03
+	uM
+	2.35
+	uM
+	16
+	4
+	[1/40]_A_R3
+	0.28
+	mg/L
+	16.44
+	uM
+	1.76
+	uM
+	12
+	6
+	[1/40]_B_R1
+	0.28
+	mg/L
+	16.44
+	uM
+	1.76
+	uM
+	12
+	4
+	[1/40]_B_R2
+	0.23
+	mg/L
+	13.51
+	uM
+	-1.17
+	uM
+	-8
+	5
+	[1/40]_B_R3
+	0.28
+	mg/L
+	16.44
+	uM
+	1.76
+	uM
+	12
+	7
+	[1/50]_A_R1
+	0.22
+	mg/L
+	12.92
+	uM
+	1.17
+	uM
+	10
+	2
+	[1/50]_A_R2
+	0.23
+	mg/L
+	13.51
+	uM
+	1.76
+	uM
+	15
+	5
+	[1/50]_A_R3
+	0.22
+	mg/L
+	12.92
+	uM
+	1.17
+	uM
+	10
+	6
+	[1/50]_B_R1
+	0.21
+	mg/L
+	12.33
+	uM
+	0.59
+	uM
+	5
+	4
+	[1/50]_B_R2
+	0.29
+	mg/L
+	17.03
+	uM
+	5.28
+	uM
+	45
+	5
+	[1/50]_B_R3
+	0.24
+	mg/L
+	14.09
+	uM
+	2.35
+	uM
+	20
+	7
+	[1/60]_A_R1
+	0.18
+	mg/L
+	10.57
+	uM
+	0.78
+	uM
+	8
+	2
+	[1/60]_A_R2
+	0.18
+	mg/L
+	10.57
+	uM
+	0.78
+	uM
+	8
+	3
+	[1/60]_A_R3
+	0.17
+	mg/L
+	9.98
+	uM
+	0.20
+	uM
+	2
+	6
+	[1/60]_B_R1
+	0.18
+	mg/L
+	10.57
+	uM
+	0.78
+	uM
+	8
+	4
+	[1/60]_B_R2
+	0.18
+	mg/L
+	10.57
+	uM
+	0.78
+	uM
+	8
+	5
+	[1/60]_B_R3
+	0.18
+	mg/L
+	10.57
+	uM
+	0.78
+	uM
+	8
+	7
+	[1/70]_A_R1
+	0.15
+	mg/L
+	8.81
+	uM
+	0.42
+	uM
+	5
+	2
+	[1/70]_A_R2
+	0.14
+	mg/L
+	8.22
+	uM
+	-0.17
+	uM
+	-2
+	3
+	[1/70]_A_R3
+	0.15
+	mg/L
+	8.81
+	uM
+	0.42
+	uM
+	5
+	6
+	[1/70]_B_R1
+	0.15
+	mg/L
+	8.81
+	uM
+	0.42
+	uM
+	5
+	4
+	[1/70]_B_R2
+	0.17
+	mg/L
+	9.98
+	uM
+	1.59
+	uM
+	19
+	5
+	[1/70]_B_R3
+	0.16
+	mg/L
+	9.40
+	uM
+	1.01
+	uM
+	12
+	7
+	[1/100]_A_R1
+	0.09
+	mg/L
+	5.28
+	uM
+	-0.59
+	uM
+	-10
+	1
+	[1/100]_B_R1
+	0.13
+	mg/L
+	7.63
+	uM
+	1.76
+	uM
+	30
+	1
+	[1/100]_B_R3
+	0.1
+	mg/L
+	5.87
+	uM
+	0.00
+	uM
+	0
+	6
+	[1/100]_A_R2
+	0.13
+	mg/L
+	7.63
+	uM
+	1.76
+	uM
+	30
+	5
+	[1/100]_B_R2
+	0.11
+	mg/L
+	6.46
+	uM
+	0.59
+	uM
+	10
+	5
+	[1/100]_B_R3
+	0.11
+	mg/L
+	6.46
+	uM
+	0.59
+	uM
+	10
+	7
+	[1/1000]_A_R1
+	Under
+	mg/L
+	NA
+	uM
+	NA
+	uM
+	NA
+	1
+	[1/1000]_A_R2
+	0.01
+	mg/L
+	0.59
+	uM
+	0.00
+	uM
+	0
+	2
+	[1/1000]_A_R3
+	0
+	mg/L
+	0.00
+	uM
+	-0.59
+	uM
+	-100
+	6
+	[1/1000]_B_R1
+	Under
+	mg/L
+	NA
+	uM
+	Na
+	uM
+	NA
+	1
+	[1/1000]_B_R2
+	0
+	mg/L
+	0.00
+	uM
+	-0.59
+	uM
+	-100
+	4
+	[1/1000]_B_R3
+	0
+	mg/L
+	0.00
+	uM
+	-0.59
+	uM
+	-100
+	7
+	
+
+------
+
+
+# August 20, 2020
+
+
+## Fed (DK)
+
+
+* All tanks/genotypes
+* Corals moved to cooler and fed ~ 1h
+
+
+
+
+## Corals in tanks 9-12 moved to tanks 5-8[b] (DK)
+
+
+
+
+## Ran dilutions and tank samples through spectrophotometer (DK/AP)
+
+
+* see the Hatch Test spreadsheet in [Nutrient calculations](https://docs.google.com/spreadsheets/d/1YvdtbUH2qMIzq6EW2xj6OTkVD5FPB1q9HCX_sdudOvY/edit?usp=sharing) 
+
+
+
+
+------
+
+
+# August 21, 2020
+
+
+## Fed (DK)
+
+
+* All tanks/genotypes
+* Corals moved to cooler and fed ~ 1h
+
+
+## Ran dilutions through spectrophotometer (AP)
+
+
+* see the Hatch Test spreadsheet in [Nutrient calculations](https://docs.google.com/spreadsheets/d/1YvdtbUH2qMIzq6EW2xj6OTkVD5FPB1q9HCX_sdudOvY/edit?usp=sharing) 
+
+
+
+
+## Noticed pumps were off in the morning. Turned them back on. (DK/AP)
+
+
+## BW (DK, SR)
+
+
+* Temperature bw 27 and 29C
+* Full water changes.
+* Fragments with tags #s  A153, A136, A142, and A145 added to replace dead fragments. BW taken
+
+
+
+
+------
+
+
+# August 24, 2020
+
+
+## Fed (DK)
+
+
+* All tanks/genotypes
+* Corals moved to plastic bins and fed ~ 1h
+
+
+## Cleaned tanks (DK)
+
+
+* Tank #s 1-8
+* Removed corals from tanks, scrubbed inside surfaces, let debris settle and siphon it out from the bottom. Do not drain the tank entirely. 
+
+
+## Fragment A009 was reglued
+
+
+------
+
+
+# September 1, 2020 
+
+
+## Cleaned tanks (DK) 
+
+
+* tanks 3, and 5-8
+* Cleaned coral tags for these tanks also
+* Removed corals from tanks, scrubbed inside surfaces, let debris settle and siphon it out from the bottom. Do not drain the tank entirely. 
+
+
+## reglued fragment A087 (DK)
+
+
+## Tissue loss observed (DK)
+
+
+* Extras genotypes Acerv2 and FM6
+* Experimental fragment A054, tank 8
+* Fragments with tissue loss removed from extra tank
+* A054 placed in top right touch tank near the drainpipe 
+
+
+## Tested automated feeders (AP/DK)
+
+
+
+
+Tank
+	Volume Dispensed (mL)
+	1
+	40
+	2
+	45
+	3
+	42.5
+	4
+	45
+	5
+	50
+	6
+	30
+	7
+	46
+	8
+	40
+	
+
+------
+
+
+# September 2, 2020
+
+
+
+
+## Tank 3 and tank 7 were swapped, returned to their intended tanks (DK)
+
+
+## Tissue loss on experimental fragment A081 (elkhorn), tank 7 (AP)
+
+
+## Cleaned tanks (AP, DK)
+
+
+* Tanks drained completely, refilled with bleach water, rinsed at least twice, and refilled with seawater
+* All heaters and pumps turned off during cleaning
+* Tubing and feeders bleached as well
+
+
+
+
+## IPAM T2 (DK, AP)
+
+
+* Fragments dark adapted for at least 30 min in cooler
+* Data in [IPAM, 2020-09-02](https://drive.google.com/drive/folders/1Z3HffLAAZdj8U5CN4swjFnA1ejU-4PvG?usp=sharing)
+
+
+------ 
+
+
+# September 3, 2020
+
+
+## Refilled and programmed automatic feeders (DK)
+
+
+* 10g of ReefRoids per 1000 mL DI water
+* Programed feeders to dose 45 mL per tank at 20:00
+
+
+## Reglued fragment A052
+
+
+# September 4, 2020
+
+
+## Refilled automatic feeders (DK)
+
+
+* 10g of ReefRoids per 1000 mL DI water
+
+
+## BW data collection (DK, SR, AP )
+
+
+* Water sample # 1-> Tank 5-6-4-8 -> Water sample # 2
+* Water sample # 3-> Tank 1-2-3-7 -> Water sample # 4
+* Corals assigned to tank 4 were in tank 7. Ups!
+* Coral A181[c][d] from genet FM19, tank         5 (Ambient-Pathogen) is Dead
+
+
+# Current number of fragments per assigned treatment (AP): 
+
+
+Genotype
+	Pathogen
+	Placebo
+	Total
+	Pathogen
+	Placebo
+	Total
+	Grand Total
+	Acerv2
+	5
+	6
+	11
+	6
+	6
+	12
+	23
+	Cooper-9
+	6
+	5
+	11
+	6
+	6
+	12
+	23
+	Elkhorn
+	6
+	6
+	12
+	5
+	5
+	10
+	22
+	FM14
+	6
+	6
+	12
+	6
+	6
+	12
+	24
+	FM19
+	6
+	6
+	12
+	6
+	6
+	12
+	24
+	FM6
+	6
+	6
+	12
+	6
+	6
+	12
+	24
+	FM9
+	6
+	6
+	12
+	6
+	6
+	12
+	24
+	K2
+	6
+	5
+	11
+	6
+	6
+	12
+	23
+	Kelsey-1
+	6
+	6
+	12
+	5
+	6
+	11
+	23
+	U41
+	5
+	
+
+	5
+	6
+	
+
+	6
+	11
+	U44
+	6
+	6
+	12
+	6
+	6
+	12
+	24
+	Total
+	64
+	58
+	122
+	64
+	59
+	123
+	245
+	
+
+## Extra fragments updates (AP, DK)
+
+
+Genotype
+	Tags/Zipties
+	Elkhorn
+	Blue zipties (one tile with 456 and 436) A070 and A092 moved to experimental, 373, 147?
+	Kelsey-1
+	Yellow zipties: 2 unattached frags, one yellow tile. Made new tag = 306 for experiment.
+	Acerv2
+	Pink zipties; no zipties anymore, one tile, tags 355 moved to Experimental. Tags 364, 401, 459 and 473 not found
+	Cooper-9
+	Tag # 391. Not found 
+	K2
+	Tag # 410 Not found. Latter found unattached 306
+
+
+	FM19
+	Orange zipties: 2 tiles  
+	FM14
+	Green zipties: 2 tiles, 411, 413 
+	FM9
+	Blue and green zipties: one tile w 3 tags, no zip ties 
+	FM6
+	Pink and yellow zipties: one tile w 1 tag (392), no zipties. 257? 
+	U44
+	Tag # 146: Still alive
+Also 148, 141?
+	
+
+## IPAM T2
+
+
+* Repeated corals with weird pictures (image 11 and 23)
+* New corals to replace dead ones 
+* Data in [IPAM_2020-09-04](https://drive.google.com/drive/folders/1hSBNuYvXSOKot4chr_IRdhX87fpQJg8b?usp=sharing) 
+
+
+------
+
+
+# September 5, 2020
+
+
+* Fragment 355 (Acerv2: replacement) is dead (AP) 
+
+
+------
+
+
+# September 7, 2020
+
+
+# Tissue loss on fragment A063 (Elkhorn), tank 6 (DK)
+
+
+* cut off tissue loss area with bone cutters 
+* coral treated with revive and placed in holding tank 
+
+
+
+
+## Cleaned tanks 5 and 6 (DK)
+
+
+* Cleaned coral tags for these tanks also
+* Removed corals from tanks, scrubbed inside surfaces, let debris settle and siphon it out from the bottom. Did not drain the tank entirely. 
+
+
+## Turned off automatic feeders (DK)
+
+
+## Fed (DK)
+
+
+* corals fed in tank using ReefRoids mixed with seawater in a bottle
+
+
+------
+
+
+# September 8, 2020
+
+
+## Moved the following corals that are in tank 1:
+
+
+* 410 and A145 to Tank 6 
+* A070 and A092 to Tank 3 
+* A153 to tank 4 
+* 306, A136 and A142 back to holding tank 
+
+
+## Cleaned tanks 1-4, and 7-8
+
+
+* Cleaned coral tags for these tanks also
+* Removed corals from tanks, scrubbed inside surfaces, let debris settle and siphon it out from the bottom. Did not drain the tank entirely. 
+
+
+## New experimental fragments selected (DK) 
+
+
+* One FM-19 placed in tank 5: tag # 358
+* One Acerv2 placed in tank 8: tag # 469
+
+
+## Fed (DK) 
+
+
+* Corals moved to plastic bins and fed ~ 1h 
+## Fragment A063 is dead
+
+
+* fragment removed from holding tank 
+
+
+------
+
+
+# September 9, 2020
+
+
+## Soaked cartridges in vinegar 
+
+
+* Left for 24 hrs 
+
+
+## Weighed out packets of ReefRoids 
+
+
+* 0.5g of food per packet
+* Stored in ERL refrigerator 
+
+
+## Fed 
+
+
+* Tanks 1-8 fed one packet (0.5g ReefRoids) each
+* Circulation pump turned off, tank pump left on 
+* Tanks drained to half volume for 1 hour and then circulation pumps were turned back on
+* Bottle fed in tank
+
+
+## Pictures taken of new fragments 
+
+
+* tag #’s 358 and 469 (in order from left to right)
+* Saved in [2020-09-09 New Fragments](https://drive.google.com/drive/folders/1Nff7jJHNVJ36X0_bUApGC1ccG-nEtmet?usp=sharing) 
+
+
+## Cleaned Holding tank
+
+
+* Removed corals
+* Drained, wiped out with a sponge, and refilled
+
+
+------ 
+
+
+# September 10, 2020
+
+
+## Fed (DK) 
+
+
+* Tanks 1-8 fed one packet (0.5g ReefRoids) each
+* Circulation pump turned off, tank pump left on 
+* Tanks drained to half volume for 1 hour and then circulation pumps were turned back on
+* Bottle fed in tank
+
+
+------
+
+
+# September 11, 2020
+
+
+## Glass tanks fully drained and cleaned (AP)
+
+
+* Tissue loss on fragment A026 moved to holding tank
+
+
+## Fed (AP) 
+
+
+* Tanks 1-8 fed one packet (0.5g ReefRoids) each
+* Fed in coolers with pump
+
+
+## BW (DK, SR, AP)
+
+
+* Full water changes between tanks 4 and 5.
+* Water sample # 1-> Tank 1-2-3-4 -> Water sample # 2
+* Water sample # 3-> Tank 5-6-7-8 -> Water sample # 4
+
+
+
+
+## IPAM T3 (DK, AP)
+
+
+* Fragments dark adapted for at least 30 min in cooler
+* Data in [IPAM, 2020-09-11](https://drive.google.com/drive/folders/1XdjT-qKSPidgJo9pkyzQXHOgfi8IA8Tt?usp=sharing)
+* Picture 39 not in order
+* Fragment 252 tip broke and was reglued (AP)
+
+
+
+
+# September 12, 2020
+
+
+* Corals look ok (AP)
+
+
+# September 13, 2020
+
+
+* Corals were fed, tanks cleaned (AP)
+* Tanks 1 and 2 moved to 7 and 8 (AP). Check the numbers tomorrow!
+* TT was cleaned … These corals need some food! 
+
+
+# September 14, 2020
+
+
+## Fed (DK)
+
+
+* corals fed 4 tanks at a time in holding tank 
+* Tanks 1-8 fed one packet (0.5g ReefRoids) each
+
+
+## Fragments
+
+
+* Coral A026 looks stable. Move to the respective tank? (AP)
+* Coral A017 has progressive TL. I cut the tip and moved to TT (AP)
+
+
+## Tanks
+
+
+* Tanks 3 and 8 are not in order. Change later today (AP). Done
+
+
+### Volume 
+
+
+* N tanks were measured in dimensions and drained and refilled to measure the actual water volume
+
+
+Tank
+	1
+	2
+	3
+	4
+	6
+	7
+	8
+	Dimensions
+	58.5
+	
+
+	58.4
+	58.4
+	
+
+	58.5
+	58.5
+	
+
+	58.8
+	
+
+	58.5
+	58.5
+	
+
+	58.5
+	58.5
+	
+
+	27.2
+	
+
+	27.4
+	27.2
+	
+
+	27.0
+	26.6
+	
+
+	93.6
+	
+
+	93.6
+	92.9
+	
+
+	92.4
+	91.0
+	Sump
+	45.0
+	
+
+	45.1
+	45.3
+	
+
+	45.3
+	45.1
+	
+
+	60.0
+	
+
+	60.0
+	60.0
+	
+
+	60.0
+	60.3
+	
+
+	40.0
+	
+
+	41.2
+	40.0
+	
+
+	41.2
+	39.8
+	
+
+	108.0
+	
+
+	111.5
+	108.6
+	
+
+	111.9
+	108.2
+	Total
+	201.6
+	
+
+	205.1
+	201.5
+	
+
+	204.3
+	199.3
+	Volume
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	20L buckets
+	
+
+	
+
+	160.0
+	180.0
+	
+
+	180.0
+	180.0
+	Extra
+	
+
+	
+
+	8.5
+	0.0
+	
+
+	0.0
+	0.0
+	~Sump
+	
+
+	
+
+	24.3
+	10.9
+	
+
+	13.6
+	13.6
+	Total
+	
+
+	
+
+	192.8
+	190.9
+	
+
+	193.6
+	193.6
+	Rank
+	
+
+	
+
+	2
+	1
+	
+
+	3
+	4
+	
+
+
+
+## Nutrients
+
+
+### Round one: 
+
+
+* Discarded old stock 2 (AP) 
+
+
+* New water income was off ~ 7:30 (AP)
+* Tanks 4,5,7,8  were primed with 8.5 mL of Stock 1 (old) at 8AM (AP). 
+* Water sample (#1) 8:40 AM (AP), preserved with Chloroform @ 9:30AM (DK)
+* Water sample (#2) 15:22 PM (DK), preserved with Chloroform @ 15:30 (DK)
+
+
+* N tanks were drained and refilled to measure volume so round two of N was necessary. 
+
+
+### Round two: 
+* New water income was off ~ 7:00PM (AP, DK)
+* Tanks 4,5,7,8  were primed with 9.5 mL of Stock 1 (old) ~ 7:20PM (AP). 
+* Water sample (#3) 7:27 PM (DK), preserved with Chloroform @ 7:30PM (DK)
+
+
+### Stocks
+
+
+* Made new stock 1 (DK). Tubes were reused.
+
+
+## Feeders (N dosing)
+
+
+### Position:
+
+
+Feders were moved 
+- Feeder 1 to tank 7
+- Feeder 2 to tank 8
+- Feeders 3 and 4 stay in tanks 3 and 4 respectively
+
+
+### Delivering tests
+
+
+* Settings: 1=14s, 2=21s, 3=16s, 4=16s
+
+
+* Test 1: 8:54 AM to 11:14AM (29 doses ~ 290mL)
+* Tube 1 out of the water source
+
+
+* Test 2: 8:54 AM to 11:14AM (29 doses ~ 290mL)
+* Tube 1 out of the water source[e]
+
+
+
+
+## Measured tank volume (AP, DK)
+- Place tubing and start pumps.
+
+
+# September 15, 2020
+
+
+## Made stock 2 (DK)
+
+
+* 3 mM concentration 
+* Added 15 mL of stock 1 per liter of RO water 
+
+
+## Set up new water pumps (DK, AP)
+
+
+* tubing ziptied from water basin to tanks 3-4 and 7-8
+* Flow rate tests done, data in [Nutrient Calculations](https://docs.google.com/spreadsheets/d/1YvdtbUH2qMIzq6EW2xj6OTkVD5FPB1q9HCX_sdudOvY/edit?usp=sharing) 
+
+
+## Fed (DK)
+
+
+* corals fed 4 tanks at a time in holding tank 
+* Tanks 1-8 fed one packet (0.5g ReefRoids) each
+
+
+## Tank 1 temperature dropped dramatically last night
+
+
+* Temp Override button was selected on LabView
+* Temperature dropped to 18 C at ~ 7:15
+* Problem discovered at ~ 3 pm today 9/15
+* some fragments appear pale: A055 (Acerv2), A031(cooper-9), A012, A103, A005
+
+
+## Water samples (#4) taken at 7 pm 
+
+
+## Started constant nutrient dosing 
+
+
+* Set flow rate to ~200 mL/min
+* Started nutrients dosing @ 19:51
+* Water pumps started simultaneously 
+
+
+# September 16, 2020 
+
+
+## Fed (DK)
+
+
+* corals fed 4 tanks at a time in holding tank 
+* Tanks 1-8 fed one packet (0.5g ReefRoids) each
+
+
+## Nutrient dosing
+
+
+* Tested seawater flow rate of elevated nutrients tanks
+
+
+Tank
+	30 sec volume
+	Mean Manual Flow (mL/min)
+	3
+	84
+	84
+	168
+	4
+	100
+	100
+	200
+	7
+	96
+	96
+	192
+	8
+	98
+	97
+	196
+	
+
+* Stopped nutrient feeders and water pumps @ 13:
+55 (DK)
+
+
+* Water Samples (NH4) taken at ~ 14:00 (DK)
+
+
+* Tanks 3-4 and 7-8 drained entirely and refilled with seawater (DK)
+
+
+* Tanks dosed with 9.50 mL of 200 mM NH4 (stock 1) at 16:45 (AP)
+
+
+* Water samples taken at ~17:00 (DK)
+
+
+* 24 total samples currently
+
+
+## Fragment A036 is dead[f][g]. I think this was A026, not A036
+
+
+
+
+------  
+
+
+# September 17, 2020
+
+
+## Nutrient samples 
+
+
+* Samples from tanks 1-8 at 8:05 AM (AP)
+* Preserved ~ 9 (DK)
+
+
+## Feeding 
+
+
+* All tanks fed in glass tanks. Drained half of glass tank and stopped all pumps
+* 8:45 - 9:45. Pumps back on
+
+
+ ## Nutrient dosing
+
+
+### Water income 
+
+
+* Tanks 1,2,6 with flow meter set to ~ 200mL/min at 9:45 AM
+* Tanks 5 set to ~ 228mL/min at 9:45 AM with cylinder
+* Tanks 3,4,7,8 set to ~ 200mL/min at  AM with P. pump @ 10:30
+
+
+### Tested and reorganized  feeders
+
+
+## Started constant nutrient dosing 
+
+
+* Started nutrients dosing @ 10:30
+* Water pumps started simultaneously 
+
+
+* Tubing broke. Stopped the system @ 4:30PM
+* Drained and refilled NH4 tanks 
+* Dosed with 9.5 mL os stock 1 @ 19:40. 
+* Used ½ of old stock 1 and started new stock 1  
+* Water samples #9 collected at 19:50
+
+
+## Checked corals were in the right tanks
+
+
+* All tanks were ok, except
+* 202 was in 8, moved back to 7
+* Moved A017 from holding tank back to tank 5
+
+
+## Tissue loss on fragment A169 (tank 1)
+
+
+* Moved to touch tank 
+
+
+# September 18, 2020
+
+
+## Feeding
+
+
+* All tanks feed outside galls tanks 
+* Tanks 5 and 6 were fed at  8:30 am
+* Tanks 7 and 8 were fed at  9:30 am
+* Tanks 2 and 3 were fed at  10:30 am
+* Tanks 1 and 4 were fed at  11:30 am
+
+
+## A169 is dead
+
+
+## IPAM T4
+
+
+* Check for camera lens next time  
+
+
+## BW T4
+
+
+* Water sample 1 (T1->T2->T3->T4) -> water sample 2 -> water change
+* Water sample 3 (T5->T6->T8->T7) -> water sample 4
+
+
+## Nutrients
+
+
+* Tank 7 and 8 were switched
+* Water samples #10 collected at 9:00 am (Tanks 3,4,7,8)
+* Closed system
+* Add 2mL of stock 1 and 40L of new sea H20 to Tanks 3,4,7,8 @ 6PM
+
+
+
+
+# September 19, 2020
+
+
+## Feeding (AP)
+
+
+* All tanks feed inside tanks 
+* Glass tanks drained half way
+* Food added
+* Glass tanks completely drained-Refilled
+* Corals placed in holding tank while draining
+
+
+## Nutrients (AP)
+
+
+* Water samples #11 collected at 13:30  (Tanks 3,4,7,8) after closed system (AP)
+* Full water change after feeding (AP) 
+
+
+* Tested feeders and Coleman pump (AP)
+* Initial settings for feeders: 15, 20, 16, 15 secs
+* New feeder settings: 15-20-17-18 secs
+
+
+* Add 9.5mL of stock 1 to tanks 3,4,7,8 @ 21: 05 (AP)
+* Started all pumps @ 22: 49 (AP)
+
+
+# September 20, 2020
+
+
+## Feeding (AP)
+
+
+* All tanks fed in holding tank
+
+
+Masterflex check: 970-970-960-970
+Feeder check: 21-21-20-21 (2 doses)
+
+
+# Tissue loss (AP)
+
+
+* Fragments 229 and 073 from Tank 1. Moved to holding tank
+
+
+# September 21, 2020
+
+
+## Fed (DK)
+
+
+* corals fed 4 tanks at a time in holding tank 
+* Tanks 1-8 fed one packet (1g ReefRoids) each
+
+
+# Mortality (DK)
+
+
+* Fragments 229 A026 and A073 are dead - removed from holding tank
+* A145 TL on tip, seems like abrasion
+
+
+## Water sample (#12)  taken at ~12:00 from tanks 3-4, 7-8
+
+
+## Checked water pumps and nutrient feeders, everything looks good (DK)
+
+
+* No bubbles
+* replenished nutrients stock 2 supply in the feeder bottles
+
+
+## Made stock 1 (DK)
+
+
+* 5 falcon tubes made
+* added 2.67g of Ammonium Chloride to 250 mL millipore water
+
+
+## Calibrated flow rate in ambient tanks
+
+
+* tanks 1-2, 5-6
+* No flow meter in tank 5, used graduated cylinder and timer to set correct flow rate
+* Calibration record kept in the Experiment Calibrations tab of [Flow Rate Cylinder Tests](https://docs.google.com/spreadsheets/d/1Ijg8hDC4eJ5p0zLXUOVLBbhuAgEeLA7Bj3QtMQcfbmA/edit?usp=sharing) 
+
+
+
+
+* Measure light intensity in all tanks, center of corals and corners (https://docs.google.com/spreadsheets/d/1XcyIOb_l0eM6qPMONbyPFsITBzTS697ptZlfOdzY_08/edit?usp=sharing) 
+
+
+## Made stock 2 (DK)
+
+
+* 3 mM concentration 
+* Added 15 mL of stock 1 per liter of RO water 
+* Made 5 L of stock 2, refilled nutrient feeder bottles
+* stored remainder in 1 gal container in a dark spot to avoid algae issues 
+
+
+# September 22, 2020
+
+
+## Heat stress
+
+
+* tanks 8 probe outside water
+* temp 31.8 C from 3:30 pm 9/21/2020 to 10:30 am 9/22/2020
+* corals look ok, a few are pale but had been pale previously
+* YII values look similar to other tanks
+
+
+##  Tissue loss
+
+
+* Abrasion on tips
+* A086 (Tank 5) 
+* A151 (Tank 3) 
+* A145 (Tank 6) 
+
+
+* moved pumps to the top of the tank to try and avoid fragments from being knocked over in the future 
+
+
+## Fed (DK)
+
+
+* corals fed 4 tanks at a time in holding tank 
+* Tanks 1-8 fed one packet (1g ReefRoids) each
+
+
+* Corals (1-4) moved back to glass tanks and re-fed there with 100mL of AP100
+
+
+## Nutrients
+
+
+* Water samples (#13) for NH4 and NO3 in all tanks
+* Stopped all pumps (water and nutrients at 14:07)
+* Pumps back on at (water and nutrients at ~ 17:00)
+* Added 40L of H20 to tanks 7-8 + 2mL of stock solution
+
+
+## New fragment (replacements) in tank 1
+
+
+* 471 (Elkhorn replaces 079) 
+* 334 (FM9, replaces 229)
+
+
+## IPAM (DK,AP)
+
+
+* Tanks 1-4 dark adapted in glass tanks from 15:40 to 16:10 
+* Tanks 5-8 dark adapted in glass tanks from 17:00 to 17:30
+ 
+* Data in [IPAM, 2020-09-22](https://drive.google.com/drive/folders/1Z3HffLAAZdj8U5CN4swjFnA1ejU-4PvG?usp=sharing) 
+
+
+------
+
+
+# September 23, 2020
+
+
+
+
+## Fed (DK)
+
+
+* corals fed all at once in glass tanks for ~1 hour
+* Stopped pumps, moved tubing to go inside the downpipe
+* Tanks fed 100mL each of 1g ReefRoids food per 100 mL seawater
+
+
+## Tissue loss (DK)
+
+
+* Fragment A145 tissue loss is severe, some tissue remains on the base, did not remove
+* A086 (Tank 5) and A151 (Tank 3) look about the same as yesterday 
+
+
+## Fragments randomized (DK)
+
+
+## Labview data updated (DK)
+
+
+* up to 9/23/2020 17:00
+
+
+## Water samples (DK)
+
+
+* Samples (14_3,4,7,8) taken for NH4 at 13:00 (DK)
+
+
+* Preserved with 100 µL of chloroform and stored in qPCR fridge
+* Nutrient samples log kept in [Nutrient samples_round2](https://docs.google.com/spreadsheets/d/1gNFxafD6A-K6kQwq7-lKo2WjovPa33OpQlSKW2JB2Nw/edit?usp=sharing) 
+
+
+* Labeled all water sample tubes with sample ID
+* Sample not presently in the spreadsheet found. Labeled: 15_3,4,7,8 [Nutrient Samples_Round2](https://docs.google.com/spreadsheets/d/1gNFxafD6A-K6kQwq7-lKo2WjovPa33OpQlSKW2JB2Nw/edit?usp=sharing)
+
+
+## Made 9L of stock 2
+
+
+* 3 mM concentration 
+* Added 15 mL of stock 1 per liter of RO water 
+* Refilled feeder bottles to the top, stored remainder in a dark location 
+
+
+------
+
+
+# September 24, 2020 
+
+
+## Water samples (DK)
+
+
+* Samples (16_1,2,3,4,5,6,7,8) taken for NH4 at 13:00 (DK)
+
+
+## Fed (DK)
+
+
+* corals fed all at once in glass tanks for ~1 hour
+* Stopped pumps, moved tubing to go inside the downpipe
+* Tanks fed 100mL each of 1g ReefRoids food per 100 mL seawater
+
+
+## Tissue Loss (DK)
+
+
+* Fragment A145 is dead
+* A086 (Tank 5) and A151 (Tank 3) have not declined further but have not improved 
+
+
+## Corals put in order for IPAM and BW tomorrow (DK)
+
+
+* coral tags cleaned
+
+
+# September 25, 2020 
+
+
+## Tissue loss (DK)
+
+
+* Fragment A151 is dead 
+
+
+## IPAM (AP, SR, DK)
+
+
+* Fragments dark adapted for at least 30 min in glass tanks
+* Data in [IPAM, 2020-09-25](https://drive.google.com/drive/folders/1h61piwPmCAbqBXAo2tg2rwSSJ5UPdtXJ?usp=sharing) 
+
+
+## Water samples taken for NH4 at 15:30
+
+
+* Sample # 17_3,4,7,8 
+* added 100uL of Chloroform for preservation 
+
+
+## BW (DK, SR, AP)
+
+
+### Water pump (AP, DK)
+
+
+* Tank 3: 930 mL
+* Tank 4: 950 mL
+* Tank 7: 950 mL
+* Tank 8: 950 mL
+
+
+## Fed (DK)
+
+
+* corals fed all at once in glass tanks for ~1 hour
+* Stopped pumps, moved tubing to go inside the downpipe
+* Tanks fed 100mL each of 1g ReefRoids food per 100 mL seawater
+
+
+## Made 3L of stock 2 (DK) 
+
+
+* 3 mM concentration 
+* Added 15 mL of stock 1 per liter of RO water 
+* Refilled feeder bottles to the top, stored remainder in a cool dark location 
+
+
+# September 26, 2020 
+
+
+## Feeding (AP)
+
+
+* Fed all tanks with 1g of reef roids 
+* Turned off recirculation and circulation pumps
+* Moved nutrient tubing to the drainpipe
+* Turned off heaters
+
+
+* Added food and let alone for 1h before turning all back on
+
+
+## Corals moved around (AP)
+
+
+* Changed coral position in tanks
+
+
+## TL  
+* Tag A129 from tank 4 lost the top part that was broken
+* AW=1.9950
+
+
+## Nutrients
+
+
+* Replenished nutrient jars with stock 2 in the fridge
+* Collected nutrient samples (#18) from 3, 4, 7, 8, preserved with 100uL of chloroform
+* Calibrated flow to ~ 200mL/min
+* Water pumps rate
+T3:930 
+T4:955
+T7:940
+T8:940
+
+
+# September 27, 2020 
+
+
+## Feeding (AP) @ 2PM
+
+
+* Fed all tanks with 1g of reef roids 
+* Turned off recirculation and circulation pumps
+* Moved nutrient tubing to the drainpipe
+* Turned off heaters
+
+
+* Added food and let alone for 1h before turning all back on
+
+
+## Corals moved around (AP)
+* Changed coral position in tanks
+
+
+## Nutrients
+
+
+* Collected nutrient samples (#19) from 3, 4, 7, 8, @2PM
+* Preserved with 100uL of chloroform
+* Calibrated flow to ~ 200mL/min
+* Water pumps rate
+T3: 920 / 1030
+T4: 955 / 930
+T7: 940 / 950
+T8: 940 / 940
+
+
+## Salinity
+T1 32.1
+T2 32.2
+T3 32.1
+T4 32.1
+T5 32.3
+T6 32.1
+T7 32.1
+T8 32.1
+
+
+------
+
+
+# September 28, 2020
+
+
+## Feeding @ 12:30 (DK)
+
+
+* Fed all tanks with 1g of reef roids 
+* Turned off recirculation and circulation pumps
+* Moved nutrient tubing to the drainpipe
+* Turned off heaters
+* Added food and let alone for 1h before turning all back on
+
+
+## Checked for TL/other issues (DK)
+
+
+* A086 still has tissue missing from the tip, tissue loss has not worsened
+* Cleaned off some green algae from tags
+
+
+## Made stock 1 (DK)
+
+
+* 10 falcon tubes made
+* added 5.35 g of Ammonium Chloride to 500 mL millipore water
+
+
+## Made stock 2 (DK) 
+
+
+* 3 mM concentration 
+* Added 15 mL of stock 1 per liter of RO water 
+* Refilled feeder bottles to the top, stored remainder in minifridge 
+
+
+## Nutrients
+
+
+* Collected nutrient samples (#20) from 3, 4, 7, 8, @12:15PM
+* Preserved with 100uL of chloroform
+
+
+* Calibrated flow to ~ 200mL/min
+
+
+*Nutrient seawater flow rates (AP)
+* T3: 1000
+* T4: 960
+* T7: 940
+* T8: 940
+
+
+*Nutrient seawater flow rates after moving tubing (AP)
+* T3: 1000
+* T4: 980
+* T7: 1000
+* T8: 1000
+
+
+# Corals moved around (DK)
+
+
+------
+
+
+# September 29, 2020
+
+
+## Nutrients
+
+
+* Collected nutrient samples (#21) from 3, 4, 7, 8, @12:00PM
+* Preserved with 100uL of chloroform
+
+
+* Calibrated flow to ~ 200mL/min
+
+
+* Refilled nutrient feeder bottles with stock 2
+
+
+* seawater flow rates (DK)
+* T3: 980
+* T4: 960
+* T7: 980
+* T8: 950
+
+
+* seawater flow rates after moving tubing (AP)
+* T3: 980
+* T4: 960
+* T7: 990
+* T8: 1020
+
+
+*Nutrient feeder flow rates After 10 rounds of dosing: (DK, AP)
+
+
+* T3: 104
+* T4: 98.5
+* T7: 105
+* T8: 101
+
+
+* Re-started all pump at 2:29PM
+
+
+## Feeding @ 12:15 (DK)
+
+
+* Fed all tanks with 1g of reef roids 
+* Turned off recirculation and circulation pumps
+* Moved nutrient tubing to the drainpipe
+* Turned off heaters
+* Added food and let alone for 1h before turning all back on
+
+
+## Checked for TL/other issues (DK)
+
+
+* A086 in similar condition to yesterday
+* check temperature
+
+
+## Updated labVIEW data (DK)
+
+
+## Measured light intensity in all tanks (AP, DK)
+
+
+# Corals moved around (DK)
+
+
+------
+
+
+# September 30, 2020
+
+
+## Nutrients
+
+
+* Collected nutrient samples (#22) from 3, 4, 7, 8, @12:00PM
+* Preserved with 100uL of chloroform
+
+
+* Calibrated flow to ~ 200mL/min
+
+
+* Refilled nutrient feeder bottles with stock 2
+
+
+## Feeding @ 12:05 (DK)
+
+
+* Fed all tanks with 1g of reef roids 
+* Turned off recirculation and circulation pumps
+* Moved nutrient tubing to the drainpipe
+* Turned off heaters
+* Added food and let alone for 1h before turning all back on
+
+
+## Corals moved around (DK)
+
+
+## Cleaned experimental tanks and touch tank (DK)
+
+
+* scrubbed everything down, siphoned out debris
+
+
+## Checked for TL/other issues (DK)
+
+
+* One FM14 fragment in the touch tank had tissue loss
+* Dead fragment removed from touch tank 
+
+
+## “Sick” corals arrived @ 4pm (DK)
+
+
+* Kept in a bucket with a circulation pump
+
+
+------
+
+
+# October 1, 2020
+
+
+## Nutrients
+
+
+* Collected nutrient samples (#23) from 1, 2, 3, 4, 5, 6, 7, 8, @ 7:30 AM
+* Preserved with 100uL of chloroform
+* Samples #17-x through #23-x dropped off to Ian at 8 AM
+
+
+* Calibrated flow to ~ 200mL/min
+
+
+* Refilled nutrient feeder bottles with stock 2
+
+
+*Water pump flow rates after 5 minutes (DK)
+
+
+* T3: 980
+* T4: 940
+* T7: 960
+* T8: 940
+
+
+* NH4 levels came back really high.
+
+
+  
+
+## Nutrients tanks drained completely and refilled
+
+
+* tanks 3-4 and 7-8 drained completely 
+* Tanks hosed out. Top and bottom. 
+* Tanks refilled with fresh seawater and dosed with 9.50 mL of stock 1. Stock 2 feeders and water pumps initiated 
+
+
+## Feeding @ 12:00 (DK)
+
+
+* Fed all tanks with 1g of reef roids 
+* Turned off recirculation and circulation pumps
+* Moved nutrient tubing to the drainpipe
+* Turned off heaters
+* Added food and let alone for 1h before turning all back on
+
+
+## Corals moved around (DK)
+
+
+## Checked for TL/other issues (DK)
+
+
+* No new issues
+
+
+
+
+------
+
+
+# October 2, 2020
+
+
+## IPAM (AP)
+
+
+* Fragments dark adapted for at least 30 min in glass tanks
+* Data in [IPAM, 2020-10-02](https://drive.google.com/drive/folders/1zVKbCVJx06LlxWysPs8KNm9qNwVHbyJK?usp=sharing) 
+
+
+## Water samples taken for NH4 at 9:30 AM (AP)
+
+
+* Sample # 25_1, 2, 3,4,5, 6, 7,8 
+* added 100uL of Chloroform for preservation 
+
+
+## BW (DK, SR)
+
+
+* Data in [BW](https://docs.google.com/spreadsheets/d/1WvMUv8Np_tW6QucTO2KIcT7ZuLN3V6XWbt138fwzQbg/edit?usp=sharing) 
+
+
+## Feeding @ 16:00 (DK)
+
+
+* Fed all tanks with 1g of reef roids 
+* Turned off recirculation and circulation pumps
+* Moved nutrient tubing to the drainpipe
+* Turned off heaters
+* Added food and let alone for 1h before turning all back on
+
+
+## Checked for TL/other issues (DK)
+
+
+* No new issues
+
+
+## Corals moved around
+
+
+
+
+
+
+# October 3, 2020
+
+
+## Tissue blasting and diseases preparation
+
+
+* Filtered Seawater using first VWR 28333-129 filter (glass microfiber 691) and then 0.2uM filters. 
+* Autoclaved bottles of water 
+ 
+* Tried airgun vs vortexer + beads
+* Used loose fragments in TT and 3 fragments in tag 413
+* ~ 4 frag per technique: 
+        Airgun = 20mL total
+        Vortexer =  50 mL total        
+
+
+## Checked for TL (AP)
+
+
+* A070 is dead, all others are normal.
+
+
+## Nutrients
+
+
+* Collected nutrient samples (#26) from 1, 2, 3, 4, 5, 6, 7, 8, TT, source @ 2:30 PM
+* Preserved with 100uL of chloroform
+* Refilled nutrient feeder bottles with stock 2
+
+
+*Water pump flow rates after 5 minutes (AP)-- stopped feeders @ 4PM
+* T3: 960
+* T4: 930
+* T7: 950
+* T8: 940
+Water pump RPM moved to 113
+* T3: 980
+* T4: 950
+* T7: 960
+* T8: 930
+Water pump RPM moved to 114 -- started feeders @ 19:20 
+* T3: 990
+* T4: 970
+* T7: 980
+* T8: 940
+
+
+* Calibrated flow to ~ 200mL/min
+
+
+## Feeding @ 2:00 PM (AP)
+
+
+* Fed all tanks with 1g of reef roids and 1g of AP100
+* Turned off recirculation and circulation pumps
+* Moved nutrient tubing to the drainpipe
+* Turned off heaters
+* Added food and let alone for 1h before turning all back on
+
+
+## Corals moved around (AP)
+
+
+## Salinity 
+T1: 32.0
+T2: 32.1
+T3: 31.9
+T4: 31.9
+T5: 32.1
+T6: 32.2
+T7: 31.9
+T8: 31.9
+VAT: 31.8
+
+
+------
+
+
+# October 4, 2020
+
+
+## Checked for TL (AP)
+
+
+* All good
+
+
+## Nutrients
+
+
+* Collected nutrient samples (#27) from 1, 2, 3, 4, 5, 6, 7, 8 @ 1:40 PM (NH4), and beach (12:15, NH4 and NO3)
+* Preserved with 100uL of chloroform
+* Refilled nutrient feeder bottles with stock 2
+
+
+* Water pumps on at 11AM, feeders on at 14:03
+
+
+* Calibrated flow to ~ 200mL/min
+
+
+## Feeding @ 1:30 PM (AP)
+
+
+* Fed all tanks with 1g of reef roids and 1g of AP100 in TT
+* Cleaned and siphoned glass tanks 
+
+
+## Corals moved around (AP)
+
+
+## Salinity 
+T1: 31.8
+T2: 31.8
+T3: 31.9
+T4: 32.0
+T5: 31.9
+T6: 31.9
+T7: 32.0
+T8: 32.0
+VAT: 31.2
+
+
+------
+
+
+# October 5, 2020
+
+
+## Made stock 1 (DK)
+
+
+* 10 falcon tubes made
+* added 5.35 g of Ammonium Chloride to 500 mL millipore water
+
+
+## Made stock 2 (DK) 
+
+
+* 3 mM concentration 
+* Added 15 mL of stock 1 per liter of RO water 
+* Refilled feeder bottles to the top, stored remainder in minifridge 
+
+
+## Nutrients
+
+
+* Collected nutrient samples (#28) from 1, 2, 3, 4, 5, 6, 7, 8, @ 11:50 AM
+* Preserved with 100uL of chloroform
+
+
+* Calibrated flow to ~ 200mL/min
+
+
+* Refilled nutrient feeder bottles with stock 2
+
+
+* Stopped feeders and water income @ 13:40 to switch tubing and set the system to 100mL/min
+
+
+* Water pump test: after 5 mins 100 RPM (AP)
+T3: 840 = 168 ml/min
+T4: 810 = 162 ml/min
+T7: 760 = 152 ml/min
+T8: 750 = 150 ml/min
+
+
+* Water pump test: after 5 mins 60 RPM (AP)
+T3: 480 = ml/min
+T4: 460 = ml/min
+T7: 420 = ml/min
+T8: 430 = ml/min
+
+
+* Water pump test: after 5 mins 70 RPM (AP)
+T3: 550 = 110 ml/min
+T4: 530 = 106 ml/min
+T7: 500 = 100 ml/min
+T8: 500 = 100 ml/min 
+
+
+* Water pump test: after 5 mins 70 RPM + thighed back knobs (8 and 7) (AP)
+T3: 530 = 106 ml/min
+T4: Broke
+T7: 500 = 100 ml/min
+T8: 520 = 104 ml/min 
+
+
+* Water pump test: after 5 mins 70 RPM + thighed back knobs (Tank 7)
+T3: 520 = 104 ml/min
+T4: 510 = 102 ml/min
+T7: 500 = 100 ml/min
+T8: 520 = 104 ml/min 
+
+
+* changed nutrient feeder interval to 30 mins and water flow rate to 100 mL/min @ 4:02 pm
+* feeder duration set to 15, 20, 17,18 (same as before)
+
+
+* Ambient tanks flow:
+T1: 108ml/min
+T2: 108ml/min
+T5: 120ml/min 
+T6: 112ml/min 
+
+
+## Feeding @ 12:05 (DK)
+
+
+* Corals fed in touch tank, 4 tanks at a time
+* Fed 1g of reef roids per tank 
+* Turned off circulation pumps
+* Added food and let alone for 1h
+
+
+## Checked for TL (DK)
+
+
+* all good
+
+
+## Updated labVIEW data (DK)
+
+
+## Salinity 
+
+
+T1: 31.7 
+T2: 31.8
+T3: 31.6
+T4: 31.6
+T5: 31.8
+T6: 31.8
+T7: 31.7
+T8: 31.7
+
+
+------
+
+
+# October 6, 2020
+
+
+## Nutrients (DK)
+
+
+* Collected nutrient samples (#29) from 1, 2, 3, 4, 5, 6, 7, 8, @ 10:30 AM NH4/NO3
+* Collected nutrient samples (#30) from 1, 2, 3, 4, 5, 6, 7, 8, @ 4:00 PM NH4
+
+
+* Preserved with 100uL of chloroform / freezer
+
+
+* Calibrated flow to ~ 100mL/min
+* Tank flow 
+T1: 120ml/min
+T2: 108ml/min
+T5: 112ml/min 
+T6: 116ml/min
+
+
+* Tested feeders
+* Stopped at 13:33, tested 10 doses ~ 100mL
+* Tank 3:105
+* Tank 4:100
+* Tank 7: 106
+* Tank 8: 100
+* Manually dosed them at 14:03 (10mL each tank)
+* Manually dosed them at 14:33 (10mL each tank)
+
+
+* Tested water pumps @ 14:20 for 5 min
+* Tank 3: 500mL= 100mL/min
+* Tank 4: 500mL= 100mL/min
+* Tank 7: 490 = 98 mL/min
+* Tank 8: 500mL = 100mL/min
+
+
+* Nutrient pumps and water pumps re-started @ 14:40
+
+
+* Refilled nutrient feeder bottles with stock 2
+
+
+## Feeding @ 11:15 (DK)
+
+
+* Corals fed in touch tank, all at the same time
+* Fed 1g of reef roids per tank 
+* Turned off circulation pumps
+* Added food and let alone for 1h
+
+
+## Checked for TL (DK)
+
+
+* all good
+
+
+## Tested light (AP)
+
+
+Date
+	Time 
+	Tank
+	Bottom of the tank
+	
+
+	
+
+	
+
+	Top Left
+	Top Right
+	Bottom Left
+	Bottom Right
+	Center
+	2020-10-06
+	13:50
+	1
+	175
+	176
+	181
+	191
+	282
+	2020-10-06
+	13:50
+	2
+	125
+	128
+	153
+	156
+	253
+	2020-10-06
+	13:50
+	3
+	184
+	181
+	190
+	193
+	286
+	2020-10-06
+	13:50
+	4
+	161
+	180
+	152
+	165
+	274
+	2020-10-06
+	13:50
+	5
+	142
+	143
+	160
+	184
+	291
+	2020-10-06
+	13:50
+	6
+	141
+	173
+	153
+	182
+	252
+	2020-10-06
+	13:50
+	7
+	163
+	159
+	188
+	187
+	278
+	2020-10-06
+	13:50
+	8
+	143
+	164
+	160
+	173
+	281
+	
+
+Best top/bottom position is ~ 7 egg crate spots from the top
+
+
+## Tested salinity (AP, DK)
+
+
+Date
+	Time
+	Tank
+	Salinity
+	2020-10-06
+	14:36
+	1
+	31.8
+	2020-10-06
+	14:36
+	2
+	31.9
+	2020-10-06
+	14:36
+	3
+	31.6
+	2020-10-06
+	14:36
+	4
+	31.6
+	2020-10-06
+	14:36
+	5
+	31.9
+	2020-10-06
+	14:36
+	6
+	31.9
+	2020-10-06
+	14:36
+	7
+	31.7
+	2020-10-06
+	14:36
+	8
+	31.6
+	
+
+------
+
+
+# October 7, 2020
+
+
+## Salinity (AP)
+
+
+2020-10-07
+	13:45
+	1
+	32
+	
+
+	2020-10-07
+	13:45
+	2
+	32
+	
+
+	2020-10-07
+	13:45
+	3
+	31.7
+	
+
+	2020-10-07
+	13:45
+	4
+	31.8
+	
+
+	2020-10-07
+	13:45
+	5
+	32.1
+	
+
+	2020-10-07
+	13:45
+	6
+	32
+	
+
+	2020-10-07
+	13:45
+	7
+	31.8
+	
+
+	2020-10-07
+	13:45
+	8
+	31.8
+	
+
+	2020-10-07
+	13:45
+	VAT
+	
+
+	
+
+	
+
+
+
+## Nutrients (DK)
+
+
+* Collected nutrient samples (#31) from 1, 2, 3, 4, 5, 6, 7, 8, @ 8:00 AM NH4/NO3 by John
+* Collected nutrient samples (#32) from 1, 2, 3, 4, 5, 6, 7, 8, @ 12:32 PM NH4
+* Collected nutrient samples (#33) from 1, 2, 3, 4, 5, 6, 7, 8, @ 4:00 PM NH4
+
+
+* Preserved with 100uL of chloroform / freezer
+
+
+* Tested water pumps @ 14:18 for 5 min (AP) (Stopped feeders)
+* Tank 3: 500 mL
+* Tank 4: 495 mL
+* Tank 7: 495 mL
+* Tank 8: 500 mL
+* Water pumps and feeders back on at 15:30 (AP) 
+
+
+* Calibrated flow to ~ 100mL/min
+* Tank flow 
+T1: 100 ml/min
+T2: 112 ml/min
+T5: 100 ml/min 
+T6: 104 ml/min
+
+
+## Feeding @ 12:30 (DK) and 14:00-14:40 with ½ food
+
+
+* Corals fed in touch tank, all at the same time
+* Fed 1g of reef roids per tank 
+* Turned off circulation pumps
+* Added food and let alone for 1h
+
+
+## Checked for TL (AP)
+
+
+* Fragment A029 has TL, has been pale for a while
+* Pictures taken and moved back to tank
+
+
+## Updated Labview data (AP)
+
+
+* System data, temperature and flow
+
+
+## Cleaned and siphoned tanks (DK)
+
+
+------
+
+
+# October 8, 2020
+
+
+## Salinity (DK)
+
+
+Date
+	Time
+	Tank
+	Salinity
+	2020-10-08
+	13:00
+	1
+	32.1
+	2020-10-08
+	13:00
+	2
+	32.1
+	2020-10-08
+	13:00
+	3
+	31.8
+	2020-10-08
+	13:00
+	4
+	31.8
+	2020-10-08
+	13:00
+	5
+	32.2
+	2020-10-08
+	13:00
+	6
+	32.1
+	2020-10-08
+	13:00
+	7
+	31.8
+	2020-10-08
+	13:00
+	8
+	31.8
+	2020-10-08
+	13:00
+	VAT
+	31.1
+	
+
+
+
+## Nutrients (DK)
+
+
+* Collected nutrient samples (#34) from 1, 2, 3, 4, 5, 6, 7, 8, @ 8:30 AM NH4
+* Collected nutrient samples (#35) from 1, 2, 3, 4, 5, 6, 7, 8, @ 12:30 PM NH4/NO3
+* Collected nutrient samples (#36) from 1, 2, 3, 4, 5, 6, 7, 8, @ 16:30 PM NH4
+
+
+* Preserved with 100uL of chloroform / freezer
+
+
+* Calibrated flow to ~ 100mL/min
+* Tank flow 
+T1: 108 ml/min
+T2: 100 ml/min
+T5: 112 ml/min 
+T6: 108 ml/min
+
+
+## Feeding @ 12:30 (DK) 
+
+
+* Corals fed in touch tank, all at the same time
+* Fed 1g of reef roids per tank 
+* Turned off circulation pumps
+* Added food and let alone for 1h
+
+
+## Water change and cleaned touch tank
+* noticed water smelled bad and had many copepods floating on surface
+* removed extras, turned off heaters, drained tank, and refilled
+* this was done before feeding
+
+
+## Checked for TL (DK)
+
+
+* Fragment A029 still has TL
+* Pictures taken and moved back to tank
+
+
+# October 9, 2020
+
+
+## Salinity
+
+
+2020-10-09
+	16:30
+	1
+	31.7
+	2020-10-09
+	16:30
+	2
+	31.7
+	2020-10-09
+	16:30
+	3
+	31.6
+	2020-10-09
+	16:30
+	4
+	31.6
+	2020-10-09
+	16:30
+	5
+	31.8
+	2020-10-09
+	16:30
+	6
+	31.8
+	2020-10-09
+	16:30
+	7
+	31.6
+	2020-10-09
+	16:30
+	8
+	31.6
+	2020-10-09
+	16:30
+	VAT
+	30.9
+	2020-10-09
+	
+
+	TT
+	30.9
+	
+
+## Nutrients
+
+
+* Air bubbles in water tubbing-> Stopped system at 8:15 AM
+* Added more ambient water to ambient
+* Collected nutrient samples (#37) from 1, 2, 3, 4, 5, 6, 7, 8, @ 8:30 AM NH4
+* Changed tubing to norprene 75RPM
+T3: 650
+T4: 650
+T7: 640
+T8: 650
+* Changed tubing to norprene 57RPM
+T3: 500
+T4: 500
+T7: 490
+T8: 500
+* Started the system at 13:30
+
+
+* Collected nutrient samples (#38) from 1, 2, 3, 4, 5, 6, 7, 8, @ 16:30
+ 
+* Preserved with 100uL of chloroform / freezer
+
+
+* Calibrated flow to ~ 100mL/min
+* Tank flow 
+T1: 108 ml/min
+T2:104 ml/min
+T5: 104 ml/min 
+T6: 104 ml/min
+
+
+## Feeding @ 
+
+
+* Corals fed in touch tank, a tank at a time
+        1-4 started at 9:00 -11
+5-8 started at  12-2:30
+
+
+* Fed 1g of reef roids per tank 
+* Turned off circulation pumps
+
+
+## TL
+
+
+* No new issues
+
+
+## IPAM
+
+
+* Did not export pic 40
+
+
+## BW
+
+
+* All ok 
+
+
+# October 10, 2020
+
+
+## Salinity (AP)
+
+
+
+
+2020-10-10
+	15:30
+	1
+	31.6
+	2020-10-10
+	15:30
+	2
+	31.8
+	2020-10-10
+	15:30
+	3
+	31.6
+	2020-10-10
+	15:30
+	4
+	31.7
+	2020-10-10
+	15:30
+	5
+	31.9
+	2020-10-10
+	15:30
+	6
+	31.9
+	2020-10-10
+	15:30
+	7
+	31.7
+	2020-10-10
+	15:30
+	8
+	31.7
+	2020-10-10
+	15:30
+	VAT
+	
+
+	2020-10-10
+	15:30
+	TT
+	
+
+	
+
+## Nutrients (AP)
+
+
+* Replenish stock 2 jars 
+
+
+* NH4 and NO3 water samples (# 39) from tanks 1-8
+* Preserved with Chloroform and Freezer 
+
+
+## Feeding (AP)
+* Corals fed in touch tank, all tanks at a time
+
+
+* Fed 1g of reef roids per tank 
+* Turned off circulation pumps
+
+
+## TL (AP)
+* No new issues
+
+
+# October 11, 2020
+
+
+## Salinity (AP)
+
+
+
+
+2020-10-11
+	17:48
+	1
+	31.7
+	2020-10-11
+	17:48
+	2
+	31.7
+	2020-10-11
+	17:48
+	3
+	31.2
+	2020-10-11
+	17:48
+	4
+	31.2
+	2020-10-11
+	17:48
+	5
+	31.9
+	2020-10-11
+	17:48
+	6
+	31.9
+	2020-10-11
+	17:48
+	7
+	31.2
+	2020-10-11
+	17:48
+	8
+	31.2
+	2020-10-11
+	17:48
+	VAT
+	29.1
+	2020-10-11
+	17:48
+	TT
+	29.1
+	
+
+
+
+## Nutrients (AP)
+
+
+* Replenish stock 2
+* NH4 and NO3 water samples (# 40) from tanks 1-8 at 16:45
+* Preserved with Chloroform and Freezer 
+
+
+* Water flow
+* T3: 460
+* T4: 460
+* T7: 460
+* T8: 460
+* RPM changed from 57 to 60
+
+
+## Feeding (AP)
+* Corals fed in touch tank, all tanks at a time
+
+
+* Fed 1g of reef roids per tank 
+* Turned off circulation pumps
+
+
+## TL (AP)
+* No TL, but A154 tip broke 
+
+
+# October 12, 2020
+
+
+## Salinity (DK)
+
+
+2020-10-12
+	14:00
+	1
+	31.4
+	2020-10-12
+	14:00
+	2
+	31.4
+	2020-10-12
+	14:00
+	3
+	30.9
+	2020-10-12
+	14:00
+	4
+	30.9
+	2020-10-12
+	14:00
+	5
+	31.6
+	2020-10-12
+	14:00
+	6
+	31.6
+	2020-10-12
+	14:00
+	7
+	30.9
+	2020-10-12
+	14:00
+	8
+	30.9
+	2020-10-12
+	14:00
+	VAT
+	30.5
+	2020-10-11
+	14:00
+	TT
+	30.5
+	
+
+
+
+## Nutrients (DK)
+
+
+* Replenish stock 2
+* NH4 and NO3 water samples (# 41) from tanks 1-8 at 12:50
+* NH4 water samples (# 42) from tanks 1-8 at 4:30 pm
+* Preserved with Chloroform and Freezer 
+
+
+* Water flow (mL/min)
+
+
+* T1: 104
+* T2: 112
+* T5: 112
+* T6: 116
+
+
+## Feeding 12:00 (DK)
+
+
+* Corals fed in touch tank, all tanks at a time
+* Fed 1g of reef roids per tank 
+* Turned off circulation pumps
+* shuffled coral positions in tanks 
+
+
+## TL (DK)
+
+
+* ~90% of tissue gone on A029 (Tank 8)
+
+
+## Cleaned tanks (DK)
+
+
+* turned of circulation pumps, wiped down tanks and siphoned out debris 
+* done while corals were fed in TT
+
+
+# October 13, 2020
+
+
+## Salinity (DK)
+
+
+
+
+2020-10-13
+	14:00
+	1
+	31.2
+	2020-10-13
+	14:00
+	2
+	31.2
+	2020-10-13
+	14:00
+	3
+	30.8
+	2020-10-13
+	14:00
+	4
+	30.8
+	2020-10-13
+	14:00
+	5
+	31.3
+	2020-10-13
+	14:00
+	6
+	31.3
+	2020-10-13
+	14:00
+	7
+	30.8
+	2020-10-13
+	14:00
+	8
+	30.8
+	2020-10-13
+	14:00
+	VAT
+	31.8
+	2020-10-13
+	14:00
+	TT
+	30.8
+	
+
+## Nutrients (DK)
+
+
+* Replenish stock 2
+* NH4 and NO3 water samples (# 43) from tanks 1-8 at 13:15
+* NH4 water samples (# 44) from tanks 1-8 at 16:10
+* Preserved with Chloroform and Freezer 
+
+
+* Water flow (mL/min)
+
+
+* T1: 112
+* T2: 104
+* T5: 108
+* T6: 112
+
+
+## Feeding 12:00 (DK)
+
+
+* Corals fed in touch tank, all tanks at a time
+* Fed 1g of reef roids per tank 
+* Turned off circulation pumps
+* shuffled coral positions in the tanks 
+
+
+## TL (DK)
+
+
+* A029 is dead
+
+
+## Updated Labview data (DK)
+
+
+* System data, temperature and flow
+
+
+## Homogenate trials (DK, AP, SR)
+
+
+### Blasting protocole trial (AP, SP)
+1. Got 5 healthy FM19 fragments 
+2. Blasted them in fume hood (works pretty well)
+3. Result: 80mL of not so thick blastate 
+4. Note: Adjust airgun liquid flow 
+
+
+5. Got 4 frozen diseased fragments 
+6. Blasted them in fume hood 
+7. Result was 45mL of blastate, thicker and darker 
+8. Added filtered seawater up to 80mL to make healthy and diseased volumes comparable 
+9. Split them into 2 falcon tubes, one with 20 beads and one without. 
+10. Vortexed them for 10 minutes to homogenize tissue
+11. There was no noticeable difference between tubes with and without beads
+
+
+### Test homogenates
+1. Got 10 fragments from Kelsey genotype in the TT (extras)
+2. Glued them to tags
+3. Took pictures in 4 angles 
+Pictures:[2020-10-13_Test_infection](https://drive.google.com/drive/folders/1H1QAj_7w9Rf4TVEcDqcBhcyc0P11zIEV?usp=sharing) 
+
+
+Test Fragments
+	Tank
+	CR058
+	Diseased
+	CR048
+	Healthy
+	CR054
+	Diseased
+	CR042
+	Healthy
+	CR053
+	Healthy
+	CR044
+	Diseased
+	CR059
+	Diseased
+	CR045
+	Healthy
+	CR055
+	Diseased
+	CR057
+	Healthy
+	
+
+4. At 6:00 PM put them in 5 and 5 fragments in 2 aquaria placed in TT
+5. At 6:50 PM we dosed one tank with 40 mL of placebo obtained from FM 19 (blatate with beads) and the other tank with 40 mL of frozen/diseased homogenates
+
+
+------
+
+
+# October 14, 2020
+
+
+## Salinity (DK)
+
+
+2020-10-14
+	12:00
+	1
+	32.1
+	2020-10-14
+	12:00
+	2
+	32.0
+	2020-10-14
+	12:00
+	3
+	31.6
+	2020-10-14
+	12:00
+	4
+	31.7
+	2020-10-14
+	12:00
+	5
+	32.0
+	2020-10-14
+	12:00
+	6
+	32.0
+	2020-10-14
+	12:00
+	7
+	31.7
+	2020-10-14
+	12:00
+	8
+	31.7
+	2020-10-14
+	12:00
+	VAT
+	33.0
+	2020-10-14
+	12:00
+	TT
+	32.50
+	
+
+
+
+## Nutrients (DK)
+
+
+* Replenish stock 2
+* NH4 and NO3 water samples (# 45) from tanks 1-8 at 13:15
+* Preserved with Chloroform and Freezer 
+
+
+* Water flow (mL/min)
+* T1: 112
+* T2: 104
+* T5: 108 
+* T6: 108
+
+
+* Water pumps (AP) @ 60 RPM
+* T3: 96mL/min
+* T4: 96mL/min
+* T7: 96mL/min
+* T9: 96mL/min
+* Water pumps set to 65 RPM: All tanks @ 100mL/min+
+## Feeding 12:15 (DK)
+
+
+* Corals fed in glass tanks separately
+* Fed 1g of reef roids per tank 
+* shuffled coral positions in the tanks 
+
+
+## TL (DK)
+
+
+* nothing new
+
+
+## Cleaned tanks (DK)
+
+
+* turned of circulation pumps, wiped down tanks and siphoned out debris 
+* done while corals were fed in glass tanks
+* cleaned tags and put all tanks in order
+
+
+## Homogenate trials (DK, AP, SR)
+
+
+* No tissue loss in any of the placebo or frozen dosed tanks
+
+
+## Preparation for homogenate dosing (AP)
+
+
+* Diseased A.cer kept in the tank is almost dead. Might no resist until Friday
+
+
+ * Current number of fragments in tanks 
+
+
+
+
+	Tank
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	Genotype
+	1
+	2
+	3
+	4
+	5
+	6
+	7
+	8
+	Total
+	Acerv2
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	24
+	Cooper-9
+	3
+	3
+	3
+	3
+	2
+	3
+	3
+	2
+	22
+	Elkhorn
+	3
+	3
+	2
+	3
+	3
+	2
+	3
+	3
+	22
+	FM14
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	24
+	FM19
+	3
+	3
+	3
+	3
+	4
+	3
+	3
+	3
+	25
+	FM6
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	24
+	FM9
+	3
+	3
+	3
+	4
+	3
+	3
+	3
+	2
+	24
+	K2
+	2
+	3
+	2
+	3
+	3
+	3
+	3
+	3
+	22
+	Kelsey-1
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	24
+	U41
+	1
+	1
+	2
+	2
+	1
+	2
+	1
+	1
+	11
+	U44
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	24
+	Grand Total
+	30
+	31
+	30
+	33
+	31
+	31
+	31
+	29
+	246
+	
+
+* Expected number of fragments for homogenate dosing
+
+
+
+
+	A_D
+	A_D
+	N_D
+	N_D
+	A_P
+	A_P
+	N_P
+	N_P
+	
+
+	Genotype
+	1
+	2
+	3
+	4
+	5
+	6
+	7
+	8
+	Total
+	Acerv2
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	24
+	Cooper-9
+	3
+	3
+	3
+	3
+	3
+	2
+	3
+	2
+	22
+	Elkhorn
+	3
+	2
+	3
+	3
+	3
+	3
+	2
+	3
+	22
+	FM14
+	3
+	3
+	3
+	2
+	3
+	3
+	3
+	3
+	23
+	FM19
+	4
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	25
+	FM6
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	24
+	FM9
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	24
+	K2
+	3
+	3
+	3
+	3
+	2
+	3
+	2
+	3
+	22
+	Kelsey-1
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	24
+	U41
+	2
+	3
+	3
+	3
+	
+
+	
+
+	
+
+	
+
+	11
+	U44
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	3
+	24
+	Grand Total
+	33
+	32
+	33
+	32
+	29
+	29
+	28
+	29
+	245
+	
+
+* Moved the corals to their assigned diseased tanks 
+
+
+* Made a bleach bucket
+
+
+# October 15, 2020
+
+
+## Feeding (AP, DK)
+
+
+* Corals fed for 1h in separated glass aquaria 
+* 1g of reef roids per tank
+* Unfortunately things went slow and corals were in the dark for a while
+
+
+## IPAM (AP)
+
+
+* All good
+
+
+## BW (DK)
+
+
+* Replaced battery in YSI
+* Values look low. 
+* Salinity is considerably higher today
+
+
+## homogenate trial round 2 (SR)
+* One sample showed a small amount of tissue loss after the trial experiment.
+* To increase the infection to other fragments the non-infected fragments were injured with the same razor blade. In addition more fragments were collected from the extra healthy tank and also injured. Both sets of fragments were photographed. 
+* About three fragments were zip tied to the disease fragment and others were placed near it.
+* In addition the leftover refrigerated homogenate made on Oct 13 was also added to the tank.
+* The tank was 5.5 (~2L) and had a pump running inside but had no new incoming water. 
+
+
+
+
+# October 16, 2020
+
+
+## Tissue samples (DK[h])
+
+
+*T1 samples for S/H ratio
+
+
+## Nutrients (DK)
+
+
+* Replenish stock 2
+* NH4 and NO3 water samples (# 48) from tanks 1-8 at 19:15
+* Preserved with Chloroform and Freezer 
+
+
+* Water flow (mL/min)
+* T1: 104
+* T2: 104
+* T5: 104 
+* T6: 112
+
+
+
+
+## Salinity (AP)
+
+
+2020-10-16
+	19:25
+	1
+	33
+	2020-10-16
+	19:25
+	2
+	33
+	2020-10-16
+	19:25
+	3
+	32.8
+	2020-10-16
+	19:25
+	4
+	32.8
+	2020-10-16
+	19:25
+	5
+	33
+	2020-10-16
+	19:25
+	6
+	33
+	2020-10-16
+	19:25
+	7
+	32.9
+	2020-10-16
+	19:25
+	8
+	32.8
+	2020-10-16
+	19:25
+	VAT
+	32.9
+
+
+	
+
+## Coral injury (SR, AP)
+
+
+* All fragments were injured with a razor blade. The injury was about 1 cm from the base (~3 polyps from the base). The injury was made in a circular manner around the base. One razor blade was used per tank and the razor blade was bleached prior to injuring each fragment. 
+* After the injury each fragment was photographed. 
+* This process took ~1.5 minutes per fragment and took about 6 hours to complete.
+
+
+Injury of large fragment (AP)
+* A large kelsey fragment was injured and placed in the disease trail 5L tank to propagate disease. This was done because the other small fragments died and we needed more tissue to make a disease slurry.
+
+
+
+
+
+
+# October 17, 2020
+
+
+## Disease dosing  (AP, SR)
+
+
+* Photos for this day are found here
+
+
+### Placebo homogenate
+
+
+* Selected 16 health fragments (5 genotypes[Kelsey, FM14, FM9,FM19,U44]) and photographed them together.
+* After selection fragments were photographed and cleaned in 0.22um FSW and placed in autoclaved beakers with 0.22um FSW.
+ *Blasted them in fume hood (detailed protocol on protocols.io)
+* Started at 13, finished 13:46
+*Total volume obtained ~112mL and photographed post blast.
+
+
+### Disease homogenate
+
+
+* Selected 7 diseased fragments (tag# 456 had only a small amount of tissue on the tip) and photographed them together.
+* After selection fragments were photographed and cleaned in 0.22um FSW and placed in autoclaved beakers with 0.22um FSW.
+*Blasted them in fume hood (detailed protocol on protocols.io)
+* Total volume obtained ~62mL[i]
+*Tags used (A147, CR054, 456, 411, a kelsey fragment, CR055, and one unknown tag and genotype)
+
+
+### Homogenates
+
+
+* Placed all five 50mL falcon tubes on a vortexer for ~10 min with steel beads inside to break up mucus and tissue.
+* To normalize the amount of homogenate to use per treatment, fragments were paired by healthy and diseased based on tissue area as photographed.
+* Mixed all falcon tubes with placebo homogenate in a ziplock bag
+* Took 62mL and brought up to 80mL with 0.22um FSW (This was to dose two tanks with one tube and to keep half the homogenate in the refrigerator)
+* Mixed in a ziplock bag
+* Split into 2 falcon tubes (Tube labels: Healthy 2 and Healthy 3)
+* Leftover placebo homogenate (112-62)mL was kept in fridge
+
+
+* Brought disease up to 80mL with FSW
+* Mixed in a ziplock bag
+* Splitted into 2 falcon tubes (Disease 1 and Disease 2)
+
+
+* Placed all homogenates into fridge
+
+
+### Dosing 
+
+
+*Corals were removed from aquaria. 500 ul of homogenate was pipetted directly on the scared area of each fragment.  ~3min out of water.
+*Coral were placed in 5L aquaria and these aquaria were placed in larger aquaria for temperature control. 
+* 20*20*40cm = 16L of water were added to the aquaria to completely cover the fragments
+
+
+* Corals dosed in closed system for ~3 hours
+
+
+Tank
+	Started
+	Dose (mL)
+	Tube label
+	Extra added at 20:25 (mL)
+	Tube label
+	Finished
+	Total homogenate (mL)
+	Notes
+	5
+	17:55
+	14.5
+	P_2
+	4.5
+	P_2+3
+	21:00
+	19
+	
+
+	6
+	18:05
+	14.5
+	P_2
+	4.5
+	P_2+3
+	21:10
+	19
+	
+
+	7
+	18:17
+	14
+	P_3
+	4.5
+	P_2+3
+	21:22
+	18.5
+	
+
+	8
+	18:27
+	14.5
+	P_3
+	4.5
+	P_2+3
+	21:32
+	19
+	
+
+	4
+	18:44
+	16
+	D_1
+	3
+	D_1+2
+	21:49
+	19
+	Second dose was short
+	3
+	18:57
+	16.5
+	D_1
+	3
+	D_1+2
+	22:02
+	19.5
+	
+
+	2
+	19:10
+	16
+	D_2
+	3
+	D_1+2
+	22:15
+	19
+	
+
+	1
+	19:25
+	16.5
+	D_2
+	3
+	D_1+2
+	22:30
+	19.5
+	
+
+	
+
+* Open the system and fed corals in glass tanks with 1g of reef roids each 
+
+
+### Homogenate samples  (SR)
+
+
+* 100ul were collected from the four 40mL homogenates for DNA/RNA extractions. Then 300ul of DNA/RNA shield was added for preservation. Samples were stored in -80C and labeled 1-4. 
+* Homogenate samples were collected after dosing occured.
+
+
+## Nutrients 
+
+
+* Water samples # 49 (Before) and # 50 (after disease dosing). Took NO3 and NH4 both times.
+* Preserved in freezer /Chloroform 
+
+
+* Calibrated ambient tanks to ~100mL/min
+* Measure new water income in nutrient tanks 
+
+
+Tank3 = 520 (104mL/min)
+Tank4 = 520 (104mL/min)
+Tank7= 520 (104mL/min)
+Tank8= 520 (104mL/min)
+
+
+* Shaked stock 2 jars
+
+
+
+
+# October 18, 2020
+
+
+## Disease (AP)
+
+
+* No diseases signs 10AM-12AM
+* No diseases signs until 7PM
+
+
+## Tissue loss (AP)
+
+
+* Fragment A068 fell against a pump and might have abrasion signs tomorrow non-homogenate related
+
+
+## Nutrients (AP)
+
+
+* NO3 and NH4 samples (#51) collected at 11:45
+* Shaked stock 2 jars
+* Replenish stock 2
+
+
+## Feeding
+ 
+* Corals fed in glass tanks with 1g reef roids each
+
+
+12:30-13:30
+
+
+## Salinity
+
+
+2020-10-18
+	18:50
+	1
+	33.4
+	2020-10-18
+	18:50
+	2
+	33.4
+	2020-10-18
+	18:50
+	3
+	33.2
+	2020-10-18
+	18:50
+	4
+	33.2
+	2020-10-18
+	18:50
+	5
+	33.4
+	2020-10-18
+	18:50
+	6
+	33.4
+	2020-10-18
+	18:50
+	7
+	33.2
+	2020-10-18
+	18:50
+	8
+	33.2
+	2020-10-18
+	18:50
+	VAT
+	33.5
+	
+
+
+
+
+
+# October 19, 2020
+
+
+## Disease (AP)
+
+
+* Took pictures of diseased and placebo trial frags in TT
+* Monitored experimental corals, no one is sick yet
+ 
+### FACTS (AP, SR, GS)
+
+
+* Got one healthy, healthy in disease, and disease in disease fragment from Kelsey-1 and delivered it to Grace to run FACS
+* Grace  gave us four aliquots totalling 160,000 cells, it's normal to expect 30% loss. These cells were from diseased fragments and were cell populations not found in healthy samples.
+*Sample #5 for DNA/RNA extractions was collected by pulling three of the cell sorted aliquots (150,000 cells). The remainder 10,000 cells will be used for gram-staining  
+* Grace also conducted a phagocytosis assay and found 6x higher phagocytosis than the healthy fragment.
+
+
+
+
+## Feeding (AP)
+
+
+* Pumps off, fed for 1 h in glass tanks Started at 11:30
+
+
+## Nutrients
+
+
+* Delivered samples round 4 (# 44-51) to Charlie (SR)
+* NH4 samples collected at 11AM (AP)
+* NH4 and NO3 samples (#53) collected at 4:45 pm (DK)
+
+
+* Water flow (mL/min)
+* T1: 104
+* T2: 108
+* T5: 104 
+* T6: 112
+
+
+## Salinity (AP)
+
+
+------
+
+
+
+
+# October 20, 2020
+
+
+## Disease (DK, AP)
+
+
+* fragment A114 appears pale/dying but not from WBD
+
+
+## Feeding (DK)
+
+
+* Pumps off, fed for 1 h in glass tanks at 12:20
+
+
+## Nutrients (DK)
+
+
+* NH4 samples (#54) collected at 10:15
+* NH4 and NO3 samples (#55) collected at 12:15
+* NH4 sample (#56) collected at 4:15
+
+
+* Water flow (mL/min)
+* T1:  102
+* T2: 104
+* T5:  102
+* T6: 116
+
+
+## Salinity (DK)
+
+
+2020-10-20
+	15:20
+	1
+	33.8
+	2020-10-20
+	15:20
+	2
+	33.8
+	2020-10-20
+	15:20
+	3
+	33.6
+	2020-10-20
+	15:20
+	4
+	33.6
+	2020-10-20
+	15:20
+	5
+	33.8
+	2020-10-20
+	15:20
+	6
+	33.8
+	2020-10-20
+	15:20
+	7
+	33.6
+	2020-10-20
+	15:20
+	8
+	33.6
+	2020-10-20
+	15:20
+	VAT
+	33.3
+	
+
+Ana
+* Find clippers for sampling. 
+* Return compressor to Chris
+
+
+------
+
+
+# October 21, 2020
+
+
+## Disease (DK)
+
+
+* fragment A114 has more TL near the tip, very pale (tank 4)
+* Fragment A037 has new tissue loss, not from WBD (tank 8)
+
+
+## Tanks cleaned at 8:00 am 
+
+
+* removed corals and wiped down tank interior 
+* siphoned out debris and replaced egg crate
+* cleaned coral tags
+* fragments rotated
+
+
+## Feeding (DK)
+
+
+* Pumps off, fed for 1 h in glass tanks at 11:00
+
+
+## Nutrients (DK)
+
+
+* NH4 samples (#57) collected at 7:45
+* NH4 and NO3 samples (#58) collected at 12:00
+* NH4 sample (#59) collected at 17:30
+* NO3 samples 58-2 and 58-3 broke-> discarded 
+
+
+* Water flow (mL/min)
+* T1:  104
+* T2: 100
+* T5:  100
+* T6: 100
+
+
+## Salinity (DK)
+
+
+2020-10-21
+	11:30
+	1
+	33.8
+	2020-10-21
+	11:30
+	2
+	33.7
+	2020-10-21
+	11:30
+	3
+	33.6
+	2020-10-21
+	11:30
+	4
+	33.6
+	2020-10-21
+	11:30
+	5
+	33.7
+	2020-10-21
+	11:30
+	6
+	33.7
+	2020-10-21
+	11:30
+	7
+	33.6
+	2020-10-21
+	11:30
+	8
+	33.6
+	2020-10-21
+	11:30
+	VAT
+	33.1
+	
+
+## DNA collections (SR, AP)
+
+
+* from fragment A037 labeled #6 placed in DNA/RNA shield
+* from fragment A114 labeled # 7 placed in DNA/RNA shield
+
+
+------
+
+
+# October 22, 2020
+
+
+## Disease (DK)
+
+
+* fragment in TT losing tissue from the base, looks like WBD
+
+
+## Feeding (DK)
+
+
+* Pumps off, fed for 1 h in glass tanks at 11:45
+
+
+## Nutrients (DK)
+
+
+* NH4 samples (#60) collected at 8:45
+* NH4 sample (#61) collected at 4:15
+* not many falcon tubes left
+
+
+* Water flow (mL/min)
+* T1:  100
+* T2: 104
+* T5:  104
+* T6: 112
+
+
+## Salinity (DK)
+
+
+2020-10-22
+	8:30
+	1
+	33.5
+	2020-10-22
+	8:30
+	2
+	33.5
+	2020-10-22
+	8:30
+	3
+	33.3
+	2020-10-22
+	8:30
+	4
+	33.3
+	2020-10-22
+	8:30
+	5
+	33.5
+	2020-10-22
+	8:30
+	6
+	33.5
+	2020-10-22
+	8:30
+	7
+	33.3
+	2020-10-22
+	8:30
+	8
+	33.3
+	2020-10-22
+	8:30
+	VAT
+	32.5
+	
+
+
+
+# October 23, 2020
+
+
+## IPAM turned off lights at 8:30
+
+
+Finished: ~2:00 pm
+
+
+## Disease
+
+
+* No new TL, some corals very pale 
+
+
+## Feeding 
+
+
+ * Pumps off, fed for 1 h in glass tanks at 9:30 (disease treatments) and 13:00 (healthy treatments)
+
+
+## Nutrients 
+
+
+### Changed water flow back to ~ 200mL/min (AP)
+ 
+* Water flow (mL/min) (AP, DK)
+* T1:  208
+* T2: 196
+* T5: 196
+* T6: 208
+
+
+* Pump (mL/min) (AP, DK)
+* T3: 190 
+* T4: 192
+* T7: 192
+* T8: 190
+
+
+
+
+* NH4 samples (#62) collected at 12:15
+* NH4 sample (#63) collected at 15:50
+
+
+## Salinity (AP, DK)
+
+
+2020-10-23
+	9:00
+	1
+	33.3
+	2020-10-23
+	9:00
+	2
+	33.1
+	2020-10-23
+	9:00
+	3
+	32.8
+	2020-10-23
+	9:00
+	4
+	32.8
+	2020-10-23
+	9:00
+	5
+	33.3
+	2020-10-23
+	9:00
+	6
+	33.3
+	2020-10-23
+	9:00
+	7
+	32.9
+	2020-10-23
+	9:00
+	8
+	32.9
+	2020-10-23
+	9:00
+	VAT
+	32
+	
+
+
+
+# October 24, 2020
+
+
+## Disease (AP)
+
+
+* Kelsey -1 in glass aquarium is chilling 
+
+
+* Fragment A060 has TL - sample and pictures taken 
+* Sample # 8 placed in DNA/RNA shield
+
+
+
+
+## Feeding (AP)
+
+
+* Pumps off, fed for 1 h in glass tanks at 5:50 - 6:50PM
+
+
+## Nutrients (AP)
+
+
+* NH4 samples (#64) collected at 5:50 PM -> Frozen 
+
+
+## Salinity (AP)
+
+
+2020-10-24
+	17:00
+	1
+	32.2
+	2020-10-24
+	17:00
+	2
+	32.2
+	2020-10-24
+	17:00
+	3
+	31.9
+	2020-10-24
+	17:00
+	4
+	31.9
+	2020-10-24
+	17:00
+	5
+	32.3
+	2020-10-24
+	17:00
+	6
+	32.3
+	2020-10-24
+	17:00
+	7
+	32
+	2020-10-24
+	17:00
+	8
+	32
+	2020-10-24
+	17:00
+	VAT
+	31.3
+	
+
+
+
+# October 25, 2020
+
+
+## Disease (AP)
+
+
+* Kelsey -1 in glass aquarium is still chilling 
+
+
+* Fragments A048 (sample #9) and A019 (sample #10) with TL
+ 
+* Samples placed in DNA/RNA shield
+
+
+## Feeding (AP)
+
+
+* Pumps off, fed for 1 h in glass tanks at 14:00 - 15:00PM
+
+
+## Nutrients (AP)
+
+
+* NH4 samples (#65) collected at 2:00 PM -> Frozen 
+
+
+## Salinity (AP)
+
+
+
+
+2020-10-25
+	14:45
+	1
+	31.6
+	2020-10-25
+	14:45
+	2
+	31.7
+	2020-10-24
+	14:45
+	3
+	31.4
+	2020-10-24
+	14:45
+	4
+	31.4
+	2020-10-24
+	14:45
+	5
+	31.7
+	2020-10-24
+	14:45
+	6
+	31.8
+	2020-10-24
+	14:45
+	7
+	31.4
+	2020-10-24
+	14:45
+	8
+	31.4
+	2020-10-24
+	14:45
+	VAT
+	31
+	
+
+------
+
+
+# October 26, 2020
+
+
+## Disease (DK, AP)
+
+
+* TL on A038 (tank 4). Sampled middle # 13. Moved to glass # 9 after
+* TL on A153, sample tip # 11. Moved to glass # 9 after
+* TL on A008, sample tip # 12. Moved to glass # 9 after
+
+
+## Feeding (DK)
+
+
+* Pumps off, fed for 1 h in glass tanks at 11:00 AM
+
+
+## Nutrients (DK)
+
+
+* NH4 samples (#66) collected at 10:20 AM -> Frozen 
+* 66_9 = Vat sample
+* NH4 samples (#67) collected at 4:00 PM -> Frozen
+
+
+* made more stock 2, feeder bottles refilled and remainder stored in minifridge
+
+
+* Water flow (mL/min) (DK)
+* T1:  204
+* T2: 208
+* T5: 212
+* T6: 200
+
+
+## Salinity (DK)
+
+
+2020-10-26
+	12:40
+	1
+	30.7
+	2020-10-26
+	12:40
+	2
+	30.9
+	2020-10-26
+	12:40
+	3
+	30.4
+	2020-10-26
+	12:40
+	4
+	30.5
+	2020-10-26
+	12:40
+	5
+	31.3
+	2020-10-26
+	12:40
+	6
+	31.1
+	2020-10-26
+	12:40
+	7
+	30.4
+	2020-10-26
+	12:40
+	8
+	30.4
+	2020-10-26
+	12:40
+	VAT
+	30.5
+	
+
+------
+
+
+# October 27, 2020
+
+
+## Disease (DK)
+
+
+* no new tissue loss
+*A002 is very pale though
+
+
+## Tanks cleaned at 3:00 PM 
+
+
+* removed corals and wiped down tank interior 
+* siphoned out debris and replaced egg crate
+* cleaned coral tags
+* fragments rotated
+
+
+
+
+
+
+## Feeding (DK)
+
+
+* Pumps off, fed for 1 h in glass tanks at 1:00 PM
+
+
+## Nutrients (DK)
+
+
+* NH4 samples (#68) collected at 8:30 -> Frozen 
+* NH4 samples (#69) collected at 4:45 -> Frozen
+
+
+* Water flow (mL/min) (DK)
+* T1: 216
+* T2: 208
+* T5: 216
+* T6: 200
+
+
+* Water flow pumps (AP, DK) - 5 min @ 123 RPM
+* T3:  980 = 196 mL/min
+* T4:  990 = 198 mL/min
+* T7: 1000 = 200 mL/min
+* T8: 9800 = 196 mL/min
+
+
+* Feeders (AP) - 9 doses
+* T3: 94 = 10.4 mL/min
+* T4: 93/ = 10.3 mL/min
+* T7: 96 = 10.6 mL/min Too high 
+* T8: 92 = 10.2 mL/min
+
+
+Changed seconds in tank 7 (AP), started @ 17:22/23
+15 (1) Tank 8 ->15s
+20 (2) Tank 4 ->20s
+17 (3) Tank 7 ->16s
+18 (4)-Tank 3 ->18s
+
+
+* Feeders (AP) - 9 doses
+* T3: 93 = 10.3 mL/min
+* T4: 95 = 10.5 mL/min
+* T7: 90 = 10 mL/min
+* T8: 92 = 10.2 mL/min
+
+
+
+
+## Salinity (DK)
+
+
+2020-10-27        1:30        1        29.8
+2020-10-27        1:30        2        30
+2020-10-27        1:30        3        29.7
+2020-10-27        1:30        4        29.6
+2020-10-27        1:30        5        30.1
+2020-10-27        1:30        6        30
+2020-10-27        1:30        7        29.6
+2020-10-27        1:30        8        29.6
+2020-10-27        1:30        VAT        30
+
+
+------
+
+
+# October 28, 2020
+
+
+## Disease (DK)
+
+
+* A040 (tank 4) has severe tissue loss, sampled tip #14, moved to tank 9
+* TL on A017(tank 5), sampled middle #15, moved to tank 9
+
+
+## Feeding (DK)
+
+
+* Pumps off, fed for 1 h in glass tanks at 12:00
+
+
+## Nutrients (DK)
+
+
+* NH4 samples (#70) collected at 8:50 AM -> Frozen 
+* NH4 samples (#71) collected at 4:00 PM -> Frozen
+
+
+* Water flow (mL/min) (DK)
+* T1: 204 
+* T2: 208
+* T5: 212
+* T6: 200
+
+
+## Salinity (DK)
+
+
+
+
+2020-10-28
+	9:00
+	1
+	29.7
+	2020-10-28
+	9:00
+	2
+	29.6
+	2020-10-28
+	9:00
+	3
+	29.3
+	2020-10-28
+	9:00
+	4
+	29.4
+	2020-10-28
+	9:00
+	5
+	29.6
+	2020-10-28
+	9:00
+	6
+	29.6
+	2020-10-28
+	9:00
+	7
+	29.5
+	2020-10-28
+	9:00
+	8
+	29.5
+	2020-10-28
+	9:00
+	VAT
+	28.5
+	
+
+------
+
+
+# October 29, 2020
+
+
+## Tanks
+
+
+* Computer froze @ 8PM yesterday
+* Tanks were at ambient temperature (25.5-26C), except 
+* Tank 2 was at 33.88C (Corals releasing weird stuff)
+* Tank 10 (Holding Kelsey fragment and Placebo trial corals: CR42, 45, 48, 53 and 57) was at 35.4 (All corals dead)
+
+
+*At 9:18 AM Temps were as follows
+* Tank 1: 25.4707
+* Tank 2: 33.8834
+* Tank 3: 26.1372
+* Tank 4: 25.8928
+* Tank 5: 25.3702
+* Tank 6: 25.8170
+* Tank 7: 26.0397
+* Tank 8: 25.8494
+
+
+## Disease (DK)
+
+
+*A076 (tank 4) has TL, sampled middle #16, moved to tank 9
+*A002 (tank4) has TL, sampled middle #17, moved to tank 9
+
+
+## Nutrients (DK)
+
+
+* NH4 samples (#72) collected at 10:15 AM -> Frozen 
+* NH4 samples (#73) collected at 4:00 PM -> Frozen
+
+
+* Water flow (mL/min) (DK)
+* T1: 200
+* T2: 200
+* T5: 216
+* T6: 208
+
+
+## Salinity (DK)
+
+
+2020-10-29        9:45        1        29.5
+2020-10-29        9:45        2        29.6
+2020-10-29        9:45        3        29.3
+2020-10-29        9:45        4        29.3
+2020-10-29        9:45        5        29.5
+2020-10-29        9:45        6        29.5
+2020-10-29        9:45        7        29.3
+2020-10-29        9:45        8        29.4
+2020-10-29        9:45        VAT        28.6
+
+
+## Feeding (DK)
+
+
+* Pumps off, fed for 1 h in glass tanks at 11:00
+
+
+
+
+## IPAMing (AP) 
+
+
+* Tank 2 corals were darkadapted during feeding time and IPAMed
+* Values do not look as low as I expected
+* However, by the end of the day all Coopers (A023, A025 and A032) as well as Acerv-2 (469) are dead (5:30PM).
+
+
+## New placebo corals (AP)
+
+
+* Obtained healthy fragments from Diego’s (Miami Beach mixed collection)
+* These corals were placed in Glass tank 10 after draining it because of previous heating and death. 
+
+
+## Nutrients vs ambient samples proposed (AP)
+
+
+Genotype
+	1
+	2
+	3
+	4
+	5
+	6
+	7
+	8
+	Total
+	Acerv2
+	1
+	
+
+	
+
+	1
+	1
+	1
+	1
+	1
+	6
+	Cooper-9
+	1
+	
+
+	
+
+	1
+	1
+	1
+	1
+	1
+	6
+	Elkhorn
+	1
+	
+
+	
+
+	1
+	1
+	1
+	1
+	1
+	6
+	FM14
+	1
+	
+
+	
+
+	1
+	1
+	1
+	1
+	1
+	6
+	FM19
+	1
+	
+
+	
+
+	1
+	1
+	1
+	1
+	1
+	6
+	FM6
+	1
+	
+
+	
+
+	1
+	1
+	1
+	1
+	1
+	6
+	FM9
+	1
+	
+
+	
+
+	1
+	1
+	1
+	1
+	1
+	6
+	K2
+	1
+	
+
+	
+
+	1
+	1
+	1
+	1
+	1
+	6
+	Kelsey-1
+	1
+	
+
+	
+
+	1
+	1
+	1
+	1
+	1
+	6
+	U41
+	0
+	
+
+	
+
+	0
+	
+
+	
+
+	
+
+	
+
+	0
+	U44
+	1
+	
+
+	
+
+	1
+	1
+	1
+	1
+	1
+	6
+	Total
+	10
+	0
+	0
+	10
+	10
+	10
+	10
+	10
+	60
+	
+
+------
+
+
+# October 30, 2020
+
+
+## Feeding (DK)
+
+
+* Pumps off, fed for 1 h in glass tanks at 8:50
+* Corals darkadapted as they were feeding
+
+
+## IPAMing (AP, DK, SR) 
+
+
+* Nikkis computer was super slow, had to use Baker’s.
+
+
+
+
+## Disease (DK, SR, AP)
+
+
+### Coral injury and DNA/RNA samples for nutrient effects
+
+
+*  All fragments were injured with a razor blade. The injury was made in a circular manner, above the first injury made on Oct 26. One razor blade was used per tank (SR). Bleached tank 2 was skipped.
+
+
+* This injuring process was used to collect samples from a subset of corals in ambient and nutrient treatments. One fragment per genotype in tanks 1, 4, 5, 6, 7 and 8 were sampled (n=60). Tank 2 (ambient) was not sampled because of heat stress. Tank 3 (NH4) was not sampled to balance sample numbers from echa treatment, and chose because it has not had any mortality yet. (AP). 
+* Samples collected with a new-corner of a razor blade and placed on DNA/RNA shield.
+* Sample numbers 18-77. Moved to -80 in Box #2.
+* Fragment A035 was not sampled (Too small). Instead sampled A020 from the same tank genotype.
+
+
+### Tissue loss
+* After IPAMing and while injuring we saw that A009 had TL. Sample # 78 was collected from the middle.   
+
+
+### New diseased corals (AP, DK, SR)
+
+
+* Suspected to be fireworm predation. Tissue missing in tips, not bottom. Some tips with all dead skeletons suggest that lesions did not progress after predation stopped. 
+
+
+* Corals were ordered and pictures taken to evaluate lesion progression tomorrow. 
+
+
+## Nutrients (DK)
+
+
+* NH4 samples (#74) collected at 8:45 AM-> Frozen 
+
+
+* Water flow (mL/min) (DK)
+* T1: 208
+* T2: 216
+* T5: 200
+* T6: 204
+
+
+T2 had dead corals from bleaching. We increased water flow during the day and calibrated again to ~200 in the afternoon. 
+
+
+———
+
+
+# October 31, 2020
+
+
+## Feeding (DK)
+
+
+* Pumps off, fed for 1 h in glass tanks at 10:30 am
+
+
+## Nutrients (DK)
+
+
+* NH4 samples (#75) collected at 10:30 AM -> Frozen 
+
+
+* Water flow (mL/min) (DK)
+* T1: 200
+* T2: 208
+* T5: 216
+* T6: 200
+
+
+## Salinity (DK)
+
+
+2020-10-31
+	11:30
+	1
+	28.8
+	2020-10-31
+	11:30
+	2
+	28.8
+	2020-10-31
+	11:30
+	3
+	28.4
+	2020-10-31
+	11:30
+	4
+	29.4
+	2020-10-31
+	11:30
+	5
+	28.4
+	2020-10-31
+	11:30
+	6
+	28.7
+	2020-10-31
+	11:30
+	7
+	28.5
+	2020-10-31
+	11:30
+	8
+	28.4
+	2020-10-31
+	11:30
+	VAT
+	28.3
+	
+
+
+
+## Bleached corals (AP)
+
+
+In addition to 23, 25, 32, 82, and 469 (first to die), corals 3, 98, 44, 59, 80, and 93 were moved from tank 2 to tank 10 since they have a lot of tissue loss.
+
+
+## TL (AP)
+
+
+* Corals A097 (sample79) and A022 (sample 80) in elevated nutrients that had TL
+* Samples preserved in DNA/RNA shield
+
+
+## Disease (AP, SR)
+
+
+### Frozen blastate
+
+
+* 3 fragments from Kelsey-1 with TL progression were blasted
+* Volume?[j]
+* After blasting pictures
+
+
+### New corals blastate 
+
+
+Diseased blastate 
+
+
+* We started with diseased homogenate since we already did the frozen diseased one 
+* Selected 7 fragments showing TL (bubbling) (AP, SR)
+* Took pictures in 2 sides (AP)
+* Rinse them with 0.22 um FSW and placed them in autoclaved beaker with FSW (AP, SR)
+* Cut fragments to remove dead skeletons (AP, SR)
+* Blasted with 0.22 um FSW, one fragment was discarded (not blasted very well) (AP, SR)
+* Obtained 135 mL of blastate
+* Skeletons weighted 52.6g
+* The homogenate from each 50mL tube (3 tubes total) were mixed in ziplock bags where the homogenate was collected. 
+*Steel beads (~6) were placed into each tube and were vortexed for 10min
+
+
+Healthy blastate 
+* tweezers and airbrush gun were cleaned with soap, ethanol, and bleach. 
+* Selected 6 fragments ~ 5cm long (AP)
+* Took pictures in 2 sides (AP)
+* Rinse them with FSW and placed them in autoclaved beaker with FSW
+* Obtained 75 mL of blastate
+* Skeletons weighted  ~49g
+* Brought the homogenate to same volume as diseases by adding 60mL of FSW
+* The homogenate from each 50mL tube (3 tubes total) were mixed in ziplock bags where the homogenate was collected. 
+*Steel beads (~6) were placed into each tube and were vortexed for 10min
+
+
+### Tank setup (DK)
+* 5.5 G tanks were cleaned with 10% bleach and 70% ethanol. They were then cleaned with freshwater.
+*  They were then filled to ~15cm  
+* These tanks were placed inside the larger tanks to buffer temperature
+* Coral fragments were then placed in the 5.5 G tanks
+
+
+### Coral infection
+
+
+* To balance treatments due to the loss of an entire tank due to bleaching (see October 29, 2020) fragments were moved as follows:
+
+
+* Corals in tank 2 (Ambient-Pathogen were discarded because of bleaching). Moved to tank 10.
+* Corals in tank 6 (Originally Ambient-Placebo) were reallocated to Ambient-Pathogen and moved to tank 2
+* Corals in tank 5 (Ambient-Placebo) were splitted between tanks 5 and 6 to allow for replication in the Ambient-Placebo treatment. 
+
+
+* Dosed all tanks with a 25mL serological pipette:
+
+
+* Tanks 5-6 with 25 mL of tube # 1 healthy homogenate @ 9:00 PM (Tank 6 still had original tank 6 corals)
+* Tanks 7-8 with 25 mL of tube # 2 healthy homogenate @ 9:05 PM
+* Tanks 5-8 with additional 6 mL of tube # 3 healthy homogenate @ 9:10 PM
+
+
+* Tank1 with 25 mL of tube # 1 diseased homogenate @ 9:14 PM 
+* Tanks 3-4 with 25 mL of tube # 2 diseased homogenate @ 9:18 PM
+
+
+* Stopped and moved corals from tank 6 to tank 2
+
+
+*  Tank 2 with 25 mL of tube # 3 diseased homogenate @ 10:26 PM 
+*  Tanks 1-4 with additional 6 mL of tube # 3 diseased homogenate @ 10:28 PM
+
+
+* DNA samples from blastate were collected after dosing the tanks (SR)
+* Sample 87: 200uL of healthy homogenate 
+* Sample 88: 200uL of diseased homogenate [k]
+
+
+
+
+# November 1, 2020
+
+
+## Feeding
+
+
+* No feeding today :(
+
+
+## Salinity and temperature 
+
+
+Measured salinity and temperature before adding more water to the aquaria
+
+
+2020-11-01
+	14:45
+	1
+	30.1
+	27.5
+	2020-11-01
+	14:45
+	2
+	29.6
+	27.7
+	2020-11-01
+	14:45
+	3
+	29.6
+	27.6
+	2020-11-01
+	14:45
+	4
+	29.6
+	27.7
+	2020-11-01
+	14:45
+	5
+	29.7
+	27.1
+	2020-11-01
+	14:45
+	6
+	29.6
+	27.6
+	2020-11-01
+	14:45
+	7
+	29.6
+	27.6
+	2020-11-01
+	14:45
+	8
+	29.6
+	27.6
+	2020-11-01
+	14:45
+	VAT
+	30.1
+	27.5
+	
+
+
+
+## TL 
+
+
+* 3 corals with TL: 
+
+
+* A056 was not sampled. TL on base close to scratching ring 
+* A021 was sampled (sample 81). TL on base close to scratching ring 
+* A034 was not sampled. All tissue was gone
+
+
+## Tanks (Aquaria)
+
+
+* Added more water to aquaria to bring them to 22cm depth.
+* Levels did not look the same across them before.
+
+
+### New diseased corals
+
+
+* More corals showed disease progression with gross bubbling tissue 
+* One sample collected for histology 
+
+
+## Sample collections
+
+
+### Histology (SR)
+* One sample was collected showing bubbling for histology labeled #1
+* One samples was taken from healthy samples used for the healthy homogenates
+
+
+### DNA/RNA (AP)
+* A021 was sampled (sample 81)
+
+
+### Frozen fragments (SR)
+* Three fragments from the healthy colonies were collected and frozen at -80C to potentially be used as a healthy homogenate. 
+
+
+## Nutrients (AP)
+
+
+* NH4 samples (#76) collected at 3:00 from 5.5 G aquaria  
+* NH4 samples (#77) collected at 3:45 from 5.5 G tanks after water was added to 22cm depth.
+
+
+## Current number of fragments 
+
+
+
+
+	Am-Disease
+	Nutrients disease
+	Am-Place
+	Nutrients placebo
+	Bleached
+	
+
+	Genotype
+	T1
+	T2
+	T3
+	T4
+	T5
+	T6
+	T7
+	T8
+	T10
+	Total
+	Acerv2
+	3
+	3
+	3
+	2
+	1
+	2
+	2
+	2
+	
+
+	18
+	Cooper-9
+	3
+	2
+	2
+	1
+	1
+	1
+	2
+	
+
+	
+
+	12
+	Elkhorn
+	3
+	3
+	3
+	2
+	2
+	1
+	2
+	3
+	
+
+	19
+	FM14
+	3
+	3
+	3
+	3
+	2
+	1
+	3
+	3
+	3
+	24
+	FM19
+	4
+	3
+	3
+	3
+	2
+	1
+	3
+	3
+	2
+	24
+	FM6
+	3
+	3
+	3
+	3
+	1
+	2
+	3
+	3
+	3
+	24
+	FM9
+	3
+	3
+	3
+	3
+	1
+	2
+	3
+	3
+	3
+	24
+	K2
+	3
+	3
+	3
+	3
+	1
+	1
+	2
+	3
+	3
+	22
+	Kelsey-1
+	3
+	3
+	3
+	
+
+	1
+	2
+	1
+	2
+	
+
+	15
+	U41
+	2
+	
+
+	3
+	2
+	
+
+	
+
+	
+
+	
+
+	3
+	10
+	U44
+	3
+	3
+	3
+	3
+	2
+	1
+	3
+	3
+	3
+	24
+	Grand Total
+	33
+	29
+	32
+	25
+	14
+	14
+	24
+	25
+	20
+	216
+	
+
+
+
+
+
+# November 2, 2020
+
+
+## Tanks 
+
+
+* Pumps turned down to 20% power and moved to inside of aquaria (DK)
+* Added 1 L of water from the glass tanks to each aquaria (AP)
+* Cleaned the pumps and tanks (AP)
+
+
+## Disease (DK)
+
+
+* Fragment A056 (tank 7) is losing tissue, mostly from the base. 40% of tissue gone
+* Sample 82 collected and moved to -80 (AP)
+
+
+## Salinity and Temperature (DK)
+
+
+Date
+	Time
+	Tank
+	Salinity
+	Temp
+	Notes
+	
+
+2020-11-02
+	9:40
+	1
+	30.2
+	27.8
+	
+
+	2020-11-02
+	9:40
+	2
+	30
+	27.8
+	Measured inside aquaria
+	2020-11-02
+	9:40
+	3
+	29.9
+	27.8
+	
+
+	2020-11-02
+	9:40
+	4
+	29.9
+	27.9
+	
+
+	2020-11-02
+	9:40
+	5
+	30.3
+	27.7
+	
+
+	2020-11-02
+	9:40
+	6
+	30
+	27.9
+	
+
+	2020-11-02
+	9:40
+	7
+	29.8
+	27.9
+	
+
+	2020-11-02
+	9:40
+	8
+	30.1
+	28
+	
+
+	2020-11-02
+	9:40
+	VAT
+	29.3
+	27.9
+	
+
+	
+
+
+
+2020-11-02
+	14:20
+	1
+	30.3
+	28
+	
+
+	2020-11-02
+	14:20
+	2
+	30
+	28.1
+	Measured inside aquaria
+	2020-11-02
+	14:20
+	3
+	30
+	28.1
+	
+
+	2020-11-02
+	14:20
+	4
+	29.9
+	28.1
+	
+
+	2020-11-02
+	14:20
+	5
+	30.4
+	27.9
+	
+
+	2020-11-02
+	14:20
+	6
+	30.1
+	28.1
+	
+
+	2020-11-02
+	14:20
+	7
+	29.8
+	28.1
+	
+
+	2020-11-02
+	14:20
+	8
+	30
+	28
+	
+
+	2020-11-02
+	14:20
+	VAT
+	31
+	27.5
+	
+
+	
+
+
+
+## Nutrients (DK, AP)
+
+
+* NH4 samples (#78) collected at 10:10 AM-> Frozen 
+* NH4 samples (#79) collected at 4:00 PM-> Frozen 
+* Added 1L of glass tank water to each aquaria (AP)
+
+
+## LabVIEW (DK)
+
+
+* Updated labview data in google drive
+* Temp, system data, and flow
+
+
+# November 3, 2020
+
+
+## Tanks (DK)
+
+
+* moved temp sensor into glass aquaria 
+
+
+## Salinity and Temperature (DK, AP)
+
+
+2020-11-03
+	9:00
+	1
+	31
+	27.8
+	
+
+	2020-11-03
+	9:00
+	2
+	30.6
+	27.9
+	Measured inside aquaria
+	2020-11-03
+	9:00
+	3
+	30.4
+	27.9
+	
+
+	2020-11-03
+	9:00
+	4
+	30.5
+	28
+	
+
+	2020-11-03
+	9:00
+	5
+	30.8
+	
+
+	
+
+	2020-11-03
+	9:00
+	6
+	30.7
+	
+
+	
+
+	2020-11-03
+	9:00
+	7
+	30.4
+	
+
+	
+
+	2020-11-03
+	9:00
+	8
+	30.6
+	
+
+	
+
+	
+
+2020-11-03
+	18:00
+	1
+	31.5
+	2020-11-03
+	18:00
+	2
+	31.3
+	2020-11-03
+	18:00
+	3
+	30.8
+	2020-11-03
+	18:00
+	4
+	30.8
+	2020-11-03
+	18:00
+	5
+	31.4
+	2020-11-03
+	18:00
+	6
+	31.1
+	2020-11-03
+	18:00
+	7
+	30.8
+	2020-11-03
+	18:00
+	8
+	31
+	2020-11-03
+	18:00
+	VAT
+	33.7
+	
+
+## Feeding
+* Drained glass tanks 5-8 and moved corals to bins
+* Started feeding tanks 7-9 at 9AM-10:20
+* Moved tanks 5-6 downstairs for BW
+* Started feeding tanks 5-6 at 10:20AM-11:40
+
+
+## TL
+
+
+* Tank 7 TL
+* A007: few polyps (not sampled)
+* A018: one polyp (not sampled)
+* Tank 3
+* A039: sample 90
+* Tank 4
+* A041: sample 91
+* A046: sample 83. Almost no tissue left
+* Tank 1
+* A030: sample 84. Almost no tissue left
+* A053: sample 89.
+
+
+Tank 5:
+* A055: No tissue loss (Pair to sample). Sample 85. Back to tank
+
+
+ Tank 8:
+* A052: No tissue loss (Pair to sample). Sample 86
+ 
+## Nutrients (DK, AP)
+
+
+* NH4 samples (#80) collected at 9:10 AM-> Frozen 
+* NH4 samples (#81) collected at 5:20 PM-> Frozen 
+
+
+* Added 1L of glass tank water to each aquaria and 1mL of stock 1 to each high NH4 aquaria
+
+
+## BW (DK, AP)
+
+
+## Diseased (AP)
+
+
+* Froze 3 fragments with active TL on source tank
+* Remove skeletons gone 
+* Only big branching fragment still progressing in tank
+
+
+Current number of fragments
+
+
+Genotype
+	D_A_1
+	D_A_2
+	D_N_3
+	D_N_4
+	A_P_5
+	A_P_6
+	N_P_7
+	N_P_8
+	Ble_10
+	Total
+	Acerv2
+	3
+	3
+	2
+	1
+	1
+	2
+	1
+	2
+	
+
+	15
+	Cooper-9
+	2
+	2
+	1
+	1
+	1
+	1
+	2
+	
+
+	
+
+	10
+	Elkhorn
+	3
+	3
+	3
+	2
+	2
+	1
+	2
+	3
+	
+
+	19
+	FM14
+	3
+	3
+	3
+	3
+	2
+	1
+	3
+	3
+	3
+	24
+	FM19
+	4
+	3
+	3
+	3
+	2
+	1
+	3
+	3
+	2
+	24
+	FM6
+	3
+	3
+	3
+	3
+	1
+	2
+	3
+	3
+	3
+	24
+	FM9
+	3
+	3
+	3
+	3
+	1
+	2
+	3
+	3
+	3
+	24
+	K2
+	3
+	3
+	3
+	3
+	1
+	1
+	2
+	3
+	3
+	22
+	Kelsey-1
+	3
+	3
+	3
+	
+
+	1
+	2
+	2
+	2
+	
+
+	16
+	U41
+	2
+	
+
+	3
+	2
+	
+
+	
+
+	
+
+	
+
+	3
+	10
+	U44
+	3
+	3
+	3
+	3
+	2
+	1
+	3
+	3
+	3
+	24
+	Grand Total
+	32
+	29
+	30
+	24
+	14
+	14
+	24
+	25
+	20
+	212
+	
+
+
+
+------
+
+
+# November 4, 2020
+
+
+## Salinity and Temperature (DK)
+
+
+Date
+	Time
+	Tank
+	Salinity
+	Temp
+	Notes
+	
+
+2020-11-04
+	10:45
+	1
+	31.9
+	28.1
+	
+
+	2020-11-04
+	10:45
+	2
+	31.5
+	27.9
+	
+
+	2020-11-04
+	10:45
+	3
+	31.1
+	28
+	
+
+	2020-11-04
+	10:45
+	4
+	31
+	28.1
+	
+
+	2020-11-04
+	10:45
+	5
+	31.8
+	27.9
+	
+
+	2020-11-04
+	10:45
+	6
+	31.3
+	28.1
+	
+
+	2020-11-04
+	10:45
+	7
+	31
+	28.1
+	
+
+	2020-11-04
+	10:45
+	8
+	31.4
+	28
+	
+
+	2020-11-04
+	10:45
+	VAT
+	33.1
+	24.7
+	
+
+	
+
+
+
+## Nutrients (DK, AP)
+
+
+* NH4 samples (#82) collected at 10:30 AM-> Frozen 
+* NH4 samples (#83) collected at 3:55 PM-> Frozen 
+* Added 1L of glass tank water to each aquaria
+
+
+## TL (AP)
+
+
+### AM samples (10:30-11:30): 
+
+
+*A018, A007 (sample 92), A121 (sample 93) have TL. A018 was completely gone. 
+* A091 (sample 94) paired A121. 
+* Placebo NH4 are not going to be paired. 
+
+
+### Observed blisters in T1
+
+
+* FM6: 243, 256
+* FM9: 228 
+* FM14: 264, 283
+
+
+Blisters mainly in branches tips
+
+
+### PM samples (6:05-6:34PM): 
+
+
+* 205 (sample 97), 253 (sample 98), A027 (sample 100) and A118 (sample 101) have TL.
+* 215 (sample 95), 231 (sample 96) and A036 (sample 99) were sampled as pairs. 
+* A118 (U41) does not have a coral to pair. 
+
+
+All PM samples except A118 (U41) were sampled for FACs 
+
+
+* Always sample pairs before the actual corals with TL. 
+* Pairs moved back to the tanks, A036 might be too small to make it. 
+
+
+*A163 started a little of TL. Took pictures but not samples. 
+
+
+* T1 blisters are gone.
+
+
+Current number of fragments
+
+
+Genotype
+	1
+	2
+	3
+	4
+	5
+	6
+	7
+	8
+	10
+	Grand Total
+	Acerv2
+	3
+	3
+	2
+	1
+	1
+	2
+	1
+	2
+	
+
+	15
+	Cooper-9
+	2
+	2
+	1
+	
+
+	1
+	1
+	1
+	
+
+	
+
+	8
+	Elkhorn
+	3
+	3
+	3
+	2
+	2
+	1
+	2
+	3
+	
+
+	19
+	FM14
+	3
+	3
+	3
+	3
+	2
+	1
+	3
+	3
+	3
+	24
+	FM19
+	4
+	3
+	3
+	3
+	2
+	1
+	3
+	3
+	2
+	24
+	FM6
+	3
+	3
+	2
+	3
+	1
+	2
+	3
+	3
+	3
+	23
+	FM9
+	3
+	3
+	2
+	3
+	1
+	2
+	3
+	3
+	3
+	23
+	K2
+	3
+	3
+	3
+	3
+	1
+	1
+	2
+	3
+	3
+	22
+	Kelsey-1
+	3
+	3
+	3
+	
+
+	1
+	2
+	1
+	2
+	
+
+	15
+	U41
+	2
+	
+
+	3
+	1
+	
+
+	
+
+	
+
+	
+
+	3
+	9
+	U44
+	2
+	3
+	3
+	3
+	2
+	1
+	3
+	3
+	3
+	23
+	Grand Total
+	31
+	29
+	28
+	22
+	14
+	14
+	22
+	25
+	20
+	205
+	
+
+Dead Fragments
+
+
+Genotype
+	T1
+	T2
+	T3
+	T4
+	T5
+	T6
+	T7
+	T8
+	T10
+	Total
+	Acerv2
+	0
+	0
+	1
+	1
+	0
+	0
+	1
+	0
+	0
+	3
+	Cooper-9
+	1
+	0
+	1
+	1
+	0
+	0
+	1
+	0
+	0
+	4
+	Elkhorn
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	FM14
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	FM19
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	FM6
+	0
+	0
+	1
+	0
+	0
+	0
+	0
+	0
+	0
+	1
+	FM9
+	0
+	0
+	1
+	0
+	0
+	0
+	0
+	0
+	0
+	1
+	K2
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	Kelsey-1
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	U41
+	0
+	0
+	0
+	1
+	0
+	0
+	0
+	0
+	0
+	1
+	U44
+	1
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	1
+	Grand Total
+	2
+	0
+	4
+	3
+	0
+	0
+	2
+	0
+	0
+	11
+	Lost to disease
+	
+
+	
+
+	
+
+	
+
+	Lost to N
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+
+
+
+
+# November 5, 2020
+
+
+## Diseased corals source (AP)
+
+
+* Lesion progress is slower in the only diseased fragment left. Other fragments in the tank look healthy
+
+
+
+
+## Nutrients (DK, AP)
+
+
+* NH4 samples (#84) collected at 9:45 AM-> Frozen 
+* NH4 samples (#85) collected at 3:30 PM-> Frozen 
+* Added 10L of new water to all tanks and 1mL of NH4 stock 1 to NH4 tanks
+
+
+## Fed (DK)
+
+
+* Fed at 11 AM outside of aquaria
+* All pumps turned off, fed 1g of Reefroids in 100 mL per tank 
+
+
+### AM samples (10:30-11:30): 
+
+
+* T8 (nutrient placebo): A101 (Thin tissue, sample 109), A045 (TL base, sample 110), A010 (Thin tissue sample 111) were sampled. Samples not paired. Not FACs samples.
+
+
+*T1 (ambient disease): A005 (TL base, sample 112), A016 (thin tissue, sample 113), and 281 (TL base, sample 114) were sampled. Pairs sampled: A012 (sample 102), A028 (sample 103), and 276 (sample 104). Sampled for FACs.
+
+
+*T3 (nutrients disease): 247 (TL base, 115), A058 (TL base, sample, 116), were sampled. A001 was gone and not sampled. Pairs sampled: 258 (sample 105), A051 (sample 106). Sampled for FACs.[l][m]
+
+
+*T4 (nutrients disease): A163 (TL base), A107 (TL base + thin, sample, not pair available), A176 (TL base) and 183 (thin tissue) were sampled. Paired samples A162 (sample 107), A188 (sample 108). Sampled for FACs.  
+
+
+### PM samples (2:40 PM): 
+*T1 (ambient disease): A170 (TL base, sample 122). Paired with A160 (sample 121). Sampled for FACs.
+
+
+At ~ 7:00 pm A061 showed about 20% TL as of 8:30 pm A161 showed potential TL (samples for A161 and A061 will be collected in the AM).
+
+
+
+
+Current number of fragments
+
+
+Genotype
+	1
+	2
+	3
+	4
+	5
+	6
+	7
+	8
+	10
+	Total
+	Acerv2
+	3
+	3
+	1
+	1
+	1
+	2
+	1
+	1
+	
+
+	13
+	Cooper-9
+	1
+	2
+	1
+	
+
+	1
+	1
+	1
+	
+
+	
+
+	7
+	Elkhorn
+	3
+	3
+	3
+	2
+	2
+	1
+	2
+	3
+	
+
+	19
+	FM14
+	2
+	3
+	3
+	3
+	2
+	1
+	3
+	3
+	3
+	23
+	FM19
+	4
+	3
+	3
+	1
+	2
+	1
+	3
+	3
+	2
+	22
+	FM6
+	3
+	3
+	1
+	3
+	1
+	2
+	3
+	3
+	3
+	22
+	FM9
+	3
+	3
+	2
+	3
+	1
+	2
+	3
+	3
+	3
+	23
+	K2
+	2
+	3
+	3
+	2
+	1
+	1
+	2
+	3
+	3
+	20
+	Kelsey-1
+	2
+	3
+	3
+	
+
+	1
+	2
+	1
+	
+
+	
+
+	12
+	U41
+	2
+	
+
+	3
+	
+
+	
+
+	
+
+	
+
+	
+
+	3
+	8
+	U44
+	2
+	3
+	3
+	3
+	2
+	1
+	3
+	3
+	3
+	23
+	Grand Total
+	27
+	29
+	26
+	18
+	14
+	14
+	22
+	22
+	20
+	192
+	
+
+Dead Fragments
+
+
+
+
+
+
+	Ambient-Diseae
+	Nutrients disease
+	Am-Place
+	Nutrients placebo
+	Bleached
+	
+
+	Genotype
+	T1
+	T2
+	T3
+	T4
+	T5
+	T6
+	T7
+	T8
+	T10
+	Total
+	Acerv2
+	0
+	0
+	2
+	1
+	0
+	0
+	1
+	1
+	0
+	5
+	Cooper-9
+	2
+	0
+	1
+	1
+	0
+	0
+	1
+	0
+	0
+	5
+	Elkhorn
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	FM14
+	1
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	1
+	FM19
+	0
+	0
+	0
+	2
+	0
+	0
+	0
+	0
+	0
+	2
+	FM6
+	0
+	0
+	2
+	0
+	0
+	0
+	0
+	0
+	0
+	2
+	FM9
+	0
+	0
+	1
+	0
+	0
+	0
+	0
+	0
+	0
+	1
+	K2
+	1
+	0
+	0
+	1
+	0
+	0
+	0
+	0
+	0
+	2
+	Kelsey-1
+	1
+	0
+	0
+	0
+	0
+	0
+	0
+	2
+	0
+	3
+	U41
+	0
+	0
+	0
+	2
+	0
+	0
+	0
+	0
+	0
+	2
+	U44
+	1
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	0
+	1
+	Grand Total
+	6
+	0
+	6
+	7
+	0
+	0
+	2
+	3
+	0
+	24
+	Lost to disease
+	
+
+	
+
+	
+
+	
+
+	Lost to N
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+
+
+# November 6, 2020
+
+
+## AM samples
+
+
+10-11AM:
+
+
+TL
+	
+
+	Pair
+	283
+	FM14
+	268
+	200
+	FM9
+	218
+	A031
+	Cooper-9
+	A033
+	A164
+	K2
+	A154
+	A049
+	Acerv2
+	A047
+	A061
+	Not sampled
+	A052
+	A161
+	K2
+	165
+	
+
+11:30 AM:
+
+
+A195
+	FM19
+	A190
+	A094
+	Kelsey-1
+	A014
+	
+
+## PM samples (7:30PM-): 
+
+
+TL
+	
+
+	Pair
+	208
+	FM9
+	227
+	A087
+	Elkhorn
+	A086
+	A004
+	Kelsey-1
+	A103
+	A115
+	U41
+	
+
+	A116
+	U41
+	
+
+	265
+	FM14
+	262
+	202
+	FM9
+	204
+	A119
+	U41
+	No placebo
+	A067
+	U44
+	A105
+	A111
+	U44
+	A131
+	232
+	FM6
+	239
+	A089
+	Elkhorn
+	A072
+	A129
+	U44
+	A106
+	296
+	FM14
+	269
+	sampled by accident
+	279
+	sampled by accident
+	A109
+	
+
+
+
+## Fed (DK)
+
+
+* Fed at 8:45 AM outside of aquaria
+* All pumps turned off, fed 1g of Reefroids in 100 mL per tank 
+
+
+## IPAM (DK[n])
+
+
+
+
+## Nutrients (DK, AP)
+
+
+* NH4 samples (#86) collected at 20:10 -> Frozen 
+
+
+
+
+# November 7, 2020
+
+
+## Feeding (AP)
+
+
+* Outside aquaria, in glass tanks (11AM-12)
+
+
+
+
+## Nutrients (AP)
+
+
+* Added 2L of water to each aquaria + 0.5mL of NH4 to treatments
+
+
+* Water samples # 87 at 3:30 PM -> frozen
+
+
+
+
+## TL (AP) 
+
+
+AM 11:30: samples 167-170
+
+
+TL
+	
+
+	Pair
+	256
+	FM6
+	245
+	A075
+	Elkhorn
+	A077
+	
+
+PM 4:30: samples 171-174
+
+
+A015
+	Kelsey-1
+	A095
+	A077
+	Elkhorn
+	A084
+	
+
+
+
+PM 7:00 samples (SR)
+
+
+A113 TL in center (U44) ------>  A120 (U44) tank 6
+A179 thin tissue (FM 19) ------> A196 (FM19) tank 7
+A102 TL in center  (U44) ------> A134 (U44) tank8 
+A159  TL from base up (K2) tank 7 ------> No pair needed
+
+
+
+
+# November 8, 2020
+
+
+## TL (AP) 
+
+
+* A166 is gone and cannot be sampled
+
+
+TL
+	
+
+	Pair
+	A088
+	Elkhorn
+	A069
+	264
+	FM14
+	276
+	A024
+	Cooper-9
+	Not pair available
+	A051
+	Acerv2
+	Does not need pair
+	
+
+## Nutrients (AP) 
+
+
+* Samples # 88 → frozen
+* Added 10L of new water to all aquaria, did not have time to add nutrients. 
+* Added 20L to T1 since it looked bad
+* No time for salinity. Campus was closed. 
+
+
+## Feeding (AP)
+
+
+* Outside aquaria, in glass tanks (11AM-12)
+
+
+# November 8, 2020
+
+
+## Feeding (AP)
+
+
+* Outside aquaria, in glass tanks (1-2PM)
+
+
+## Nutrients (AP)
+
+
+* Water samples #89 @ 12:30 
+* Added 10L of water to all tanks, 20L to tank 1
+* Added 1mL of stock 1 to 3,4,7,8
+* Water samples #90 @ 17:00 
+
+
+## TL (AP) 
+
+
+* T1 
+* 243,  Pair 252 (T6)
+* A057, pair A062 (T6)
+
+
+* T4
+* 238,  pair 261 (T8)
+
+
+* T8
+* A052 (T8) has TL, but was small and sampled 2x before
+
+
+## Salinity (AP) 
+
+
+
+
+NOTES 
+* Pictures are up to date
+* IPAM is up to date
+* DNA samples up to date
+* Mortality up to date
+* BW missing last data point (useless?)
+* Nutrient results not updated with 2 last batches?
+
+
+Possible samples
+
+
+* All (including already sampled, excluding T2 and T10)
+
+
+
+
+
+
+	Ambient
+	NH4
+	
+
+	Genotype
+	1-D
+	5-P
+	6-P
+	3-D
+	4-D
+	7-P
+	8-P
+	Total
+	Acerv2
+	
+
+	1
+	2
+	
+
+	
+
+	1
+	1
+	5
+	Cooper-9
+	
+
+	1
+	1
+	
+
+	
+
+	1
+	
+
+	3
+	Elkhorn
+	1
+	2
+	1
+	1
+	1
+	2
+	3
+	11
+	FM14
+	
+
+	2
+	1
+	2
+	2
+	3
+	3
+	13
+	FM19
+	4
+	2
+	1
+	2
+	
+
+	3
+	3
+	15
+	FM6
+	1
+	1
+	2
+	
+
+	2
+	3
+	3
+	12
+	FM9
+	1
+	1
+	2
+	1
+	3
+	3
+	3
+	14
+	K2
+	
+
+	1
+	1
+	3
+	1
+	1
+	3
+	10
+	Kelsey-1
+	
+
+	1
+	2
+	1
+	
+
+	1
+	
+
+	5
+	U41
+	1
+	
+
+	
+
+	1
+	
+
+	
+
+	
+
+	2
+	U44
+	1
+	2
+	1
+	2
+	
+
+	3
+	3
+	12
+	Total
+	9
+	14
+	14
+	13
+	9
+	21
+	22
+	102
+	 
+
+
+
+
+
+
+* Excluding already sampled, T2 and T10: 
+
+
+
+
+
+
+	Ambient
+	NH4
+	Total
+	Genotype
+	1
+	5
+	6
+	3
+	4
+	7
+	8
+	
+
+	Elkhorn
+	1
+	1
+	
+
+	1
+	1
+	1
+	1
+	6
+	FM14
+	
+
+	
+
+	
+
+	2
+	2
+	1
+	3
+	8
+	FM19
+	4
+	2
+	1
+	2
+	
+
+	1
+	2
+	12
+	FM6
+	1
+	1
+	
+
+	
+
+	2
+	1
+	1
+	6
+	FM9
+	1
+	
+
+	1
+	1
+	3
+	2
+	2
+	10
+	K2
+	
+
+	
+
+	
+
+	3
+	1
+	
+
+	2
+	6
+	Kelsey-1
+	
+
+	
+
+	
+
+	1
+	
+
+	
+
+	
+
+	1[o]
+	U41
+	1
+	NA
+	NA
+	1
+	
+
+	
+
+	
+
+	2
+	U44[p]
+	1
+	
+
+	
+
+	2
+	
+
+	1
+	1
+	5
+	Total
+	9
+	4
+	2
+	13
+	9
+	7
+	12
+	56
+	
+
+------
+
+
+# November 9, 2020
+
+
+## Feeding (AP)
+
+
+* All corals fed in glass tanks (1-2PM)
+
+
+## Tissue Loss
+
+
+* T1:  
+* 243 -> pair 252 (T6)
+* A057 -> pair A062 (T6)
+* T4: 
+* 238 -> pair 261 (T8)
+
+
+## Nutrients (AP)
+
+
+* Sample # 89 before water change (12:30)
+* Added 10l of new seawater to all aquaria, except tank 1 (20L)
+* Added 1mL of NH4 to 3, 4, 7 and 8
+* Sample # 90 after water change (5PM)
+
+
+
+
+# November 10, 2020
+
+
+## Feeding (DK)
+
+
+* Outside aquaria, in glass tanks (9:30-10:30)
+* Pumps and heaters turned off
+
+
+## Nutrients (DK)
+
+
+* Water samples #91 @ 8:30 
+* Water samples #92 @ 16:20
+
+
+ 
+## Salinity (DK)
+
+
+2020-11-10
+	8:45
+	1
+	33.1
+	28.1
+	2020-11-10
+	8:45
+	2
+	34.3
+	28
+	2020-11-10
+	8:45
+	3
+	33.6
+	27.8
+	2020-11-10
+	8:45
+	4
+	33.6
+	28
+	2020-11-10
+	8:45
+	5
+	34.2
+	28.1
+	2020-11-10
+	8:45
+	6
+	33.9
+	28.1
+	2020-11-10
+	8:45
+	7
+	33.8
+	28
+	2020-11-10
+	8:45
+	8
+	33.8
+	28
+	
+
+## TL (DK)
+
+
+* Physical damage tissue loss on the tip of A068 (tank 8)
+* TL at base of A165 (tank 8)
+* A072 has thinning tissue all over (tank 8)
+* Didn’t manage to sample them, got tossed in bleach by mistake 
+
+
+## Tanks (DK, AP, SR)
+
+
+* removed corals from aquaria and placed them in tanks after tissue samples completed
+* nutrients feeders  and water turned back on 
+
+
+# November 11, 2020
+
+
+## Histology (SR)
+
+
+*A total of five samples were collected for histology
+* 288 = TL 
+* 180 = TL
+* 182 = apparently healthy
+* A175  = apparently healthy
+*  From inoculant tank = active TL
+
+
+## Lipids (AP)
+
+
+* Collected 42 samples for lipid analysis with Hannah
+
+
+Genotype
+	Ambient
+	NH4
+	Grand Total
+	Acerv2
+	3
+	
+
+	3
+	Elkhorn
+	3
+	
+
+	3
+	FM14
+	3
+	3
+	6
+	FM19
+	3
+	
+
+	3
+	FM6
+	3
+	3
+	6
+	FM9
+	3
+	3
+	6
+	K2
+	3
+	3
+	6
+	Kelsey-1
+	3
+	
+
+	3
+	U44
+	3
+	3
+	6
+	Grand Total
+	27
+	15
+	42
+	
+
+
+
+## Disease source 
+
+
+* Froze 4 fragments with active tissue loss from the inoculation tank
+
+
+## ROS (AP, DK)
+
+
+* Selected samples for ROS analysis with Dani
+
+
+
+
+To do: 
+Update and analyze nutrients data
+Update and analyze BW data
+
+
+
+
+[a]+danielle.kroesche@rsmas.miami.edu 
+
+
+Dani, do you have the calculation for these dilutions?
+_Assigned to danielle.kroesche@rsmas.miami.edu_
+[b]to 1-4?
+[c]@danielle.kroesche@rsmas.miami.edu This coral is alive
+_Assigned to danielle.kroesche@rsmas.miami.edu_
+[d]Seems like it was A081
+[e]??
+[f]We have BW and YII data from this coral on 09-18. How is that possible?
+[g]A136 i think
+[h]@danielle.kroesche@rsmas.miami.edu
+_Assigned to danielle.kroesche@rsmas.miami.edu_
+[i]67 mL?
+[j]@stephanie.rosales@noaa.gov
+_Assigned to Stephanie Rosales - NOAA Affiliate_
+[k]The tubes are labeled the opposite. 87 for diseased and 88 for healthy
+[l]Does this mean just the last sentence of samples or all the samples listed except A001 were sampled for FACS
+[m]All samples in the paragraph
+[n]@dmkroesche@gmail.com please add pictures
+_Assigned to Danielle Kroesche_
+[o]Kelsey nutrient + placebo resample
+[p]U44 for ambient maybe the one that need to resample a placeo ambient
