@@ -49,27 +49,25 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
 ```{r}
 # Nutrients
 
-Nutrients<-read.csv("Data/Nutrient samples_round4.csv")
+Nutrients<-read.csv("Data/Nutrient samples_round5.csv")
   summary(Nutrients)
   
-  #Nutrients$Date<-as.Date(Nutrients$Date, "%m-%d-%Y")
-  #Nutrients$Time<-paste(Nutrients$Date, Nutrients$Hour, sep = " ")
-
-  #Nutrients$Time<-strptime(Nutrients$Time, "%Y-%m-%d %H:%M:%S")
-  #Nutrients$Time <- as.POSIXct(Nutrients$Time)
-  #Nutrients$Date <- as.Date(Nutrients$Time)
-  
-summary(Nutrients)
+  Nutrients$Date<-as.Date(Nutrients$Date, "%m-%d-%Y")
+  Nutrients$Time<-paste(Nutrients$Date, Nutrients$Hour, sep = " ")
+  Nutrients$Time<-strptime(Nutrients$Time, "%Y-%m-%d %H:%M:%S")
+  Nutrients$Time <- as.POSIXct(Nutrients$Time)
+  Nutrients$Date <- as.Date(Nutrients$Time)
+  summary(Nutrients)
 
 # Tall format
   Nutrients.tall <- gather(Nutrients, Nutrient, Concentration, 
                       NH4:PO4.uM., factor_key=TRUE)
   Nutrients.tall$Date<-as.Date(Nutrients.tall$Date, "%m-%d-%Y")
-  Nutrients.tall$Time<-paste(Nutrients.tall$Date, Nutrients$Hour, sep = " ")
+  #Nutrients.tall$Time<-paste(Nutrients.tall$Date, Nutrients$Hour, sep = " ")
 
-  Nutrients.tall$Time<-strptime(Nutrients.tall$Time, "%Y-%m-%d %H:%M:%S")
-  Nutrients.tall$Time <- as.POSIXct(Nutrients.tall$Time)
-  Nutrients.tall$Date <- as.Date(Nutrients.tall$Time)
+  #Nutrients.tall$Time<-strptime(Nutrients.tall$Time, "%Y-%m-%d %H:%M:%S")
+  #Nutrients.tall$Time <- as.POSIXct(Nutrients.tall$Time)
+  #Nutrients.tall$Date <- as.Date(Nutrients.tall$Time)
   
   summary(Nutrients.tall)
   
@@ -112,6 +110,8 @@ summary(Summary.Salinity)
 
 ### All 
 ```{r}
+
+summary(Nutrients.tall)
 TankNutrients<- ggplot(subset(Nutrients.tall, Treatment=="Ambient"),
                        aes (Time, Concentration, group=(Tank),
                                             colour=factor(Tank))) +
@@ -121,10 +121,11 @@ TankNutrients<- ggplot(subset(Nutrients.tall, Treatment=="Ambient"),
   scale_y_continuous(#limits = c(0, 35),
                          breaks = seq(0, 35, 2),  
                        #  expand = c(0, 0),
-                         name=("NH4 (uM)"))+
+                         name=("Concentration (uM)"))+
   scale_x_datetime(date_minor_breaks = "1 day", 
                name=("Date"))+
-  geom_vline(xintercept = as.numeric(as_datetime("2020-10-04 23:00:00")), linetype=3)
+  geom_vline(xintercept = as.numeric(as_datetime("2020-10-18 23:00:00")), linetype=3)+
+  geom_vline(xintercept = as.numeric(as_datetime("2020-10-31 23:00:00")), linetype=3)
   
 TankNutrients+facet_wrap(Nutrient~., scales = "free")
 
@@ -134,13 +135,14 @@ TankNutrients<- ggplot(Nutrients.tall, aes (Time, Concentration, group=(Tank),
   #geom_vline(xintercept=1500)+
   geom_line(linetype=1)+
   geom_point(alpha=1, size=1, shape=21)+
-  scale_y_continuous(limits = c(0, 20),
+  scale_y_continuous(limits = c(0, 35),
                          breaks = seq(0, 35, 2),  
                        #  expand = c(0, 0),
                          name=("(uM)"))+
   scale_x_datetime(date_minor_breaks = "1 day", 
                name=("Date"))+
-  geom_vline(xintercept = as.numeric(as_datetime("2020-10-04 23:00:00")), linetype=3)
+  geom_vline(xintercept = as.numeric(as_datetime("2020-10-18 23:00:00")), linetype=3)+
+  geom_vline(xintercept = as.numeric(as_datetime("2020-10-31 23:00:00")), linetype=3)
   
 TankNutrients+facet_wrap(Nutrient~., scales = "free")
 
@@ -173,16 +175,17 @@ TankNutrients<- ggplot(Nutrients.tall, aes (Date, Concentration, colour=factor(T
   #geom_point(alpha=1, size=1, shape=21)+
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
-  stat_summary(fun.y=mean, geom="point") +
+  stat_summary(fun.y=mean, geom="point", shape=21) +
   scale_y_continuous(#limits = c(0, 20),
                       breaks = seq(0, 35, 2),  
                       #  expand = c(0, 0),
                       name=("(uM)"))+
-  geom_vline(xintercept = as.numeric(as.Date("2020-10-04")), linetype=3)
+  geom_vline(xintercept = as.numeric(as.Date("2020-10-18")), linetype=3)+
+  geom_vline(xintercept = as.numeric(as.Date("2020-10-31")), linetype=3)
 TankNutrients+facet_wrap(~Nutrient, scales = "free_y")
 
 TankNutrients<- ggplot(Nutrients,
-                       aes (Date, NH4, shape=(sample), colour=factor(sample))) +
+                       aes (Date, NH4, shape=(sample), colour=factor(Tank))) +
   #geom_vline(xintercept=1500)+
   #geom_line(linetype=1)+
   geom_line()+
@@ -194,8 +197,9 @@ TankNutrients<- ggplot(Nutrients,
                       breaks = seq(0, 35, 1),  
                       #  expand = c(0, 0),
                       name=("NH4 (uM)"))+
-  geom_vline(xintercept = as.numeric(as.Date("2020-10-04")), linetype=3)
-TankNutrients+facet_wrap(~Tank, scales = "free_y")
+  geom_vline(xintercept = as.numeric(as.Date("2020-10-18")), linetype=3)+
+  geom_vline(xintercept = as.numeric(as.Date("2020-10-31")), linetype=3)
+TankNutrients+facet_wrap(~Treatment)
 
 
 NO3<- ggplot(Nutrients, aes (Date, N.N.uM., colour=factor(Treatment))) +

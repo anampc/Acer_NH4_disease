@@ -23,15 +23,17 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 ```{r libraries, results="hide"}
 
 # Load all libraries and sources required to run the script
-    library(tidyverse)
+  library(ggplot2)    
+  library(tidyverse)
     library(ggthemes)
     library(survival)
     library(survminer)
+
     #library(rms)
    
 # Default ggplot settings
 
-    Fill.colour<-scale_colour_manual(values = c("black", "gray35"))
+    Fill.colour <- c("deepskyblue", "indianred1", "blue4", "red4")
 
     ggthe_bw<-theme(plot.background=element_blank(),
           panel.grid.major.y = element_blank(),
@@ -80,7 +82,7 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
     summary(fit0)
   # Plot the survival model
     Genotype_only<-ggsurvplot(fit0, data = Survival.data, pval = TRUE,
-               risk.table=T, tables.height=0.4, conf.int = F, n.risk   = TRUE )
+               risk.table=T, tables.height=0.4, conf.int = F, n.risk   = TRUE)
     Genotype_only
 
 ```
@@ -93,7 +95,7 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
     fit1 <- survfit(surv_object ~ Treatment,
                     data = Survival.data)
     summary(fit1)
-    coxfit <- coxph(surv_object ~ Treatment, data = Survival.data, ties = 'exact')
+    coxfit <- coxph(surv_object ~ Treatment, data = Survival.data)
     summary(coxfit)
 
     # Plot the survival model
@@ -143,6 +145,7 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 # Filter data 
     Survival.data_1<-Survival.data
     Survival.data_1<-filter(Survival.data_1, Treatment!="Ambient-Heat")
+    Survival.data_1<-filter(Survival.data_1, Genotype!="U41")
     Survival.data_1$Treatment<-factor(Survival.data_1$Treatment,
                                       levels = c("Ambient-Placebo", "Ambient-Pathogen",
                                                   "NH4-Placebo", "NH4-Pathogen"))
@@ -172,6 +175,16 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
     Genotype_only<-ggsurvplot(fit0, data = Survival.data_1, pval = TRUE,
                risk.table=F, tables.height=0.4, conf.int = F, n.risk   = TRUE )
     Genotype_only
+    
+    fit0 <- survfit(surv_object_1 ~ Treatment, conf.type = "log-log", data = Survival.data_1)
+    summary(fit0)
+  # Plot the survival model
+    Treatment_only<-ggsurvplot(fit0, data = Survival.data_1, pval = TRUE,
+              risk.table=F, 
+              palette=Fill.colour, tables.height=0.4,
+              conf.int = T, n.risk   = TRUE)
+    Treatment_only
+    #ggsave("Outputs/Tratment.svg", Treatment_only, width=6, height=6,dpi = 300)
 
 ```
 
@@ -190,8 +203,9 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
     
     GenotypeP<-ggsurvplot_facet(fit2, data = Survival.data_1, facet.by="Genotype", 
                   risk.table=F, # tables.height=0.5, 
+                   palette=Fill.colour, 
                  nrow = 6, alpha=1, linetype=1) +
-        geom_vline(xintercept = 46, linetype="dashed", 
+        geom_vline(xintercept = 48, linetype="dashed", 
                 color = "gray")
     GenotypeP
 
@@ -211,7 +225,7 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
       annotate("point",x=c(58), y=c(0), 
            shape=4, size=2)
     TreatmentP
-    #ggsave("Outputs/Samples2.svg", TreatmentP, width=6, height=6,dpi = 300)
+    #ggsave("Outputs/Samples2.svg", print(TreatmentP), width=4.5, height=4.5,dpi = 300)
 ```
 
 ```{r}
@@ -254,8 +268,8 @@ Do not run
     Survival.data2<-Survival.data[(Survival.data$Treatment!="Ambient"),]
     summary(Survival.data2)
     summary(Survival.data2$Genotype)
-    Survival.data2$Genotype<-factor(Survival.data2$Genotype, 
-                                   levels=c("G_48", "G_62","G_31", "G_08","G_07", "G_50"))
+    #Survival.data2$Genotype<-factor(Survival.data2$Genotype, 
+     #                              levels=c("G_48", "G_62","G_31", "G_08","G_07", "G_50"))
     summary(Survival.data2$Genotype)
     summary(Survival.data2$Treatment)
     Survival.data2$Treatment<-factor(Survival.data2$Treatment, 

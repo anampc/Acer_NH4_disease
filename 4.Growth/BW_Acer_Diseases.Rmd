@@ -169,9 +169,6 @@ BW.data<-BW.data %>%
     group_by(Tag) %>%
     dplyr::mutate(dBW_r = dBW/(Days*lag(Coral_BW, default = Coral_BW[1])))
   
-  
-
-  
   BW.data$dBW_r<-BW.data$dBW_r*1000
   
   summary(BW.data)
