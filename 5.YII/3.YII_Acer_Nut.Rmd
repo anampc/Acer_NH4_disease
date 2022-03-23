@@ -31,11 +31,26 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
                               panel.grid.minor = element_blank(), 
                               axis.line = element_line(colour = "black"),
                               legend.position="none",
-                              axis.text.x = element_text(angle = 90, vjust = 0.5),
-                              plot.title = element_text(size=12, face="bold"),
-                              #panel.border = element_rect(colour = "black", fill=NA, size=1)
+                              axis.text.x = element_text(angle = 90, 
+                                                         vjust = 0.5),
+                              plot.title = element_text(size=12,
+                                                        face="bold"),
+                              #panel.border = element_rect(colour = "black",
+                              #fill=NA, size=1)
                               panel.border = element_blank()
                               ))
+
+# Treatment colour
+  Fill.colour <- scale_colour_manual(values =
+                     c("deepskyblue", "indianred1", "blue4", "red4"))
+
+# Models 
+  library(lme4)
+  library(multcomp)
+  library(multcompView)
+  library(emmeans)
+  library(effects)
+  library(lmerTest)
 ```
 
 # Data and data clean-up 
@@ -60,9 +75,10 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
     #YII.nutrients$Time <- as.factor(YII.nutrients$Time)
     YII.Tall$Time<-as.numeric(YII.Tall$Time)
     YII.Tall$Date<-as.Date(YII.Tall$Date, "%Y-%m-%d")
-    YII.Tall$Days<-(as.numeric(YII.Tall$Date)-18486)
+    YII.Tall$Days<-(as.numeric(YII.Tall$Date)-18518)
     YII.Tall$Date[which(YII.Tall$Date=="2020-09-04")]<-"2020-09-02"
     YII.Tall$Date<-as.Date(YII.Tall$Date, "%Y-%m-%d")
+    YII.Tall<-filter(YII.Tall, Date!="2020-10-29")
   
   # Remove-unused data    
     Extras <- YII.Tall[which (YII.Tall$Nutrients=="Extra"), ]
@@ -72,11 +88,27 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
     Error <- YII.Tall[which (YII.Tall$YII==0), ]
     YII.Tall <- droplevels(YII.Tall[!rownames(YII.Tall) %in%
                                         rownames(Error), ])
+    
+    YII.Tall<-filter(YII.Tall, Genotype!="U41")
+    YII.Tall$Genotype <- droplevels(YII.Tall$Genotype)
+    YII.Tall$Genotype<-factor(YII.Tall$Genotype, 
+                              levels=c("FM19", "FM6", "FM9", "U44",
+                                       "FM14", "Elkhorn","K2",
+                                      "Acerv2", "Kelsey-1", "Cooper-9"))
+
+    
   # Treatments
     YII.Tall$Nutrients<-factor(YII.Tall$Nutrients, 
                              levels= c("Ambient", "NH4"), ordered=TRUE)
     YII.Tall$Disease<-factor(YII.Tall$Disease, 
-                             levels= c("Placebo", "Pathogen"), ordered=TRUE)
+                             levels= c("Placebo", "Pathogen"),
+                             ordered=TRUE)
+    YII.Tall$Treatment<-paste(YII.Tall$Nutrients, YII.Tall$Disease,
+                              sep = "-")
+    YII.Tall$Treatment<-factor(YII.Tall$Treatment,
+                              levels = c("Ambient-Placebo",
+                                         "Ambient-Pathogen",
+                                         "NH4-Placebo", "NH4-Pathogen"))
   # Replicates
     YII.Tall$Tank<-factor(YII.Tall$Tank, ordered=FALSE)
     YII.Tall$Genotype<-factor(YII.Tall$Genotype, ordered=FALSE)
@@ -100,300 +132,89 @@ YII.FWC<-YII.Tall[which(YII.Tall$Genotype=='FM14'|
 
 
 LastTreatment<-YII.Tall[which(YII.Tall$Time=='12'|YII.Tall$Time=='13'), ]
+
+YII.Nutrients<-YII.Tall[YII.Tall$Days>-3,]
+YII.Nutrients<-YII.Nutrients[YII.Nutrients$Days<51,]
 ```
 
 # Data exploration
 
-## Genotype
+## Genotype + Treatment
 
 ```{r}
 # Genotype
-
-YII_Genet<- ggplot(YII.Tall, aes (Date, YII, colour=Genotype)) +
+YII_Genet<- ggplot(YII.Nutrients, aes (Days, YII, colour=Genotype)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun.y=mean, geom="line") + 
+  stat_summary(fun=mean, geom="line") + 
   #geom_jitter(alpha=0.5, shape=21)+
   theme(legend.position = "bottom")+
-  scale_y_continuous(limits = c(0, .73),
-                         breaks = seq(0, 0.7,0.2),  
+  scale_y_continuous(limits = c(0.4, .70),
+                         breaks = seq(0, 0.7, 0.1),  
                          expand = c(0.01, 0.01),
-                         name=("YII (Fv/Fm)"))
-  
-YII_Genet
-
+                         name=("YII (Fv/Fm)"))+
+  scale_x_continuous(limits = c(-2, 49),
+                         breaks = seq(0, 50, 7),  
+                         expand = c(0.01, 0.01),
+                         name=("Days in the experiment"))+
+   annotate("rect",xmin=48, ymin=0.2, xmax = 49, ymax = 0.7, 
+               alpha=0.5)+
+  # Tissue samples
+  annotate("point",x=c(47), y=c(0.7), 
+           shape=4, size=2)+
+  annotate("point",x=c(58), y=c(0.7), 
+           shape=4, size=2)
+YII_Genet  
 YII_Genet+ facet_wrap(~Nutrients)
-YII_Genet+ facet_wrap(~Disease)
+#YII_Genet+ facet_wrap(~Disease)
 YII_Genet+ facet_wrap(Nutrients~Disease)
+```
 
-
-YII_Genet<- ggplot(YII.Tall, aes (Date, YII, colour=factor(Nutrients), shape=Nutrients)) +
+```{r}
+YII_Genet2<- ggplot(YII.Nutrients, aes (Days, YII, colour=factor(Treatment), shape=Nutrients)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun.y=mean, geom="line") + 
-  stat_summary(fun.y=mean, geom="point") +
+  stat_summary(fun=mean, geom="line") + 
+  stat_summary(fun=mean, geom="point") +
+  #geom_jitter(alpha=0.2)+
+  theme(legend.position = "bottom")+
+  scale_y_continuous(limits = c(0.4, .70),
+                         breaks = seq(0, 0.7,0.1),  
+                         expand = c(0.01, 0.01),
+                         name=("YII (Fv/Fm)"))+
+  scale_x_continuous(limits = c(-2, 59),
+                         breaks = seq(0, 60, 7),  
+                         expand = c(0.01, 0.01),
+                         name=("Days in the experiment"))+
+  Fill.colour
+
+YII_Genet2+ facet_wrap(Genotype~.)
+```
+
+
+```{r}
+
+YII_Genet<- ggplot(YII.Nutrients, aes (Days, YII, colour=factor(Nutrients), shape=Nutrients)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun=mean, geom="line") + 
+  stat_summary(fun=mean, geom="point") +
   #geom_jitter(alpha=0.2)+
   theme(legend.position = "bottom")+
   scale_y_continuous(limits = c(0.3, .73),
                          breaks = seq(0, 0.7,0.2),  
                          expand = c(0.01, 0.01),
-                         name=("YII (Fv/Fm)"))
-YII_Genet+ facet_wrap(~Genotype)
-```
-
-## Tank
-
-```{r}
-YII_Tank<- ggplot(YII.Tall, aes (Tank, YII)) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun.y=mean, geom="line") + 
-  scale_y_continuous(limits = c(0.4, .73),
-                         breaks = seq(0, 0.7,0.2),  
-                         expand = c(0, 0),
                          name=("YII (Fv/Fm)"))+
-  geom_jitter(aes(colour=Genotype), alpha=0.2, shape=21)+
-  facet_wrap(~Time) +
-  theme(legend.position = "bottom")
-YII_Tank
+  scale_x_continuous(limits = c(-2, 59),
+                         breaks = seq(0, 60, 7),  
+                         expand = c(0.01, 0.01),
+                         name=("Days in the experiment"))
+  #Fill.colour
 
-YII_Tank2<- ggplot(YII.Tall, aes (Time, YII, colour=(Tank))) + 
-      
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun.y=mean, geom="line") + 
-     scale_y_continuous(limits = c(0.4, .73),
-                         breaks = seq(0, 0.7,0.1),  
-                         expand = c(0, 0),
-                         name=("YII (Fv/Fm)"))+
-    
-    theme(legend.position="bottom",
-        legend.title = element_blank(), 
-        strip.background =element_rect(fill=NA)) 
-YII_Tank2+facet_wrap(~Nutrients)
-
-# YII_Tank+ facet_wrap(Time~Nutrients)
-# YII_Tank+ facet_wrap(Time~Disease)
-```
-
-## Fragment
-
-```{r}
-YII_Frag<- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
-                                    colour=factor(Tank))) + 
-      geom_line()+
-      
-     scale_y_continuous(limits = c(0.3, .73),
-                         breaks = seq(0, 0.7,0.2),  
-                         expand = c(0, 0),
-                         name=("YII (Fv/Fm)"))+
-    
-    theme(legend.position="bottom",
-        legend.title = element_blank(), 
-        strip.background =element_rect(fill=NA)) 
-YII_Frag+facet_wrap(Nutrients~Genotype)
-
-
-YII_Frag1 <- ggplot(YII.Tall, aes (Date, YII, group=(Fragment),
-                                    colour=factor(Genotype))) + 
-      geom_line()+
-      
-     scale_y_continuous(limits = c(0.4, .73),
-                         breaks = seq(0, 0.7,0.2),  
-                         expand = c(0, 0),
-                         name=("YII (Fv/Fm)"))+
-    
-    theme(legend.position="bottom",
-        legend.title = element_blank(), 
-        strip.background =element_rect(fill=NA)) 
-YII_Frag1+facet_wrap(Nutrients~A_Tank)
-
-```
-
-## Treatments
-
-```{r}
-
-YII_Nutrient<- ggplot(YII.Tall, aes (Date, YII,
-                                    group=(Genotype),
-                                    colour=factor(Genotype))) + 
-  #geom_point(alpha=0.1)+    
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.5 )+
-  stat_summary(fun.y=mean, geom="line") + 
-     scale_y_continuous(limits = c(0.0, .73),
-                         breaks = seq(0, 0.7,0.2),  
-                         expand = c(0, 0),
-                         name=("YII (Fv/Fm)"))+
-  geom_vline(xintercept = as.Date("2020-09-14"), linetype=3)+
-    
-    theme(legend.position="bottom",
-        legend.title = element_blank(), 
-        strip.background =element_rect(fill=NA)) 
-YII_Nutrient+facet_wrap(~Nutrients)
-
-YII_Disease<- ggplot(YII.Tall, aes (Time, YII, group=(Genotype),
-                                    colour=factor(Genotype))) + 
-      
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun.y=mean, geom="line") + 
-     scale_y_continuous(limits = c(0.4, .73),
-                         breaks = seq(0, 0.7,0.2),  
-                         expand = c(0, 0),
-                         name=("YII (Fv/Fm)"))+
-    
-    theme(legend.position="bottom",
-        legend.title = element_blank(), 
-        strip.background =element_rect(fill=NA)) 
-YII_Disease+facet_wrap(~Disease)
-
-```
-
-
-```{r Graphs YII, echo =FALSE}
-YII_Genotype<- ggplot(YII.Tall, aes (Date, YII, colour=factor(Nutrients))) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun.y=mean, geom="line")
-YII_Genotype +  facet_grid (~Disease)
-YII_Genotype +  facet_wrap(~Genotype)
-
-YII_Genotype<- ggplot(YII.Tall, aes (Time, YII, colour=factor(Nutrients))) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun.y=mean, geom="line")
-YII_Genotype + facet_grid (Genotype~.)
-
-YII_Genotype<- ggplot(YII.Tall, aes (Time, YII, colour=factor(Fragment))) +
-  # stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  #stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
-  stat_summary(fun.y=mean, geom="line") +   theme_gdocs()
-YII_Genotype + ylim(0.2, 0.65) + facet_grid (Genotype~Nutrients) + theme(legend.position="none")
-  # xlim(as.Date(c("2017-11-01", "2018-02-30")))
-
-# Nutrients
-
-YII_Treat<- ggplot(YII.Tall, aes (Date, YII, colour=factor(Nutrients))) +   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2)+
-  stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
-  stat_summary(fun.y=mean, geom="line") +
-  ylim(0.0, 0.6) + xlim(as.Date(c("2020-09-15", "2020-11-09"))) +
-   facet_wrap (~Disease) + theme_bw()
-YII_Treat
-
-YII.Tall$Days<-YII.Tall$Days-33
-YII_Treat2<- ggplot(YII.Tall, aes (Days, YII, colour=factor(Nutrients))) +   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2)+
-  stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
-  stat_summary(fun.y=mean, geom="line") +
-  ylim(0.0, 0.6) + xlim(c(1, 60)) +
-   facet_wrap (~Disease) + theme_bw() + geom_vline(xintercept = 46, linetype="dashed", 
-                color = "gray")
-YII_Treat2
-
-   #ggsave("YII.svg", YII_Treat2, width=6, height=4,dpi = 300)
-
-
-YII_Date <- ggplot(YII.Tall, aes (Nutrients, YII, colour=factor(Nutrients))) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2)+
-  stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
-  theme_gdocs() 
-YII_Date + facet_grid (Genotype~Date) + theme(legend.position="none")
-
-```
-
-# YII over time only after nutrients
-
-```{r GraphsFrag, echo =FALSE}
-
-# After nutrients 
-
-YII.nutrients<-YII.Tall[which(YII.Tall$Time>4),]
-
-YII_Genotype<- ggplot(YII.nutrients, aes (Date, YII, colour=factor(Genotype))) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  #stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
-  stat_summary(fun.y=mean, geom="line") +   theme_gdocs()
-YII_Genotype + ylim(0.2, 0.7) + facet_grid (Nutrients~.)
-
-YII_Nut<- ggplot(YII.nutrients, aes (Date, YII, colour=factor(Nutrients))) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
-  stat_summary(fun.y=mean, geom="line") +   theme_gdocs()
-YII_Nut + ylim(0.2, 0.7) +  facet_wrap (~Genotype) 
-
-YII_Nut<- ggplot(YII.nutrients, aes (Date, YII, colour=factor(Nutrients))) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
-  stat_summary(fun.y=mean, geom="line") +   theme_gdocs()
-YII_Nut + ylim(0.2, 0.7)
-
-YII_Date_Nut<- ggplot(YII.nutrients, aes (Nutrients, YII, colour=factor(Nutrients))) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
-  stat_summary(fun.y=mean, geom="line") +   theme_gdocs()
-YII_Date_Nut + ylim(0.2, 0.7) +   facet_grid (~Date) 
-  # + xlim(as.Date(c("2017-11-01", "2018-01-20")))
-
-
-YII_VariationOverTime <- ggplot(YII.Tall, aes (Time, YII, colour=factor(Genotype)))+ 
-  geom_point() + facet_wrap (~Nutrients)
-
-library(lattice)
-xyplot(YII ~ Time | Nutrients, data=YII.nutrients, type=c("p", "r"), ylim=c(0.0, 0.7))
+YII_Genet+ facet_wrap(Genotype~.)
 ```
 
 # Model selection 
 
 ```{r StatsForTreattmentandTime}
 
-Survivors  <- YII.nutrients[, c("Fragment", "Days", "Genotype", "Nutrients")]
-  library(plyr)
-  SurvivorsFrecuency<-as.data.frame(xtabs(~ Days + Nutrients, Survivors))
-  write.csv(SurvivorsFrecuency, "SurvivorsFrecuency.csv")
-
-YII_Genotype<- ggplot(YII.nutrients, aes (Days, YII, colour=factor(Genotype))) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  #stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
-  stat_summary(fun.y=mean, geom="line") +   theme_gdocs()
-YII_Genotype + ylim(0.45, 0.65) + facet_grid (~Nutrients)
-
-YII_Nutrients<- ggplot(YII.nutrients, aes (Days, YII, colour=Nutrients)) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", 
-               width = 0.2, position = position_dodge(width = 2) )+
-  #stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
-  stat_summary(fun.y=mean, geom="line") +   theme_bw () + ggtitle("B.")+
-  theme(plot.background=element_blank(), 
-            panel.border = element_blank(),
-            axis.line = element_line(colour = "black"),
-            panel.grid.major = element_blank(),
-            panel.grid.minor = element_blank(),
-            legend.position="bottom",
-            strip.background = element_rect(fill="white")) +
-      annotate("rect", xmin= 2, xmax = 91,
-               ymin = 0.1, ymax =0.2, fill="blue", alpha = .04)+
-      annotate("rect", xmin= 79, xmax = 90,
-               ymin = 0.1, ymax = .7, fill="orange", alpha = .04)+
-      annotate("rect", xmin= 90, xmax = 113,
-               ymin = 0.1, ymax = 0.7, fill="red", alpha = .04)+
-       scale_y_continuous(limits = c(0.1, 0.7),
-                         breaks = seq(0.2, 0.6,0.2),  
-                         expand = c(0, 0),
-                         name=("YII (Fv/Fm)")) +
-      scale_x_continuous(name="Days in the experiment",
-                         limits = c(-2,115),
-                         breaks = seq(0, 110, 15),  
-                         expand = c(0, 0)) + 
-    facet_grid (Genotype~., labeller = labeller(Genotype=c(`Green` = "A.cer_1", 
-                                    `Green and Orange` = "A.cer_2",
-                                    `Orange` = "A.cer_3", 
-                                    `Red and Orange` = "A.cer_4",
-                                    `Red and Yellow` = "A.cer_5")))
-YII_Nutrients 
-
-    ggsave(file="5.3B_YII.svg", plot=YII_Nutrients, width=3.0, height=6)
-    ggsave(file="5.3B_YII_NOGenotype.svg", plot=YII_Nutrients, width=3.0, height=3)
-
-
-# Libraries 
-  library(lme4)
-  library(multcomp)
-  library(multcompView)
-  library(lsmeans)
-      library(emmeans)
-  library(effects)
-  library(lmerTest)
 
 # More complex model 
     

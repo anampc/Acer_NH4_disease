@@ -15,12 +15,11 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 ```
 
 # General project set-up 
 
-```{r libraries, results="hide"}
+```{r libraries, results="hide", echo=FALSE}
 
 # Load all libraries and sources required to run the script
   library(ggplot2)    
@@ -47,7 +46,7 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 
 # Importa and organize data
 
-```{r}
+```{r, echo=FALSE}
 # Data
     Survival.data<-read.csv("Data/Acer_Mortality2.csv", header = TRUE)
     summary(Survival.data)
@@ -57,18 +56,16 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
     Survival.data$Treatment<-paste(Survival.data$Nutrients, 
                                    Survival.data$Disease, sep = "-" )
     Survival.data$Gen_Treat<-paste(Survival.data$Genotype,
-                                   Survival.data$Gen_Treat, sep = "-" )
+                                   Survival.data$Treatment, sep = "-" )
     Survival.data$Genotype<-as.factor(Survival.data$Genotype)
 ```
-
-# 1. Experimental data (excluding cooked tank)
 
 ```{r}
 # Filter data 
     Survival.data_1<-Survival.data
     Survival.data_1<-filter(Survival.data_1, Treatment!="Ambient-Heat")
     Survival.data_1<-filter(Survival.data_1, Genotype!="U41")
-    Survival.data_1$Treatment <- droplevels(Survival.data_1$Treatment)
+    #Survival.data_1$Treatment <- droplevels(Survival.data_1$Treatment)
     Survival.data_1$Genotype <- droplevels(Survival.data_1$Genotype)
     
     Survival.data_1$Treatment<-factor(Survival.data_1$Treatment,
@@ -77,24 +74,24 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
     Survival.data_1$Genotype<-factor(Survival.data_1$Genotype, 
                                levels=c("FM19", "FM6", "FM9", "U44", "FM14", "Elkhorn",
                                         "K2", "Acerv2", "Kelsey-1", "Cooper-9"))
-    summary(Survival.data_1$Genotype)
-    summary(Survival.data_1$Treatment)
+    #summary(Survival.data_1$Genotype)
+    #summary(Survival.data_1$Treatment)
     
     
 # Create survival object (Fit survival data using the Kaplan-Meier method)
     surv_object_1 <- Surv(time = Survival.data_1$Fu.time_texp, 
                           event = Survival.data_1$Fu.stat_exp)
-    surv_object_1 
+    #surv_object_1 
 
 ```
-
 
 ## Model 0 (Genotype)
 
 ```{r}
 # Only genotype model
   # Kaplan-Meier estimator. The "log-log" confidence interval is preferred.
-    fit0 <- survfit(surv_object_1 ~ Genotype, conf.type = "log-log", data = Survival.data_1)
+    fit0 <- survfit(surv_object_1 ~ Genotype, conf.type = "log-log", 
+                    data = Survival.data_1)
     summary(fit0)
   # Plot the survival model
     Genotype_only<-ggsurvplot(fit0, data = Survival.data_1, pval = TRUE,
@@ -106,7 +103,8 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 ## Model 1 (Treatment)
 
 ```{r}
-    fit1 <- survfit(surv_object_1 ~ Treatment, conf.type = "log-log", data = Survival.data_1)
+    fit1 <- survfit(surv_object_1 ~ Treatment, conf.type = "log-log", 
+                    data = Survival.data_1)
     summary(fit1)
   # Plot the survival model
     Treatment_only<-ggsurvplot(fit1, data = Survival.data_1, pval = TRUE,
@@ -117,16 +115,15 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
     #ggsave("Outputs/Tratment.svg", Treatment_only, width=6, height=6,dpi = 300)
 ```
 
-## Model 2 (Genotype + Treatemnt)
+## Model 2 (Genotype + Treatment)
 
 ```{r}
-
 # Kaplan-Meier estimator. The "log-log" confidence interval is- preferred.
     
     fit2 <- survfit(surv_object_1 ~ Genotype + Treatment, data = Survival.data_1)
     
     summary(fit2)
-    summary(fit2)$table
+    #summary(fit2)$table
     #sd1<-survdiff(surv_object_1~Treatment, data = Survival.data_1)
     #1 - pchisq(sd1$chisq, length(sd1$n) - 1)# pvalue
     results<-summary(fit2)
@@ -134,21 +131,31 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
     save.df <- as.data.frame(results[c("strata", "time", "n.risk", "n.event", "surv", "std.err")])
     write.csv(save.df, file = "Outputs/survival.csv")
     
-    
-    # Plot the survival model
+```
+
+### Plot by treatments 
+
+```{r, echo=FALSE}
+# Plot the survival model
     GenTre_1<-ggsurvplot(fit2, data = Survival.data_1, pval = TRUE,
            risk.table=F,  tables.height=0.5)
     #GenTre_1
     
-    GenotypeP<-ggsurvplot_facet(fit2, data = Survival.data_1, facet.by="Genotype", 
+    GenotypeP<-ggsurvplot_facet(fit2, data = Survival.data_1,
+                                facet.by="Genotype", 
                   risk.table=F, # tables.height=0.5, 
                    palette=Fill.colour, 
                  nrow = 6, alpha=1, linetype=1) +
         geom_vline(xintercept = 48, linetype="dashed", 
                 color = "gray")
     GenotypeP
+    #ggsave("Outputs/Genotype_T.svg", print(GenotypeP), width=5.5, height=8,dpi = 300)
+```
 
-    TreatmentP<-ggsurvplot_facet(fit2, data = Survival.data_1, 
+### Plot by genotype
+
+```{r, echo=FALSE}
+  TreatmentP<-ggsurvplot_facet(fit2, data = Survival.data_1, 
                  facet.by="Treatment", 
                  # risk.table=T, tables.height=0.5, 
                  nrow = 3, alpha=1,
@@ -165,8 +172,10 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
       annotate("point",x=c(58), y=c(0), 
            shape=4, size=2)
     TreatmentP
-  #ggsave("Outputs/Samples2.svg", print(GenotypeP), width=5.5, height=8,dpi = 300)
+  #ggsave("Outputs/Genotype_S.svg", print(TreatmentP), width=5.5, height=6,dpi = 300)
 ```
+
+## Model 3 (Genotype * Treatemnt)
 
 ```{r}
 # Treatment and genotype model 2
@@ -209,14 +218,14 @@ Do not run
 # Data
     Survival.data2<-Survival.data_1[(Survival.data_1$Treatment=="Ambient-Pathogen"),]
     Survival.data2$Treatment <- droplevels(Survival.data2$Treatment)
-    summary(Survival.data2)
-    summary(Survival.data2$Genotype)
-    summary(Survival.data2$Treatment)
-    
+    #summary(Survival.data2)
+    #summary(Survival.data2$Genotype)
+    #summary(Survival.data2$Treatment)
     
   ## Add survival object (Fit survival data using the Kaplan-Meier method)
-  surv_object2 <- Surv(time = Survival.data2$Fu.time_texp, event = Survival.data2$Fu.stat_exp)
-  surv_object2 
+  surv_object2 <- Surv(time = Survival.data2$Fu.time_texp,
+                       event = Survival.data2$Fu.stat_exp)
+  #surv_object2 
     ```
 
 
@@ -231,7 +240,7 @@ Do not run
     coxfit0_2 <- coxph(surv_object2 ~ Genotype, data = Survival.data2)
   # Plot the survival model
     Genotype_only2<-ggsurvplot(fit0_2, data = Survival.data2, pval = TRUE,
-               risk.table=T, tables.height=0.4, conf.int = T, n.risk = TRUE,
+               risk.table=F, tables.height=0.4, conf.int = T, n.risk = TRUE,
                #risk.table.y.text = FALSE, 
                break.time.by=15, xlim=c(0,58), 
            risk.table.title="Number of A. cervicornis at risk")
@@ -254,14 +263,15 @@ fit.coxph0_2
 # Data
     Survival.data3<-Survival.data_1[(Survival.data_1$Treatment=="NH4-Placebo"),]
     Survival.data3$Treatment <- droplevels(Survival.data3$Treatment)
-    summary(Survival.data3)
-    summary(Survival.data3$Genotype)
-    summary(Survival.data3$Treatment)
+    #summary(Survival.data3)
+    #summary(Survival.data3$Genotype)
+    #summary(Survival.data3$Treatment)
     
     
   ## Add survival object (Fit survival data using the Kaplan-Meier method)
-  surv_object3 <- Surv(time = Survival.data3$Fu.time_texp, event = Survival.data3$Fu.stat_exp)
-  surv_object3 
+  surv_object3 <- Surv(time = Survival.data3$Fu.time_texp, 
+                       event = Survival.data3$Fu.stat_exp)
+  #surv_object3 
     ```
 
 
@@ -276,7 +286,7 @@ fit.coxph0_2
     coxfit0_3 <- coxph(surv_object3 ~ Genotype, data = Survival.data3)
   # Plot the survival model
     Genotype_only3<-ggsurvplot(fit0_3, data = Survival.data3, pval = TRUE,
-               risk.table=T, tables.height=0.4, conf.int = T, n.risk = TRUE,
+               risk.table=F, tables.height=0.4, conf.int = T, n.risk = TRUE,
                #risk.table.y.text = FALSE, 
                break.time.by=15, xlim=c(0,58), 
            risk.table.title="Number of A. cervicornis at risk")
@@ -300,14 +310,15 @@ fit.coxph0_3
 # Data
     Survival.data4<-Survival.data_1[(Survival.data_1$Treatment=="NH4-Pathogen"),]
     Survival.data4$Treatment <- droplevels(Survival.data4$Treatment)
-    summary(Survival.data4)
-    summary(Survival.data4$Genotype)
-    summary(Survival.data4$Treatment)
+    #summary(Survival.data4)
+    #summary(Survival.data4$Genotype)
+    #summary(Survival.data4$Treatment)
     
     
   ## Add survival object (Fit survival data using the Kaplan-Meier method)
-  surv_object4 <- Surv(time = Survival.data4$Fu.time_texp, event = Survival.data4$Fu.stat_exp)
-  surv_object4 
+  surv_object4 <- Surv(time = Survival.data4$Fu.time_texp,
+                       event = Survival.data4$Fu.stat_exp)
+  #surv_object4 
     ```
 
 
@@ -322,7 +333,7 @@ fit.coxph0_3
     coxfit0_4 <- coxph(surv_object4 ~ Genotype, data = Survival.data4)
   # Plot the survival model
     Genotype_only4<-ggsurvplot(fit0_4, data = Survival.data4, pval = TRUE,
-               risk.table=T, tables.height=0.4, conf.int = T, n.risk = TRUE,
+               risk.table=F, tables.height=0.4, conf.int = T, n.risk = TRUE,
                #risk.table.y.text = FALSE, 
                break.time.by=15, xlim=c(0,58), 
            risk.table.title="Number of A. cervicornis at risk")
@@ -350,14 +361,15 @@ fit.coxph0_4
     Survival.data5$Treatment <- droplevels(Survival.data5$Treatment)
     Survival.data5$Treatment<-factor(Survival.data5$Treatment, 
                                      levels = c("NH4-Placebo", "Ambient-Pathogen", "NH4-Pathogen"))
-    summary(Survival.data5)
-    summary(Survival.data5$Genotype)
-    summary(Survival.data5$Treatment)
+    #summary(Survival.data5)
+    #summary(Survival.data5$Genotype)
+    #summary(Survival.data5$Treatment)
     
     
   ## Add survival object (Fit survival data using the Kaplan-Meier method)
-  surv_object5 <- Surv(time = Survival.data5$Fu.time_texp, event = Survival.data5$Fu.stat_exp)
-  surv_object5 
+  surv_object5 <- Surv(time = Survival.data5$Fu.time_texp, 
+                       event = Survival.data5$Fu.stat_exp)
+  #surv_object5 
   
 # Treatment and genotype model 1 
     # Kaplan-Meier estimator. The "log-log" confidence interval is preferred.
@@ -396,4 +408,11 @@ fit.coxph2_2 <- coxph(surv_object5 ~ Treatment + Genotype, data = Survival.data5
 ggforest(fit.coxph2_2, data = Survival.data5)
 fit.coxph2_2
 summary(fit.coxph2_2)
+```
+
+# Packages used
+
+```{r}
+# Creates bibliography 
+#knitr::write_bib(c(.packages()), "packages.bib")
 ```
