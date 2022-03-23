@@ -268,9 +268,22 @@ YII_Genotype + ylim(0.2, 0.65) + facet_grid (Genotype~Nutrients) + theme(legend.
 
 YII_Treat<- ggplot(YII.Tall, aes (Date, YII, colour=factor(Nutrients))) +   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2)+
   stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
-  stat_summary(fun.y=mean, geom="line") + theme_gdocs()
-YII_Treat  + ylim(0.2, 0.7) #+ xlim(as.Date(c("2017-11-01", "2018-01-20"))) +
-   #facet_grid (~Replicate)  #+ geom_jitter()
+  stat_summary(fun.y=mean, geom="line") +
+  ylim(0.0, 0.6) + xlim(as.Date(c("2020-09-15", "2020-11-09"))) +
+   facet_wrap (~Disease) + theme_bw()
+YII_Treat
+
+YII.Tall$Days<-YII.Tall$Days-33
+YII_Treat2<- ggplot(YII.Tall, aes (Days, YII, colour=factor(Nutrients))) +   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2)+
+  stat_summary(fun.y=mean, geom="point", size =3, alpha=0.5) +
+  stat_summary(fun.y=mean, geom="line") +
+  ylim(0.0, 0.6) + xlim(c(1, 60)) +
+   facet_wrap (~Disease) + theme_bw() + geom_vline(xintercept = 46, linetype="dashed", 
+                color = "gray")
+YII_Treat2
+
+   #ggsave("YII.svg", YII_Treat2, width=6, height=4,dpi = 300)
+
 
 YII_Date <- ggplot(YII.Tall, aes (Nutrients, YII, colour=factor(Nutrients))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2)+

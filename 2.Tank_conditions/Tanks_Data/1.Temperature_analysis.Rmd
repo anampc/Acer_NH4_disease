@@ -101,21 +101,22 @@ meanTemp<-ggplot(Temperature, aes(Day, Temperature,
                                   group=Tank, colour=Replicate)) +
   geom_vline(xintercept=48, linetype="dashed")+
   stat_summary(fun.data = "mean_cl_boot", geom = "errorbar")+
-  stat_summary(fun.y=mean, geom="line") + 
+  stat_summary(fun=mean, geom="line") + 
   #geom_jitter(alpha=0.1, size=0.1)+
   scale_y_continuous(limits = c(22, 30),
                          breaks = seq(15, 30, 2),  
                          expand = c(0, 0),
-                         name=("Temperature (C)"))+
+                         name=expression("Temperature ("*~degree*C*")"))+
   scale_x_continuous(limits = c(0, 59),
                          breaks = seq(0, 60,7),  
                          expand = c(0, 0),
                          name=("Days in the experiment"))+
-  facet_grid(Disease~Nutrients)
+  facet_grid(Disease~Nutrients)+
+  theme( legend.position=c(0.1, 0.15))
 
 meanTemp
 
-ggsave(file="Temperature_plot.svg", meanTemp, width=5.5, height=4.5)
+#ggsave(file="Outputs/Temperature_plot.svg", meanTemp, width=5.5, height=4.5)
 
 ```
 
@@ -133,6 +134,15 @@ Temp.Summary<- Temperature %>%
             )
 Temp.Summary
 
+Temp.Summary_all<- Temperature %>%
+  group_by(Nutrients, Disease, Replicate) %>%
+  summarize(Temp_mean = mean (Temperature,  na.rm = T),
+            Temp_sd = sd (Temperature,  na.rm = T),
+            Temp_min = min (Temperature,  na.rm = T),
+            Temp_max = max (Temperature,  na.rm = T)
+            )
+Temp.Summary_all
+write.csv(Outputs/Temp.Summary_all, "Temp.Summary_all.csv", row.names = F)
 ```
 
 # Packages used

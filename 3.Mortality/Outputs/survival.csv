@@ -1,0 +1,65 @@
+"","strata","time","n.risk","n.event","surv","std.err"
+"1","Genotype=FM19, Treatment=NH4-Pathogen    ",53,6,2,0.666666666666667,0.192450089729875
+"2","Genotype=FM19, Treatment=NH4-Pathogen    ",54,4,1,0.5,0.204124145231932
+"3","Genotype=FM19, Treatment=NH4-Pathogen    ",55,3,1,0.333333333333333,0.192450089729875
+"4","Genotype=FM6, Treatment=Ambient-Pathogen",55,3,1,0.666666666666667,0.272165526975909
+"5","Genotype=FM6, Treatment=NH4-Pathogen    ",52,6,1,0.833333333333333,0.152145154862546
+"6","Genotype=FM6, Treatment=NH4-Pathogen    ",53,5,1,0.666666666666667,0.192450089729875
+"7","Genotype=FM6, Treatment=NH4-Pathogen    ",54,4,1,0.5,0.204124145231932
+"8","Genotype=FM9, Treatment=Ambient-Pathogen",54,3,2,0.333333333333333,0.272165526975909
+"9","Genotype=FM9, Treatment=NH4-Pathogen    ",52,6,1,0.833333333333333,0.152145154862546
+"10","Genotype=FM9, Treatment=NH4-Pathogen    ",54,5,1,0.666666666666667,0.192450089729875
+"11","Genotype=U44, Treatment=Ambient-Pathogen",52,3,1,0.666666666666667,0.272165526975909
+"12","Genotype=U44, Treatment=Ambient-Pathogen",55,2,1,0.333333333333333,0.272165526975909
+"13","Genotype=U44, Treatment=NH4-Pathogen    ",54,6,3,0.5,0.204124145231932
+"14","Genotype=U44, Treatment=NH4-Pathogen    ",55,3,1,0.333333333333333,0.192450089729875
+"15","Genotype=FM14, Treatment=Ambient-Pathogen",53,3,1,0.666666666666667,0.272165526975909
+"16","Genotype=FM14, Treatment=Ambient-Pathogen",54,2,1,0.333333333333333,0.272165526975909
+"17","Genotype=FM14, Treatment=Ambient-Pathogen",56,1,1,0,NA
+"18","Genotype=FM14, Treatment=NH4-Pathogen    ",54,6,2,0.666666666666667,0.192450089729875
+"19","Genotype=Elkhorn, Treatment=Ambient-Pathogen",54,3,1,0.666666666666667,0.272165526975909
+"20","Genotype=Elkhorn, Treatment=Ambient-Pathogen",56,2,1,0.333333333333333,0.272165526975909
+"21","Genotype=Elkhorn, Treatment=NH4-Pathogen    ",46,6,1,0.833333333333333,0.152145154862546
+"22","Genotype=Elkhorn, Treatment=NH4-Pathogen    ",54,5,1,0.666666666666667,0.192450089729875
+"23","Genotype=Elkhorn, Treatment=NH4-Pathogen    ",55,4,2,0.333333333333333,0.192450089729875
+"24","Genotype=K2, Treatment=Ambient-Pathogen",53,3,1,0.666666666666667,0.272165526975909
+"25","Genotype=K2, Treatment=Ambient-Pathogen",54,2,1,0.333333333333333,0.272165526975909
+"26","Genotype=K2, Treatment=Ambient-Pathogen",56,1,1,0,NA
+"27","Genotype=K2, Treatment=NH4-Placebo     ",55,5,1,0.8,0.178885438199983
+"28","Genotype=K2, Treatment=NH4-Pathogen    ",53,6,1,0.833333333333333,0.152145154862546
+"29","Genotype=K2, Treatment=NH4-Pathogen    ",54,5,1,0.666666666666667,0.192450089729875
+"30","Genotype=Acerv2, Treatment=Ambient-Pathogen",51,3,1,0.666666666666667,0.272165526975909
+"31","Genotype=Acerv2, Treatment=Ambient-Pathogen",54,2,1,0.333333333333333,0.272165526975909
+"32","Genotype=Acerv2, Treatment=NH4-Placebo     ",41,6,1,0.833333333333333,0.152145154862546
+"33","Genotype=Acerv2, Treatment=NH4-Placebo     ",42,5,1,0.666666666666667,0.192450089729875
+"34","Genotype=Acerv2, Treatment=NH4-Placebo     ",50,4,1,0.5,0.204124145231932
+"35","Genotype=Acerv2, Treatment=NH4-Placebo     ",53,3,1,0.333333333333333,0.192450089729875
+"36","Genotype=Acerv2, Treatment=NH4-Placebo     ",56,2,1,0.166666666666667,0.152145154862546
+"37","Genotype=Acerv2, Treatment=NH4-Pathogen    ",45,6,1,0.833333333333333,0.152145154862546
+"38","Genotype=Acerv2, Treatment=NH4-Pathogen    ",51,5,3,0.333333333333333,0.192450089729875
+"39","Genotype=Acerv2, Treatment=NH4-Pathogen    ",53,2,1,0.166666666666667,0.152145154862546
+"40","Genotype=Acerv2, Treatment=NH4-Pathogen    ",54,1,1,0,NA
+"41","Genotype=Kelsey-1, Treatment=Ambient-Pathogen",53,3,1,0.666666666666667,0.272165526975909
+"42","Genotype=Kelsey-1, Treatment=Ambient-Pathogen",54,2,1,0.333333333333333,0.272165526975909
+"43","Genotype=Kelsey-1, Treatment=Ambient-Pathogen",55,1,1,0,NA
+"44","Genotype=Kelsey-1, Treatment=NH4-Placebo     ",43,6,1,0.833333333333333,0.152145154862546
+"45","Genotype=Kelsey-1, Treatment=NH4-Placebo     ",49,5,1,0.666666666666667,0.192450089729875
+"46","Genotype=Kelsey-1, Treatment=NH4-Placebo     ",52,4,1,0.5,0.204124145231932
+"47","Genotype=Kelsey-1, Treatment=NH4-Placebo     ",53,3,2,0.166666666666667,0.152145154862546
+"48","Genotype=Kelsey-1, Treatment=NH4-Pathogen    ",43,6,1,0.833333333333333,0.152145154862546
+"49","Genotype=Kelsey-1, Treatment=NH4-Pathogen    ",46,5,1,0.666666666666667,0.192450089729875
+"50","Genotype=Kelsey-1, Treatment=NH4-Pathogen    ",48,4,1,0.5,0.204124145231932
+"51","Genotype=Kelsey-1, Treatment=NH4-Pathogen    ",49,3,1,0.333333333333333,0.192450089729875
+"52","Genotype=Kelsey-1, Treatment=NH4-Pathogen    ",54,2,1,0.166666666666667,0.152145154862546
+"53","Genotype=Cooper-9, Treatment=Ambient-Pathogen",51,3,1,0.666666666666667,0.272165526975909
+"54","Genotype=Cooper-9, Treatment=Ambient-Pathogen",53,2,1,0.333333333333333,0.272165526975909
+"55","Genotype=Cooper-9, Treatment=Ambient-Pathogen",54,1,1,0,NA
+"56","Genotype=Cooper-9, Treatment=NH4-Placebo     ",38,5,1,0.8,0.178885438199983
+"57","Genotype=Cooper-9, Treatment=NH4-Placebo     ",42,4,1,0.6,0.219089023002066
+"58","Genotype=Cooper-9, Treatment=NH4-Placebo     ",49,3,1,0.4,0.219089023002066
+"59","Genotype=Cooper-9, Treatment=NH4-Placebo     ",52,2,1,0.2,0.178885438199983
+"60","Genotype=Cooper-9, Treatment=NH4-Pathogen    ",43,5,1,0.8,0.178885438199983
+"61","Genotype=Cooper-9, Treatment=NH4-Pathogen    ",48,4,1,0.6,0.219089023002066
+"62","Genotype=Cooper-9, Treatment=NH4-Pathogen    ",49,3,1,0.4,0.219089023002066
+"63","Genotype=Cooper-9, Treatment=NH4-Pathogen    ",52,2,1,0.2,0.178885438199983
+"64","Genotype=Cooper-9, Treatment=NH4-Pathogen    ",56,1,1,0,NA
