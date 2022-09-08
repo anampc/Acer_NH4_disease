@@ -1,0 +1,9 @@
+Tank,Nutrients,Disease,Combo,Replicate
+Tank.1,Ambient,Disease,Ambient+Disease,R1
+Tank.2,Ambient,Disease,Ambient+Disease,R2
+Tank.3,NH4,Disease,NH4+Disease,R1
+Tank.4,NH4,Disease,NH4+Disease,R2
+Tank.5,Ambient,Placebo,Ambient+Placebo,R1
+Tank.6,Ambient,Placebo,Ambient+Placebo,R2
+Tank.7,NH4,Placebo,NH4+Placebo,R1
+Tank.8,NH4,Placebo,NH4+Placebo,R2
