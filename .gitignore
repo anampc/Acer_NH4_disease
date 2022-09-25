@@ -27,12 +27,13 @@ vignettes/*.pdf
 **/.knit.md
 
 # Other files
+**/*.png
 **/.directory
 **/.dropbox
 **/*.DS_Store*
 **/Old
 **/*.docx
-**/*.svg
+#**/*.svg
 **/*.eds
 **/*.xls
 **/*.xlsx

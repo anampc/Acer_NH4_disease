@@ -112,7 +112,10 @@ editor_options:
               palette=Fill.colour, tables.height=0.4,
               conf.int = T, n.risk   = TRUE)
     Treatment_only
-    #ggsave(file="Outputs/Treatment.svg", print(Treatment_only), width=5, height=5, dpi = 300)
+    ggsave(file="Treatment.svg", print(ggsurvplot(fit1, data = Survival.data_1, pval = TRUE,
+              risk.table=F, 
+              palette=Fill.colour, tables.height=0.4,
+              conf.int = T, n.risk   = TRUE)), width=5, height=5, dpi = 300)
 ```
 
 ## Model 2 (Genotype + Treatment)
