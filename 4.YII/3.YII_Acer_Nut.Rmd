@@ -1,5 +1,5 @@
 ---
-title: "Acer_YII_Disease"
+title: "Acropora cerviornis Fv/Fm under nutrient treatments"
 author: "Ana M. Palacio"
 date: "`r Sys.Date()`"
 output:
@@ -14,7 +14,7 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE, fig.width=7, fig.height=7 )
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, fig.width=7, fig.height=7 )
 ```
 
 # General project set-up 
@@ -33,8 +33,6 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
                               panel.grid.minor = element_blank(), 
                               axis.line = element_line(colour = "black"),
                               legend.position="none",
-                              axis.text.x = element_text(angle = 90, 
-                                                         vjust = 0.5),
                               plot.title = element_text(size=12,
                                                         face="bold"),
                               #panel.border = element_rect(colour = "black",
@@ -61,21 +59,11 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
 ```{r}
 
 # 1. Import data: 
-
-  # Long format Ssid YII
     YII.Tall<-read.csv("Data/YII_tall.csv")
-
-  # Wide format 
-    # YII.wide<- YII.Tall<-readRDS("Data/YII.Wide.rds")
-    # YII.Wide<-read.csv("Data/YII_Wide.csv")
-  
-  #summary(YII.Tall)
-
 
 # 2. Data clean-up an types: 
   
   # Variable types 
-    #YII.nutrients$Time <- as.factor(YII.nutrients$Time)
     YII.Tall$Time<-as.numeric(YII.Tall$Time)
     YII.Tall$Date<-as.Date(YII.Tall$Date, "%Y-%m-%d")
     YII.Tall$Days<-(as.numeric(YII.Tall$Date)-18518)
@@ -112,27 +100,13 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
                               levels = c("Ambient+Placebo",
                                          "Ambient+Disease",
                                          "NH4+Placebo", "NH4+Disease"))
+    YII.Tall$DayF<-as.factor(YII.Tall$Days)
+  
   # Replicates
     YII.Tall$Tank<-factor(YII.Tall$Tank, ordered=FALSE)
     YII.Tall$Genotype<-factor(YII.Tall$Genotype, ordered=FALSE)
   
   summary(YII.Tall)
-
-# Subset data  
-  # YII.CRF<-YII.Tall[which(YII.Tall$Genotype=='K2'|
-  #                       YII.Tall$Genotype=='U41'|
-  #                       YII.Tall$Genotype=='U44'), ]
-  # 
-  # YII.UM<-YII.Tall[which(YII.Tall$Genotype=='Acerv2'|
-  #                       YII.Tall$Genotype=='Cooper-9'|
-  #                       YII.Tall$Genotype=='Elkhorn'|
-  #                       YII.Tall$Genotype=='Kelsey-1'), ]
-  # 
-  # YII.FWC<-YII.Tall[which(YII.Tall$Genotype=='FM14'|
-  #                       YII.Tall$Genotype=='FM6'|
-  #                       YII.Tall$Genotype=='FM19'|
-  #                       YII.Tall$Genotype=='FM9'), ]
-
 
 LastTreatment<-YII.Tall[which(YII.Tall$Time=='12'|YII.Tall$Time=='13'), ]
 
@@ -159,7 +133,7 @@ YII_Genet<- ggplot(YII.Nutrients, aes (Days, YII, fill=Genotype)) +
   scale_x_continuous(limits = c(-2, 49),
                          breaks = seq(0, 50, 7),  
                          expand = c(0.01, 0.01),
-                         name=("Days in the experiment"))+
+                         name=("Days in nutrient treatments"))+
    annotate("rect",xmin=48, ymin=0.2, xmax = 49, ymax = 0.7, 
                alpha=0.5)+
   # Tissue samples
@@ -167,11 +141,12 @@ YII_Genet<- ggplot(YII.Nutrients, aes (Days, YII, fill=Genotype)) +
            shape=4, size=2)+
   annotate("point",x=c(58), y=c(0.7), 
            shape=4, size=2)
-YII_Genet  
-YII_Genet+ facet_wrap(~Nutrients)
+YII_Genet
+ggsave(YII_Genet, file="Outputs/Fig_S2_YII_genets.svg", width=5, height=4)
 
+YII_Genet+ facet_wrap(~Nutrients)
 #YII_Genet+ facet_wrap(~Disease)
-YII_Genet+ facet_wrap(Nutrients~Disease)
+#YII_Genet+ facet_wrap(Nutrients~Disease)
 ```
 
 ```{r}
@@ -197,7 +172,7 @@ YII_Genet2+ facet_wrap(Genotype~.)
 
 ```{r}
 
-YII_Genet<- ggplot(YII.Nutrients, aes (Days, YII, fill=Nutrients)) +
+YII_Nutrients<- ggplot(YII.Nutrients, aes (Days, YII, fill=Nutrients)) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun=mean, geom="line") + 
   stat_summary(fun=mean, geom="point", shape=21) +
@@ -210,68 +185,47 @@ YII_Genet<- ggplot(YII.Nutrients, aes (Days, YII, fill=Nutrients)) +
   scale_x_continuous(limits = c(-2, 47),
                          breaks = seq(0, 60, 14),  
                          expand = c(0.01, 0.01),
-                         name=("Days in the experiment"))+
+                         name=("Days in nutrient treatments"))+
   scale_fill_manual(values =
                      c("deepskyblue", "blue4"))
-
-YII_Genet+ facet_wrap(Genotype~., ncol = 5)
+YII_Nutrients
+YII_Nutrients<-YII_Nutrients + facet_wrap(Genotype~., ncol = 5)
+YII_Nutrients
+#ggsave(YII_Nutrients, file="Outputs/Fig_S2_YII.svg", width=7, height=5)
 ```
 
 # Model selection
 
-## Nutrients
-
-```{r StatsForNutrients}
-
-# More complex model 
-    
-YII.nutrients<-subset(YII.Nutrients, Days<48)
-YII.nutrients$DayF<-as.factor(YII.nutrients$Days)
- 
-# Final model 
-LM_Nutrients_Days<-lmer(YII ~ Nutrients * DayF + 
-                             (1|Genotype), data= YII.nutrients)
-  anova(LM_Nutrients_Days)
-  summary(LM_Nutrients_Days)
-  coef(LM_Nutrients_Days)
-  fitted(LM_Nutrients_Days)
-      
-      layout(matrix(1:4,2,2))  
-      plot(LM_Nutrients_Days)  
-      
-plot(Effect(c("Nutrients","DayF"), LM_Nutrients_Days), 
-     x.var="DayF", multiline=T, ci.style="bars")
-
-#  Pair-wise comparisons
-cld(emmeans(LM_Nutrients_Days, "Nutrients"))
-YIIAcerEmm<-cld(emmeans(LM_Nutrients_Days, specs = c("Nutrients", "DayF")))
-YIIAcerEmm<-YIIAcerEmm[order(YIIAcerEmm$DayF, YIIAcerEmm$Nutrients), ]
-YIIAcerEmm
-write.csv(YIIAcerEmm, "YIIAcer_Nutrients_Emm.csv")
-
-```
-
-## Genotype
-
-```{r StatsForGenotype}
-LM_Genet_Days<-lmer(YII ~ Genotype * DayF + Nutrients +
-                             (1|Fragment), data= YII.nutrients)
+```{r StatsForGenotype, echo=TRUE}
+LM_Genet_Days<-lmer(YII ~ Genotype * DayF * Nutrients +
+                             (1|Fragment), data= YII.Nutrients)
   anova(LM_Genet_Days)
-  summary(LM_Genet_Days)
-  coef(LM_Genet_Days)
-  fitted(LM_Genet_Days)
-      
-      layout(matrix(1:4,2,2))  
-      plot(LM_Genet_Days)  
-      
-plot(Effect(c("Genotype","DayF"), LM_Genet_Days), x.var="DayF", multiline=T, ci.style="bars")
+  step(LM_Genet_Days)
 
-#  Pair-wise comparisons
-cld(emmeans(LM_Genet_Days, "Genotype"))
-YIIAcer_G_Emm<-cld(emmeans(LM_Genet_Days, ~Genotype, by="DayF"))
-#YIIAcer_G_Emm<-YIIAcer_G_Emm[order(YIIAcer_G_Emm$DayF, YIIAcer_G_Emm$Genotype), ]
-YIIAcer_G_Emm
-write.csv(YIIAcer_G_Emm, "YIIAcer_Genotype_Emm.csv")
+Model<-lmer(YII ~ Genotype + Nutrients + DayF + (1 | Fragment) + 
+  Genotype:DayF + Nutrients:DayF, data = YII.Nutrients)
+anova(Model)
+ranova(Model)
+  #summary(LM_Genet_Days)
+  #coef(LM_Genet_Days)
+  #fitted(LM_Genet_Days)
+      
+  #layout(matrix(1:4,2,2))  
+  #plot(Model)  
+  #plot(Effect(c("Genotype","DayF"), Model), x.var="DayF", multiline=T, ci.style="bars")
+
+#  Simple Pair-wise comparisons
+cld(emmeans(Model, "Genotype"))
+cld(emmeans(Model, "Nutrients"))
+
+YIIAcer_G_Emm<-cld(emmeans(Model, ~Genotype, by="DayF"))
+  #YIIAcer_G_Emm<-YIIAcer_G_Emm[order(YIIAcer_G_Emm$DayF, YIIAcer_G_Emm$Genotype), ]
+  YIIAcer_G_Emm
+  write.csv(YIIAcer_G_Emm, "Outputs/YII_Genotype_Emm.csv")
+
+YIIAcer_N_Emm<-cld(emmeans(Model, ~Nutrients, by="DayF"))
+  YIIAcer_N_Emm
+  write.csv(YIIAcer_N_Emm, "Outputs/YII_Nut_Emm.csv")
 
 ```
 
