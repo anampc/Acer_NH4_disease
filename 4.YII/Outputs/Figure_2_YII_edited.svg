@@ -1,0 +1,1525 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="svglite"
+   width="432.00pt"
+   height="288.00pt"
+   viewBox="0 0 432.00 288.00"
+   version="1.1"
+   id="svg375"
+   sodipodi:docname="Figure_2_YII_edited.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/Figure_2_YII.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview377"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="2.0364583"
+     inkscape:cx="1398.2609"
+     inkscape:cy="156.6445"
+     inkscape:window-width="1846"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg375" />
+  <defs
+     id="defs4">
+    <style
+       type="text/css"
+       id="style2"><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+  </defs>
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.878305;stroke-miterlimit:10;stroke-opacity:0.588235;paint-order:fill markers stroke"
+     id="rect23101"
+     width="432"
+     height="220.40218"
+     x="0"
+     y="0"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <rect
+     width="100%"
+     height="100%"
+     style="stroke: none; fill: none;"
+     id="rect6" />
+  <defs
+     id="defs11">
+    <clipPath
+       id="cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA=">
+      <rect
+         x="0.00"
+         y="0.00"
+         width="432.00"
+         height="288.00"
+         id="rect8" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA=)"
+     id="g13" />
+  <defs
+     id="defs18">
+    <clipPath
+       id="cpMC4wMHwxOTQuNDB8MC4wMHwyODguMDA=">
+      <rect
+         x="0.00"
+         y="0.00"
+         width="194.40"
+         height="288.00"
+         id="rect15" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA=)"
+     id="g24" />
+  <defs
+     id="defs29">
+    <clipPath
+       id="cpMzcuNTd8MTg4LjkyfDUuNDh8MjM3Ljg1">
+      <rect
+         x="37.57"
+         y="5.48"
+         width="151.35"
+         height="232.37"
+         id="rect26" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#cpMzcuNTd8MTg4LjkyfDUuNDh8MjM3Ljg1)"
+     id="g113"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">
+    <polyline
+       points="44.99,104.36 47.96,104.36 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline33" />
+    <polyline
+       points="46.48,104.36 46.48,110.09 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline35" />
+    <polyline
+       points="44.99,110.09 47.96,110.09 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline37" />
+    <polyline
+       points="59.83,103.17 62.80,103.17 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline39" />
+    <polyline
+       points="61.31,103.17 61.31,109.44 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline41" />
+    <polyline
+       points="59.83,109.44 62.80,109.44 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline43" />
+    <polyline
+       points="74.67,108.66 77.64,108.66 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline45" />
+    <polyline
+       points="76.15,108.66 76.15,114.61 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline47" />
+    <polyline
+       points="74.67,114.61 77.64,114.61 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline49" />
+    <polyline
+       points="89.51,78.50 92.47,78.50 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline51" />
+    <polyline
+       points="90.99,78.50 90.99,85.20 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline53" />
+    <polyline
+       points="89.51,85.20 92.47,85.20 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline55" />
+    <polyline
+       points="104.34,103.39 107.31,103.39 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline57" />
+    <polyline
+       points="105.83,103.39 105.83,109.55 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline59" />
+    <polyline
+       points="104.34,109.55 107.31,109.55 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline61" />
+    <polyline
+       points="119.18,111.86 122.15,111.86 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline63" />
+    <polyline
+       points="120.67,111.86 120.67,119.29 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline65" />
+    <polyline
+       points="119.18,119.29 122.15,119.29 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline67" />
+    <polyline
+       points="134.02,98.37 136.99,98.37 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline69" />
+    <polyline
+       points="135.50,98.37 135.50,104.92 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline71" />
+    <polyline
+       points="134.02,104.92 136.99,104.92 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline73" />
+    <polyline
+       points="148.86,121.64 151.83,121.64 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline75" />
+    <polyline
+       points="150.34,121.64 150.34,128.70 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline77" />
+    <polyline
+       points="148.86,128.70 151.83,128.70 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline79" />
+    <polyline
+       points="163.70,140.05 166.66,140.05 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline81" />
+    <polyline
+       points="165.18,140.05 165.18,145.80 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline83" />
+    <polyline
+       points="163.70,145.80 166.66,145.80 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline85" />
+    <polyline
+       points="178.53,116.84 181.50,116.84 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline87" />
+    <polyline
+       points="180.02,116.84 180.02,127.28 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline89" />
+    <polyline
+       points="178.53,127.28 181.50,127.28 "
+       style="stroke-width: 1.07; stroke-linecap: butt;"
+       id="polyline91" />
+    <circle
+       cx="46.48"
+       cy="107.30"
+       r="1.95"
+       style="stroke-width: 0.71; fill: #F8766D;"
+       id="circle93" />
+    <circle
+       cx="61.31"
+       cy="106.21"
+       r="1.95"
+       style="stroke-width: 0.71; fill: #D89000;"
+       id="circle95" />
+    <circle
+       cx="76.15"
+       cy="111.64"
+       r="1.95"
+       style="stroke-width: 0.71; fill: #A3A500;"
+       id="circle97" />
+    <circle
+       cx="90.99"
+       cy="81.90"
+       r="1.95"
+       style="stroke-width: 0.71; fill: #39B600;"
+       id="circle99" />
+    <circle
+       cx="105.83"
+       cy="106.59"
+       r="1.95"
+       style="stroke-width: 0.71; fill: #00BF7D;"
+       id="circle101" />
+    <circle
+       cx="120.67"
+       cy="115.61"
+       r="1.95"
+       style="stroke-width: 0.71; fill: #00BFC4;"
+       id="circle103" />
+    <circle
+       cx="135.50"
+       cy="101.50"
+       r="1.95"
+       style="stroke-width: 0.71; fill: #00B0F6;"
+       id="circle105" />
+    <circle
+       cx="150.34"
+       cy="125.15"
+       r="1.95"
+       style="stroke-width: 0.71; fill: #9590FF;"
+       id="circle107" />
+    <circle
+       cx="165.18"
+       cy="143.03"
+       r="1.95"
+       style="stroke-width: 0.71; fill: #E76BF3;"
+       id="circle109" />
+    <circle
+       cx="180.02"
+       cy="122.07"
+       r="1.95"
+       style="stroke-width: 0.71; fill: #FF62BC;"
+       id="circle111" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:14.2857px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="135.14507"
+     y="95.363724"
+     id="text4511-3-2-7-2"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6-9-0-6"
+       style="font-size:8px;fill:#4d4d4d;stroke-width:0.75px"
+       x="135.14507"
+       y="95.363724">c</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:14.2857px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="90.956947"
+     y="72.105911"
+     id="text4511-3-2-6"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6-9-06"
+       style="font-size:8px;fill:#4d4d4d;stroke-width:0.75px"
+       x="90.956947"
+       y="72.105911">d</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:14.2857px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="105.50533"
+     y="95.363724"
+     id="text4511-3-2-9"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6-9-3"
+       style="font-size:8px;fill:#4d4d4d;stroke-width:0.75px"
+       x="105.50533"
+       y="95.363724">c</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:14.2857px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="75.865601"
+     y="95.363724"
+     id="text4511-3-2-7"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6-9-0"
+       style="font-size:8px;fill:#4d4d4d;stroke-width:0.75px"
+       x="75.865601"
+       y="95.363724">c</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:14.2857px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="61.045734"
+     y="95.363724"
+     id="text4511-3-2-1"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6-9-2"
+       style="font-size:8px;fill:#4d4d4d;stroke-width:0.75px"
+       x="61.045734"
+       y="95.363724">c</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:14.2857px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="46.225872"
+     y="95.363724"
+     id="text4511-3-2"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6-9"
+       style="font-size:8px;fill:#4d4d4d;stroke-width:0.75px"
+       x="46.225872"
+       y="95.363724">c</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:14.2857px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="120.21972"
+     y="106.60591"
+     id="text4511-3-3"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6-56"
+       style="font-size:8px;fill:#4d4d4d;stroke-width:0.75px"
+       x="120.21972"
+       y="106.60591">bc</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:14.2857px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="179.62614"
+     y="114.10591"
+     id="text4511-3-7"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6-5"
+       style="font-size:8px;fill:#4d4d4d;stroke-width:0.75px"
+       x="179.62614"
+       y="114.10591">b</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:14.2857px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="149.9864"
+     y="114.10591"
+     id="text4511-3"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6"
+       style="font-size:8px;fill:#4d4d4d;stroke-width:0.75px"
+       x="149.9864"
+       y="114.10591">b</tspan></text>
+  <polyline
+     points="37.57,237.85 37.57,5.48 "
+     style="stroke-width:1.07;stroke-linecap:butt"
+     id="polyline115"
+     transform="matrix(1,0,0,0.709515,0,1.5918578)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <text
+     x="32.639999"
+     y="160.50999"
+     text-anchor="end"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="13.98"
+     lengthAdjust="spacingAndGlyphs"
+     id="text119"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">0.5</text>
+  <text
+     x="32.639999"
+     y="89.230003"
+     text-anchor="end"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="13.98"
+     lengthAdjust="spacingAndGlyphs"
+     id="text121"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">0.6</text>
+  <text
+     x="32.639999"
+     y="17.950001"
+     text-anchor="end"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="13.98"
+     lengthAdjust="spacingAndGlyphs"
+     id="text123"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">0.7</text>
+  <polyline
+     points="34.83,157.31 37.57,157.31 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline127"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="34.83,86.03 37.57,86.03 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline129"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="34.83,14.75 37.57,14.75 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline131"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="37.57,237.85 188.92,237.85 "
+     style="stroke-width:1.07;stroke-linecap:butt"
+     id="polyline133"
+     transform="translate(0,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="46.48,240.59 46.48,237.85 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline135"
+     transform="translate(0,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="61.31,240.59 61.31,237.85 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline137"
+     transform="translate(0,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="76.15,240.59 76.15,237.85 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline139"
+     transform="translate(0,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="90.99,240.59 90.99,237.85 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline141"
+     transform="translate(0,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="105.83,240.59 105.83,237.85 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline143"
+     transform="translate(0,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="120.67,240.59 120.67,237.85 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline145"
+     transform="translate(0,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="135.50,240.59 135.50,237.85 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline147"
+     transform="translate(0,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="150.34,240.59 150.34,237.85 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline149"
+     transform="translate(0,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="165.18,240.59 165.18,237.85 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline151"
+     transform="translate(0,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="180.02,240.59 180.02,237.85 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline153"
+     transform="translate(0,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <text
+     transform="rotate(-90,122.415,72.735)"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="23.84"
+     lengthAdjust="spacingAndGlyphs"
+     id="text155"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">FM19</text>
+  <text
+     transform="rotate(-90,129.835,65.315)"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="18.24"
+     lengthAdjust="spacingAndGlyphs"
+     id="text157"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">FM6</text>
+  <text
+     transform="rotate(-90,137.255,57.895)"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="18.24"
+     lengthAdjust="spacingAndGlyphs"
+     id="text159"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">FM9</text>
+  <text
+     transform="rotate(-90,144.675,50.475)"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="17.629999"
+     lengthAdjust="spacingAndGlyphs"
+     id="text161"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">U44</text>
+  <text
+     transform="rotate(-90,152.095,43.055)"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="23.84"
+     lengthAdjust="spacingAndGlyphs"
+     id="text163"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">FM14</text>
+  <text
+     transform="rotate(-90,159.51,35.64)"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="33.099998"
+     lengthAdjust="spacingAndGlyphs"
+     id="text165"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">Elkhorn</text>
+  <text
+     transform="rotate(-90,166.93,28.22)"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="11.36"
+     lengthAdjust="spacingAndGlyphs"
+     id="text167"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">K2</text>
+  <text
+     transform="rotate(-90,174.35,20.8)"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="30.540001"
+     lengthAdjust="spacingAndGlyphs"
+     id="text169"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">Acerv2</text>
+  <text
+     transform="rotate(-90,181.77,13.38)"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="37.02"
+     lengthAdjust="spacingAndGlyphs"
+     id="text171"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">Kelsey-1</text>
+  <text
+     transform="rotate(-90,189.19,5.96)"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="39.740002"
+     lengthAdjust="spacingAndGlyphs"
+     id="text173"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">Cooper-9</text>
+  <text
+     transform="rotate(-90,49.585,36.085)"
+     text-anchor="middle"
+     style="font-size:11px;font-family:Arial"
+     textLength="58.880001"
+     lengthAdjust="spacingAndGlyphs"
+     id="text175"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">YII (<tspan
+   style="font-style:italic"
+   id="tspan1530">Fv/Fm</tspan>)</text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="77.03421"
+     y="17.281836"
+     id="text7164"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan7162"
+       style="font-weight:bold;stroke-width:0.75px"
+       x="77.03421"
+       y="17.281836">A. Genotypes</tspan></text>
+  <defs
+     id="defs182">
+    <clipPath
+       id="cpMTk0LjQwfDQzMi4wMHwwLjAwfDI4OC4wMA==">
+      <rect
+         x="194.40"
+         y="0.00"
+         width="237.60"
+         height="288.00"
+         id="rect179" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#cpMC4wMHw0MzIuMDB8MC4wMHwyODguMDA=)"
+     id="g188" />
+  <defs
+     id="defs193">
+    <clipPath
+       id="cpMjE4Ljc5fDQyNi41Mnw1LjQ4fDI1Ni4wMQ==">
+      <rect
+         x="218.79"
+         y="5.48"
+         width="207.73"
+         height="250.53"
+         id="rect190" />
+    </clipPath>
+  </defs>
+  <polyline
+     points="220.87,86.83 220.87,98.91 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline197"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="248.41,105.93 249.21,105.93 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline199"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="248.81,105.93 248.81,117.88 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline201"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="248.41,117.88 249.21,117.88 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline203"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="264.38,118.37 265.18,118.37 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline205"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="264.78,118.37 264.78,130.19 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline207"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="264.38,130.19 265.18,130.19 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline209"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="276.35,114.08 277.15,114.08 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline211"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="276.75,114.08 276.75,125.67 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline213"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="276.35,125.67 277.15,125.67 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline215"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="304.30,120.72 305.09,120.72 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline217"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="304.69,120.72 304.69,132.76 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline219"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="304.30,132.76 305.09,132.76 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline221"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="332.24,129.48 333.04,129.48 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline223"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="332.64,129.48 332.64,140.89 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline225"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="332.24,140.89 333.04,140.89 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline227"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="356.19,117.38 356.99,117.38 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline229"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="356.59,117.38 356.59,126.52 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline231"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="356.19,126.52 356.99,126.52 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline233"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="388.12,130.56 388.92,130.56 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline235"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="388.52,130.56 388.52,138.37 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline237"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="388.12,138.37 388.92,138.37 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline239"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="416.06,138.71 416.86,138.71 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline241"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="416.46,138.71 416.46,148.65 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline243"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="416.06,148.65 416.86,148.65 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline245"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="220.87,87.41 220.87,99.43 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline247"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="248.41,111.63 249.21,111.63 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline249"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="248.81,111.63 248.81,123.95 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline251"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="248.41,123.95 249.21,123.95 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline253"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="264.38,118.08 265.18,118.08 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline255"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="264.78,118.08 264.78,128.40 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline257"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="264.38,128.40 265.18,128.40 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline259"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="276.35,114.07 277.15,114.07 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline261"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="276.75,114.07 276.75,123.55 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline263"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="276.35,123.55 277.15,123.55 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline265"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="304.30,125.22 305.09,125.22 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline267"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="304.69,125.22 304.69,134.82 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline269"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="304.30,134.82 305.09,134.82 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline271"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="332.24,123.17 333.04,123.17 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline273"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="332.64,123.17 332.64,132.50 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline275"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="332.24,132.50 333.04,132.50 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline277"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="356.19,107.86 356.99,107.86 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline279"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="356.59,107.86 356.59,115.07 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline281"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="356.19,115.07 356.99,115.07 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline283"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="388.12,110.70 388.92,110.70 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline285"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="388.52,110.70 388.52,119.08 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline287"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="388.12,119.08 388.92,119.08 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline289"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="416.06,114.58 416.86,114.58 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline291"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="416.46,114.58 416.46,123.72 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline293"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="416.06,123.72 416.86,123.72 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline295"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="220.87,92.83 248.81,111.82 264.78,124.42 276.75,119.66 304.69,126.50 332.64,134.95 356.59,121.92 388.52,134.28 416.46,143.40 "
+     style="stroke:#00bfff;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline297"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="220.87,93.02 248.81,117.84 264.78,123.20 276.75,118.79 304.69,130.11 332.64,127.63 356.59,111.45 388.52,114.90 416.46,119.05 "
+     style="stroke:#00008b;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline299"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:21.4286px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1.125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="402.56052"
+     y="96.454178"
+     id="text4511-3-7-1-2"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6-5-8-0"
+       style="font-size:12px;fill:#4d4d4d;stroke-width:1.125px"
+       x="402.56052"
+       y="96.454178">*</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:21.4286px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1.125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="375.65927"
+     y="96.454178"
+     id="text4511-3-7-1-7"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6-5-8-9"
+       style="font-size:12px;fill:#4d4d4d;stroke-width:1.125px"
+       x="375.65927"
+       y="96.454178">*</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:21.4286px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1.125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="345.758"
+     y="96.454178"
+     id="text4511-3-7-1"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509-6-5-8"
+       style="font-size:12px;fill:#4d4d4d;stroke-width:1.125px"
+       x="345.758"
+       y="96.454178">*</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;white-space:pre;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="254.08417"
+     y="18.261084"
+     id="text7164-3"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan7162-6"
+       style="font-weight:bold;stroke-width:0.75px"
+       x="254.08417"
+       y="18.261084">B. Nutrients</tspan></text>
+  <polyline
+     points="218.79,256.01 218.79,5.48 "
+     style="stroke-width:1.07;stroke-linecap:butt"
+     id="polyline303"
+     transform="matrix(0.93223475,0,0,0.65617261,13.173564,1.4764699)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <text
+     x="213.86"
+     y="172.38"
+     text-anchor="end"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="13.98"
+     lengthAdjust="spacingAndGlyphs"
+     id="text307"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">0.5</text>
+  <text
+     x="213.86"
+     y="95.529999"
+     text-anchor="end"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="13.98"
+     lengthAdjust="spacingAndGlyphs"
+     id="text309"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">0.6</text>
+  <text
+     x="213.86"
+     y="18.68"
+     text-anchor="end"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="13.98"
+     lengthAdjust="spacingAndGlyphs"
+     id="text311"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">0.7</text>
+  <polyline
+     points="216.05,169.17 218.79,169.17 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline315"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="216.05,92.32 218.79,92.32 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline317"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="216.05,15.47 218.79,15.47 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline319"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="218.79,256.01 426.52,256.01 "
+     style="stroke-width:1.07;stroke-linecap:butt"
+     id="polyline321"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="228.85,258.75 228.85,256.01 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline323"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="256.79,258.75 256.79,256.01 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline325"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="284.74,258.75 284.74,256.01 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline327"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="312.68,258.75 312.68,256.01 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline329"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="340.62,258.75 340.62,256.01 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline331"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="368.56,258.75 368.56,256.01 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline333"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="396.50,258.75 396.50,256.01 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline335"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <polyline
+     points="424.44,258.75 424.44,256.01 "
+     style="stroke:#333333;stroke-width:1.07;stroke-linecap:butt"
+     id="polyline337"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <text
+     x="228.85001"
+     y="268.35001"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="5.5900002"
+     lengthAdjust="spacingAndGlyphs"
+     id="text339"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">0</text>
+  <text
+     x="256.79001"
+     y="268.35001"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="5.5900002"
+     lengthAdjust="spacingAndGlyphs"
+     id="text341"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">7</text>
+  <text
+     x="284.73999"
+     y="268.35001"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="11.19"
+     lengthAdjust="spacingAndGlyphs"
+     id="text343"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">14</text>
+  <text
+     x="312.67999"
+     y="268.35001"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="11.19"
+     lengthAdjust="spacingAndGlyphs"
+     id="text345"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">21</text>
+  <text
+     x="340.62"
+     y="268.35001"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="11.19"
+     lengthAdjust="spacingAndGlyphs"
+     id="text347"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">28</text>
+  <text
+     x="368.56"
+     y="268.35001"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="11.19"
+     lengthAdjust="spacingAndGlyphs"
+     id="text349"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">35</text>
+  <text
+     x="396.5"
+     y="268.35001"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="11.19"
+     lengthAdjust="spacingAndGlyphs"
+     id="text351"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">42</text>
+  <text
+     x="424.44"
+     y="268.35001"
+     text-anchor="middle"
+     style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
+     textLength="11.19"
+     lengthAdjust="spacingAndGlyphs"
+     id="text353"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-67.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">49</text>
+  <text
+     x="322.66"
+     y="280.10001"
+     text-anchor="middle"
+     style="font-size:11px;font-family:Arial"
+     textLength="129.21001"
+     lengthAdjust="spacingAndGlyphs"
+     id="text355"
+     transform="matrix(0.93223475,0,0,0.92560142,13.173564,-61.5)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">Days in the experiment</text>
+  <line
+     x1="291.17529"
+     y1="15.776917"
+     x2="304.05878"
+     y2="15.776917"
+     style="stroke:#00bfff;stroke-width:0.993936;stroke-linecap:butt"
+     id="line361"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <line
+     x1="291.17529"
+     y1="15.776917"
+     x2="304.05878"
+     y2="15.776917"
+     style="stroke:#00bfff;stroke-width:0.993936;stroke-linecap:butt"
+     id="line363"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <line
+     x1="348.27466"
+     y1="15.776917"
+     x2="361.15814"
+     y2="15.776917"
+     style="stroke:#00008b;stroke-width:0.993936;stroke-linecap:butt"
+     id="line365"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <line
+     x1="348.27466"
+     y1="15.776917"
+     x2="361.15814"
+     y2="15.776917"
+     style="stroke:#00008b;stroke-width:0.993936;stroke-linecap:butt"
+     id="line367"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
+  <text
+     x="319.23999"
+     y="234.17"
+     style="font-size:8.8px;font-family:Arial"
+     textLength="37.060001"
+     lengthAdjust="spacingAndGlyphs"
+     id="text369"
+     transform="matrix(0.93223475,0,0,0.92560142,8.673564,-198)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">Ambient</text>
+  <text
+     x="380.48999"
+     y="234.17"
+     style="font-size:8.8px;font-family:Arial"
+     textLength="18.790001"
+     lengthAdjust="spacingAndGlyphs"
+     id="text371"
+     transform="matrix(0.93223475,0,0,0.92560142,8.673564,-198)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">NH<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan13333">4</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:14.2857px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="164.92932"
+     y="134.36372"
+     id="text4511"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/5.YII/Outputs/YII.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan4509"
+       style="font-size:8px;fill:#4d4d4d;stroke-width:0.75px"
+       x="164.92932"
+       y="134.36372">a</tspan></text>
+</svg>

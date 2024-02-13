@@ -1,0 +1,308 @@
+---
+title: "Acer_YII_Disease"
+author: "Ana M. Palacio"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+      toc: true
+      df_print: paged
+      theme: united
+bibliography: packages.bib
+nocite: '@*'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE, fig.width=7, fig.height=7 )
+```
+
+# General project set-up 
+
+```{r libraries, results="hide"}
+
+# Get all libraries and sources required to run the script
+
+library(dplyr)
+library(plyr)
+library(reshape2)
+library(ggplot2)
+library(ggthemes)
+library(ggpubr)
+
+theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
+                              panel.grid.minor = element_blank(), 
+                              axis.line = element_line(colour = "black"),
+                              legend.position="none",
+                              axis.text.x = element_text(angle = 90, 
+                                                         vjust = 0.5),
+                              plot.title = element_text(size=12,
+                                                        face="bold"),
+                              #panel.border = element_rect(colour = "black",
+                              #fill=NA, size=1)
+                              panel.border = element_blank()
+                              ))
+
+# Treatment colour
+  Fill.colour <- scale_colour_manual(values =
+                     c("deepskyblue", "indianred1", "blue4", "red4"))
+  Fill.colour2 <- scale_colour_manual(values =
+                     c("deepskyblue", "blue4"))
+
+# Models 
+  library(lme4)
+  library(multcomp)
+  library(multcompView)
+  library(emmeans)
+  library(effects)
+  library(lmerTest)
+```
+
+# Data and data clean-up 
+
+```{r}
+
+# 1. Import data: 
+
+  # Long format Ssid YII
+    YII.Tall<-read.csv("Data/YII_tall.csv")
+
+  # Wide format 
+    # YII.wide<- YII.Tall<-readRDS("Data/YII.Wide.rds")
+    # YII.Wide<-read.csv("Data/YII_Wide.csv")
+  
+  #summary(YII.Tall)
+
+
+# 2. Data clean-up an types: 
+  
+  # Variable types 
+    #YII.nutrients$Time <- as.factor(YII.nutrients$Time)
+    YII.Tall$Time<-as.numeric(YII.Tall$Time)
+    YII.Tall$Date<-as.Date(YII.Tall$Date, "%Y-%m-%d")
+    YII.Tall$Days<-(as.numeric(YII.Tall$Date)-18518)
+    YII.Tall$Date[which(YII.Tall$Date=="2020-09-04")]<-"2020-09-02"
+    YII.Tall$Date<-as.Date(YII.Tall$Date, "%Y-%m-%d")
+    YII.Tall<-filter(YII.Tall, Date!="2020-10-29")
+  
+  # Remove-unused data    
+    Extras <- YII.Tall[which (YII.Tall$Nutrients=="Extra"), ]
+    #YII.Tall <- droplevels(YII.Tall[!rownames(YII.Tall) %in%
+    #                                     rownames(Extras), ])
+    
+    Error <- YII.Tall[which (YII.Tall$YII==0), ]
+    # YII.Tall <- droplevels(YII.Tall[!rownames(YII.Tall) %in%
+    #                                     rownames(Error), ])
+    
+    YII.Tall<-filter(YII.Tall, Genotype!="U41")
+    #YII.Tall$Genotype <- droplevels(YII.Tall$Genotype)
+    YII.Tall$Genotype<-factor(YII.Tall$Genotype, 
+                              levels=c("FM19", "FM6", "FM9", "U44",
+                                       "FM14", "Elkhorn","K2",
+                                      "Acerv2", "Kelsey-1", "Cooper-9"))
+
+    
+  # Treatments
+    YII.Tall$Nutrients<-factor(YII.Tall$Nutrients, 
+                             levels= c("Ambient", "NH4"), ordered=TRUE)
+    YII.Tall$Disease<-factor(YII.Tall$Disease, 
+                             levels= c("Placebo", "Pathogen"),
+                             ordered=TRUE)
+    YII.Tall$Treatment<-paste(YII.Tall$Nutrients, YII.Tall$Disease,
+                              sep = "-")
+    YII.Tall$Treatment<-factor(YII.Tall$Treatment,
+                              levels = c("Ambient-Placebo",
+                                         "Ambient-Pathogen",
+                                         "NH4-Placebo", "NH4-Pathogen"))
+  # Replicates
+    YII.Tall$Tank<-factor(YII.Tall$Tank, ordered=FALSE)
+    YII.Tall$Genotype<-factor(YII.Tall$Genotype, ordered=FALSE)
+  
+  summary(YII.Tall)
+
+# Subset data  
+YII.CRF<-YII.Tall[which(YII.Tall$Genotype=='K2'|
+                      YII.Tall$Genotype=='U41'|
+                      YII.Tall$Genotype=='U44'), ]
+
+YII.UM<-YII.Tall[which(YII.Tall$Genotype=='Acerv2'|
+                      YII.Tall$Genotype=='Cooper-9'|
+                      YII.Tall$Genotype=='Elkhorn'|
+                      YII.Tall$Genotype=='Kelsey-1'), ]
+
+YII.FWC<-YII.Tall[which(YII.Tall$Genotype=='FM14'|
+                      YII.Tall$Genotype=='FM6'|
+                      YII.Tall$Genotype=='FM19'|
+                      YII.Tall$Genotype=='FM9'), ]
+
+
+LastTreatment<-YII.Tall[which(YII.Tall$Time=='12'|YII.Tall$Time=='13'), ]
+
+YII.Nutrients<-YII.Tall[YII.Tall$Days>-3,]
+YII.Nutrients<-YII.Nutrients[YII.Nutrients$Days<51,]
+```
+
+# Data exploration
+
+# Genotype
+
+```{r}
+YII_Genet<- ggplot(YII.Nutrients, aes (Genotype, YII, fill=Genotype)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun=mean, geom="point", shape=21) + 
+  #geom_jitter(alpha=0.5, shape=21)+
+  theme(legend.position ="none",
+        axis.title.x = element_blank())+
+  scale_y_continuous(limits = c(0.4, .70),
+                         breaks = seq(0, 0.7, 0.1),  
+                         expand = c(0.01, 0.01),
+                         name=("YII (Fv/Fm)"))
+YII_Genet  
+```
+
+# Nutrient treatment
+
+```{r}
+YII_Nutrients<- ggplot(YII.Nutrients, aes (Days, YII, colour=Nutrients)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun=mean, geom="line") + 
+  #geom_jitter(alpha=0.5, shape=21)+
+  theme(legend.position = c(0.5, 0.1), legend.direction = "horizontal",
+        axis.text.x = element_text(angle = 0),
+         axis.title.y = element_blank())+
+  scale_y_continuous(limits = c(0.4, .70),
+                         breaks = seq(0, 0.7, 0.1),  
+                         expand = c(0.01, 0.01),
+                         name=("YII (Fv/Fm)"))+
+  scale_x_continuous(limits = c(-2, 49),
+                         breaks = seq(0, 50, 7),  
+                         expand = c(0.01, 0.01),
+                         name=("Days in the experiment"))+
+  Fill.colour2
+YII_Nutrients  
+```
+
+```{r}
+YII_plot<-ggarrange(YII_Genet, YII_Nutrients,
+                ncol = 2, nrow = 1, widths = c(0.9, 1.1))
+ggsave(file="Outputs/Figure_2_YII.svg", plot=YII_plot, dpi = 300, width=6, height=4)
+```
+
+## Genotype + Treatment
+
+```{r}
+# Genotype
+YII_Genet<- ggplot(YII.Nutrients, aes (Days, YII, colour=Genotype)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun=mean, geom="line") + 
+  #geom_jitter(alpha=0.5, shape=21)+
+  theme(legend.position = "bottom")+
+  scale_y_continuous(limits = c(0.4, .70),
+                         breaks = seq(0, 0.7, 0.1),  
+                         expand = c(0.01, 0.01),
+                         name=("YII (Fv/Fm)"))+
+  scale_x_continuous(limits = c(-2, 49),
+                         breaks = seq(0, 50, 7),  
+                         expand = c(0.01, 0.01),
+                         name=("Days in the experiment"))+
+   annotate("rect",xmin=48, ymin=0.2, xmax = 49, ymax = 0.7, 
+               alpha=0.5)+
+  # Tissue samples
+  annotate("point",x=c(47), y=c(0.7), 
+           shape=4, size=2)+
+  annotate("point",x=c(58), y=c(0.7), 
+           shape=4, size=2)
+YII_Genet  
+#YII_Genet+ facet_wrap(~Nutrients)
+#YII_Genet+ facet_wrap(~Disease)
+#YII_Genet+ facet_wrap(Nutrients~Disease)
+```
+
+```{r}
+YII_Genet2<- ggplot(YII.Nutrients, aes (Days, YII, colour=factor(Treatment), shape=Nutrients)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun=mean, geom="line") + 
+  stat_summary(fun=mean, geom="point") +
+  #geom_jitter(alpha=0.2)+
+  theme(legend.position = "bottom")+
+  scale_y_continuous(limits = c(0.4, .70),
+                         breaks = seq(0, 0.7,0.1),  
+                         expand = c(0.01, 0.01),
+                         name=("YII (Fv/Fm)"))+
+  scale_x_continuous(limits = c(-2, 59),
+                         breaks = seq(0, 60, 7),  
+                         expand = c(0.01, 0.01),
+                         name=("Days in the experiment"))+
+  Fill.colour
+
+#YII_Genet2+ facet_wrap(Genotype~.)
+```
+
+
+```{r}
+YII_Genet<- ggplot(YII.Nutrients, aes (Days, YII, colour=factor(Nutrients), shape=Nutrients)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun=mean, geom="line") + 
+  stat_summary(fun=mean, geom="point") +
+  #geom_jitter(alpha=0.2)+
+  theme(legend.position = "bottom")+
+  scale_y_continuous(limits = c(0.3, .73),
+                         breaks = seq(0, 0.7,0.2),  
+                         expand = c(0.01, 0.01),
+                         name=("YII (Fv/Fm)"))+
+  scale_x_continuous(limits = c(-2, 59),
+                         breaks = seq(0, 60, 7),  
+                         expand = c(0.01, 0.01),
+                         name=("Days in the experiment"))
+  #Fill.colour
+
+YII_Genet+ facet_wrap(Genotype~.)
+```
+
+# Model selection 
+
+```{r StatsForTreattmentandTime}
+# More complex model 
+YII.Nutrients<-subset(YII.Nutrients, Days<49)
+YII.Nutrients$DayF<-as.factor(YII.Nutrients$Days)
+
+LM_1 <- lmer(YII ~ Nutrients * DayF * Genotype + 
+                             (1|Fragment), REML=TRUE, data= YII.Nutrients)
+
+step(LM_1)
+LM_2 <- lmer(YII ~ Nutrients + DayF + Genotype + (1 | Fragment) + Nutrients:DayF + DayF:Genotype,  data= YII.Nutrients)
+ 
+# Select model
+anova(LM_1, LM_2, refit=FALSE)
+
+```
+
+# Final model and pairwise comparissions
+
+```{r}
+LM_Nutrients_Days<-lmer(YII ~ Nutrients + DayF + Genotype + 
+                          (1 | Fragment) + 
+                          Nutrients:DayF + DayF:Genotype,  data= YII.Nutrients)
+  anova(LM_Nutrients_Days)
+  #summary(LM_Nutrients_Days)
+  #coef(LM_Nutrients_Days)
+  #fitted(LM_Nutrients_Days)
+      
+  #layout(matrix(1:4,2,2))  
+  #plot(LM_Nutrients_Days)  
+      
+plot(Effect(c("Nutrients","DayF"), LM_1), x.var="DayF", multiline=T, ci.style="bars")
+
+#  Pair-wise comparisons
+## Nutrients only
+cld(emmeans(LM_Nutrients_Days, "Nutrients"))
+## Genotype only
+cld(emmeans(LM_Nutrients_Days, "Genotype"))
+## Nutrients by day
+cld(emmeans(LM_Nutrients_Days,  ~ Nutrients | DayF))
+```
+
+# Packages used
+
+```{r}
+# Creates bibliography 
+#knitr::write_bib(c(.packages()), "packages.bib")
+```
