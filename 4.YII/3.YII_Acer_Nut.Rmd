@@ -221,11 +221,11 @@ cld(emmeans(Model, "Nutrients"))
 YIIAcer_G_Emm<-cld(emmeans(Model, ~Genotype, by="DayF"))
   #YIIAcer_G_Emm<-YIIAcer_G_Emm[order(YIIAcer_G_Emm$DayF, YIIAcer_G_Emm$Genotype), ]
   YIIAcer_G_Emm
-  write.csv(YIIAcer_G_Emm, "Outputs/YII_Genotype_Emm.csv")
+  #write.csv(YIIAcer_G_Emm, "Outputs/YII_Genotype_Emm.csv")
 
 YIIAcer_N_Emm<-cld(emmeans(Model, ~Nutrients, by="DayF"))
   YIIAcer_N_Emm
-  write.csv(YIIAcer_N_Emm, "Outputs/YII_Nut_Emm.csv")
+  #write.csv(YIIAcer_N_Emm, "Outputs/YII_Nut_Emm.csv")
 
 ```
 

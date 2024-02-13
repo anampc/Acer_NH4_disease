@@ -1,0 +1,94 @@
+﻿Sample.Name,Genotype,Notes,Nutrients,Disease,Timepoint,File.Name,A.CT.mean,Acerv.CT.mean,A.CT.sd,Acerv.CT.sd,A.reps,Acerv.reps,A.Acerv
++,N/A,,N/A,N/A,N/A,DK_T1_Subsample_1.csv,7.3355,7.894,0.333047294,0.275771645,2,2,0.39530625
+A004,Kelsey-1,,Ambient,Pathogen,T1,DK_T1_Subsample_1.csv,21.6985,23.66,0.044547727,0.257386868,2,2,1.045391019
+235,FM6,,NH4,Pathogen,T1,DK_T1_Subsample_1.csv,21.012,24.212,0.004242641,0.1668772,2,2,2.466632302
+A104,U44,,Ambient,Pathogen,T1,DK_T1_Subsample_1.csv,20.3715,26.338,0.072831998,0.783474314,2,2,16.78432567
+A012,Kelsey-1,,Ambient,Placebo,T1,DK_T1_Subsample_1.csv,21.594,24.769,0.156977705,0.053740115,2,2,2.424257035
+A028,Cooper-9,,Ambient,Placebo,T1,DK_T1_Subsample_1.csv,22.158,25.028,0.12303658,0.28991378,2,2,1.962295988
+A047,Acerv2,,Ambient,Placebo,T1,DK_T1_Subsample_1.csv,21.694,27.0285,0.045254834,0.193040151,2,2,10.83061057
+A069,Elkhorn,,Ambient,Placebo,T1,DK_T1_Subsample_1.csv,21.123,24.598,0.172534055,0.050911688,2,2,2.984610506
+A110,U41,,Ambient,Pathogen,T1,DK_T1_Subsample_1.csv,20.815,24.6925,0.06363961,0.376887914,2,2,3.945047499
+A180,FM19,,Ambient,Pathogen,T1,DK_T1_Subsample_1.csv,20.473,24.611,0.021213203,0.213546248,2,2,4.725747905
+228,FM9,,Ambient,Pathogen,T1,DK_T1_Subsample_1.csv,20.613,23.427,0.065053824,0.082024387,2,2,1.887586385
+230,FM6,,Ambient,Pathogen,T1,DK_T1_Subsample_1.csv,20.5935,24.173,0.316076731,0.154149278,2,2,3.208819572
+281,FM14,,Ambient,Pathogen,T1,DK_T1_Subsample_1.csv,21.02,23.57,0.106066017,0.22627417,2,2,1.571936207
+A011,U44,,NH4,Pathogen,T1,DK_T1_Subsample_1.csv,21.026,23.5155,0.008485281,0.214253355,2,2,1.507379493
+A064,Elkhorn,,NH4,Pathogen,T1,DK_T1_Subsample_1.csv,21.038,25.463,0.164048773,0.125865007,2,2,5.76588743
+A100,Kelsey-1,,NH4,Pathogen,T1,DK_T1_Subsample_1.csv,21.645,23.0855,0.333754401,0.098287843,2,2,0.728521104
+A125,U41,,NH4,Pathogen,T1,DK_T1_Subsample_1.csv,21.168,24.997,0.052325902,0.005656854,2,2,3.814628787
+A152,K2,,NH4,Pathogen,T1,DK_T1_Subsample_1.csv,20.5585,24.766,0.0417193,0.028284271,2,2,4.95897747
+A175,FM19,,NH4,Pathogen,T1,DK_T1_Subsample_1.csv,21.724,25.9665,0.917824602,0.019091883,2,2,5.080754202
+A066,Elkhorn,,Ambient,Pathogen,T1,DK_T1_Subsample_1.csv,20.7355,25.573,0.109601551,0.571342279,2,2,7.674339936
+201,FM9,,NH4,Pathogen,T1,DK_T1_Subsample_1.csv,21.332,23.356,0.094752309,0.025455844,2,2,1.091674434
+289,FM14,,NH4,Pathogen,T1,DK_T1_Subsample_1.csv,21.2145,23.9885,0.016263456,0.113844192,2,2,1.835970236
++,N/A,,N/A,N/A,N/A,DK_T1_Subsample_2.csv,7.8605,7.051,0.502752921,1.15116984,2,2,0.153152696
+A091,U44,,Ambient,Placebo,T1,DK_T1_Subsample_2.csv,21.4185,25.851,0.102530483,0.135764502,2,2,5.795940043
+A154,K2,,Ambient,Placebo,T1,DK_T1_Subsample_2.csv,19.8505,27.2465,0.222738636,0.253851334,2,2,45.20914319
+A186,FM19,,Ambient,Placebo,T1,DK_T1_Subsample_2.csv,21.1285,25.9385,0.000707107,0.338704148,2,2,7.529440532
+218,FM9,,Ambient,Placebo,T1,DK_T1_Subsample_2.csv,21.573,24.6915,0.065053824,0.283549819,2,2,2.331151344
+245,FM6,,Ambient,Placebo,T1,DK_T1_Subsample_2.csv,21.2165,24.9825,0.426385389,0.355674711,2,2,3.651635261
+268,FM14,,Ambient,Placebo,T1,DK_T1_Subsample_2.csv,21.354,23.1045,0.185261977,0.053033009,2,2,0.903153222
+A006,U44,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2.csv,21.808,26.8515,0.080610173,0.012020815,2,2,8.852240645
+A013,Kelsey-1,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2.csv,23.231,22.9015,0.004242641,0.023334524,2,2,0.213608753
+A020,Cooper-9,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2.csv,20.942,23.389,0.009899495,0.06363961,2,2,1.46362166
+A042,Acerv2,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2.csv,21.504,24.8675,0.311126984,0.023334524,2,2,2.762630606
+A065,Elkhorn,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2.csv,21.992,24.1745,0.272943218,0.201525433,2,2,1.218446301
+A178,FM19,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2.csv,21.32,23.7525,0.138592929,0.226981277,2,2,1.448985011
+207,FM9,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2.csv,21.211,24.0025,0.318198052,0.095459415,2,2,1.858376313
+244,FM6,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2.csv,22.034,22.3715,0.487903679,0.33163308,2,2,0.339161113
+263,FM14,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2.csv,21.4085,22.915,0.071417785,0.015556349,2,2,0.762623383
+410,K2,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2.csv,20.2095,25.2595,0.118086832,0.060104076,2,2,8.892214013
+A014,Kelsey-1,,NH4,Placebo,T1,DK_T1_Subsample_2.csv,22.7775,22.704,0.168998521,0.171119841,2,2,0.255083709
+A036,Cooper-9,,NH4,Placebo,T1,DK_T1_Subsample_2.csv,21.717,22.3225,0.376180808,0.136471609,2,2,0.408396575
+A051,Acerv2,,NH4,Placebo,T1,DK_T1_Subsample_2.csv,21.7435,22.9705,0.065760931,0.098287843,2,2,0.628307484
+A077,Elkhorn,,NH4,Placebo,T1,DK_T1_Subsample_2.csv,21.3525,23.177,0.047376154,0.340825469,2,2,0.950687219
+A105,U44,,NH4,Placebo,T1,DK_T1_Subsample_2.csv,20.8525,22.874,0.511238203,0.053740115,2,2,1.089784344
+A162,K2,,NH4,Placebo,T1,DK_T1_Subsample_2.csv,21.058,25.1005,0.367695526,0.355674711,2,2,4.423053433
+NTC,N/A,,N/A,N/A,N/A,DK_T1_Subsample_2.csv,NA,34.161,NA,NA,0,1,NA
++,N/A,,N/A,N/A,N/A,DK_T1_Subsample_1_redo.csv,7.6895,8.0895,0.195868578,0.007778175,2,2,0.354177058
+201,FM9,,NH4,Pathogen,T1,DK_T1_Subsample_1_redo.csv,21.455,23.687,0.094752309,0.089095454,2,2,1.26097762
+228,FM9,,Ambient,Pathogen,T1,DK_T1_Subsample_1_redo.csv,20.8695,23.7225,0.225567063,0.072831998,2,2,1.939308969
+230,FM6,,Ambient,Pathogen,T1,DK_T1_Subsample_1_redo.csv,20.5395,24.2975,0.099702056,0.126572114,2,2,3.631442334
+235,FM6,,NH4,Pathogen,T1,DK_T1_Subsample_1_redo.csv,21.05,24.4435,0.154149278,0.241123412,2,2,2.820679347
+281,FM14,,Ambient,Pathogen,T1,DK_T1_Subsample_1_redo.csv,21.1095,23.8635,0.235466558,0.258093975,2,2,1.810693892
+289,FM14,,NH4,Pathogen,T1,DK_T1_Subsample_1_redo.csv,21.3975,24.731,0.113844192,0.946108873,2,2,2.70577649
+A004,Kelsey-1,,Ambient,Pathogen,T1,DK_T1_Subsample_1_redo.csv,21.8255,23.944,0.043133514,0.026870058,2,2,1.165575672
+A011,U44,,NH4,Pathogen,T1,DK_T1_Subsample_1_redo.csv,21.05,23.7805,0.287085353,0.050204581,2,2,1.78143849
+A012,Kelsey-1,,Ambient,Placebo,T1,DK_T1_Subsample_1_redo.csv,21.7845,24.85,0.129400541,0.018384776,2,2,2.247066267
+A028,Cooper-9,,Ambient,Placebo,T1,DK_T1_Subsample_1_redo.csv,22.3835,25.3045,0.062932504,0.10111627,2,2,2.032904821
+A047,Acerv2,,Ambient,Placebo,T1,DK_T1_Subsample_1_redo.csv,21.559,27.227,0.458205194,0.011313708,2,2,13.64729074
+A064,Elkhorn,,NH4,Pathogen,T1,DK_T1_Subsample_1_redo.csv,21.006,25.614,0.222031529,0.024041631,2,2,6.545678167
+A066,Elkhorn,,Ambient,Pathogen,T1,DK_T1_Subsample_1_redo.csv,20.6295,25.6495,0.253851334,0.446184379,2,2,8.709214895
+A069,Elkhorn,,Ambient,Placebo,T1,DK_T1_Subsample_1_redo.csv,21.167,24.9,0.032526912,0.028284271,2,2,3.569056328
+A100,Kelsey-1,,NH4,Pathogen,T1,DK_T1_Subsample_1_redo.csv,21.613,23.4425,0.096166522,0.098287843,2,2,0.953987766
+A104,U44,,Ambient,Pathogen,T1,DK_T1_Subsample_1_redo.csv,20.6385,26.2,0.335875721,0.120208153,2,2,12.67613189
+A110,U41,,Ambient,Pathogen,T1,DK_T1_Subsample_1_redo.csv,21.2345,25.27,0.419314321,0.247487373,2,2,4.401644624
+A125,U41,,NH4,Pathogen,T1,DK_T1_Subsample_1_redo.csv,21.5035,25.4415,0.358503138,0.119501046,2,2,4.114002501
+A152,K2,,NH4,Pathogen,T1,DK_T1_Subsample_1_redo.csv,20.784,25.1515,0.012727922,0.092630988,2,2,5.540601745
+A175,FM19,,NH4,Pathogen,T1,DK_T1_Subsample_1_redo.csv,22.0675,26.196,1.371080049,0.022627417,2,2,4.694731568
+A180,FM19,,Ambient,Pathogen,T1,DK_T1_Subsample_1_redo.csv,20.676,24.8035,0.091923882,0.088388348,2,2,4.691478555
++,N/A,,N/A,N/A,N/A,DK_T1_Subsample_2_redo.csv,8.622,5.5705,0.127279221,0.108187338,2,2,0.032375419
+207,FM9,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2_redo.csv,21.8405,24.572,0.2085965,0.120208153,2,2,1.782673717
+218,FM9,,Ambient,Placebo,T1,DK_T1_Subsample_2_redo.csv,22.28,24.9865,0.322440692,0.072831998,2,2,1.75204845
+244,FM6,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2_redo.csv,22.8285,22.989,0.724784451,0.296984848,2,2,0.300001719
+245,FM6,,Ambient,Placebo,T1,DK_T1_Subsample_2_redo.csv,22.486,25.566,NA,0.37335238,1,2,2.269764583
+263,FM14,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2_redo.csv,22.14,23.4925,0.045254834,0.102530483,2,2,0.685411675
+268,FM14,,Ambient,Placebo,T1,DK_T1_Subsample_2_redo.csv,22.3185,23.725,0.142128463,0.12303658,2,2,0.711552776
+410,K2,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2_redo.csv,20.9205,26.435,0.086974134,0.842871283,2,2,12.26982418
+A006,U44,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2_redo.csv,22.5855,27.4605,0.263750829,0.034648232,2,2,7.876434346
+A013,Kelsey-1,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2_redo.csv,24.0255,23.4015,0.031819805,0.026162951,2,2,0.174166936
+A014,Kelsey-1,,NH4,Placebo,T1,DK_T1_Subsample_2_redo.csv,23.7255,23.303,0.137885822,0.223445743,2,2,0.200273393
+A020,Cooper-9,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2_redo.csv,22.0785,24.0885,0.306177236,0.348603643,2,2,1.081131994
+A036,Cooper-9,,NH4,Placebo,T1,DK_T1_Subsample_2_redo.csv,22.644,23.085,0.101823376,0.079195959,2,2,0.364386817
+A042,Acerv2,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2_redo.csv,21.967,25.4215,0.036769553,0.195868578,2,2,2.942500521
+A051,Acerv2,,NH4,Placebo,T1,DK_T1_Subsample_2_redo.csv,22.7205,23.477,0.154856385,0.06363961,2,2,0.453458576
+A065,Elkhorn,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2_redo.csv,22.623,24.529,0.056568542,0.223445743,2,2,1.005938894
+A077,Elkhorn,,NH4,Placebo,T1,DK_T1_Subsample_2_redo.csv,22.1295,23.4945,0.185969083,0.010606602,2,2,0.691376116
+A091,U44,,Ambient,Placebo,T1,DK_T1_Subsample_2_redo.csv,22.1,26.405,0.012727922,0.132936075,2,2,5.305698408
+A105,U44,,NH4,Placebo,T1,DK_T1_Subsample_2_redo.csv,22.179,23.4625,0.287085353,0.1251579,2,2,0.653401952
+A154,K2,,Ambient,Placebo,T1,DK_T1_Subsample_2_redo.csv,20.4455,27.545,0.060104076,0.552957503,2,2,36.81042932
+A162,K2,,NH4,Placebo,T1,DK_T1_Subsample_2_redo.csv,21.8505,25.651,0.028991378,0.007071068,2,2,3.740011408
+A178,FM19,"given placebo treatment in 1st infection trial, given pathogen treatment in 2nd infection trial",Ambient,Pathogen*,T1,DK_T1_Subsample_2_redo.csv,22.0225,24.155,0.096873629,0.12303658,2,2,1.176941547
+A186,FM19,,Ambient,Placebo,T1,DK_T1_Subsample_2_redo.csv,21.961,26.2665,0.155563492,0.112429978,2,2,5.307537542
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
