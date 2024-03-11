@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    class="svglite"
    width="504.00pt"
    height="504.00pt"
@@ -14,10 +7,17 @@
    version="1.1"
    id="svg1041"
    sodipodi:docname="Tanks_edited.svg"
-   inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks.png"
+   inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata
      id="metadata1045">
     <rdf:RDF>
@@ -26,7 +26,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,17 +38,19 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1844"
+     inkscape:window-width="1846"
      inkscape:window-height="1043"
      id="namedview1043"
      showgrid="false"
      inkscape:zoom="1"
-     inkscape:cx="336"
-     inkscape:cy="321"
-     inkscape:window-x="76"
+     inkscape:cx="336.5"
+     inkscape:cy="318"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg1041" />
+     inkscape:current-layer="svg1041"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="pt" />
   <defs
      id="defs4">
     <style
@@ -98,13 +99,17 @@
   </defs>
   <g
      clip-path="url(#cpMC4wMHw1MDQuMDB8MC4wMHwxNjguMDA=)"
-     id="g22">
+     id="g22"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"
+     transform="matrix(1,0,0,1.1764614,0,-29.645508)">
     <rect
-       x="0.00"
-       y="-0.000000000000085"
-       width="504.00"
-       height="168.00"
-       style="stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;"
+       x="0"
+       y="-8.5e-14"
+       width="504"
+       height="168"
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:1.07"
        id="rect20" />
   </g>
   <g
@@ -131,797 +136,1322 @@
        width="460.55"
        height="154.30"
        style="stroke-width: 1.07; stroke: none; fill: #FFFFFF;"
-       id="rect31" />
+       id="rect31"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="41.11,14.57 41.11,14.57 48.94,15.91 48.94,15.91 56.77,18.52 56.77,18.52 64.60,21.80 64.60,21.80 72.44,25.55 72.44,25.55 80.27,21.92 80.27,21.92 88.10,23.01 88.10,23.01 95.93,23.92 95.93,23.92 103.77,18.44 103.77,18.44 111.60,23.00 111.60,23.00 119.43,24.28 119.43,24.28 127.26,32.27 127.26,32.27 135.10,38.26 135.10,38.26 142.93,43.24 142.93,43.24 150.76,51.69 150.76,51.69 158.59,46.36 158.59,46.36 166.43,43.71 166.43,43.71 174.26,36.80 174.26,36.80 182.09,21.94 182.09,21.94 189.92,18.57 189.92,18.57 197.76,24.29 197.76,24.29 205.59,40.47 205.59,40.47 213.42,61.84 213.42,61.84 221.25,62.43 221.25,62.43 229.09,58.59 229.09,58.59 236.92,56.92 236.92,56.92 244.75,60.76 244.75,60.76 252.58,54.66 252.58,54.66 260.41,59.84 260.41,59.84 268.25,65.10 268.25,65.10 276.08,65.25 276.08,65.25 283.91,64.14 283.91,64.14 291.74,63.19 291.74,63.19 299.58,64.75 299.58,64.75 307.41,68.81 307.41,68.81 315.24,67.75 315.24,67.75 323.07,72.65 323.07,72.65 330.91,84.37 330.91,84.37 338.74,84.36 338.74,84.36 346.57,62.91 346.57,62.91 354.40,45.18 354.40,45.18 362.24,43.21 362.24,43.21 370.07,44.08 370.07,44.08 377.90,42.45 377.90,42.45 385.73,35.83 385.73,35.83 393.57,31.20 393.57,31.20 401.40,34.19 401.40,34.19 409.23,37.91 409.23,37.91 417.06,52.89 417.06,52.89 424.90,60.77 424.90,60.77 432.73,66.68 432.73,66.68 440.56,78.67 440.56,78.67 448.39,96.02 448.39,96.02 456.23,105.98 456.23,105.98 464.06,103.80 464.06,103.80 471.89,109.95 471.89,109.95 "
        style="stroke-width: 1.07; stroke: #999999; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;"
-       id="polyline33" />
+       id="polyline33"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="41.11,14.57 41.11,14.57 48.94,15.91 48.94,15.91 56.77,18.52 56.77,18.52 64.60,21.80 64.60,21.80 72.44,25.55 72.44,25.55 80.27,21.92 80.27,21.92 88.10,23.01 88.10,23.01 95.93,23.92 95.93,23.92 103.77,18.44 103.77,18.44 111.60,23.00 111.60,23.00 119.43,24.28 119.43,24.28 127.26,32.27 127.26,32.27 135.10,38.26 135.10,38.26 142.93,43.24 142.93,43.24 150.76,51.69 150.76,51.69 158.59,46.36 158.59,46.36 166.43,43.71 166.43,43.71 174.26,36.80 174.26,36.80 182.09,21.94 182.09,21.94 189.92,18.57 189.92,18.57 197.76,24.29 197.76,24.29 205.59,40.47 205.59,40.47 213.42,61.84 213.42,61.84 221.25,62.43 221.25,62.43 229.09,58.59 229.09,58.59 236.92,56.92 236.92,56.92 244.75,60.76 244.75,60.76 252.58,54.66 252.58,54.66 260.41,59.84 260.41,59.84 268.25,65.10 268.25,65.10 276.08,65.25 276.08,65.25 283.91,64.14 283.91,64.14 291.74,63.19 291.74,63.19 299.58,64.75 299.58,64.75 307.41,68.81 307.41,68.81 315.24,67.75 315.24,67.75 323.07,72.65 323.07,72.65 330.91,84.37 330.91,84.37 338.74,84.36 338.74,84.36 346.57,62.91 346.57,62.91 354.40,45.18 354.40,45.18 362.24,43.21 362.24,43.21 370.07,44.08 370.07,44.08 377.90,42.45 377.90,42.45 385.73,35.83 385.73,35.83 393.57,31.20 393.57,31.20 401.40,34.19 401.40,34.19 409.23,37.91 409.23,37.91 417.06,52.89 417.06,52.89 424.90,60.77 424.90,60.77 432.73,66.68 432.73,66.68 440.56,78.67 440.56,78.67 448.39,96.02 448.39,96.02 456.23,105.98 456.23,105.98 464.06,103.80 464.06,103.80 471.89,109.95 471.89,109.95 "
        style="stroke-width: 1.07; stroke: #999999; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;"
-       id="polyline35" />
+       id="polyline35"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="41.11,14.57 41.11,14.57 48.94,15.91 48.94,15.91 56.77,18.52 56.77,18.52 64.60,21.80 64.60,21.80 72.44,25.55 72.44,25.55 80.27,21.92 80.27,21.92 88.10,23.01 88.10,23.01 95.93,23.92 95.93,23.92 103.77,18.44 103.77,18.44 111.60,23.00 111.60,23.00 119.43,24.28 119.43,24.28 127.26,32.27 127.26,32.27 135.10,38.26 135.10,38.26 142.93,43.24 142.93,43.24 150.76,51.69 150.76,51.69 158.59,46.36 158.59,46.36 166.43,43.71 166.43,43.71 174.26,36.80 174.26,36.80 182.09,21.94 182.09,21.94 189.92,18.57 189.92,18.57 197.76,24.29 197.76,24.29 205.59,40.47 205.59,40.47 213.42,61.84 213.42,61.84 221.25,62.43 221.25,62.43 229.09,58.59 229.09,58.59 236.92,56.92 236.92,56.92 244.75,60.76 244.75,60.76 252.58,54.66 252.58,54.66 260.41,59.84 260.41,59.84 268.25,65.10 268.25,65.10 276.08,65.25 276.08,65.25 283.91,64.14 283.91,64.14 291.74,63.19 291.74,63.19 299.58,64.75 299.58,64.75 307.41,68.81 307.41,68.81 315.24,67.75 315.24,67.75 323.07,72.65 323.07,72.65 330.91,84.37 330.91,84.37 338.74,84.36 338.74,84.36 346.57,62.91 346.57,62.91 354.40,45.18 354.40,45.18 362.24,43.21 362.24,43.21 370.07,44.08 370.07,44.08 377.90,42.45 377.90,42.45 385.73,35.83 385.73,35.83 393.57,31.20 393.57,31.20 401.40,34.19 401.40,34.19 409.23,37.91 409.23,37.91 417.06,52.89 417.06,52.89 424.90,60.77 424.90,60.77 432.73,66.68 432.73,66.68 440.56,78.67 440.56,78.67 448.39,96.02 448.39,96.02 456.23,105.98 456.23,105.98 464.06,103.80 464.06,103.80 471.89,109.95 471.89,109.95 "
        style="stroke-width: 1.07; stroke: #999999; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;"
-       id="polyline37" />
+       id="polyline37"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="41.11,14.57 41.11,14.57 48.94,15.91 48.94,15.91 56.77,18.52 56.77,18.52 64.60,21.80 64.60,21.80 72.44,25.55 72.44,25.55 80.27,21.92 80.27,21.92 88.10,23.01 88.10,23.01 95.93,23.92 95.93,23.92 103.77,18.44 103.77,18.44 111.60,23.00 111.60,23.00 119.43,24.28 119.43,24.28 127.26,32.27 127.26,32.27 135.10,38.26 135.10,38.26 142.93,43.24 142.93,43.24 150.76,51.69 150.76,51.69 158.59,46.36 158.59,46.36 166.43,43.71 166.43,43.71 174.26,36.80 174.26,36.80 182.09,21.94 182.09,21.94 189.92,18.57 189.92,18.57 197.76,24.29 197.76,24.29 205.59,40.47 205.59,40.47 213.42,61.84 213.42,61.84 221.25,62.43 221.25,62.43 229.09,58.59 229.09,58.59 236.92,56.92 236.92,56.92 244.75,60.76 244.75,60.76 252.58,54.66 252.58,54.66 260.41,59.84 260.41,59.84 268.25,65.10 268.25,65.10 276.08,65.25 276.08,65.25 283.91,64.14 283.91,64.14 291.74,63.19 291.74,63.19 299.58,64.75 299.58,64.75 307.41,68.81 307.41,68.81 315.24,67.75 315.24,67.75 323.07,72.65 323.07,72.65 330.91,84.37 330.91,84.37 338.74,84.36 338.74,84.36 346.57,62.91 346.57,62.91 354.40,45.18 354.40,45.18 362.24,43.21 362.24,43.21 370.07,44.08 370.07,44.08 377.90,42.45 377.90,42.45 385.73,35.83 385.73,35.83 393.57,31.20 393.57,31.20 401.40,34.19 401.40,34.19 409.23,37.91 409.23,37.91 417.06,52.89 417.06,52.89 424.90,60.77 424.90,60.77 432.73,66.68 432.73,66.68 440.56,78.67 440.56,78.67 448.39,96.02 448.39,96.02 456.23,105.98 456.23,105.98 464.06,103.80 464.06,103.80 471.89,109.95 471.89,109.95 "
        style="stroke-width: 1.07; stroke: #999999; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;"
-       id="polyline39" />
+       id="polyline39"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="42.77,101.96 97.60,101.30 152.43,100.44 207.25,99.99 262.08,100.00 316.91,107.18 371.73,100.84 426.56,102.18 481.39,105.29 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline41" />
+       id="polyline41"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="46.88,102.52 101.71,100.59 156.54,100.35 211.36,99.74 266.19,99.87 321.02,106.89 375.85,100.69 430.67,101.75 485.50,104.13 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline43" />
+       id="polyline43"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="51.00,101.66 105.82,97.17 160.65,101.04 215.48,99.73 270.30,99.80 325.13,106.85 379.96,100.61 434.78,102.15 489.61,100.37 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline45" />
+       id="polyline45"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="55.11,101.55 109.93,100.24 164.76,100.97 219.59,99.68 274.42,99.72 329.24,105.86 384.07,100.33 438.90,102.20 493.72,100.51 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline47" />
+       id="polyline47"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="41.40,100.56 44.14,100.56 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline49" />
+       id="polyline49"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="42.77,100.56 42.77,103.49 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline51" />
+       id="polyline51"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="41.40,103.49 44.14,103.49 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline53" />
+       id="polyline53"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="96.23,100.14 98.97,100.14 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline55" />
+       id="polyline55"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="97.60,100.14 97.60,103.01 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline57" />
+       id="polyline57"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="96.23,103.01 98.97,103.01 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline59" />
+       id="polyline59"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="151.05,100.23 153.80,100.23 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline61" />
+       id="polyline61"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="152.43,100.23 152.43,100.65 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline63" />
+       id="polyline63"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="151.05,100.65 153.80,100.65 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline65" />
+       id="polyline65"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="205.88,99.81 208.62,99.81 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline67" />
+       id="polyline67"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="207.25,99.81 207.25,100.24 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline69" />
+       id="polyline69"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="205.88,100.24 208.62,100.24 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline71" />
+       id="polyline71"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="260.71,99.79 263.45,99.79 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline73" />
+       id="polyline73"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="262.08,99.79 262.08,100.28 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline75" />
+       id="polyline75"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="260.71,100.28 263.45,100.28 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline77" />
+       id="polyline77"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="315.54,101.72 318.28,101.72 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline79" />
+       id="polyline79"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="316.91,101.72 316.91,112.78 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline81" />
+       id="polyline81"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="315.54,112.78 318.28,112.78 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline83" />
+       id="polyline83"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="370.36,100.16 373.10,100.16 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline85" />
+       id="polyline85"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="371.73,100.16 371.73,101.76 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline87" />
+       id="polyline87"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="370.36,101.76 373.10,101.76 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline89" />
+       id="polyline89"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="425.19,100.41 427.93,100.41 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline91" />
+       id="polyline91"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="426.56,100.41 426.56,104.20 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline93" />
+       id="polyline93"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="425.19,104.20 427.93,104.20 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline95" />
+       id="polyline95"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="480.02,99.99 482.76,99.99 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline97" />
+       id="polyline97"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="481.39,99.99 481.39,112.74 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline99" />
+       id="polyline99"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="480.02,112.74 482.76,112.74 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline101" />
+       id="polyline101"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="45.51,100.56 48.25,100.56 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline103" />
+       id="polyline103"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="46.88,100.56 46.88,104.85 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline105" />
+       id="polyline105"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="45.51,104.85 48.25,104.85 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline107" />
+       id="polyline107"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="100.34,99.95 103.08,99.95 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline109" />
+       id="polyline109"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="101.71,99.95 101.71,101.48 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline111" />
+       id="polyline111"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="100.34,101.48 103.08,101.48 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline113" />
+       id="polyline113"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="155.17,100.14 157.91,100.14 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline115" />
+       id="polyline115"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="156.54,100.14 156.54,100.58 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline117" />
+       id="polyline117"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="155.17,100.58 157.91,100.58 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline119" />
+       id="polyline119"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="209.99,99.68 212.73,99.68 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline121" />
+       id="polyline121"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="211.36,99.68 211.36,99.83 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline123" />
+       id="polyline123"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="209.99,99.83 212.73,99.83 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline125" />
+       id="polyline125"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="264.82,99.67 267.56,99.67 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline127" />
+       id="polyline127"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="266.19,99.67 266.19,100.19 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline129" />
+       id="polyline129"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="264.82,100.19 267.56,100.19 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline131" />
+       id="polyline131"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="319.65,101.43 322.39,101.43 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline133" />
+       id="polyline133"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="321.02,101.43 321.02,113.76 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline135" />
+       id="polyline135"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="319.65,113.76 322.39,113.76 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline137" />
+       id="polyline137"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="374.47,99.95 377.22,99.95 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline139" />
+       id="polyline139"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="375.85,99.95 375.85,102.02 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline141" />
+       id="polyline141"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="374.47,102.02 377.22,102.02 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline143" />
+       id="polyline143"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="429.30,100.16 432.04,100.16 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline145" />
+       id="polyline145"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="430.67,100.16 430.67,103.74 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline147" />
+       id="polyline147"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="429.30,103.74 432.04,103.74 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline149" />
+       id="polyline149"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="484.13,100.45 486.87,100.45 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline151" />
+       id="polyline151"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="485.50,100.45 485.50,109.70 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline153" />
+       id="polyline153"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="484.13,109.70 486.87,109.70 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline155" />
+       id="polyline155"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="49.62,100.38 52.37,100.38 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline157" />
+       id="polyline157"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="51.00,100.38 51.00,103.02 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline159" />
+       id="polyline159"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="49.62,103.02 52.37,103.02 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline161" />
+       id="polyline161"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="104.45,91.86 107.19,91.86 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline163" />
+       id="polyline163"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="105.82,91.86 105.82,101.39 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline165" />
+       id="polyline165"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="104.45,101.39 107.19,101.39 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline167" />
+       id="polyline167"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="159.28,100.11 162.02,100.11 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline169" />
+       id="polyline169"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="160.65,100.11 160.65,102.26 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline171" />
+       id="polyline171"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="159.28,102.26 162.02,102.26 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline173" />
+       id="polyline173"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="214.11,99.67 216.85,99.67 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline175" />
+       id="polyline175"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="215.48,99.67 215.48,99.81 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline177" />
+       id="polyline177"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="214.11,99.81 216.85,99.81 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline179" />
+       id="polyline179"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="268.93,99.66 271.67,99.66 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline181" />
+       id="polyline181"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="270.30,99.66 270.30,100.00 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline183" />
+       id="polyline183"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="268.93,100.00 271.67,100.00 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline185" />
+       id="polyline185"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="323.76,101.57 326.50,101.57 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline187" />
+       id="polyline187"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="325.13,101.57 325.13,112.73 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline189" />
+       id="polyline189"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="323.76,112.73 326.50,112.73 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline191" />
+       id="polyline191"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="378.59,99.94 381.33,99.94 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline193" />
+       id="polyline193"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="379.96,99.94 379.96,101.48 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline195" />
+       id="polyline195"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="378.59,101.48 381.33,101.48 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline197" />
+       id="polyline197"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="433.41,100.33 436.15,100.33 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline199" />
+       id="polyline199"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="434.78,100.33 434.78,104.27 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline201" />
+       id="polyline201"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="433.41,104.27 436.15,104.27 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline203" />
+       id="polyline203"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="488.24,100.12 490.98,100.12 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline205" />
+       id="polyline205"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="489.61,100.12 489.61,100.69 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline207" />
+       id="polyline207"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="488.24,100.69 490.98,100.69 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline209" />
+       id="polyline209"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="53.74,100.46 56.48,100.46 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline211" />
+       id="polyline211"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="55.11,100.46 55.11,102.62 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline213" />
+       id="polyline213"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="53.74,102.62 56.48,102.62 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline215" />
+       id="polyline215"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="108.56,99.80 111.30,99.80 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline217" />
+       id="polyline217"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="109.93,99.80 109.93,100.85 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline219" />
+       id="polyline219"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="108.56,100.85 111.30,100.85 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline221" />
+       id="polyline221"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="163.39,99.97 166.13,99.97 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline223" />
+       id="polyline223"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="164.76,99.97 164.76,102.38 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline225" />
+       id="polyline225"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="163.39,102.38 166.13,102.38 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline227" />
+       id="polyline227"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="218.22,99.62 220.96,99.62 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline229" />
+       id="polyline229"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="219.59,99.62 219.59,99.76 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline231" />
+       id="polyline231"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="218.22,99.76 220.96,99.76 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline233" />
+       id="polyline233"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="273.04,99.61 275.79,99.61 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline235" />
+       id="polyline235"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="274.42,99.61 274.42,99.86 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline237" />
+       id="polyline237"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="273.04,99.86 275.79,99.86 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline239" />
+       id="polyline239"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="327.87,101.12 330.61,101.12 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline241" />
+       id="polyline241"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="329.24,101.12 329.24,111.18 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline243" />
+       id="polyline243"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="327.87,111.18 330.61,111.18 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline245" />
+       id="polyline245"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="382.70,99.83 385.44,99.83 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline247" />
+       id="polyline247"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="384.07,99.83 384.07,100.95 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline249" />
+       id="polyline249"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="382.70,100.95 385.44,100.95 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline251" />
+       id="polyline251"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="437.53,100.40 440.27,100.40 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline253" />
+       id="polyline253"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="438.90,100.40 438.90,104.48 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline255" />
+       id="polyline255"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="437.53,104.48 440.27,104.48 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline257" />
+       id="polyline257"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="492.35,100.18 495.09,100.18 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline259" />
+       id="polyline259"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="493.72,100.18 493.72,100.86 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline261" />
+       id="polyline261"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <polyline
        points="492.35,100.86 495.09,100.86 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
-       id="polyline263" />
+       id="polyline263"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="42.77"
        cy="101.96"
        r="3.56"
        style="stroke-width: 0.71; fill: #00BFFF;"
-       id="circle265" />
+       id="circle265"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="97.60"
        cy="101.30"
        r="3.56"
        style="stroke-width: 0.71; fill: #00BFFF;"
-       id="circle267" />
+       id="circle267"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="152.43"
        cy="100.44"
        r="3.56"
        style="stroke-width: 0.71; fill: #00BFFF;"
-       id="circle269" />
+       id="circle269"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="207.25"
        cy="99.99"
        r="3.56"
        style="stroke-width: 0.71; fill: #00BFFF;"
-       id="circle271" />
+       id="circle271"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="262.08"
        cy="100.00"
        r="3.56"
        style="stroke-width: 0.71; fill: #00BFFF;"
-       id="circle273" />
+       id="circle273"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="316.91"
        cy="107.18"
        r="3.56"
        style="stroke-width: 0.71; fill: #00BFFF;"
-       id="circle275" />
+       id="circle275"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="371.73"
        cy="100.84"
        r="3.56"
        style="stroke-width: 0.71; fill: #00BFFF;"
-       id="circle277" />
+       id="circle277"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="426.56"
        cy="102.18"
        r="3.56"
        style="stroke-width: 0.71; fill: #00BFFF;"
-       id="circle279" />
+       id="circle279"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="481.39"
        cy="105.29"
        r="3.56"
        style="stroke-width: 0.71; fill: #00BFFF;"
-       id="circle281" />
+       id="circle281"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="46.88"
        cy="102.52"
        r="3.56"
        style="stroke-width: 0.71; fill: #FF6A6A;"
-       id="circle283" />
+       id="circle283"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="101.71"
        cy="100.59"
        r="3.56"
        style="stroke-width: 0.71; fill: #FF6A6A;"
-       id="circle285" />
+       id="circle285"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="156.54"
        cy="100.35"
        r="3.56"
        style="stroke-width: 0.71; fill: #FF6A6A;"
-       id="circle287" />
+       id="circle287"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="211.36"
        cy="99.74"
        r="3.56"
        style="stroke-width: 0.71; fill: #FF6A6A;"
-       id="circle289" />
+       id="circle289"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="266.19"
        cy="99.87"
        r="3.56"
        style="stroke-width: 0.71; fill: #FF6A6A;"
-       id="circle291" />
+       id="circle291"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="321.02"
        cy="106.89"
        r="3.56"
        style="stroke-width: 0.71; fill: #FF6A6A;"
-       id="circle293" />
+       id="circle293"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="375.85"
        cy="100.69"
        r="3.56"
        style="stroke-width: 0.71; fill: #FF6A6A;"
-       id="circle295" />
+       id="circle295"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="430.67"
        cy="101.75"
        r="3.56"
        style="stroke-width: 0.71; fill: #FF6A6A;"
-       id="circle297" />
+       id="circle297"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="485.50"
        cy="104.13"
        r="3.56"
        style="stroke-width: 0.71; fill: #FF6A6A;"
-       id="circle299" />
+       id="circle299"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="51.00"
        cy="101.66"
        r="3.56"
        style="stroke-width: 0.71; fill: #00008B;"
-       id="circle301" />
+       id="circle301"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="105.82"
        cy="97.17"
        r="3.56"
        style="stroke-width: 0.71; fill: #00008B;"
-       id="circle303" />
+       id="circle303"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="160.65"
        cy="101.04"
        r="3.56"
        style="stroke-width: 0.71; fill: #00008B;"
-       id="circle305" />
+       id="circle305"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="215.48"
        cy="99.73"
        r="3.56"
        style="stroke-width: 0.71; fill: #00008B;"
-       id="circle307" />
+       id="circle307"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="270.30"
        cy="99.80"
        r="3.56"
        style="stroke-width: 0.71; fill: #00008B;"
-       id="circle309" />
+       id="circle309"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="325.13"
        cy="106.85"
        r="3.56"
        style="stroke-width: 0.71; fill: #00008B;"
-       id="circle311" />
+       id="circle311"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="379.96"
        cy="100.61"
        r="3.56"
        style="stroke-width: 0.71; fill: #00008B;"
-       id="circle313" />
+       id="circle313"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="434.78"
        cy="102.15"
        r="3.56"
        style="stroke-width: 0.71; fill: #00008B;"
-       id="circle315" />
+       id="circle315"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="489.61"
        cy="100.37"
        r="3.56"
        style="stroke-width: 0.71; fill: #00008B;"
-       id="circle317" />
+       id="circle317"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="55.11"
        cy="101.55"
        r="3.56"
        style="stroke-width: 0.71; fill: #8B0000;"
-       id="circle319" />
+       id="circle319"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="109.93"
        cy="100.24"
        r="3.56"
        style="stroke-width: 0.71; fill: #8B0000;"
-       id="circle321" />
+       id="circle321"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="164.76"
        cy="100.97"
        r="3.56"
        style="stroke-width: 0.71; fill: #8B0000;"
-       id="circle323" />
+       id="circle323"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="219.59"
        cy="99.68"
        r="3.56"
        style="stroke-width: 0.71; fill: #8B0000;"
-       id="circle325" />
+       id="circle325"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="274.42"
        cy="99.72"
        r="3.56"
        style="stroke-width: 0.71; fill: #8B0000;"
-       id="circle327" />
+       id="circle327"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="329.24"
        cy="105.86"
        r="3.56"
        style="stroke-width: 0.71; fill: #8B0000;"
-       id="circle329" />
+       id="circle329"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="384.07"
        cy="100.33"
        r="3.56"
        style="stroke-width: 0.71; fill: #8B0000;"
-       id="circle331" />
+       id="circle331"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="438.90"
        cy="102.20"
        r="3.56"
        style="stroke-width: 0.71; fill: #8B0000;"
-       id="circle333" />
+       id="circle333"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <circle
        cx="493.72"
        cy="100.51"
        r="3.56"
        style="stroke-width: 0.71; fill: #8B0000;"
-       id="circle335" />
+       id="circle335"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <line
        x1="421.76"
        y1="159.78"
        x2="421.76"
        y2="5.48"
        style="stroke-width: 1.07; stroke: #FF6A6A; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;"
-       id="line337" />
+       id="line337"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <line
        x1="422.31"
        y1="159.78"
        x2="422.31"
        y2="5.48"
        style="stroke-width: 1.07; stroke: #8B0000; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;"
-       id="line339" />
+       id="line339"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <rect
        x="37.97"
        y="5.48"
        width="460.55"
        height="154.30"
        style="stroke-width: 2.13;"
-       id="rect341" />
+       id="rect341"
+       inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
   </g>
   <polyline
      id="polyline345"
      style="fill:none;stroke:#000000;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="37.97,159.78 37.97,5.48 " />
+     points="37.97,159.78 37.97,5.48 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <text
      id="text347"
      lengthAdjust="spacingAndGlyphs"
      textLength="11.19"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="138.44"
-     x="33.040001">26</text>
+     x="33.040001"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">26</text>
   <text
      id="text349"
      lengthAdjust="spacingAndGlyphs"
      textLength="11.19"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="103.37"
-     x="33.040001">28</text>
+     x="33.040001"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">28</text>
   <text
      id="text351"
      lengthAdjust="spacingAndGlyphs"
      textLength="11.19"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="68.300003"
-     x="33.040001">30</text>
+     x="33.040001"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">30</text>
   <text
      id="text353"
      lengthAdjust="spacingAndGlyphs"
      textLength="11.19"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="33.23"
-     x="33.040001">32</text>
+     x="33.040001"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">32</text>
   <polyline
      id="polyline355"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="35.23,135.23 37.97,135.23 " />
+     points="35.23,135.23 37.97,135.23 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline357"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="35.23,100.16 37.97,100.16 " />
+     points="35.23,100.16 37.97,100.16 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline359"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="35.23,65.10 37.97,65.10 " />
+     points="35.23,65.10 37.97,65.10 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline361"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="35.23,30.03 37.97,30.03 " />
+     points="35.23,30.03 37.97,30.03 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline363"
      style="fill:none;stroke:#000000;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="37.97,159.78 498.52,159.78 " />
+     points="37.97,159.78 498.52,159.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline365"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="48.94,162.52 48.94,159.78 " />
+     points="48.94,162.52 48.94,159.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline367"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="103.77,162.52 103.77,159.78 " />
+     points="103.77,162.52 103.77,159.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline369"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="158.59,162.52 158.59,159.78 " />
+     points="158.59,162.52 158.59,159.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline371"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="213.42,162.52 213.42,159.78 " />
+     points="213.42,162.52 213.42,159.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline373"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="268.25,162.52 268.25,159.78 " />
+     points="268.25,162.52 268.25,159.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline375"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="323.07,162.52 323.07,159.78 " />
+     points="323.07,162.52 323.07,159.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline377"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="377.90,162.52 377.90,159.78 " />
+     points="377.90,162.52 377.90,159.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline379"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="432.73,162.52 432.73,159.78 " />
+     points="432.73,162.52 432.73,159.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline381"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="487.56,162.52 487.56,159.78 " />
+     points="487.56,162.52 487.56,159.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <text
      id="text385"
      lengthAdjust="spacingAndGlyphs"
@@ -948,7 +1478,10 @@
   </defs>
   <g
      clip-path="url(#cpMC4wMHw1MDQuMDB8MTY4LjAwfDMzNi4wMA==)"
-     id="g402">
+     id="g402"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">
     <rect
        x="0.00"
        y="168.00"
@@ -974,7 +1507,10 @@
   </defs>
   <g
      clip-path="url(#cpMzcuODF8NDk4LjUyfDE3My40OHwzMjcuNzg=)"
-     id="g683">
+     id="g683"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">
     <rect
        x="37.81"
        y="173.48"
@@ -1599,113 +2135,182 @@
   <polyline
      id="polyline685"
      style="fill:none;stroke:#000000;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="37.81,327.78 37.81,173.48 " />
+     points="37.81,327.78 37.81,173.48 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <text
      id="text687"
      lengthAdjust="spacingAndGlyphs"
      textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="325.37"
-     x="32.869999">0</text>
+     x="32.869999"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">0</text>
   <text
      id="text689"
      lengthAdjust="spacingAndGlyphs"
      textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="296.57001"
-     x="32.869999">5</text>
+     x="32.869999"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">5</text>
   <text
      id="text691"
      lengthAdjust="spacingAndGlyphs"
      textLength="11.19"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="267.78"
-     x="32.869999">10</text>
+     x="32.869999"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">10</text>
   <text
      id="text693"
      lengthAdjust="spacingAndGlyphs"
      textLength="11.19"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="238.99001"
-     x="32.869999">15</text>
+     x="32.869999"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">15</text>
   <text
      id="text695"
      lengthAdjust="spacingAndGlyphs"
      textLength="11.19"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="210.19"
-     x="32.869999">20</text>
+     x="32.869999"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">20</text>
   <text
      id="text697"
      lengthAdjust="spacingAndGlyphs"
      textLength="11.19"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="181.39999"
-     x="32.869999">25</text>
+     x="32.869999"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">25</text>
   <polyline
      id="polyline699"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="35.07,322.16 37.81,322.16 " />
+     points="35.07,322.16 37.81,322.16 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline701"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="35.07,293.37 37.81,293.37 " />
+     points="35.07,293.37 37.81,293.37 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline703"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="35.07,264.57 37.81,264.57 " />
+     points="35.07,264.57 37.81,264.57 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline705"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="35.07,235.78 37.81,235.78 " />
+     points="35.07,235.78 37.81,235.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline707"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="35.07,206.99 37.81,206.99 " />
+     points="35.07,206.99 37.81,206.99 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline709"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="35.07,178.19 37.81,178.19 " />
+     points="35.07,178.19 37.81,178.19 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline711"
      style="fill:none;stroke:#000000;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="37.81,327.78 498.52,327.78 " />
+     points="37.81,327.78 498.52,327.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline713"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="48.77,330.52 48.77,327.78 " />
+     points="48.77,330.52 48.77,327.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline715"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="103.62,330.52 103.62,327.78 " />
+     points="103.62,330.52 103.62,327.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline717"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="158.47,330.52 158.47,327.78 " />
+     points="158.47,330.52 158.47,327.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline719"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="213.32,330.52 213.32,327.78 " />
+     points="213.32,330.52 213.32,327.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline721"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="268.16,330.52 268.16,327.78 " />
+     points="268.16,330.52 268.16,327.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline723"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="323.01,330.52 323.01,327.78 " />
+     points="323.01,330.52 323.01,327.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline725"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="377.86,330.52 377.86,327.78 " />
+     points="377.86,330.52 377.86,327.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline727"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="432.70,330.52 432.70,327.78 " />
+     points="432.70,330.52 432.70,327.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline729"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="487.55,330.52 487.55,327.78 " />
+     points="487.55,330.52 487.55,327.78 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <text
      id="text737"
      lengthAdjust="spacingAndGlyphs"
@@ -1738,15 +2343,86 @@
   </defs>
   <g
      clip-path="url(#cpMC4wMHw1MDQuMDB8MzM2LjAwfDUwNC4wMA==)"
-     id="g758">
+     id="g758"
+     transform="matrix(1,0,0,0.87186105,0,43.054688)">
     <rect
-       x="0.00"
-       y="336.00"
-       width="504.00"
-       height="168.00"
-       style="stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;"
+       x="0"
+       y="336"
+       width="504"
+       height="168"
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:1.07"
        id="rect756" />
   </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="486.77307"
+     y="446.91248"
+     id="text15393-6-9"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan15391-2-1"
+       style="fill:#333333;stroke-width:0.75px"
+       x="486.77307"
+       y="446.91248">57</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="264.84692"
+     y="446.974"
+     id="text6829-3"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan6827-6"
+       style="fill:#333333;stroke-width:0.75px"
+       x="264.84692"
+       y="446.974">29-35</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="320.34097"
+     y="446.974"
+     id="text9837-7"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan9835-5"
+       style="fill:#333333;stroke-width:0.75px"
+       x="320.34097"
+       y="446.974">36-42</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="375.93796"
+     y="446.974"
+     id="text11915-3"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan11913-5"
+       style="fill:#333333;stroke-width:0.75px"
+       x="375.93796"
+       y="446.974">43-49</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="431.28632"
+     y="446.97656"
+     id="text15393-6"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan15391-2"
+       style="fill:#333333;stroke-width:0.75px"
+       x="431.28632"
+       y="446.97656">50-56</tspan></text>
   <g
      clip-path="url(#cpMC4wMHw1MDQuMDB8MC4wMHw1MDQuMDA=)"
      id="g760" />
@@ -1765,7 +2441,10 @@
   <g
      clip-path="url(#cpMzIuMjF8NDk4LjUyfDM0MS40OHw0MzEuOTc=)"
      id="g943"
-     transform="matrix(0.9887414,0,0,1,5.6126397,0)">
+     transform="matrix(0.9887414,0,0,1,5.6126397,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">
     <rect
        x="32.209999"
        y="341.48001"
@@ -2175,170 +2854,157 @@
      id="polyline945"
      style="fill:none;stroke:#000000;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
      points="32.21,431.97 32.21,341.48 "
-     transform="translate(6.375)" />
+     transform="translate(6.375)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <text
      id="text947"
      lengthAdjust="spacingAndGlyphs"
      textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="432.62"
      x="27.280001"
-     transform="translate(5.25)">0</text>
+     transform="translate(5.25)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">0</text>
   <text
      id="text949"
      lengthAdjust="spacingAndGlyphs"
      textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="408.69"
      x="27.280001"
-     transform="translate(5.25)">1</text>
+     transform="translate(5.25)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">1</text>
   <text
      id="text951"
      lengthAdjust="spacingAndGlyphs"
      textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="384.76001"
      x="27.280001"
-     transform="translate(5.25)">2</text>
+     transform="translate(5.25)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">2</text>
   <text
      id="text953"
      lengthAdjust="spacingAndGlyphs"
      textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
+     style="font-size:8.8px;font-family:Arial;text-anchor:end;fill:#4d4d4d"
      y="360.82001"
      x="27.280001"
-     transform="translate(5.25)">3</text>
+     transform="translate(5.25)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">3</text>
   <polyline
      id="polyline955"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
      points="29.47,429.41 32.21,429.41 "
-     transform="translate(5.25)" />
+     transform="translate(5.25)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline957"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
      points="29.47,405.48 32.21,405.48 "
-     transform="translate(5.25)" />
+     transform="translate(5.25)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline959"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
      points="29.47,381.55 32.21,381.55 "
-     transform="translate(5.25)" />
+     transform="translate(5.25)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline961"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
      points="29.47,357.62 32.21,357.62 "
-     transform="translate(5.25)" />
+     transform="translate(5.25)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline963"
      style="fill:none;stroke:#000000;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
      points="32.21,431.97 498.52,431.97 "
-     transform="matrix(0.97619609,0,0,1,11.866724,0)" />
+     transform="matrix(0.97619609,0,0,1,11.866724,0)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline965"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="43.31,434.71 43.31,431.97 " />
+     points="43.31,434.71 43.31,431.97 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline967"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="98.83,434.71 98.83,431.97 " />
+     points="98.83,434.71 98.83,431.97 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline969"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="154.34,434.71 154.34,431.97 " />
+     points="154.34,434.71 154.34,431.97 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline971"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="209.85,434.71 209.85,431.97 " />
+     points="209.85,434.71 209.85,431.97 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline973"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="265.37,434.71 265.37,431.97 " />
+     points="265.37,434.71 265.37,431.97 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline975"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="320.88,434.71 320.88,431.97 " />
+     points="320.88,434.71 320.88,431.97 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline977"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="376.39,434.71 376.39,431.97 " />
+     points="376.39,434.71 376.39,431.97 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline979"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="431.90,434.71 431.90,431.97 " />
+     points="431.90,434.71 431.90,431.97 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <polyline
      id="polyline981"
      style="fill:none;stroke:#333333;stroke-width:1.07000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
-     points="487.42,434.71 487.42,431.97 " />
-  <text
-     id="text983"
-     lengthAdjust="spacingAndGlyphs"
-     textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:middle;fill:#4d4d4d"
-     y="443.31"
-     x="43.310001">1</text>
-  <text
-     id="text985"
-     lengthAdjust="spacingAndGlyphs"
-     textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:middle;fill:#4d4d4d"
-     y="443.31"
-     x="98.830002">2</text>
-  <text
-     id="text987"
-     lengthAdjust="spacingAndGlyphs"
-     textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:middle;fill:#4d4d4d"
-     y="443.31"
-     x="154.34">3</text>
-  <text
-     id="text989"
-     lengthAdjust="spacingAndGlyphs"
-     textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:middle;fill:#4d4d4d"
-     y="443.31"
-     x="209.85001">4</text>
-  <text
-     id="text991"
-     lengthAdjust="spacingAndGlyphs"
-     textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:middle;fill:#4d4d4d"
-     y="443.31"
-     x="265.37">5</text>
-  <text
-     id="text993"
-     lengthAdjust="spacingAndGlyphs"
-     textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:middle;fill:#4d4d4d"
-     y="443.31"
-     x="320.88">6</text>
-  <text
-     id="text995"
-     lengthAdjust="spacingAndGlyphs"
-     textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:middle;fill:#4d4d4d"
-     y="443.31"
-     x="376.39001">7</text>
-  <text
-     id="text997"
-     lengthAdjust="spacingAndGlyphs"
-     textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:middle;fill:#4d4d4d"
-     y="443.31"
-     x="431.89999">8</text>
-  <text
-     id="text999"
-     lengthAdjust="spacingAndGlyphs"
-     textLength="5.5900002"
-     style="font-size:8.80000019px;font-family:Arial;text-anchor:middle;fill:#4d4d4d"
-     y="443.31"
-     x="487.42001">9</text>
-  <text
-     id="text1001"
-     lengthAdjust="spacingAndGlyphs"
-     textLength="30.139999"
-     style="font-size:11px;font-family:Arial;text-anchor:middle"
-     y="456.32001"
-     x="265.37">Week</text>
+     points="487.42,434.71 487.42,431.97 "
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <text
      id="text1009"
      lengthAdjust="spacingAndGlyphs"
@@ -2357,118 +3023,264 @@
      textLength="2.75"
      style="font-size:11px;font-family:'Standard Symbols PS'"
      transform="rotate(-90,196.23,182.39)" />
-  <rect
-     id="rect1021"
-     style="fill:#ffffff;stroke:none;stroke-width:1.28400004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
-     height="33.888"
-     width="454.69202"
-     y="456.95599"
-     x="35.004711" />
   <circle
      id="circle1023"
      style="fill:#00bfff;stroke:#000000;stroke-width:0.852;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
      r="4.2719998"
-     cy="473.89999"
-     cx="58.524708" />
+     cy="-13.670319"
+     cx="46.527637"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <circle
      id="circle1025"
      style="fill:#ff6a6a;stroke:#000000;stroke-width:0.852;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
      r="4.2719998"
-     cy="473.89999"
-     cx="179.71271" />
+     cy="-13.670319"
+     cx="167.71564"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <circle
      id="circle1027"
      style="fill:#00008b;stroke:#000000;stroke-width:0.852;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
      r="4.2719998"
-     cy="473.89999"
-     cx="299.10071" />
+     cy="-13.670319"
+     cx="287.10364"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <circle
      id="circle1029"
      style="fill:#8b0000;stroke:#000000;stroke-width:0.852;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
      r="4.2719998"
-     cy="473.89999"
-     cx="400.47672" />
+     cy="-13.670319"
+     cx="388.47964"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300" />
   <text
      id="text1031"
      lengthAdjust="spacingAndGlyphs"
      textLength="78.800003"
-     style="font-size:8.80000019px;font-family:Arial"
+     style="font-size:8.8px;font-family:Arial"
      y="487.60999"
      x="109.63"
-     transform="matrix(1.2,0,0,1.2,-56.087295,-107.38)">Ambient+Placebo</text>
+     transform="matrix(1.2,0,0,1.2,-77.084365,-594.95031)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">Ambient+Placebo</text>
   <text
      id="text1033"
      lengthAdjust="spacingAndGlyphs"
      textLength="79.050003"
-     style="font-size:8.80000019px;font-family:Arial"
+     style="font-size:8.8px;font-family:Arial"
      y="487.60999"
      x="210.62"
-     transform="matrix(1.2,0,0,1.2,-56.087295,-107.38)">Ambient+Disease</text>
+     transform="matrix(1.2,0,0,1.2,-77.084365,-594.95031)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">Ambient+Disease</text>
   <text
      id="text1035"
      lengthAdjust="spacingAndGlyphs"
      textLength="60.540001"
-     style="font-size:8.80000019px;font-family:Arial"
+     style="font-size:8.8px;font-family:Arial"
      y="487.60999"
      x="310.10001"
-     transform="matrix(1.2,0,0,1.2,-56.087295,-107.38)">NH4+Placebo</text>
+     transform="matrix(1.2,0,0,1.2,-77.084365,-594.95031)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">NH<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan44901">4</tspan>+Placebo</text>
   <text
      id="text1037"
      lengthAdjust="spacingAndGlyphs"
      textLength="60.779999"
-     style="font-size:8.80000019px;font-family:Arial"
+     style="font-size:8.8px;font-family:Arial"
      y="487.60999"
      x="394.59"
-     transform="matrix(1.2,0,0,1.2,-56.087295,-107.38)">NH4+Disease</text>
+     transform="matrix(1.2,0,0,1.2,-77.084365,-594.95031)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">NH<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan46847">4</tspan>+Disease</text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.70499897px;line-height:22.6875px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.90749991px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.705px;line-height:22.6875px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9075px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="-394.08521"
      y="12.9318"
      id="text1848"
-     transform="rotate(-90)"><tspan
+     transform="rotate(-90)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
        sodipodi:role="line"
        id="tspan1846"
        x="-394.08521"
        y="12.9318"
-       style="stroke-width:0.90749991px">PO<tspan
-   style="font-size:8.25824928px;baseline-shift:sub;stroke-width:0.90749991px"
+       style="stroke-width:0.9075px">PO<tspan
+   style="font-size:8.25825px;baseline-shift:sub;stroke-width:0.9075px"
    id="tspan1850">4</tspan> (μM)</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.70499897px;line-height:22.6875px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.90749991px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.705px;line-height:22.6875px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9075px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="-254.30142"
      y="12.928699"
      id="text1848-3"
-     transform="rotate(-90)"><tspan
+     transform="rotate(-90)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
        sodipodi:role="line"
        id="tspan1846-6"
        x="-254.30142"
        y="12.928699"
-       style="stroke-width:0.90749991px">NH<tspan
-   style="font-size:8.25824928px;baseline-shift:sub;stroke-width:0.90749991px"
+       style="stroke-width:0.9075px">NH<tspan
+   style="font-size:8.25825px;baseline-shift:sub;stroke-width:0.9075px"
    id="tspan1850-7">4</tspan> (μM)</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.70499897px;line-height:22.6875px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.90749985px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.705px;line-height:22.6875px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9075px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="-90.798843"
      y="12.928699"
      id="text1848-3-3"
-     transform="rotate(-90)"><tspan
+     transform="rotate(-90)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
        sodipodi:role="line"
        id="tspan1846-6-6"
        x="-90.798843"
        y="12.928699"
-       style="stroke-width:0.90749985px">Temperature (°C)</tspan></text>
+       style="stroke-width:0.9075px">Temperature (°C)</tspan></text>
+  <g
+     id="g76317"
+     transform="translate(9,3.923664)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">
+    <path
+       d="m 197.76,24.912226 h 11.59179 m -11.59179,0 4.82991,-4.98889 m -4.82991,4.98889 4.82991,4.9889"
+       stroke="#000000"
+       stroke-width="1.9635"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path5996-6-2"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;line-height:16.0714px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="266.15222"
+       y="27.186401"
+       id="text1364"><tspan
+         sodipodi:role="line"
+         id="tspan1362"
+         x="266.15222"
+         y="27.186401"
+         style="font-size:9px;stroke-width:0.75px">Incoming seawater salinity</tspan></text>
+  </g>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="267.30652"
-     y="50.653198"
-     id="text1364"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="42.504711"
+     y="447.04065"
+     id="text6829"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
        sodipodi:role="line"
-       id="tspan1362"
-       x="267.30652"
-       y="50.653198"
-       style="stroke-width:0.75px">Incoming water salinity</tspan></text>
+       id="tspan6827"
+       style="fill:#333333;stroke-width:0.75px"
+       x="42.504711"
+       y="447.04065">1-7</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="98.368294"
+     y="446.97656"
+     id="text9837"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan9835"
+       style="fill:#333333;stroke-width:0.75px"
+       x="98.368294"
+       y="446.97656">8-14</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="154.20882"
+     y="446.97656"
+     id="text11915"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan11913"
+       style="fill:#333333;stroke-width:0.75px"
+       x="154.20882"
+       y="446.97656">15-21</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5px;line-height:18.75px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="209.37813"
+     y="446.97656"
+     id="text15393"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan15391"
+       style="fill:#333333;stroke-width:0.75px"
+       x="209.37813"
+       y="446.97656">22-28</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:22.6786px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="262.32422"
+     y="468.54785"
+     id="text31721"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300"><tspan
+       sodipodi:role="line"
+       id="tspan31719"
+       style="font-size:12.7px;stroke-width:0.75px"
+       x="262.32422"
+       y="468.54785">Days in the experiment</tspan></text>
+  <g
+     id="g4800-9"
+     transform="translate(300.18045,-182.60077)"
+     inkscape:export-filename="/home/mcano/Dropbox/NOAA/Projects/Nutrient_Transcriptomics_project/0.Nutrient_Disease_Repo/1.Tank_conditions/Outputs/Tanks_2.png"
+     inkscape:export-xdpi="300"
+     inkscape:export-ydpi="300">
+    <path
+       d="M 125.06721,211.43666 H 136.659 m -11.59179,0 4.82991,-4.98889 m -4.82991,4.98889 4.82991,4.9889"
+       stroke="#000000"
+       stroke-width="1.9635"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path5996-6"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9px;font-family:Arial;-inkscape-font-specification:Arial;white-space:pre;fill:#000000;stroke-width:0.75"
+       x="139.29192"
+       y="214.25308"
+       id="text3226-6-4-3-1"><tspan
+         sodipodi:role="line"
+         style="font-size:9px;stroke-width:0.75"
+         x="139.29192"
+         y="214.25308"
+         id="tspan3828-9">Tissue</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:9px;stroke-width:0.75"
+         x="139.29192"
+         y="225.50308"
+         id="tspan70146">slurries added</tspan></text>
+  </g>
 </svg>
