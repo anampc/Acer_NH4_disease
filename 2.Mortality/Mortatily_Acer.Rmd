@@ -87,6 +87,8 @@ editor_options:
 
 ## Model 0 (Genotype)
 
+Overall survivorship by genotype (all treatments combined)
+
 ```{r}
 # Only genotype model
   # Kaplan-Meier estimator. The "log-log" confidence interval is preferred.
@@ -112,10 +114,22 @@ editor_options:
               palette=Fill.colour, tables.height=0.4,
               conf.int = T, n.risk   = TRUE)
     Treatment_only
-    ggsave(file="Treatment.svg", print(ggsurvplot(fit1, data = Survival.data_1, pval = TRUE,
+    #ggsave("Outputs/Treatment.svg",Treatment_only, width=5.5, height=5, dpi = 300)
+    ggsave(file="Outputs/Treatment.svg", print(ggsurvplot(fit1, data = Survival.data_1, pval = TRUE,
               risk.table=F, 
               palette=Fill.colour, tables.height=0.4,
-              conf.int = T, n.risk   = TRUE)), width=5, height=5, dpi = 300)
+              conf.int = T, n.risk   = TRUE)), width=5.5, height=5)
+    
+
+    ggsave_workaround <- function(g){survminer:::.build_ggsurvplot(x = g,
+                                                                   surv.plot.height = NULL,
+                                                                   risk.table.height = NULL,
+                                                                   ncensor.plot.height = NULL)}
+    
+    g_to_save <- ggsave_workaround(Treatment_only)
+    
+    ggsave(filename = "Outputs/Treatment.svg", plot = g_to_save,
+           width = 5.5, height = 3, dpi = 300)
 ```
 
 ## Model 2 (Genotype + Treatment)
@@ -152,7 +166,7 @@ editor_options:
         geom_vline(xintercept = 48, linetype="dashed", 
                 color = "gray")
     GenotypeP
-    #ggsave("Outputs/Genotype_T.svg", print(GenotypeP), width=5.5, height=8, dpi = 300)
+    #ggsave("Outputs/Genotype_T2.svg", print(GenotypeP), width=5.5, height=8, dpi = 300)
 ```
 
 ### Plot by genotype
@@ -177,19 +191,6 @@ editor_options:
     TreatmentP
   #ggsave("Outputs/Genotype_S.svg", print(TreatmentP), width=5.5, height=6,dpi = 300)
 ```
-
-## Model 3 (Genotype * Treatment)
-
-```{r}
-# Treatment and genotype model 2
-    # Kaplan-Meier estimator. The "log-log" confidence interval is preferred.
-    fit3 <- survfit(surv_object_1 ~ Gen_Treat, data = Survival.data_1)
-    summary(fit3)
-    # Plot the survival model
-    ggsurvplot(fit3, data = Survival.data_1, pval = TRUE, conf.int = F,
-           risk.table=F,  tables.height=0.5)
-```
-
 
 Do not run
 ```{r}
@@ -300,10 +301,10 @@ fit.coxph0_2
     #ggsave("Outputs/Fig_3_Surv_Genotype.pdf", print(Genotype_only3),
     #       width=4.5, height=4.5,dpi = 300)
 
-fit.coxph0_3 <- coxph(surv_object3 ~ Genotype, data = Survival.data3)
-HazardRatio3<-ggforest(fit.coxph0_3, data = Survival.data3)
-HazardRatio3
-fit.coxph0_3
+# fit.coxph0_3 <- coxph(surv_object3 ~ Genotype, data = Survival.data3)
+# HazardRatio3<-ggforest(fit.coxph0_3, data = Survival.data3)
+# HazardRatio3
+# fit.coxph0_3
 
 ```
 
