@@ -1,0 +1,222 @@
+---
+title: "Variation in S/H ratio in A. cervicornis, Under Nutrient Stress"
+author: "Ana Palacio and Danielle Kroesche"
+date: "`r Sys.Date()`"
+html_document:
+    toc: true
+    df_print: paged
+    theme: united
+    chunk_output_type: console
+bibliography: packages.bib
+nocite: '@*'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE, fig.width=7, fig.height=7 )
+```
+
+This file analyzes the changes in S/H cell ratio in *A. cervicornis* :
+
+* 10 genotypes were sampled after nutrient exposure
+
+* These coral fragments came from coral nurseries belonging to UM, CRF, and FWC.
+
+```{r, echo=FALSE}
+library(steponeR) # StepOne program
+library(ggplot2) # to make plots
+library(tidyr)
+library(dplyr)
+library(knitr)
+library(lmerTest)
+library(emmeans)
+library(multcomp)
+library(ggpubr)
+
+## Plot settings
+theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
+                              panel.grid.minor = element_blank(), 
+                              axis.line = element_line(colour = "black"),
+                              legend.position="bottom",
+                              axis.text.x = element_text(angle = 90, vjust = 0.5),
+                              plot.title = element_text(size=12, face="bold"),
+                              #panel.border = element_rect(colour = "black", fill=NA, size=1)
+                              panel.border = element_blank()
+                              ))
+
+# Treatment colour
+  Fill.colour <- scale_fill_manual(values = c("deepskyblue", "blue4"))
+```
+
+## Import the qPCR data and run StepOne program
+
+```{r}
+Acer.plates <- list.files(path="Data", pattern=".csv", full.names=T)
+Acer.plates
+
+Acer.Out <- steponeR(files=Acer.plates, target.ratios=c("A.Acerv"), 
+                     fluor.norm=list(A=0, Acerv=0),
+                     copy.number=list(A=9, Acerv=1),
+                     ploidy=list(A=1, Acerv=2),
+                     extract=list(A=0.813, Acerv=0.982))
+
+# Target ratio results
+
+Acer<-Acer.Out$result
+#write.csv(Acer, "Acer_ratios.csv")
+
+```
+
+## Check CTs for outlayers 
+
+```{r}
+Acer<-Acer[Acer$Sample.Name!="+", ]
+
+acer.CTs <- ggplot(aes(x=Sample.Name, y=Acerv.CT.mean), data = Acer) +
+  geom_point() 
+acer.CTs
+
+A.CTs <- ggplot(aes(x=Sample.Name, y=A.CT.mean), data = Acer) +
+  geom_point() 
+A.CTs
+
+acer.SD <- ggplot(aes(x=Sample.Name, y=Acerv.CT.sd), data = Acer) +
+  geom_point() 
+acer.SD
+
+A.SD <- ggplot(aes(x=Sample.Name, y=A.CT.sd), data = Acer) +
+  geom_point() 
+A.SD
+
+SHcell <- ggplot(aes(x=Sample.Name, y=log(A.Acerv), colour=File.Name), data = Acer) +
+  geom_point() 
+SHcell
+
+SHcell <- ggplot(aes(x=Sample.Name, y=A.Acerv, colour=File.Name), data = Acer) +
+  geom_point() 
+SHcell
+```
+
+## Import metadata
+
+```{r}
+#Add names from 16s plate reference to match metadata
+  Acer$well<-Acer$Sample.Name
+
+# Import metadata 
+  metadata<-read.csv("Metadata.csv")
+
+# Merge S/H and sample metadata info
+  Acer.data<-plyr::join(Acer, metadata, by =c("well"), type="inner")
+  head(Acer.data)
+
+  Acer.data <- subset(Acer.data, Sequence.=="OnlyNutrients")
+```
+
+## Exploratory plots
+
+```{r}
+Acer.data$Genotype<-factor(Acer.data$Genotype, 
+                              levels=c("FM19", "FM6", "FM9", "U44",
+                                       "FM14", "Elkhorn","K2",
+                                      "Acerv2", "Kelsey-1", "Cooper-9"))
+
+# Sample summary  
+  Data_summary<-Acer.data %>% count(Nutrients,
+                                Genotype, sort = F)
+  Data_summary<-as.data.frame(Data_summary %>%
+        pivot_wider(names_from = Genotype, values_from = n))
+  kable(as.data.frame(Data_summary, format = "html"),
+      caption="Samples collected by genotype and treatment")
+
+
+SH_col_trat<- ggplot(aes(x=Genotype, y=A.Acerv, fill=Nutrients), data = Acer.data,) +
+  geom_boxplot() +
+  labs(title = "Symbiont Abundance by Genotype and Treatment",
+       y = "S/H cell ratio", x = "Genotype") + Fill.colour
+SH_col_trat
+
+SH_tret<- ggplot(aes(x=Nutrients, y=A.Acerv, fill=Nutrients), data = Acer.data,) +
+  geom_boxplot() +
+  labs(title = "Symbiont Abundance by Genotype and Treatment",
+       y = "S/H cell ratio", x = "Genotype")+ Fill.colour
+SH_tret
+
+SH_col<- ggplot(aes(x=Genotype, y=A.Acerv, fill=Genotype), data = Acer.data,) +
+  geom_boxplot()+ #facet_grid(~Nutrients)+
+  labs(title = "Symbiont Abundance by Genotype and Treatment",
+       y = "S/H cell ratio", x = "Genotype")
+SH_col  
+```
+
+## Stats 
+
+```{r}
+SH_model<-lmer(A.Acerv~ Nutrients * Genotype + (1|Tank_N), data=Acer.data)
+  summary(SH_model)
+  anova(SH_model)
+  ranova(SH_model)
+  step(SH_model)
+  
+SH_model2<-lm(A.Acerv~Genotype, data=Acer.data)
+  
+# Simple Pair-wise comparisons
+  cld(emmeans(SH_model, "Genotype"))
+  cld(emmeans(SH_model, "Nutrients"))
+  cld(emmeans(SH_model2, "Genotype"))
+```
+
+```{r}
+SH_Genet<- ggplot(Acer.data, aes (Genotype, A.Acerv, fill=Genotype)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun=mean, geom="point", shape=21, size=3) + 
+  theme(legend.position ="none",
+        axis.title.x = element_blank())+
+  #geom_jitter(alpha=0.5, shape=21)+
+  scale_y_continuous(limits = c(0.1, .28),
+                     #breaks = seq(0, 0.7, 0.1),  
+                     #expand = c(0.01, 0.01),
+                     name=("S/H cell ratio"))
+SH_Genet  
+
+SH_Nutrients<- ggplot(Acer.data, aes (Nutrients, A.Acerv, fill=Nutrients)) +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun=mean, geom="point", shape=21, size=3)+
+  theme(legend.position="none", legend.direction = "horizontal",
+         axis.title.x = element_blank(),
+          #axis.text.x = element_text(angle = 0),
+         axis.title.y = element_blank())+
+  scale_y_continuous(limits = c(0.1, .28),
+                     # breaks = seq(0, 0.7, 0.1),  
+                     #expand = c(0.01, 0.01),
+                     name=("S/H cell ratio"))+
+   Fill.colour
+SH_Nutrients  
+
+SH_Genet_T<- ggplot(Acer.data, aes (Genotype, A.Acerv, fill=Nutrients)) + Fill.colour +
+  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2, position=position_dodge(width = .3) )+
+  stat_summary(fun=mean, geom="point", shape=21, size=3, position=position_dodge(width = .3)) + 
+  #geom_jitter(alpha=0.5, shape=21)+
+  theme(legend.position ="none",
+        axis.title.x = element_blank())+
+  scale_y_continuous(limits = c(0.1, .28),
+                     #breaks = seq(0, 0.7, 0.1),  
+                     #expand = c(0.01, 0.01),
+                     name=("S/H cell ratio"))
+SH_Genet_T
+```
+
+```{r}
+Figure3<-ggarrange(SH_Genet, SH_Nutrients, 
+          labels = c("A", "B"),
+          ncol = 2, nrow = 1, widths = c(2,1))
+Figure3
+#ggsave(Figure3, file="Outputs/Figure3.svg", width=6, height=4)
+
+```
+
+# Packages used
+
+```{r}
+# Creates bibliography 
+#knitr::write_bib(c(.packages()), "packages.bib")
+```

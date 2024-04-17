@@ -2,46 +2,34 @@
 
 This repository contains data and analysis scripts for the manuscript:
 
-## TITLE
-#### Authors: 
-#### Journal: _Journal_ [doi:XXX](http://dx.doi.org/XXX)  
+## Assessing Acropora cervicornis genotype resistance to elevated ammonium and disease
+#### **Authors:** Ana M. Palacio Castro, Daniele Kroesche, Ian Enochs, Chris Kelble, Ian Smith, Andrew Baker, Stephanie M. Rosales
+#### **Journal:** _Journal_ [doi:XXX](http://dx.doi.org/XXX)  
 
 -----
 
 ### Description:
-This work 
-
-* Goal 1
-* Goal 2
+These repository contains data and code use to study the impact of elevated ammonium and disease on ten _A. cervicornis_ genotypes
 
 ### Contents:
 
-#### 1.LabNotebooks:
-
-* **XX.pdf:** Pdf document with *A. cervicornis* notes (collection, maintenance, molecular work... )
-* **XX.pdf:** Pdf document with ...
-
-
-#### 2.Tank conditions:
+#### 1.Tank_conditions:
 * **XXX:** 
 
-#### 3.Mortality analysis:
+#### 2.Mortality analysis:
 * **XXX:** 
 
-#### 4.Growth rates:
+#### 3.Growth:
 * **XXX:**
 
 
-#### 5.YII:
+#### 4.YII:
 * **XXX:** 
 
-#### 6.SH:
+#### 5.Symbiodiniaceae:
 * **XXX:** 
 
-#### 7.Transcriptomics:
-* **XXX:**
-
-#### 8.Metadata:
+#### 6.Metadata:
 * **XXX:**
 
 </br>
