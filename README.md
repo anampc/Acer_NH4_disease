@@ -4,33 +4,35 @@ This repository contains data and analysis scripts for the manuscript:
 
 ## Assessing Acropora cervicornis genotype resistance to elevated ammonium and disease
 #### **Authors:** Ana M. Palacio Castro, Daniele Kroesche, Ian Enochs, Chris Kelble, Ian Smith, Andrew Baker, Stephanie M. Rosales
-#### **Journal:** _Journal_ [doi:XXX](http://dx.doi.org/XXX)  
+#### **Journal:** _Submitted to PlosOne_ [doi:XXX](http://dx.doi.org/XXX)  
 
 -----
 
 ### Description:
-These repository contains data and code use to study the impact of elevated ammonium and disease on ten _A. cervicornis_ genotypes
+These repository contains all data and code used to study the impact of elevated ammonium and disease on ten _A. cervicornis_ genotypes
 
 ### Contents:
 
 #### 1.Tank_conditions:
-* **XXX:** 
+* **1.Experimental_conditons.Rmd:** has all the code needed for Figure 1. It sources the data from the **Data** subfolder and saves statistical summaries and plots in the **Outputs** subfolder.
 
-#### 2.Mortality analysis:
-* **XXX:** 
+#### 2.Mortality:
+* **1.Mortatily_Acer.Rmd:** has all the code needed for Figure 4 and survivorship analysis. It sources te data from the **Data** subfolder and saves statistical summaries and plots in the **Outputs** subfolder.
 
 #### 3.Growth:
-* **XXX:**
-
+* This data and data analysis were not used in the manuscript:**
 
 #### 4.YII:
-* **XXX:** 
+* **1.IPAM_ImportFunction.R:** R function to imports the csv raw IPAM data. Yo do not have to do anything with this file, but the function is called by this file below.
+* **2.MergeYIIandID.R:** Applies **1.IPAM_ImportFunction.R** to the raw data in the **IPAM_Raw**, adds the sample metadata in the **ID_AOI.csv** file and creates a long format file with the YII values that is exported to the file **Data/YII_tall.csv**
+* **3.YII_Acer_Nut.Rmd:** has all the code needed for Figure 2 and related statistical analisis. It sources the data from the file **Data/YII_tall.csv** and saves statistical summaries and plots in the **Outputs** subfolder.
 
 #### 5.Symbiodiniaceae:
-* **XXX:** 
+* **SH_cell_code.Rmd:** has all the code needed for Figure 3. It sources the qPCR data from the **Data** subfolder and the sample metadata from the **Metadata.csv** file. Statistical summaries and plots are saved in the **Outputs** subfolder.
+* **Data:** has all the raw data exported from the qPCR machine.
 
 #### 6.Metadata:
-* **XXX:**
+* This folder has copies of the metadata files, but are actually not used by any code. 
 
 </br>
 

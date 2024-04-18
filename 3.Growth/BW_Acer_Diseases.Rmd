@@ -204,7 +204,6 @@ BW.data<-BW.data %>%
 BW.data$dAW_r<-BW.data$dAW_r*1000
 
 summary(BW.data)
-
 #write.csv(BW.data, "BW.data.csv", row.names = FALSE)
 
 BW.CRF<-BW.data[which(BW.data$Genotype=='K2'|
@@ -247,7 +246,6 @@ SizeBiasCheck
 ### Genotype
 
 ```{r}
- 
 BW_Genet<- ggplot(BW.data, aes (Date, Coral_BW, colour=factor(Genotype))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
@@ -305,7 +303,6 @@ BW_Bias<- ggplot(BW.data, aes (Genotype, dBW_r, colour=factor(Nutrients))) +
                          expand = c(0, 0),
                          name=("dBW [mg / g*day]"))
 BW_Bias+facet_grid(~Date)
-
 ```
 
 ## AW Exploration 
@@ -332,7 +329,6 @@ ggExtra::ggMarginal(
 ### Genotype
 
 ```{r}
-
 AW_Genet<- ggplot(BW.data, aes (Date, Est_Coral_AW, colour=factor(Genotype))) +
   stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
   stat_summary(fun.y=mean, geom="line") + 
@@ -550,7 +546,6 @@ D_AW + facet_wrap(~Nutrients)
 D_AW + facet_wrap(~Disease)
 
 ```
-
 
 ### Fragments
 
