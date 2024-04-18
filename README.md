@@ -36,3 +36,7 @@ These repository contains all data and code used to study the impact of elevated
 
 </br>
 
+#### Notes
+* All packages.bib files produce a bibliography of the packages used by each .Rmd
+* All .html files produce a webpage with code outputs, plots, etc. based on the .Rmd files
+
