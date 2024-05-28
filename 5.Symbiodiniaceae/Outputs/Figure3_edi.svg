@@ -6,7 +6,7 @@
    viewBox="0 0 432.00 288.00"
    version="1.1"
    id="svg249"
-   sodipodi:docname="Figure3.svg"
+   sodipodi:docname="Figure3_edi.svg"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -653,7 +653,9 @@
        style="font-size:8.8px;font-family:Arial;fill:#4d4d4d"
        textLength="18.790001"
        lengthAdjust="spacingAndGlyphs"
-       id="text243">NH4</text>
+       id="text243">NH<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan1990">4</tspan></text>
   </g>
   <text
      xml:space="preserve"

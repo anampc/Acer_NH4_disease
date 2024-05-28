@@ -48,7 +48,7 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
                      c("deepskyblue", "blue4"))
 
 # Models 
-  library(lme4)
+  #library(lme4)
   library(multcomp)
   library(multcompView)
   library(emmeans)
@@ -59,18 +59,11 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
 # Data and data clean-up 
 
 ```{r}
-
 # 1. Import data: 
 
   # Long format Ssid YII
     YII.Tall<-read.csv("Data/YII_tall.csv")
-
-  # Wide format 
-    # YII.wide<- YII.Tall<-readRDS("Data/YII.Wide.rds")
-    # YII.Wide<-read.csv("Data/YII_Wide.csv")
-  
-  #summary(YII.Tall)
-
+    #summary(YII.Tall)
 
 # 2. Data clean-up an types: 
   
@@ -99,7 +92,6 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
                                        "FM14", "Elkhorn","K2",
                                       "Acerv2", "Kelsey-1", "Cooper-9"))
 
-    
   # Treatments
     YII.Tall$Nutrients<-factor(YII.Tall$Nutrients, 
                              levels= c("Ambient", "NH4"), ordered=TRUE)
@@ -119,25 +111,10 @@ theme_set (theme_classic() + theme(panel.grid.major = element_blank(),
   summary(YII.Tall)
 
 # Subset data  
-YII.CRF<-YII.Tall[which(YII.Tall$Genotype=='K2'|
-                      YII.Tall$Genotype=='U41'|
-                      YII.Tall$Genotype=='U44'), ]
-
-YII.UM<-YII.Tall[which(YII.Tall$Genotype=='Acerv2'|
-                      YII.Tall$Genotype=='Cooper-9'|
-                      YII.Tall$Genotype=='Elkhorn'|
-                      YII.Tall$Genotype=='Kelsey-1'), ]
-
-YII.FWC<-YII.Tall[which(YII.Tall$Genotype=='FM14'|
-                      YII.Tall$Genotype=='FM6'|
-                      YII.Tall$Genotype=='FM19'|
-                      YII.Tall$Genotype=='FM9'), ]
-
-
-LastTreatment<-YII.Tall[which(YII.Tall$Time=='12'|YII.Tall$Time=='13'), ]
-
-YII.Nutrients<-YII.Tall[YII.Tall$Days>-3,]
-YII.Nutrients<-YII.Nutrients[YII.Nutrients$Days<51,]
+  LastTreatment<-YII.Tall[which(YII.Tall$Time=='12'|YII.Tall$Time=='13'), ]
+  
+  YII.Nutrients<-YII.Tall[YII.Tall$Days>-3,]
+  YII.Nutrients<-YII.Nutrients[YII.Nutrients$Days<51,]
 ```
 
 # Data exploration
@@ -146,7 +123,7 @@ YII.Nutrients<-YII.Nutrients[YII.Nutrients$Days<51,]
 
 ```{r}
 YII_Genet<- ggplot(YII.Nutrients, aes (Genotype, YII, fill=Genotype)) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
+  stat_summary(fun.data = "mean_cl_boot", geom = "errorbar", width = 0.2 )+
   stat_summary(fun=mean, geom="point", shape=21) + 
   #geom_jitter(alpha=0.5, shape=21)+
   theme(legend.position ="none",
@@ -167,7 +144,7 @@ YII_Nutrients<- ggplot(YII.Nutrients, aes (Days, YII, colour=Nutrients)) +
   #geom_jitter(alpha=0.5, shape=21)+
   theme(legend.position = c(0.5, 0.1), legend.direction = "horizontal",
         axis.text.x = element_text(angle = 0),
-         axis.title.y = element_blank())+
+        axis.title.y = element_blank())+
   scale_y_continuous(limits = c(0.4, .70),
                          breaks = seq(0, 0.7, 0.1),  
                          expand = c(0.01, 0.01),
@@ -211,31 +188,7 @@ YII_Genet<- ggplot(YII.Nutrients, aes (Days, YII, colour=Genotype)) +
   annotate("point",x=c(58), y=c(0.7), 
            shape=4, size=2)
 YII_Genet  
-#YII_Genet+ facet_wrap(~Nutrients)
-#YII_Genet+ facet_wrap(~Disease)
-#YII_Genet+ facet_wrap(Nutrients~Disease)
 ```
-
-```{r, echo=FALSE}
-YII_Genet2<- ggplot(YII.Nutrients, aes (Days, YII, colour=factor(Treatment), shape=Nutrients)) +
-  stat_summary(fun.data = "mean_cl_boot",geom = "errorbar", width = 0.2 )+
-  stat_summary(fun=mean, geom="line") + 
-  stat_summary(fun=mean, geom="point") +
-  #geom_jitter(alpha=0.2)+
-  theme(legend.position = "bottom")+
-  scale_y_continuous(limits = c(0.4, .70),
-                         breaks = seq(0, 0.7,0.1),  
-                         expand = c(0.01, 0.01),
-                         name=("YII (Fv/Fm)"))+
-  scale_x_continuous(limits = c(-2, 59),
-                         breaks = seq(0, 60, 7),  
-                         expand = c(0.01, 0.01),
-                         name=("Days in the experiment"))+
-  Fill.colour
-
-#YII_Genet2+ facet_wrap(Genotype~.)
-```
-
 
 ```{r, echo=FALSE}
 YII_Genet<- ggplot(YII.Nutrients, aes (Days, YII, colour=factor(Nutrients), shape=Nutrients)) +
@@ -251,8 +204,8 @@ YII_Genet<- ggplot(YII.Nutrients, aes (Days, YII, colour=factor(Nutrients), shap
   scale_x_continuous(limits = c(-2, 59),
                          breaks = seq(0, 60, 7),  
                          expand = c(0.01, 0.01),
-                         name=("Days in the experiment"))
-  #Fill.colour
+                         name=("Days in the experiment"))+
+  Fill.colour2
 
 YII_Genet+ facet_wrap(Genotype~.)
 ```

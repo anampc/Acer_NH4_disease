@@ -38,13 +38,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1839"
+     inkscape:window-width="1681"
      inkscape:window-height="991"
      id="namedview623"
      showgrid="false"
      inkscape:zoom="0.76"
-     inkscape:cx="222.36842"
-     inkscape:cy="430.26316"
+     inkscape:cx="298.68421"
+     inkscape:cy="448.68421"
      inkscape:window-x="26"
      inkscape:window-y="23"
      inkscape:window-maximized="0"
@@ -452,13 +452,6 @@
   </defs>
   <g
      id="g17344">
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.1528;stroke-miterlimit:10;paint-order:fill markers stroke"
-       id="rect1144"
-       width="394.48828"
-       height="698.77502"
-       x="-0.0029296875"
-       y="1.1220703" />
     <polyline
        points="61.69,69.11 217.07,69.11 217.07,69.11 "
        style="fill:none;stroke:#00bfff;stroke-width:2.13;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10"
@@ -1014,86 +1007,6 @@
        y2="583.09998"
        style="fill:none;stroke:#bebebe;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:5.69, 5.69"
        id="line291" />
-    <text
-       id="text304"
-       lengthAdjust="spacingAndGlyphs"
-       textLength="93.330002"
-       style="font-size:9.6px;font-family:Arial;text-anchor:middle;fill:#1a1a1a"
-       y="456.82001"
-       x="136.64999"
-       transform="translate(-28.5,148.25)">Genotype: Kelsey-1</text>
-    <text
-       id="text317"
-       lengthAdjust="spacingAndGlyphs"
-       textLength="96.309998"
-       style="font-size:9.6px;font-family:Arial;text-anchor:middle;fill:#1a1a1a"
-       y="456.82001"
-       x="307.56"
-       transform="translate(-28.5,148.25)">Genotype: Cooper-9</text>
-    <text
-       id="text330"
-       lengthAdjust="spacingAndGlyphs"
-       textLength="65.370003"
-       style="font-size:9.6px;font-family:Arial;text-anchor:middle;fill:#1a1a1a"
-       y="357.60001"
-       x="136.64999"
-       transform="translate(-42.483362,157.25)">Genotype: K2</text>
-    <text
-       id="text343"
-       lengthAdjust="spacingAndGlyphs"
-       textLength="86.269997"
-       style="font-size:9.6px;font-family:Arial;text-anchor:middle;fill:#1a1a1a"
-       y="357.60001"
-       x="307.56"
-       transform="translate(-33.531901,157.25)">Genotype: Acerv2</text>
-    <text
-       id="text356"
-       lengthAdjust="spacingAndGlyphs"
-       textLength="78.970001"
-       style="font-size:9.6px;font-family:Arial;text-anchor:middle;fill:#1a1a1a"
-       y="258.38"
-       x="136.64999"
-       transform="translate(-35.678721,164.26)">Genotype: FM14</text>
-    <text
-       x="307.56"
-       y="258.38"
-       style="font-size:9.6px;font-family:Arial;text-anchor:middle;fill:#1a1a1a"
-       textLength="89.059998"
-       lengthAdjust="spacingAndGlyphs"
-       id="text369"
-       transform="translate(-32.131575,164.26)">Genotype: Elkhorn</text>
-    <text
-       id="text382"
-       lengthAdjust="spacingAndGlyphs"
-       textLength="72.870003"
-       style="font-size:9.6px;font-family:Arial;text-anchor:middle;fill:#1a1a1a"
-       y="159.16"
-       x="136.64999"
-       transform="translate(-38.727148,173.75)">Genotype: FM9</text>
-    <text
-       id="text395"
-       lengthAdjust="spacingAndGlyphs"
-       textLength="72.199997"
-       style="font-size:9.6px;font-family:Arial;text-anchor:middle;fill:#1a1a1a"
-       y="159.16"
-       x="307.56"
-       transform="translate(-40.560566,173.75)">Genotype: U44</text>
-    <text
-       id="text408"
-       lengthAdjust="spacingAndGlyphs"
-       textLength="78.970001"
-       style="font-size:9.6px;font-family:Arial;text-anchor:middle;fill:#1a1a1a"
-       y="59.939999"
-       x="136.64999"
-       transform="translate(-35.678721,179.75)">Genotype: FM19</text>
-    <text
-       id="text421"
-       lengthAdjust="spacingAndGlyphs"
-       textLength="72.870003"
-       style="font-size:9.6px;font-family:Arial;text-anchor:middle;fill:#1a1a1a"
-       y="59.939999"
-       x="307.56"
-       transform="translate(-40.217015,179.75)">Genotype: FM6</text>
     <polyline
        transform="translate(0,120.5)"
        id="polyline425"
@@ -2096,5 +2009,135 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0.75px"
          x="66.734573"
          y="208.81415">B</tspan></text>
+    <text
+       transform="matrix(1.2,0,0,1.2,92.264882,238.39259)"
+       text-anchor="middle"
+       style="font-size:8.8px;font-family:Arial;white-space:pre;fill:#4d4d4d"
+       textLength="23.84"
+       lengthAdjust="spacingAndGlyphs"
+       id="text155">FM19</text>
+    <text
+       transform="matrix(1.2,0,0,1.2,255.73418,238.39259)"
+       text-anchor="middle"
+       style="font-size:8.8px;font-family:Arial;white-space:pre;fill:#4d4d4d"
+       textLength="18.24"
+       lengthAdjust="spacingAndGlyphs"
+       id="text157">FM6</text>
+    <text
+       transform="matrix(1.2,0,0,1.2,89.482609,330.28827)"
+       text-anchor="middle"
+       style="font-size:8.8px;font-family:Arial;white-space:pre;fill:#4d4d4d"
+       textLength="18.24"
+       lengthAdjust="spacingAndGlyphs"
+       id="text159">FM9</text>
+    <text
+       transform="matrix(1.2,0,0,1.2,256.85932,330.2728)"
+       text-anchor="middle"
+       style="font-size:8.8px;font-family:Arial;white-space:pre;fill:#4d4d4d"
+       textLength="17.629999"
+       lengthAdjust="spacingAndGlyphs"
+       id="text161">U44</text>
+    <text
+       transform="matrix(1.2,0,0,1.2,92.268981,422.69362)"
+       text-anchor="middle"
+       style="font-size:8.8px;font-family:Arial;white-space:pre;fill:#4d4d4d"
+       textLength="23.84"
+       lengthAdjust="spacingAndGlyphs"
+       id="text163">FM14</text>
+    <text
+       transform="matrix(1.2,0,0,1.2,266.12128,422.61628)"
+       text-anchor="middle"
+       style="font-size:8.8px;font-family:Arial;white-space:pre;fill:#4d4d4d"
+       textLength="33.099998"
+       lengthAdjust="spacingAndGlyphs"
+       id="text165">Elkhorn</text>
+    <text
+       transform="matrix(1.2,0,0,1.2,86.126182,514.81272)"
+       text-anchor="middle"
+       style="font-size:8.8px;font-family:Arial;white-space:pre;fill:#4d4d4d"
+       textLength="11.36"
+       lengthAdjust="spacingAndGlyphs"
+       id="text167">K2</text>
+    <text
+       transform="matrix(1.2,0,0,1.2,265.52918,514.75085)"
+       text-anchor="middle"
+       style="font-size:8.8px;font-family:Arial;white-space:pre;fill:#4d4d4d"
+       textLength="30.540001"
+       lengthAdjust="spacingAndGlyphs"
+       id="text169">Acerv2</text>
+    <text
+       transform="matrix(1.2,0,0,1.2,99.063558,608.56654)"
+       text-anchor="middle"
+       style="font-size:8.8px;font-family:Arial;white-space:pre;fill:#4d4d4d"
+       textLength="37.02"
+       lengthAdjust="spacingAndGlyphs"
+       id="text171-3">Kelsey-1</text>
+    <text
+       transform="matrix(1.2,0,0,1.2,270.46222,608.6774)"
+       text-anchor="middle"
+       style="font-size:8.8px;font-family:Arial;white-space:pre;fill:#4d4d4d"
+       textLength="39.740002"
+       lengthAdjust="spacingAndGlyphs"
+       id="text173-6">Cooper-9</text>
+    <circle
+       cx="64.875313"
+       cy="234.66205"
+       r="2.8080001"
+       style="fill:#f8766d;stroke:#000000;stroke-width:1.0224;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+       id="circle93" />
+    <circle
+       cx="235.85529"
+       cy="234.66205"
+       r="2.8080001"
+       style="fill:#d89000;stroke:#000000;stroke-width:1.0224;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+       id="circle95" />
+    <circle
+       cx="64.875313"
+       cy="326.55771"
+       r="2.8080001"
+       style="fill:#a3a500;stroke:#000000;stroke-width:1.0224;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+       id="circle97" />
+    <circle
+       cx="235.85529"
+       cy="326.55771"
+       r="2.8080001"
+       style="fill:#39b600;stroke:#000000;stroke-width:1.0224;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+       id="circle99" />
+    <circle
+       cx="64.875313"
+       cy="418.89862"
+       r="2.8080001"
+       style="fill:#00bf7d;stroke:#000000;stroke-width:1.0224;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+       id="circle101" />
+    <circle
+       cx="235.85529"
+       cy="418.89862"
+       r="2.8080001"
+       style="fill:#00bfc4;stroke:#000000;stroke-width:1.0224;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+       id="circle103" />
+    <circle
+       cx="64.875313"
+       cy="511.01773"
+       r="2.8080001"
+       style="fill:#00b0f6;stroke:#000000;stroke-width:1.0224;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+       id="circle105" />
+    <circle
+       cx="235.85529"
+       cy="511.01773"
+       r="2.8080001"
+       style="fill:#9590ff;stroke:#000000;stroke-width:1.0224;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+       id="circle107" />
+    <circle
+       cx="64.875313"
+       cy="605.88269"
+       r="2.8080001"
+       style="fill:#e76bf3;stroke:#000000;stroke-width:1.0224;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+       id="circle109" />
+    <circle
+       cx="235.85529"
+       cy="605.88269"
+       r="2.8080001"
+       style="fill:#ff62bc;stroke:#000000;stroke-width:1.0224;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+       id="circle111" />
   </g>
 </svg>
