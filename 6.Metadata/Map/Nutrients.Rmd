@@ -1,0 +1,201 @@
+---
+title: "Field_nutrients"
+output: html_document
+date: "2024-12-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Nutrients
+
+```{r}
+# Plots
+MyTheme<-theme_bw() +  
+theme(legend.position="top",
+          plot.background=element_blank(),
+          axis.text.x = element_text(angle = 90, vjust = 0.5),
+          panel.grid.major.y = element_blank(),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.minor.y = element_blank(),
+          legend.box.background = element_rect(),
+          legend.title = element_blank(),
+          panel.background =element_rect(fill = NA, 
+                                         color = "black"))#+
+  #guides(fill=guide_legend(nrow=2,byrow=TRUE), shape=guide_legend(nrow=3,byrow=TRUE))
+
+Season_fill<-scale_fill_manual(values =
+                           c("#2b83ba", "#abdda4",
+                             "#990000", "#ff9900"))
+
+Season_colour<-scale_colour_manual(values =
+                          c("#2b83ba", "#abdda4",
+                             "#990000", "#ff9900"))
+
+Precipitation_fill<-scale_fill_manual(values =
+                           c("#cc6633", "#66ccff"))
+
+Precipitation_colour<-scale_colour_manual(values =
+                           c( "#cc6633", "#66ccff"))
+
+Zone_shapes4<- scale_shape_manual(values=c(21,23,24, 25))
+Zone_shapes3<- scale_shape_manual(values=c(21,23,24))
+
+```
+
+# 1. Import and format carbon chemistry data
+
+```{r, include=FALSE}
+# 1. Get data
+  FLK.data<-read.csv("WS_Data_998-2022.csv", header = T)
+  summary(FLK.data)
+  #head(FLK.data)
+
+# 2. Format variables
+  # Date/times
+    FLK.data$Date<-as.Date(FLK.data$Date, format = "%m/%d/%y")
+    #summary(FLK.data$Year)
+
+    # FLK.data$Month<-factor(FLK.data$Month, 
+    #                       levels = c("Apr", "May","Jun",
+    #                                 "Jul", "Aug", "Sep",
+    #                                 "Oct","Nov","Dec",
+    #                                 "Jan", "Feb", "Mar"))
+    # 
+    # FLK.data$Month2<-factor(FLK.data$Month, 
+    #                       levels = c("Jan", "Feb", "Mar",
+    #                                  "Apr", "May","Jun",
+    #                                 "Jul", "Aug", "Sep",
+    #                                 "Oct","Nov","Dec"
+    #                                 ))
+    
+  FLK.data$Region<-factor(FLK.data$Region, levels = c(
+                          "BISCAYNE BAY", "UPPER KEYS", "MIDDLE KEYS", "LOWER KEYS"))
+  
+  FLK.data$Zone<-factor(FLK.data$Position, levels = c(
+                        "INSHORE", "MID CHANNEL", 
+                        "OFFSHORE", "OCEANIC"))
+  
+  FLK.data$Season<-factor(FLK.data$Season, levels = c(
+                        "Winter", "Spring", "Summer", "Fall"))
+#summary(FLK.data$Extreme)
+
+# ## Seasonality (NOPE)
+# -   Winter: Dec 20-March 19
+# -   Spring: March 20-June 18
+# -   Summer: June 19-Sep 20
+# -   Fall: Sep 21-Dec 19
+```
+
+## Seasonality
+
+-   Winter: Jan-Mar
+-   Spring: Apr-Jun
+-   Summer: Jul-Sep
+-   Fall: Oct-Dec
+-   Wet: May - October
+-   Dry: November - April
+
+# 2. Check data available
+
+## 2.1 Locations (all samples)
+
+```{r MapINformation, include=FALSE}
+Locations <- FLK.data %>% select(Latitude,
+                                Longitude, 
+                                Region, 
+                                Station)
+Locations<-unique(Locations)
+
+S.GPS.Sites <- plyr::ddply (FLK.data, .(Region, Zone, Station),summarise,
+                Lat = mean (Latitude, na.rm = T), 
+                Lon = mean (Longitude, na.rm = T),
+                number = n())
+#write.csv(WS.GPS.Sites, "FLK_results/1_meanSatationGPS.csv")
+
+```
+
+## 2.3 Number of samples
+
+### By zone and location
+
+```{r, echo=FALSE}
+library(kableExtra)
+Cases_Loc_Zone<-FLK.data %>% count(Region,
+                                  Zone,
+                                  sort = F)
+
+Cases_Loc_Zone<-as.data.frame(Cases_Loc_Zone %>%
+                   pivot_wider(names_from = Zone,
+                   values_from = n))
+#write.csv(Cases_Loc_Zone, "FLK_results/0_SampleS_Region_zone.csv")
+
+kable(as.data.frame(Cases_Loc_Zone, format = "html"), 
+      longtable = TRUE) %>% 
+kable_styling(bootstrap_options = c("striped", "condensed", full_width = F), font_size = 11)
+```
+
+```{r}
+NH4_plot<- ggplot(FLK.data) + MyTheme+
+  geom_point(aes (Date, NH4, fill=Region, shape=Zone),
+             alpha=0.6, size=.8)+
+  # geom_smooth(aes(TDate, NH4, colour=Region),
+  #             linetype=1, method = "lm", se=F)+
+    geom_smooth(aes(Date, NH4),
+               linetype=1, method = "lm", colour="black")+
+  Zone_shapes4+
+  Season_fill+
+  guides(shape="none")+
+  scale_y_continuous(limits = c(0, 10),
+                     expand = c(0.01, 0.01),
+                     name=expression(paste("NH4")))
+NH4_plot + facet_grid(Region~Zone)
+```
+
+
+```{r}
+PO4_plot<- ggplot(FLK.data) + MyTheme+
+  geom_point(aes (Date, PO4, fill=Region, shape=Zone),
+             alpha=0.6, size=.8)+
+  # geom_smooth(aes(Date, PO4, colour=Region),
+  #             linetype=1, method = "lm", se=F)+
+    geom_smooth(aes(Date, PO4),
+               linetype=1, method = "lm", colour="black")+
+  Zone_shapes4+
+  Season_fill+
+  guides(shape="none")+
+  scale_y_continuous(limits = c(0, 2),
+                     expand = c(0.01, 0.01),
+                     name=expression(paste("PO4")))
+PO4_plot + facet_grid(Region~Zone)
+```
+
+
+```{r}
+NO3_plot<- ggplot(FLK.data) + MyTheme+
+  geom_point(aes (Date, NO3, fill=Region, shape=Zone),
+             alpha=0.6, size=.8)+
+  # geom_smooth(aes(Date, NO3, colour=Region),
+  #             linetype=1, method = "lm", se=F)+
+    geom_smooth(aes(Date, NO3),
+               linetype=1, method = "lm", colour="black")+
+  Zone_shapes4+
+  Season_fill+
+  guides(shape="none")+
+  scale_y_continuous(limits = c(0, 10),
+                     expand = c(0.01, 0.01),
+                     name=expression(paste("NO3")))
+NO3_plot + facet_grid(Region~Zone)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
